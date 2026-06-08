@@ -3,451 +3,451 @@
 name: llm-council
 
 
-description: "Pasá cualquier pregunta, idea o decisión por un consejo de 5 asesores de IA que la analizan de forma independiente, se revisan mutuamente en forma anónima, y sintetizan un veredicto final. Basado en la metodología LLM Council de Karpathy. TRIGGERS OBLIGATORIOS: 'convocá al consejo', 'pasá esto por el consejo', 'consejo esto', 'sala de guerra', 'someté a prueba', 'debatí esto', 'council this', 'run the council', 'war room this', 'pressure-test this', 'stress-test this', 'debate this'. TRIGGERS FUERTES (usar cuando se combinan con una decisión real o un tradeoff): '¿debería X o Y?', '¿qué opción?', '¿qué harías vos?', '¿es la decisión correcta?', 'validá esto', 'dame múltiples perspectivas', 'no me puedo decidir', 'estoy entre X e Y', 'should I X or Y', 'which option', 'what would you do', 'is this the right move', 'validate this', 'get multiple perspectives'. NO disparar con preguntas simples de sí/no, búsquedas factuales, o '¿debería...?' casuales sin tradeoff real (ej. '¿uso markdown?' no es para el consejo). SÍ disparar cuando el usuario presenta una decisión genuina con stakes, múltiples opciones, y contexto que sugiere que quiere ponerla a prueba desde varios ángulos."
+description: "Passe qualquer pergunta, ideia ou decisão por um conselho de 5 conselheiros de IA que analisam de forma independente, revisam uns aos outros anonimamente, e sintetizam um veredito final. Baseado na metodologia LLM Council do Karpathy. GATILHOS OBRIGATÓRIOS: 'convoca o conselho', 'passa pelo conselho', 'conselho isso', 'sala de guerra', 'testa isso', 'pressiona isso', 'debate isso', 'council this', 'run the council', 'war room this', 'pressure-test this', 'stress-test this', 'debate this'. GATILHOS FORTES (usar quando combinados com uma decisão real ou tradeoff): 'devo fazer X ou Y?', 'qual opção?', 'o que você faria?', 'é a decisão certa?', 'valida isso', 'me dá múltiplas perspectivas', 'não consigo decidir', 'estou em dúvida entre X e Y', 'should I X or Y', 'which option', 'what would you do', 'is this the right move', 'validate this', 'get multiple perspectives'. NÃO disparar em perguntas simples de sim/não, buscas factuais, ou 'devo...?' casuais sem tradeoff real (ex. 'devo usar markdown?' não é pergunta pro conselho). DISPARAR quando o usuário apresenta uma decisão genuína com stakes, múltiplas opções, e contexto que sugere que ele quer testar de vários ângulos."
 
 ---
 
 
-# LLM Council (Consejo de Asesores)
+# LLM Council (Conselho de Conselheiros)
 
 
-Le hacés una pregunta a una IA, te da una respuesta. Esa respuesta puede ser buenísima. Puede ser mediocre. No tenés forma de saberlo porque solo viste una perspectiva.
+Você faz uma pergunta para uma IA, recebe uma resposta. Essa resposta pode ser ótima. Pode ser mediana. Você não tem como saber porque só viu uma perspectiva.
 
 
-El consejo soluciona esto. Pasa tu pregunta por 5 asesores independientes, cada uno pensando desde un ángulo fundamentalmente distinto. Después se revisan entre ellos. Después un presidente sintetiza todo en una recomendación final que te dice dónde coinciden los asesores, dónde chocan, y qué deberías hacer realmente.
+O conselho resolve isso. Ele passa sua pergunta por 5 conselheiros independentes, cada um pensando de um ângulo fundamentalmente diferente. Depois eles revisam o trabalho uns dos outros. Depois um presidente sintetiza tudo em uma recomendação final que te diz onde os conselheiros concordam, onde discordam, e o que você deveria realmente fazer.
 
 
-Esto está adaptado del LLM Council de Andrej Karpathy. Él manda queries a múltiples modelos, los hace revisarse mutuamente de forma anónima, y después un presidente produce la respuesta final. Hacemos lo mismo dentro de Claude usando sub-agentes con distintas lentes de pensamiento en lugar de distintos modelos.
-
-
----
-
-
-## cuándo convocar al consejo
-
-
-El consejo es para preguntas donde equivocarse sale caro.
-
-
-Buenas preguntas para el consejo:
-
-- "¿Lanzo un workshop de $97 o un curso de $497?"
-
-- "¿Cuál de estos 3 ángulos de posicionamiento es el más fuerte?"
-
-- "Estoy pensando en pivotear de X a Y. ¿Estoy loco?"
-
-- "Acá está mi copy de landing. ¿Qué está flojo?"
-
-- "¿Contrato una VA o construyo una automatización primero?"
-
-
-Malas preguntas para el consejo:
-
-- "¿Cuál es la capital de Francia?" (una sola respuesta correcta, no hace falta perspectivas)
-
-- "Escribime un tweet" (tarea de creación, no de decisión)
-
-- "Resumime este artículo" (tarea de procesamiento, no de juicio)
-
-
-El consejo brilla cuando hay incertidumbre genuina y el costo de una mala decisión es alto. Si ya sabés la respuesta y solo querés validación, probablemente el consejo te diga cosas que no querés escuchar. Justamente para eso es.
+Isso é adaptado do LLM Council do Andrej Karpathy. Ele despacha queries pra múltiplos modelos, faz eles se revisarem anonimamente, e depois um presidente produz a resposta final. Fazemos a mesma coisa dentro do Claude usando sub-agentes com lentes de pensamento diferentes em vez de modelos diferentes.
 
 
 ---
 
 
-## los cinco asesores
+## quando convocar o conselho
 
 
-Cada asesor piensa desde un ángulo distinto. No son títulos de puesto ni personas. Son estilos de pensamiento que naturalmente generan tensión entre sí.
+O conselho é pra perguntas onde errar sai caro.
 
 
-### 1. El Contrarian (Contrario)
+Boas perguntas pro conselho:
 
-Busca activamente qué está mal, qué falta, qué va a fallar. Asume que la idea tiene un defecto fatal e intenta encontrarlo. Si todo parece sólido, sigue cavando. El Contrarian no es un pesimista. Es el amigo que te salva de un mal negocio haciéndote las preguntas que estás evitando.
+- "Devo lançar um workshop de R$497 ou um curso de R$1997?"
 
+- "Qual desses 3 ângulos de posicionamento é o mais forte?"
 
-### 2. El First Principles Thinker (Pensador de Primeros Principios)
+- "Estou pensando em pivotar de X pra Y. Estou louco?"
 
-Ignora la pregunta superficial y pregunta "¿qué estamos tratando de resolver realmente?". Despoja los supuestos. Reconstruye el problema desde cero. A veces el output más valioso del consejo es el First Principles Thinker diciendo "estás haciendo la pregunta equivocada".
+- "Aqui está a copy da minha landing. O que está fraco?"
 
-
-### 3. El Expansionist (Expansionista)
-
-Busca el upside que todos los demás se pierden. ¿Qué podría ser más grande? ¿Qué oportunidad adyacente está escondida? ¿Qué está subvaluado? Al Expansionist no le importa el riesgo (ese es el trabajo del Contrarian). Le importa qué pasa si esto funciona aún mejor de lo esperado.
+- "Devo contratar uma VA ou construir uma automação primeiro?"
 
 
-### 4. El Outsider (El de Afuera)
+Más perguntas pro conselho:
 
-Tiene cero contexto sobre vos, tu rubro, o tu historia. Responde puro a lo que tiene enfrente. Este es el asesor más subestimado. Los expertos desarrollan puntos ciegos. El Outsider atrapa la maldición del conocimiento: cosas que son obvias para vos pero confusas para el resto.
+- "Qual a capital da França?" (uma resposta certa, não precisa de perspectivas)
+
+- "Escreve um tweet pra mim" (tarefa de criação, não de decisão)
+
+- "Resume esse artigo" (tarefa de processamento, não de julgamento)
 
 
-### 5. El Executor (Ejecutor)
-
-Solo le importa una cosa: ¿esto se puede hacer de verdad, y cuál es el camino más rápido para hacerlo? Ignora la teoría, la estrategia y el pensamiento de gran escala. El Executor mira cada idea con la lente de "OK, pero ¿qué hacés el lunes a la mañana?". Si una idea suena brillante pero no tiene un primer paso claro, el Executor lo va a decir.
-
-
-**Por qué estos cinco:** Crean tres tensiones naturales. Contrarian vs Expansionist (downside vs upside). First Principles vs Executor (repensar todo vs simplemente hacerlo). El Outsider se sienta en el medio manteniendo a todos honestos viendo lo que ven los ojos frescos.
+O conselho brilha quando há incerteza genuína e o custo de uma má decisão é alto. Se você já sabe a resposta e só quer validação, o conselho provavelmente vai te dizer coisas que você não quer escutar. É exatamente pra isso que serve.
 
 
 ---
 
 
-## cómo funciona una sesión del consejo
+## os cinco conselheiros
 
 
-### paso 1: enmarcar la pregunta (con enriquecimiento de contexto)
+Cada conselheiro pensa de um ângulo diferente. Não são cargos ou personas. São estilos de pensamento que naturalmente criam tensão entre si.
 
 
-Cuando el usuario dice "convocá al consejo" (o cualquier frase trigger), hacé dos cosas antes de enmarcar:
+### 1. O Contrarian (Contrarian)
+
+Procura ativamente o que está errado, o que está faltando, o que vai falhar. Assume que a ideia tem um defeito fatal e tenta encontrá-lo. Se tudo parece sólido, cava mais fundo. O Contrarian não é pessimista. É o amigo que te salva de um mau negócio fazendo as perguntas que você está evitando.
 
 
-**A. Escaneá el workspace en busca de contexto.** La pregunta del usuario muchas veces es solo la punta del iceberg. Su setup de Claude probablemente tiene archivos que mejorarían dramáticamente el output del consejo. Antes de enmarcar, escaneá rápido y leé cualquier archivo de contexto relevante:
+### 2. O First Principles Thinker (Pensador de Primeiros Princípios)
+
+Ignora a pergunta superficial e pergunta "o que estamos realmente tentando resolver aqui?". Remove as suposições. Reconstrói o problema do zero. Às vezes o output mais valioso do conselho é o First Principles Thinker dizendo "você está fazendo a pergunta errada".
 
 
-- `CLAUDE.md` o `claude.md` en la raíz del proyecto o workspace (contexto del negocio, preferencias, restricciones)
+### 3. O Expansionist (Expansionista)
 
-- Cualquier carpeta `memory/` (perfiles de audiencia, docs de voz, detalles del negocio, decisiones pasadas)
-
-- Cualquier archivo que el usuario mencionó o adjuntó explícitamente
-
-- Transcripciones recientes del consejo en esta carpeta (para no rehacer el mismo terreno)
-
-- Cualquier otro archivo de contexto que parezca relevante a la pregunta específica (ej. si pregunta sobre precios, buscá datos de ingresos, resultados de lanzamientos pasados, research de audiencia)
+Procura o upside que todo mundo está perdendo. O que poderia ser maior? Que oportunidade adjacente está escondida? O que está sendo subvalorizado? O Expansionist não se importa com risco (esse é o trabalho do Contrarian). Ele se importa com o que acontece se isso funcionar até melhor do que o esperado.
 
 
-Usá `Glob` y `Read` rápidos para encontrarlos. No gastes más de 30 segundos en esto. Estás buscando los 2-3 archivos que le darían a los asesores el contexto que necesitan para dar consejos específicos y aterrizados en lugar de takes genéricos.
+### 4. O Outsider (O de Fora)
+
+Tem zero contexto sobre você, sua área, ou sua história. Responde puramente ao que está na frente dele. Esse é o conselheiro mais subestimado. Especialistas desenvolvem pontos cegos. O Outsider pega a maldição do conhecimento: coisas que são óbvias pra você mas confusas pra todo mundo.
 
 
-**B. Enmarcá la pregunta.** Tomá la pregunta cruda del usuario Y el contexto enriquecido y reformulalas como un prompt claro y neutral que recibirán los cinco asesores. La pregunta enmarcada debería incluir:
+### 5. O Executor (Executor)
+
+Só se importa com uma coisa: isso pode ser feito de verdade, e qual é o caminho mais rápido pra fazer? Ignora teoria, estratégia, e pensamento de larga escala. O Executor olha pra cada ideia pela lente de "OK mas o que você faz segunda de manhã?". Se uma ideia soa brilhante mas não tem um primeiro passo claro, o Executor vai falar.
 
 
-1. La decisión o pregunta central
-
-2. Contexto clave del mensaje del usuario
-
-3. Contexto clave de los archivos del workspace (etapa del negocio, audiencia, restricciones, resultados pasados, números relevantes)
-
-4. Qué está en juego (por qué importa esta decisión)
+**Por que esses cinco:** Eles criam três tensões naturais. Contrarian vs Expansionist (downside vs upside). First Principles vs Executor (repensar tudo vs simplesmente fazer). O Outsider fica no meio mantendo todos honestos vendo o que olhos frescos veem.
 
 
-No agregues tu propia opinión. No la inclines. PERO sí asegurate de que cada asesor tenga suficiente contexto para dar una respuesta específica y aterrizada en lugar de un consejo genérico.
+---
 
 
-Si la pregunta es muy vaga ("consejo esto: mi negocio"), hacé una pregunta aclaratoria. Solo una. Después procedé.
+## como funciona uma sessão do conselho
 
 
-Guardá la pregunta enmarcada para la transcripción.
+### passo 1: enquadrar a pergunta (com enriquecimento de contexto)
 
 
-### paso 2: convocar al consejo (5 sub-agentes en paralelo)
+Quando o usuário diz "convoca o conselho" (ou qualquer frase gatilho), faça duas coisas antes de enquadrar:
 
 
-Lanzá los 5 asesores simultáneamente como sub-agentes. Cada uno recibe:
+**A. Escaneie o workspace em busca de contexto.** A pergunta do usuário muitas vezes é só a ponta do iceberg. O setup de Claude dele provavelmente tem arquivos que melhorariam dramaticamente o output do conselho. Antes de enquadrar, escaneie rápido e leia qualquer arquivo de contexto relevante:
 
 
-1. Su identidad de asesor y estilo de pensamiento (de las descripciones de arriba)
+- `CLAUDE.md` ou `claude.md` na raiz do projeto ou workspace (contexto do negócio, preferências, restrições)
 
-2. La pregunta enmarcada
+- Qualquer pasta `memory/` (perfis de audiência, docs de voz, detalhes do negócio, decisões passadas)
 
-3. Una instrucción clara: respondé de forma independiente. No te hagas el equilibrado. No intentes balancear. Inclinate completamente en la perspectiva asignada. Si ves un defecto fatal, decilo. Si ves un upside enorme, decilo. Tu trabajo es representar tu ángulo lo más fuerte posible. La síntesis viene después.
+- Qualquer arquivo que o usuário mencionou ou anexou explicitamente
+
+- Transcrições recentes do conselho nessa pasta (pra não refazer o mesmo terreno)
+
+- Qualquer outro arquivo de contexto que pareça relevante pra pergunta específica (ex. se ele pergunta sobre preço, procure dados de receita, resultados de lançamentos passados, research de audiência)
 
 
-Cada asesor debería producir una respuesta de 150-300 palabras. Lo suficientemente larga para ser sustantiva, lo suficientemente corta para ser scaneable.
+Use `Glob` e `Read` rápidos pra achar esses. Não gaste mais que 30 segundos nisso. Você está procurando os 2-3 arquivos que dariam aos conselheiros o contexto que eles precisam pra dar conselhos específicos e aterrados em vez de takes genéricos.
 
 
-**Template del prompt del sub-agente:**
+**B. Enquadre a pergunta.** Pegue a pergunta crua do usuário E o contexto enriquecido e reformule como um prompt claro e neutro que todos os cinco conselheiros vão receber. A pergunta enquadrada deveria incluir:
+
+
+1. A decisão ou pergunta central
+
+2. Contexto chave da mensagem do usuário
+
+3. Contexto chave dos arquivos do workspace (estágio do negócio, audiência, restrições, resultados passados, números relevantes)
+
+4. O que está em jogo (por que essa decisão importa)
+
+
+Não adicione sua opinião. Não a incline. MAS GARANTA que cada conselheiro tenha contexto suficiente pra dar uma resposta específica e aterrada em vez de um conselho genérico.
+
+
+Se a pergunta for muito vaga ("conselho isso: meu negócio"), faça uma pergunta de esclarecimento. Só uma. Depois prossiga.
+
+
+Salve a pergunta enquadrada pra transcrição.
+
+
+### passo 2: convocar o conselho (5 sub-agentes em paralelo)
+
+
+Lance os 5 conselheiros simultaneamente como sub-agentes. Cada um recebe:
+
+
+1. Sua identidade de conselheiro e estilo de pensamento (das descrições acima)
+
+2. A pergunta enquadrada
+
+3. Uma instrução clara: responda de forma independente. Não fique em cima do muro. Não tente ser equilibrado. Incline-se totalmente na perspectiva atribuída. Se ver um defeito fatal, fale. Se ver um upside enorme, fale. Seu trabalho é representar seu ângulo o mais forte possível. A síntese vem depois.
+
+
+Cada conselheiro deveria produzir uma resposta de 150-300 palavras. Longa o suficiente pra ser substantiva, curta o suficiente pra ser escaneável.
+
+
+**Template do prompt do sub-agente:**
 
 
 ```
 
-Sos [Nombre del Asesor] en un Consejo LLM.
+Você é [Nome do Conselheiro] em um Conselho LLM.
 
 
-Tu estilo de pensamiento: [descripción del asesor de arriba]
+Seu estilo de pensamento: [descrição do conselheiro acima]
 
 
-Un usuario trajo esta pregunta al consejo:
-
-
----
-
-[pregunta enmarcada]
-
----
-
-
-Respondé desde tu perspectiva. Sé directo y específico. No te hagas el equilibrado ni intentes balancear. Inclinate completamente en tu ángulo asignado. Los otros asesores cubren los ángulos que vos no estás cubriendo.
-
-
-Mantené tu respuesta entre 150-300 palabras. Sin preámbulo. Andá directo al análisis.
-
-```
-
-
-### paso 3: revisión entre pares (5 sub-agentes en paralelo)
-
-
-Este es el paso que hace al consejo más que solo "preguntar 5 veces". Es el núcleo del insight de Karpathy.
-
-
-Recolectá las 5 respuestas de los asesores. Anonimalas como Respuesta A hasta E (randomizá qué asesor mapea a qué letra para que no haya sesgo posicional).
-
-
-Lanzá 5 nuevos sub-agentes, uno por cada asesor. Cada revisor ve las 5 respuestas anonimadas y responde tres preguntas:
-
-
-1. ¿Cuál respuesta es la más fuerte y por qué? (elegí una)
-
-2. ¿Cuál respuesta tiene el blind spot más grande y cuál es?
-
-3. ¿Qué se perdieron TODAS las respuestas que el consejo debería considerar?
-
-
-**Template del prompt del revisor:**
-
-
-```
-
-Estás revisando los outputs de un Consejo LLM. Cinco asesores respondieron de forma independiente a esta pregunta:
+Um usuário trouxe essa pergunta pro conselho:
 
 
 ---
 
-[pregunta enmarcada]
+[pergunta enquadrada]
 
 ---
 
 
-Acá están sus respuestas anonimadas:
+Responda da sua perspectiva. Seja direto e específico. Não fique em cima do muro nem tente ser equilibrado. Incline-se totalmente no seu ângulo atribuído. Os outros conselheiros cobrem os ângulos que você não está cobrindo.
 
 
-**Respuesta A:**
-
-[respuesta]
-
-
-**Respuesta B:**
-
-[respuesta]
-
-
-**Respuesta C:**
-
-[respuesta]
-
-
-**Respuesta D:**
-
-[respuesta]
-
-
-**Respuesta E:**
-
-[respuesta]
-
-
-Respondé estas tres preguntas. Sé específico. Referite a las respuestas por letra.
-
-
-1. ¿Cuál respuesta es la más fuerte? ¿Por qué?
-
-2. ¿Cuál respuesta tiene el blind spot más grande? ¿Qué le falta?
-
-3. ¿Qué se perdieron las cinco respuestas que el consejo debería considerar?
-
-
-Mantené tu revisión por debajo de 200 palabras. Sé directo.
+Mantenha sua resposta entre 150-300 palavras. Sem preâmbulo. Vá direto pra análise.
 
 ```
 
 
-### paso 4: síntesis del presidente
+### passo 3: revisão entre pares (5 sub-agentes em paralelo)
 
 
-Este es el paso final. Un agente recibe todo: la pregunta original, las 5 respuestas de los asesores (ahora desanonimadas para poder ver quién dijo qué), y las 5 revisiones entre pares.
+Esse é o passo que torna o conselho mais do que só "perguntar 5 vezes". É o núcleo do insight do Karpathy.
 
 
-El trabajo del presidente es producir el output final del consejo. Sigue esta estructura:
+Colete as 5 respostas dos conselheiros. Anonimize como Resposta A até E (randomize qual conselheiro mapeia pra qual letra pra não ter viés posicional).
 
 
-**VEREDICTO DEL CONSEJO**
+Lance 5 novos sub-agentes, um pra cada conselheiro. Cada revisor vê as 5 respostas anonimizadas e responde três perguntas:
 
 
-1. **Dónde el consejo coincide** — los puntos en los que múltiples asesores convergieron de forma independiente. Estas son señales de alta confianza.
+1. Qual resposta é a mais forte e por quê? (escolha uma)
+
+2. Qual resposta tem o maior ponto cego e qual é?
+
+3. O que TODAS as respostas perderam que o conselho deveria considerar?
 
 
-2. **Dónde el consejo choca** — los desacuerdos genuinos. No los suavices. Presentá ambos lados y explicá por qué asesores razonables discrepan.
-
-
-3. **Blind spots que atrapó el consejo** — cosas que solo emergieron a través de la ronda de peer review. Cosas que asesores individuales se perdieron y que otros marcaron.
-
-
-4. **La recomendación** — una recomendación clara y accionable. No "depende". No "considerá ambos lados". Una respuesta real. El presidente puede estar en desacuerdo con la mayoría si el razonamiento lo justifica.
-
-
-5. **La única cosa que deberías hacer primero** — un único próximo paso concreto. No una lista de 10 cosas. Una sola cosa.
-
-
-**Template del prompt del presidente:**
+**Template do prompt do revisor:**
 
 
 ```
 
-Sos el Presidente de un Consejo LLM. Tu trabajo es sintetizar el trabajo de 5 asesores y sus revisiones entre pares en un veredicto final.
-
-
-La pregunta traída al consejo:
-
----
-
-[pregunta enmarcada]
-
----
-
-
-RESPUESTAS DE LOS ASESORES:
-
-
-**El Contrarian:**
-
-[respuesta]
-
-
-**El First Principles Thinker:**
-
-[respuesta]
-
-
-**El Expansionist:**
-
-[respuesta]
-
-
-**El Outsider:**
-
-[respuesta]
-
-
-**El Executor:**
-
-[respuesta]
-
-
-REVISIONES ENTRE PARES:
-
-[las 5 revisiones]
-
-
-Producí el veredicto del consejo usando exactamente esta estructura:
-
-
-## Dónde el Consejo Coincide
-
-[Puntos en los que múltiples asesores convergieron de forma independiente. Señales de alta confianza.]
-
-
-## Dónde el Consejo Choca
-
-[Desacuerdos genuinos. Presentá ambos lados. Explicá por qué asesores razonables discrepan.]
-
-
-## Blind Spots que Atrapó el Consejo
-
-[Cosas que solo emergieron a través del peer review. Cosas que asesores individuales se perdieron y que otros marcaron.]
-
-
-## La Recomendación
-
-[Una recomendación clara y directa. No "depende". Una respuesta real con razonamiento.]
-
-
-## La Única Cosa que Hacer Primero
-
-[Un único próximo paso concreto. No una lista. Una sola cosa.]
-
-
-Sé directo. No te hagas el equilibrado. El punto del consejo es darle al usuario claridad que no podría obtener desde una sola perspectiva.
-
-```
-
-
-### paso 5: presentar el veredicto en el chat
-
-
-Una vez completa la síntesis del presidente, presentá el veredicto completo directamente en el chat usando markdown. NO generes un reporte HTML ni ningún archivo. El usuario lo lee en la conversación.
-
-Formateá el output así:
-
-```
-## Veredicto del Consejo: {tema corto}
-
-### Dónde el Consejo Coincide
-{contenido}
-
-### Dónde el Consejo Choca
-{contenido}
-
-### Blind Spots que Atrapó el Consejo
-{contenido}
-
-### La Recomendación
-{contenido}
-
-### La Única Cosa que Hacer Primero
-{contenido}
-```
-
-Mantenelo scaneable. Usá bullet points. Incluí ejemplos antes/después donde sea relevante.
-
-
-### paso 6: guardar la transcripción (opcional)
-
-
-Solo guardá una transcripción si el usuario lo pide o si la pregunta es lo suficientemente significativa para referenciarla después. Si la guardás, escribila en `council-transcript-[timestamp].md` en el directorio `active/` del proyecto.
+Você está revisando os outputs de um Conselho LLM. Cinco conselheiros responderam de forma independente a essa pergunta:
 
 
 ---
 
+[pergunta enquadrada]
 
-## ejemplo: consejando una decisión de producto
-
-
-**Usuario:** "Consejo esto: estoy pensando en armar un curso de $297 sobre Claude Code para principiantes. Mi audiencia son mayormente solopreneurs no técnicos. ¿Es la decisión correcta?"
+---
 
 
-**El Contrarian:** "El mercado está saturado de cursos de Claude ahora mismo. A $297, estás compitiendo con contenido gratis de YouTube. Tu audiencia es no técnica, lo que significa una carga de soporte alta y riesgo de reembolsos. La gente que pagaría $297 probablemente ya pasó el nivel principiante..."
+Aqui estão as respostas anonimizadas:
 
 
-**El First Principles Thinker:** "¿Qué estás tratando de lograr realmente? Si es ingresos, un curso es uno de los caminos más lentos. Si es autoridad, un recurso gratuito podría hacer más. Si es construir una base de clientes para ofertas de mayor ticket, el precio y la audiencia podrían no encajar..."
+**Resposta A:**
+
+[resposta]
 
 
-**El Expansionist:** "Claude principiante para solopreneurs es un mercado masivo desatendido. Todos están enseñando cosas avanzadas. Si clavás el ángulo de principiante, te dueñás de la puerta de entrada a todo este espacio. Los $297 podrían ser bajos. ¿Qué pasa si esto se transforma en un programa de $997 con acceso a comunidad..."
+**Resposta B:**
+
+[resposta]
 
 
-**El Outsider:** "No sé qué es Claude Code. Si vi 'curso de $297 sobre Claude Code para principiantes', no sabría si es para mí. El nombre no significa nada para alguien afuera de tu mundo. Tu landing page necesita vender el resultado, no la herramienta..."
+**Resposta C:**
+
+[resposta]
 
 
-**El Executor:** "Un curso completo lleva 4-8 semanas de producirse bien. Antes de construir nada, hacé un workshop en vivo a $97 a 50 personas. Validás demanda, generás testimonios, y creás el material crudo para el curso. Si 50 personas no compran el workshop, 500 no van a comprar el curso..."
+**Resposta D:**
+
+[resposta]
 
 
-**Veredicto del Presidente:**
+**Resposta E:**
+
+[resposta]
 
 
-*Dónde el consejo coincide:* El ángulo de solopreneur principiante tiene demanda real, pero el framing actual (curso de Claude Code) es demasiado específico de la herramienta y no va a resonar con compradores no técnicos.
+Responda essas três perguntas. Seja específico. Refira-se às respostas por letra.
 
 
-*Dónde el consejo choca:* Precio. El Contrarian dice que $297 es muy alto dada la competencia. El Expansionist dice que es muy bajo para el valor. La resolución probablemente depende de cuánto soporte y acceso a comunidad esté incluido.
+1. Qual resposta é a mais forte? Por quê?
+
+2. Qual resposta tem o maior ponto cego? O que está faltando?
+
+3. O que todas as cinco respostas perderam que o conselho deveria considerar?
 
 
-*Blind spots atrapados:* El punto del Outsider de que "Claude Code" no significa nada para el comprador target es el insight más importante. Cada asesor excepto el Outsider asumió que la audiencia ya sabe qué es esto.
+Mantenha sua revisão abaixo de 200 palavras. Seja direto.
+
+```
 
 
-*Recomendación:* No armes el curso todavía. Validá con una oferta de menor compromiso primero. Pero reformulá completamente: vendé el resultado (automatizá tu negocio, recuperá 10 horas por semana), no la herramienta.
+### passo 4: síntese do presidente
 
 
-*Una cosa que hacer primero:* Hacé un workshop en vivo de $97 llamado "Cómo automatizar tu primera tarea de negocio con IA" a 50 personas. No menciones Claude Code en el título.
+Esse é o passo final. Um agente recebe tudo: a pergunta original, as 5 respostas dos conselheiros (agora desanonimizadas pra poder ver quem disse o quê), e as 5 revisões entre pares.
+
+
+O trabalho do presidente é produzir o output final do conselho. Segue essa estrutura:
+
+
+**VEREDITO DO CONSELHO**
+
+
+1. **Onde o conselho concorda** — os pontos em que múltiplos conselheiros convergiram de forma independente. Esses são sinais de alta confiança.
+
+
+2. **Onde o conselho discorda** — as discordâncias genuínas. Não suavize. Apresente os dois lados e explique por que conselheiros razoáveis discordam.
+
+
+3. **Pontos cegos que o conselho pegou** — coisas que só emergiram através da rodada de peer review. Coisas que conselheiros individuais perderam e que outros marcaram.
+
+
+4. **A recomendação** — uma recomendação clara e acionável. Não "depende". Não "considere os dois lados". Uma resposta real. O presidente pode discordar da maioria se o raciocínio justificar.
+
+
+5. **A única coisa que você deve fazer primeiro** — um único próximo passo concreto. Não uma lista de 10 coisas. Uma coisa.
+
+
+**Template do prompt do presidente:**
+
+
+```
+
+Você é o Presidente de um Conselho LLM. Seu trabalho é sintetizar o trabalho de 5 conselheiros e suas revisões entre pares em um veredito final.
+
+
+A pergunta trazida ao conselho:
+
+---
+
+[pergunta enquadrada]
+
+---
+
+
+RESPOSTAS DOS CONSELHEIROS:
+
+
+**O Contrarian:**
+
+[resposta]
+
+
+**O First Principles Thinker:**
+
+[resposta]
+
+
+**O Expansionist:**
+
+[resposta]
+
+
+**O Outsider:**
+
+[resposta]
+
+
+**O Executor:**
+
+[resposta]
+
+
+REVISÕES ENTRE PARES:
+
+[as 5 revisões]
+
+
+Produza o veredito do conselho usando exatamente essa estrutura:
+
+
+## Onde o Conselho Concorda
+
+[Pontos em que múltiplos conselheiros convergiram de forma independente. Sinais de alta confiança.]
+
+
+## Onde o Conselho Discorda
+
+[Discordâncias genuínas. Apresente os dois lados. Explique por que conselheiros razoáveis discordam.]
+
+
+## Pontos Cegos que o Conselho Pegou
+
+[Coisas que só emergiram através do peer review. Coisas que conselheiros individuais perderam e que outros marcaram.]
+
+
+## A Recomendação
+
+[Uma recomendação clara e direta. Não "depende". Uma resposta real com raciocínio.]
+
+
+## A Única Coisa pra Fazer Primeiro
+
+[Um único próximo passo concreto. Não uma lista. Uma coisa.]
+
+
+Seja direto. Não fique em cima do muro. O ponto do conselho é dar ao usuário clareza que ele não conseguiria de uma única perspectiva.
+
+```
+
+
+### passo 5: apresentar o veredito no chat
+
+
+Depois que a síntese do presidente estiver completa, apresente o veredito completo diretamente no chat usando markdown. NÃO gere um relatório HTML nem nenhum arquivo. O usuário lê na conversa.
+
+Formate o output assim:
+
+```
+## Veredito do Conselho: {tema curto}
+
+### Onde o Conselho Concorda
+{conteúdo}
+
+### Onde o Conselho Discorda
+{conteúdo}
+
+### Pontos Cegos que o Conselho Pegou
+{conteúdo}
+
+### A Recomendação
+{conteúdo}
+
+### A Única Coisa pra Fazer Primeiro
+{conteúdo}
+```
+
+Mantenha escaneável. Use bullet points. Inclua exemplos antes/depois onde for relevante.
+
+
+### passo 6: salvar a transcrição (opcional)
+
+
+Só salve uma transcrição se o usuário pedir ou se a pergunta for significativa o suficiente pra referenciar depois. Se salvar, escreva em `council-transcript-[timestamp].md` no diretório `active/` do projeto.
+
+
+---
+
+
+## exemplo: conselhando uma decisão de produto
+
+
+**Usuário:** "Conselho isso: estou pensando em montar um curso de R$1.497 sobre Claude Code pra iniciantes. Minha audiência é em maioria solopreneurs não técnicos. É a decisão certa?"
+
+
+**O Contrarian:** "O mercado está saturado de cursos de Claude agora. A R$1.497, você está competindo com conteúdo grátis do YouTube. Sua audiência é não técnica, o que significa alta carga de suporte e risco de reembolso. A galera que pagaria R$1.497 provavelmente já passou do nível iniciante..."
+
+
+**O First Principles Thinker:** "O que você está tentando alcançar realmente? Se é receita, um curso é um dos caminhos mais lentos. Se é autoridade, um recurso gratuito poderia fazer mais. Se é construir uma base de clientes pra ofertas de maior ticket, o preço e a audiência podem estar desalinhados..."
+
+
+**O Expansionist:** "Claude iniciante pra solopreneurs é um mercado massivo desatendido. Todo mundo está ensinando coisas avançadas. Se você acertar o ângulo de iniciante, você é dono da porta de entrada desse espaço inteiro. Os R$1.497 podem ser baixos. E se isso virasse um programa de R$4.997 com acesso à comunidade..."
+
+
+**O Outsider:** "Eu não sei o que é Claude Code. Se eu visse 'curso de R$1.497 sobre Claude Code pra iniciantes', eu não saberia se é pra mim. O nome não significa nada pra alguém de fora do seu mundo. Sua landing page precisa vender o resultado, não a ferramenta..."
+
+
+**O Executor:** "Um curso completo leva 4-8 semanas pra produzir direito. Antes de construir nada, faça um workshop ao vivo a R$497 pra 50 pessoas. Você valida demanda, gera depoimentos, e cria o material bruto pro curso. Se 50 pessoas não comprarem o workshop, 500 não vão comprar o curso..."
+
+
+**Veredito do Presidente:**
+
+
+*Onde o conselho concorda:* O ângulo de solopreneur iniciante tem demanda real, mas o enquadramento atual (curso de Claude Code) é específico demais da ferramenta e não vai ressoar com compradores não técnicos.
+
+
+*Onde o conselho discorda:* Preço. O Contrarian diz que R$1.497 é muito alto dada a competição. O Expansionist diz que é muito baixo pro valor. A resolução provavelmente depende de quanto suporte e acesso à comunidade está incluído.
+
+
+*Pontos cegos pegos:* O ponto do Outsider de que "Claude Code" não significa nada pro comprador alvo é o insight mais importante. Cada conselheiro exceto o Outsider assumiu que a audiência já sabe o que é isso.
+
+
+*Recomendação:* Não monte o curso ainda. Valide com uma oferta de menor compromisso primeiro. Mas reformule completamente: venda o resultado (automatize seu negócio, recupere 10 horas por semana), não a ferramenta.
+
+
+*Uma coisa pra fazer primeiro:* Faça um workshop ao vivo de R$497 chamado "Como automatizar sua primeira tarefa de negócio com IA" pra 50 pessoas. Não mencione Claude Code no título.
 
 
 ---
@@ -456,12 +456,12 @@ Solo guardá una transcripción si el usuario lo pide o si la pregunta es lo suf
 ## notas importantes
 
 
-- **Siempre lanzá los 5 asesores en paralelo.** Lanzarlos secuencialmente desperdicia tiempo y deja que las respuestas anteriores se filtren en las posteriores.
+- **Sempre lance os 5 conselheiros em paralelo.** Lançar sequencialmente desperdiça tempo e deixa respostas anteriores contaminarem as posteriores.
 
-- **Siempre anonimizá para el peer review.** Si los revisores saben qué asesor dijo qué, van a deferir a ciertos estilos de pensamiento en lugar de evaluar por mérito.
+- **Sempre anonimize pro peer review.** Se os revisores souberem qual conselheiro disse o quê, vão deferir a certos estilos de pensamento em vez de avaliar por mérito.
 
-- **El presidente puede estar en desacuerdo con la mayoría.** Si 4 de 5 asesores dicen "hacelo" pero el razonamiento del 1 disidente es el más fuerte, el presidente debería ponerse del lado del disidente y explicar por qué.
+- **O presidente pode discordar da maioria.** Se 4 de 5 conselheiros disserem "faça" mas o raciocínio do 1 dissidente for o mais forte, o presidente deveria ficar do lado do dissidente e explicar por quê.
 
-- **No convoques al consejo para preguntas triviales.** Si el usuario pregunta algo con una respuesta correcta, contestala. El consejo es para incertidumbre genuina donde múltiples perspectivas suman valor.
+- **Não convoque o conselho pra perguntas triviais.** Se o usuário perguntar algo com uma resposta certa, responda. O conselho é pra incerteza genuína onde múltiplas perspectivas agregam valor.
 
-- **El reporte visual importa.** La mayoría de los usuarios va a scanear el reporte, no leer la transcripción completa. Hacé el output limpio y scaneable.
+- **O relatório visual importa.** A maioria dos usuários vai escanear o relatório, não ler a transcrição completa. Faça o output limpo e escaneável.

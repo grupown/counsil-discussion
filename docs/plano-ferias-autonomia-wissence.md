@@ -59,7 +59,7 @@ plano muda.**
 
 ## 3. As 4 frentes (reestruturadas)
 
-### Frente A — RECEITA (a que decide tudo)
+### Frente A — RECEITA E BLINDAGEM (a que decide tudo)
 - Mapear a agenda do Leonardo: quais pacientes são **fidelizados a ele** vs. quais
   aceitam outro médico.
 - **Plano de cobertura:**
@@ -68,14 +68,28 @@ plano muda.**
     combinado financeiro definidos** (não "cobririam", mas "cobrem, tais dias, tais
     pacientes").
   - Comunicar aos pacientes com antecedência (recado ativo, não passivo).
+- **Blindagem contra "roubar o cliente" (aliciamento):**
+  - **Cláusula de não-aliciamento / não-concorrência** no contrato dos médicos, com
+    multa — é o que dissuade, não a gravação.
+  - **Fidelizar o paciente à marca Wissence, não ao médico individual** —
+    agendamento e pagamento sempre pela clínica.
+  - Sinal de aliciamento vem do **CRM/agenda**: paciente que some ou para de remarcar
+    após passar pelo Dr. X — não do áudio da consulta.
+  - Distribuir a carteira entre **vários médicos** para não migrar a concentração do
+    Leonardo para um único substituto.
 - **Meta de faturamento mínimo tolerável** para os 15 dias + gatilho de abortar (§7).
 
-### Frente B — QUALIDADE (legal, sem câmera no atendimento)
-Substituir "monitorar por câmera" por auditoria de indicadores:
-- Conferência de **prescrição** (amostragem de prontuários por médico de referência).
+### Frente B — QUALIDADE (legal, sem gravar a consulta)
+Auditar a **prescrição registrada**, não o áudio da consulta — o dado que importa já
+está no prontuário, e gravar para auditar conduta conflita com a autonomia médica
+(Res. CFM 2.314/2022):
+- **Auditoria de prescrição por amostragem** de prontuários + **alerta automático**
+  de item fora do protocolo.
 - **Checklist de atendimento** e protocolos padronizados assinados.
 - **NPS/pesquisa de satisfação** do paciente pós-consulta (sinal de qualidade sem
   violar sigilo).
+- **Gravação só para mentoria consentida** (médico e paciente de acordo, finalidade de
+  treinamento) — nunca auditoria encoberta.
 - Adriana define os **indicadores de qualidade** e **quem os acompanha na ausência
   dela** (a Diretora de Qualidade também sai — precisa de substituto nomeado).
 
@@ -174,6 +188,8 @@ Leonardo retorna/assume remotamente. Definir isso **antes** de viajar.
 | Risco | Mitigação |
 |---|---|
 | Pacientes do Leonardo cancelam em vez de aceitar substituto | Comunicação ativa antecipada; remarcar alto valor para fora de fev; medir no Ensaio 1 |
+| Médico de referência alicia o paciente (rouba o cliente) | Cláusula de não-aliciamento com multa; paciente fiel à marca; sinal de queda de remarcação pelo CRM |
+| Concentração migra do Leonardo para o Dr. X | Distribuir carteira entre vários médicos; marca Wissence como âncora do paciente |
 | Diretora de Qualidade ausente sem substituto | Nomear e treinar substituto de qualidade na Fase 0 |
 | Câmera/monitoramento gera passivo jurídico | Checklist §6 + advogado antes de instalar |
 | Escopo explode (produto/franquia antes de validar) | Sequência rígida das Fases; fev só valida |

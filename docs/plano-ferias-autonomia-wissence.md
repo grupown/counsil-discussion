@@ -112,6 +112,39 @@ está no prontuário, e gravar para auditar conduta conflita com a autonomia mé
 
 ---
 
+## 3.1 Monitoramento de cada frente e skills de IA
+
+**Verdade antes da lista:** o Claude/IA é a **camada de inteligência e interface**, não
+o sistema que roda a clínica. O dado mora no **sistema de gestão** (prontuário, estoque,
+agenda, financeiro). O Claude lê esse dado (via API/conector/MCP), analisa, **rascunha
+ações e sobe exceções** — mas **decisão clínica e de compra é humana**. Três
+consequências:
+
+- **O gargalo é a fonte de dados.** Sem sistema com API, o passo zero é integrar/trocar
+  — sem isso não há o que a IA leia (Suposição S2).
+- **Piloto ≠ monitorar tudo.** Em fevereiro, monitore só o que **explode em 15 dias**:
+  faturamento, estoque crítico (controlados), agenda/no-show e alerta de prescrição.
+  O resto é o produto (Fase 2).
+- **Sempre "humano aprova".** A IA propõe o pedido, a resposta, o flag; uma pessoa
+  confirma. É qualidade e é blindagem legal.
+
+| Frente | Medir | Alerta | Skill/Agente Claude | Prioridade |
+|---|---|---|---|---|
+| **Estoque & Farmácia** | Nível vs. reposição, validade, entrada/saída de controlados, divergência físico × sistema | Item < mínimo · validade < 30d · divergência de controlado | **Agente de Reposição** (rascunha pedido) + **Auditor de Controlados** | Piloto |
+| **Comercial** | Leads, conversão, orçamentos parados, follow-up, ticket médio, motivo de perda | Lead sem resposta > 2h · orçamento parado · queda de conversão | **Agente Comercial** — resume funil, rascunha follow-up/proposta (humano envia) | Piloto parcial |
+| **Consultas** | Volume por médico, aderência ao protocolo, NPS, retorno | Prescrição fora do protocolo · NPS baixo · queda de volume | **Auditor Clínico** — amostra prontuários, sobe exceções p/ revisão humana | Piloto |
+| **Agendamento** | Ocupação, no-show, cancelamento, buraco de agenda, tempo de espera | No-show acima da média · janela ociosa · fila > X min | **Agente de Agenda** — confirma/lembra, preenche buraco com lista de espera | Piloto |
+| **Faturamento** | Faturamento diário vs. meta, recebíveis, glosas, mix de pagamento | Faturamento < piso (gatilho de abortar) · glosa acima de X | **Agente de Faturamento** — fecha o dia, resumo diário por exceção | Piloto (termômetro) |
+| **Publicações & Reputação** | Posts, engajamento, avaliações novas, reputação | Avaliação negativa nova · calendário de posts atrasado | **Agente de Reputação** — monitora reviews, rascunha resposta (humano aprova) | Produto (reviews no piloto) |
+| **Consolidação** | Estado geral da operação | Só empurra alerta nível vermelho | **Orquestrador** — responde em linguagem natural, chama só na exceção | Piloto |
+
+**Cadeia de dependência (o que precisa existir):** sistema de gestão com API →
+integração/MCP → agente Claude por frente → painel de exceção + **aprovação humana**. O
+elo fraco é sempre a fonte de dados — comece por aí. Essa camada, bem-feita para a
+Wissence, **é o próprio produto de consultoria** que se quer vender nas Fases 2 e 3.
+
+---
+
 ## 4. Fases (sequenciais)
 
 ### Fase 0 — Preparação (ago/2026 → jan/2027)

@@ -169,6 +169,23 @@
     display:flex;gap:12px;align-items:baseline}
   .metrics li::before{content:"→";color:var(--brand);font-weight:700}
 
+  /* ---------- monitoring fronts ---------- */
+  .badge{font-family:var(--mono);font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+    padding:4px 9px;border-radius:999px;white-space:nowrap}
+  .badge.pilot{background:color-mix(in srgb,var(--brand) 16%,transparent);color:var(--brand)}
+  .badge.prod{background:var(--surface-2);color:var(--ink-faint);border:1px solid var(--line)}
+  .mongrid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  @media(max-width:640px){.mongrid{grid-template-columns:1fr}}
+  .mon{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px 24px;box-shadow:var(--shadow)}
+  .mon.wide{grid-column:1/-1;background:color-mix(in srgb,var(--brand) 6%,var(--surface));
+    border-color:color-mix(in srgb,var(--brand) 35%,transparent)}
+  .mon-h{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
+  .mon-h h3{font-size:17.5px;margin:0}
+  .mon dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:7px 14px;font-size:14px}
+  .mon dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-faint);padding-top:3px}
+  .mon dd{margin:0;color:var(--ink-soft)}
+  .mon dd b{color:var(--ink);font-weight:600}
+
   /* ---------- assumptions ---------- */
   .assump{background:var(--surface-2);border:1px dashed var(--line-strong);border-radius:14px;padding:26px}
   .assump table{width:100%;border-collapse:collapse;font-size:14.5px}
@@ -295,6 +312,88 @@
           <li>Monitoramento de equipe só com política LGPD/CLT assinada</li>
         </ul>
       </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">A operação na palma da mão</p>
+    <h2 class="sec">Monitoramento de cada frente &amp; skills de IA</h2>
+    <p class="sec-sub">O Claude é a camada de inteligência e interface — não o sistema que roda a clínica. O dado mora no sistema de gestão; a IA lê, analisa, rascunha a ação e sobe a exceção. Decisão clínica e de compra é sempre humana.</p>
+    <div class="mongrid">
+
+      <div class="mon">
+        <div class="mon-h"><h3>Estoque &amp; Farmácia</h3><span class="badge pilot">Piloto</span></div>
+        <dl>
+          <dt>Medir</dt><dd>Nível vs. reposição, validade, entrada/saída de <b>controlados</b>, divergência físico × sistema</dd>
+          <dt>Capturar</dt><dd>Módulo de estoque; SNGPC/Anvisa p/ controlados; contagem cíclica</dd>
+          <dt>Alerta</dt><dd>Item &lt; mínimo · validade &lt; 30 dias · divergência de controlado · consumo anômalo</dd>
+          <dt>Skill IA</dt><dd><b>Agente de Reposição</b> (lê consumo, rascunha o pedido de compra) + <b>Auditor de Controlados</b>. Analisa e rascunha; não conta a prateleira</dd>
+        </dl>
+      </div>
+
+      <div class="mon">
+        <div class="mon-h"><h3>Comercial</h3><span class="badge pilot">Piloto parcial</span></div>
+        <dl>
+          <dt>Medir</dt><dd>Leads, conversão, orçamentos parados, follow-up pendente, ticket médio, motivo de perda</dd>
+          <dt>Capturar</dt><dd>CRM — se não existe, é o gap nº 1 a resolver antes</dd>
+          <dt>Alerta</dt><dd>Lead sem resposta &gt; 2h · orçamento parado · queda de conversão</dd>
+          <dt>Skill IA</dt><dd><b>Agente Comercial</b> — resume o funil, prioriza e rascunha follow-ups/propostas (humano envia), classifica a perda</dd>
+        </dl>
+      </div>
+
+      <div class="mon">
+        <div class="mon-h"><h3>Consultas</h3><span class="badge pilot">Piloto</span></div>
+        <dl>
+          <dt>Medir</dt><dd>Volume por médico, aderência ao protocolo (prescrição), NPS, taxa de retorno</dd>
+          <dt>Capturar</dt><dd>Prontuário eletrônico; pesquisa NPS pós-consulta</dd>
+          <dt>Alerta</dt><dd>Prescrição fora do protocolo · NPS baixo · queda de volume</dd>
+          <dt>Skill IA</dt><dd><b>Auditor Clínico</b> — amostra prontuários, compara prescrição × protocolo, sobe exceções p/ revisão humana. Decisão clínica nunca é do Claude</dd>
+        </dl>
+      </div>
+
+      <div class="mon">
+        <div class="mon-h"><h3>Agendamento</h3><span class="badge pilot">Piloto</span></div>
+        <dl>
+          <dt>Medir</dt><dd>Ocupação, no-show, cancelamento, buraco de agenda, tempo de espera (câmera de área comum, métrica agregada)</dd>
+          <dt>Capturar</dt><dd>Sistema de agenda; câmera da sala de espera</dd>
+          <dt>Alerta</dt><dd>No-show acima da média · janela ociosa · fila &gt; X min</dd>
+          <dt>Skill IA</dt><dd><b>Agente de Agenda</b> — confirma/lembra consultas (derruba no-show), preenche buraco chamando lista de espera, alerta sobrecarga</dd>
+        </dl>
+      </div>
+
+      <div class="mon">
+        <div class="mon-h"><h3>Faturamento</h3><span class="badge pilot">Piloto · termômetro</span></div>
+        <dl>
+          <dt>Medir</dt><dd>Faturamento diário vs. meta, recebíveis, glosas, mix de pagamento</dd>
+          <dt>Capturar</dt><dd>Sistema financeiro / gestão</dd>
+          <dt>Alerta</dt><dd>Faturamento do dia &lt; piso → liga no <b>gatilho de abortar</b> · glosa acima de X</dd>
+          <dt>Skill IA</dt><dd><b>Agente de Faturamento</b> — fecha o dia, compara com a meta, manda resumo diário ao Leonardo (só nível exceção)</dd>
+        </dl>
+      </div>
+
+      <div class="mon">
+        <div class="mon-h"><h3>Publicações &amp; Reputação</h3><span class="badge prod">Produto · reviews no piloto</span></div>
+        <dl>
+          <dt>Medir</dt><dd>Posts publicados, engajamento, avaliações novas (Google/redes), reputação</dd>
+          <dt>Capturar</dt><dd>Conectores de redes sociais + Google Business Profile</dd>
+          <dt>Alerta</dt><dd>Avaliação negativa nova · calendário de posts atrasado</dd>
+          <dt>Skill IA</dt><dd><b>Agente de Reputação</b> — monitora reviews, rascunha resposta (humano aprova), mantém calendário. Review negativa sem resposta nas férias pega mal → monitorar reviews entra no piloto</dd>
+        </dl>
+      </div>
+
+      <div class="mon wide">
+        <div class="mon-h"><h3>Consolidação — a "palma da mão"</h3><span class="badge pilot">Piloto</span></div>
+        <dl>
+          <dt>Skill IA</dt><dd><b>Orquestrador</b> — junta todas as frentes, responde em linguagem natural ("como está a operação hoje?") e só empurra <b>alerta nível vermelho</b>. É o que realiza a autonomia: o Leonardo não precisa olhar; é chamado quando algo foge do padrão.</dd>
+        </dl>
+      </div>
+
+    </div>
+    <div class="abort" style="border-left-color:var(--brand);background:color-mix(in srgb,var(--brand) 7%,var(--surface))">
+      <p class="eyebrow" style="color:var(--brand)">Cadeia de dependência — o elo fraco é a fonte de dados</p>
+      <p>Sistema de gestão com API → integração/MCP → agente Claude por frente → painel de exceção + <b>aprovação humana</b>. Sem um sistema que exponha o dado, não há o que a IA leia — comece por aí (Suposição S2). Essa camada, bem-feita para a Wissence, <b>é o próprio produto de consultoria</b> que você quer vender depois.</p>
     </div>
   </div>
 </section>

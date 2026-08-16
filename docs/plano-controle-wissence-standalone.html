@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Wissence · Controle à Distância</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root{
+    color-scheme: light dark;
+    --ground:#F7F5F1; --surface:#FFFFFF; --surface-2:#F0ECE4;
+    --ink:#16211F; --ink-soft:#51605D; --ink-faint:#7C8A87;
+    --brand:#0F5257; --brand-deep:#0A3A3E;
+    --accent:#A9791F;
+    --veto:#A63A2C; --warn:#A9791F; --ok:#2E7259;
+    --line:rgba(20,32,31,.12); --line-strong:rgba(20,32,31,.22);
+    --shadow:0 1px 2px rgba(16,40,38,.04),0 8px 28px -12px rgba(16,40,38,.18);
+    --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --ground:#0E1615; --surface:#15211F; --surface-2:#1B2A27;
+      --ink:#ECEAE2; --ink-soft:#A6B4B1; --ink-faint:#77837F;
+      --brand:#49A6AA; --brand-deep:#2C7A7E;
+      --accent:#D2A855;
+      --veto:#E08268; --warn:#D2A855; --ok:#63B78E;
+      --line:rgba(236,234,226,.14); --line-strong:rgba(236,234,226,.26);
+      --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px -14px rgba(0,0,0,.6);
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#0E1615; --surface:#15211F; --surface-2:#1B2A27;
+    --ink:#ECEAE2; --ink-soft:#A6B4B1; --ink-faint:#77837F;
+    --brand:#49A6AA; --brand-deep:#2C7A7E;
+    --accent:#D2A855;
+    --veto:#E08268; --warn:#D2A855; --ok:#63B78E;
+    --line:rgba(236,234,226,.14); --line-strong:rgba(236,234,226,.26);
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px -14px rgba(0,0,0,.6);
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto} *{animation:none!important;transition:none!important}}
+  body{
+    margin:0; background:var(--ground); color:var(--ink);
+    font-family:var(--sans); font-size:17px; line-height:1.6;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  }
+  .wrap{max-width:920px;margin:0 auto;padding:0 24px}
+  section{padding:64px 0;border-top:1px solid var(--line)}
+  h1,h2,h3{font-family:var(--serif);font-weight:600;text-wrap:balance;letter-spacing:-.01em;line-height:1.12}
+  p{max-width:66ch}
+  a{color:var(--brand)}
+
+  .eyebrow{
+    font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--accent);margin:0 0 14px
+  }
+  .lead{font-size:20px;color:var(--ink-soft);max-width:60ch}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    border-top:none;
+    background:
+      radial-gradient(120% 90% at 88% -10%, color-mix(in srgb,var(--brand) 20%, transparent), transparent 60%),
+      linear-gradient(180deg, color-mix(in srgb,var(--brand) 7%, var(--ground)), var(--ground));
+    padding:76px 0 60px;
+  }
+  .hero .kicker{
+    font-family:var(--mono);font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--brand);font-weight:700;margin:0 0 22px;display:flex;gap:10px;align-items:center;flex-wrap:wrap
+  }
+  .hero .kicker::after{content:"";height:1px;flex:1;min-width:40px;background:var(--line-strong)}
+  .hero h1{font-size:clamp(34px,6vw,60px);margin:0 0 20px;max-width:16ch}
+  .hero .lead{font-size:clamp(18px,2.4vw,22px);margin:0}
+
+  .statband{display:flex;flex-wrap:wrap;gap:14px;margin-top:40px}
+  .stat{
+    background:var(--surface);border:1px solid var(--line);border-radius:14px;
+    padding:20px 22px;flex:1 1 170px;box-shadow:var(--shadow)
+  }
+  .stat .n{font-family:var(--serif);font-size:34px;font-weight:600;color:var(--brand);line-height:1;font-variant-numeric:tabular-nums}
+  .stat .l{font-size:13.5px;color:var(--ink-soft);margin-top:8px;line-height:1.35}
+  .stat.alert .n{color:var(--veto)}
+
+  /* ---------- callout: the real problem ---------- */
+  .thesis{
+    background:var(--brand-deep);color:#F3F1EA;border-radius:18px;padding:38px 34px;
+    border:1px solid color-mix(in srgb,var(--brand) 40%,transparent)
+  }
+  .thesis .eyebrow{color:color-mix(in srgb,var(--accent) 75%,white)}
+  .thesis h2{color:#fff;font-size:clamp(22px,3.4vw,30px);margin:0 0 16px}
+  .thesis p{color:#D7E0DD;max-width:64ch}
+  .thesis .big{
+    font-family:var(--serif);font-size:clamp(20px,2.8vw,25px);color:#fff;
+    border-left:3px solid var(--accent);padding-left:18px;margin:22px 0 0;font-style:italic
+  }
+
+  h2.sec{font-size:clamp(25px,3.6vw,34px);margin:0 0 10px}
+  .sec-sub{color:var(--ink-soft);margin:0 0 34px;max-width:62ch}
+
+  /* ---------- frentes grid ---------- */
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  @media(max-width:640px){.grid{grid-template-columns:1fr}}
+  .card{
+    background:var(--surface);border:1px solid var(--line);border-radius:14px;
+    padding:24px;box-shadow:var(--shadow);position:relative
+  }
+  .card .tag{
+    font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--accent);font-weight:700
+  }
+  .card h3{font-size:20px;margin:8px 0 10px}
+  .card p{font-size:15px;color:var(--ink-soft);margin:0}
+  .card.primary{border-color:color-mix(in srgb,var(--brand) 45%,transparent);
+    background:color-mix(in srgb,var(--brand) 6%,var(--surface))}
+  .card.primary .tag{color:var(--brand)}
+  .card ul{margin:12px 0 0;padding-left:18px;font-size:14.5px;color:var(--ink-soft)}
+  .card li{margin:5px 0}
+
+  /* ---------- phases ---------- */
+  .phases{display:flex;flex-direction:column;gap:0}
+  .phase{display:grid;grid-template-columns:auto 1fr;gap:22px;padding:22px 0;border-bottom:1px solid var(--line)}
+  .phase:last-child{border-bottom:none}
+  .phase .idx{font-family:var(--serif);font-size:30px;color:var(--brand);font-weight:600;line-height:1;min-width:56px}
+  .phase h3{font-size:19px;margin:0 0 6px}
+  .phase p{font-size:15px;color:var(--ink-soft);margin:0}
+  .phase .when{font-family:var(--mono);font-size:12px;color:var(--ink-faint);letter-spacing:.04em;text-transform:uppercase;margin-top:8px;display:inline-block}
+  .phase.goal{background:color-mix(in srgb,var(--brand) 7%,transparent);border-radius:12px;padding:22px;border-bottom:none;margin:6px 0}
+
+  /* ---------- timeline ---------- */
+  .tl{position:relative;margin-top:8px;padding-left:26px}
+  .tl::before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:var(--line-strong)}
+  .tl-row{position:relative;padding:14px 0}
+  .tl-row::before{content:"";position:absolute;left:-26px;top:20px;width:11px;height:11px;border-radius:50%;
+    background:var(--surface);border:2px solid var(--brand);transform:translateX(1px)}
+  .tl-row.rehearsal::before{background:var(--accent);border-color:var(--accent)}
+  .tl-row.target::before{background:var(--veto);border-color:var(--veto);width:14px;height:14px;top:18px;left:-27px}
+  .tl-when{font-family:var(--mono);font-size:12.5px;font-weight:700;letter-spacing:.06em;color:var(--brand);text-transform:uppercase}
+  .tl-row.rehearsal .tl-when{color:var(--accent)}
+  .tl-row.target .tl-when{color:var(--veto)}
+  .tl-what{font-size:15.5px;color:var(--ink);margin-top:3px}
+  .tl-what b{font-weight:600}
+
+  /* ---------- legal ---------- */
+  .legal-cols{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:640px){.legal-cols{grid-template-columns:1fr}}
+  .legal{border-radius:14px;padding:22px 24px;border:1px solid var(--line);background:var(--surface)}
+  .legal h3{font-size:17px;margin:0 0 14px;display:flex;align-items:center;gap:9px}
+  .legal ul{list-style:none;margin:0;padding:0;font-size:15px}
+  .legal li{padding:7px 0 7px 28px;position:relative;color:var(--ink-soft);border-top:1px solid var(--line)}
+  .legal li:first-child{border-top:none}
+  .legal li::before{position:absolute;left:0;top:7px;font-size:15px;font-weight:700}
+  .legal li.no::before{content:"✕";color:var(--veto)}
+  .legal li.yes::before{content:"✓";color:var(--ok)}
+  .legal li.warn::before{content:"!";color:var(--warn);font-family:var(--serif)}
+  .legal li b{color:var(--ink);font-weight:600}
+
+  /* ---------- abort / metrics ---------- */
+  .abort{border-left:4px solid var(--veto);background:color-mix(in srgb,var(--veto) 8%,var(--surface));
+    border-radius:0 12px 12px 0;padding:22px 24px;margin-top:22px}
+  .abort .eyebrow{color:var(--veto)}
+  .abort p{margin:0;color:var(--ink);font-size:15.5px}
+  .metrics{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+  .metrics li{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 18px;font-size:15.5px;
+    display:flex;gap:12px;align-items:baseline}
+  .metrics li::before{content:"→";color:var(--brand);font-weight:700}
+
+  /* ---------- monitoring fronts ---------- */
+  .badge{font-family:var(--mono);font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+    padding:4px 9px;border-radius:999px;white-space:nowrap}
+  .badge.pilot{background:color-mix(in srgb,var(--brand) 16%,transparent);color:var(--brand)}
+  .badge.prod{background:var(--surface-2);color:var(--ink-faint);border:1px solid var(--line)}
+  .mongrid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  @media(max-width:640px){.mongrid{grid-template-columns:1fr}}
+  .mon{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px 24px;box-shadow:var(--shadow)}
+  .mon.wide{grid-column:1/-1;background:color-mix(in srgb,var(--brand) 6%,var(--surface));
+    border-color:color-mix(in srgb,var(--brand) 35%,transparent)}
+  .mon-h{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
+  .mon-h h3{font-size:17.5px;margin:0}
+  .mon dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:7px 14px;font-size:14px}
+  .mon dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-faint);padding-top:3px}
+  .mon dd{margin:0;color:var(--ink-soft)}
+  .mon dd b{color:var(--ink);font-weight:600}
+
+  /* ---------- assumptions ---------- */
+  .assump{background:var(--surface-2);border:1px dashed var(--line-strong);border-radius:14px;padding:26px}
+  .assump table{width:100%;border-collapse:collapse;font-size:14.5px}
+  .assump th,.assump td{text-align:left;padding:11px 12px;vertical-align:top;border-bottom:1px solid var(--line)}
+  .assump th{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint)}
+  .assump td:first-child{white-space:nowrap;color:var(--veto);font-weight:600}
+  .assump tr:last-child td{border-bottom:none}
+  .flag{color:var(--veto)}
+
+  /* ---------- risks ---------- */
+  .risks{width:100%;border-collapse:collapse;font-size:15px}
+  .risks th,.risks td{text-align:left;padding:14px 16px;border-bottom:1px solid var(--line);vertical-align:top}
+  .risks th{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint)}
+  .risks td:first-child{color:var(--ink);font-weight:500;width:42%}
+  .risks td:last-child{color:var(--ink-soft)}
+
+  /* ---------- next steps ---------- */
+  .steps{counter-reset:s;list-style:none;padding:0;margin:0;display:grid;gap:12px}
+  .steps li{counter-increment:s;position:relative;padding:16px 18px 16px 58px;background:var(--surface);
+    border:1px solid var(--line);border-radius:12px;font-size:15.5px;box-shadow:var(--shadow)}
+  .steps li::before{content:counter(s,decimal-leading-zero);position:absolute;left:18px;top:15px;
+    font-family:var(--mono);font-size:14px;font-weight:700;color:var(--accent)}
+
+  footer{padding:44px 0 60px;border-top:1px solid var(--line);color:var(--ink-faint);font-size:13px}
+  footer p{max-width:none}
+  .disclaimer{font-size:12.5px;color:var(--ink-faint);margin-top:10px;font-style:italic}
+
+  /* theme toggle */
+  .toggle{position:fixed;top:16px;right:16px;z-index:20;background:var(--surface);border:1px solid var(--line);
+    color:var(--ink-soft);border-radius:999px;padding:8px 14px;font:600 12px/1 var(--mono);letter-spacing:.06em;
+    cursor:pointer;box-shadow:var(--shadow)}
+  .toggle:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+</style>
+</head>
+<body>
+
+<button class="toggle" id="themeBtn" aria-label="Alternar tema">TEMA</button>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="kicker">Clínica Wissence · Controle à Distância &amp; Produto</p>
+    <h1>Controlar de longe é fazer a clínica rodar sozinha.</h1>
+    <p class="lead">Não é ter tudo na palma da mão. É a operação andar sem o dono olhar — e só depois disso, com uma segunda clínica provada, virar consultoria vendável. Este é o plano do <b>produto</b>, separado do plano de férias.</p>
+
+    <div class="statband">
+      <div class="stat alert"><div class="n">Coleira</div><div class="l">"Palma da mão" onipresente é armadilha, não meta — reconstrói a dependência do dono com verniz de tecnologia</div></div>
+      <div class="stat"><div class="n">N=2</div><div class="l">o portão do produto: uma 2ª clínica rodando o playbook antes de vender qualquer coisa</div></div>
+      <div class="stat"><div class="n">7</div><div class="l">componentes essenciais do controle à distância — o resto é vaidade</div></div>
+      <div class="stat"><div class="n">0</div><div class="l">moat da IA: o produto é método + playbook, não software</div></div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="thesis">
+      <p class="eyebrow">A virada de chave</p>
+      <h2>Controlar tudo na palma da mão não é a meta — é a armadilha.</h2>
+      <p>Para um dono que já centraliza e fatura 60% sozinho, o app não liberta: vira uma coleira mais longa. A pergunta certa não é "como eu vejo tudo de longe?" — é a inversa, e ela é falseável:</p>
+      <p class="big">A Wissence passa uma semana sem o Leonardo abrir o celular?</p>
+    </div>
+
+    <div class="abort" style="margin-top:22px;border-left-color:var(--brand);background:color-mix(in srgb,var(--brand) 8%,var(--surface))">
+      <p class="eyebrow" style="color:var(--brand)">A única coisa a fazer primeiro (veredito do conselho)</p>
+      <p>Pegue cada indicador que você quer "controlar" e responda numa folha: <b>"de onde esse dado sai HOJE, quem digita, e ele está certo?"</b> Se a maioria for "ninguém" ou "tá errado", você não tem um problema de app — tem um problema de operação, e é nele que todo o trabalho começa. Dashboard sobre dado sujo só acelera a decisão errada.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Camada 0 · o gate que decide se existe produto</p>
+    <h2 class="sec">Antes de tudo: o Leonardo é transferível?</h2>
+    <p class="sec-sub">O furo mais grave que o conselho pegou. Se os 60% vêm de reputação e relação clínica pessoal do Leonardo, <b>nenhum playbook, dashboard ou IA transfere isso</b> — não há produto, há uma pessoa insubstituível. Descubra isso antes de gastar um real. É o mesmo "abrir o 60%" do plano de férias: migrar pacientes de verdade e medir a aceitação real.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">A arquitetura, em ordem</p>
+    <h2 class="sec">Os 7 componentes essenciais</h2>
+    <p class="sec-sub">Nesta ordem — a tecnologia é o trilho, e é a parte fácil. O trabalho real é destilar processo e alçada. O que não está aqui é vaidade até prova em contrário.</p>
+    <div class="phases">
+      <div class="phase"><div class="idx">1</div><div><h3>Fonte de dados única e confiável</h3><p>Não basta ter API — o dado precisa estar limpo e alimentado. Agenda mal preenchida + estoque nunca batido = ilusão de controle. Pré-condição de tudo.</p></div></div>
+      <div class="phase"><div class="idx">2</div><div><h3>Processos padronizados — antes do software</h3><p>Quem faz o quê, quando, como. Sem processo, controle à distância é "observar o caos em alta resolução".</p></div></div>
+      <div class="phase"><div class="idx">3</div><div><h3>Alçadas explícitas</h3><p>Quem decide o quê sem o dono. Este é o coração do sistema — não o painel.</p></div></div>
+      <div class="phase"><div class="idx">4</div><div><h3>Donos de processo locais</h3><p>Uma pessoa com poder de <b>agir</b> do outro lado de cada área. Alerta sem alguém que responde é ansiedade, não gestão.</p></div></div>
+      <div class="phase"><div class="idx">5</div><div><h3>Gatilhos de exceção (não dashboard onipresente)</h3><p>5 a 8 indicadores com faixa: "caixa abaixo de X", "cancelamento acima de Y%". Só me avise quando fugir da faixa.</p></div></div>
+      <div class="phase"><div class="idx">6</div><div><h3>Loop alerta → ação → responsável → prazo</h3><p>Cada gatilho termina numa <b>ação com dono e SLA</b> — não numa notificação no celular do Leonardo.</p></div></div>
+      <div class="phase"><div class="idx">7</div><div><h3>Conformidade (LGPD + CFM / responsável técnico)</h3><p>Dado clínico é sensível; operação médica à distância tem responsável técnico legal. Não é opcional.</p></div></div>
+    </div>
+    <div class="abort" style="margin-top:24px;border-left-color:var(--veto);background:color-mix(in srgb,var(--veto) 8%,var(--surface))">
+      <p class="eyebrow" style="color:var(--veto)">Vaidade — o que NÃO construir</p>
+      <p>Dashboard bonito com 9 áreas em tempo real. "Onisciência na palma da mão." Relatórios que ninguém transforma em ação. Tudo isso parece controle e não é — é custo e distração.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">O que você realmente vende</p>
+    <h2 class="sec">O produto de consultoria — e o moat de verdade</h2>
+    <p class="sec-sub">O conselho foi unânime: o produto não é software nem IA (moat zero — qualquer um compra a mesma API). É o que está em volta.</p>
+    <div class="grid">
+      <div class="card primary">
+        <span class="tag">O produto</span><h3>Método + playbook + mudança de comportamento</h3>
+        <p>O software é o trilho. O que se vende é o <b>método de implantação</b>: destilar processos, alçadas e gatilhos numa clínica e fazer a equipe mudar de comportamento. Isso é serviço, não licença.</p>
+      </div>
+      <div class="card">
+        <span class="tag">O moat (se existe)</span><h3>Método + dados de N clínicas</h3>
+        <p>Defensável no método de implantação e nos dados operacionais acumulados de várias clínicas. Mas atenção: moat "com gente cara" <b>não escala como SaaS</b> — é a tensão não resolvida do plano.</p>
+      </div>
+      <div class="card">
+        <span class="tag">O portão</span><h3>N=2 antes de vender</h3>
+        <p>N=1 (só a Wissence) é anedota, não produto. Vender antes da 2ª clínica — que não seja sua — rodando o playbook é construir a vitrine antes da loja.</p>
+      </div>
+      <div class="card">
+        <span class="tag">A visão de longo prazo</span><h3>Rede de dados (destino, não plano)</h3>
+        <p>Benchmarking, fintech de recebíveis, compra coletiva entre clínicas — o upside e o moat que escala. É o norte certo, mas prematuro por anos. Guardar como visão, ignorar como plano de curto prazo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Perguntas que decidem se há negócio</p>
+    <h2 class="sec">O que precisa ser respondido antes de escalar</h2>
+    <ul class="metrics">
+      <li><b>Leonardo quer isso?</b> Ser dono de consultoria/SaaS é um negócio totalmente diferente de tirar férias. O plano pode estar resolvendo o problema errado do próprio dono</li>
+      <li><b>Economia unitária:</b> quanto custa implantar por clínica e qual o payback? Decide se é produto escalável ou consultoria artesanal</li>
+      <li><b>Conflito de dados:</b> por que uma clínica rival entregaria o financeiro dela a uma plataforma tocada pela Wissence? Isso mata o moat de rede</li>
+      <li><b>Barreira de troca de sistema:</b> clínica pequena não troca sistema de gestão fácil — caro, doloroso e político. Pode ser viável tecnicamente e inviável comercialmente</li>
+      <li><b>Demanda paga comprovada:</b> existe cliente disposto a pagar? Ou é solução procurando problema?</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Sequenciamento</p>
+    <h2 class="sec">A ordem, sem pular etapas</h2>
+    <p class="sec-sub">Toda a energia agora vai para uma pergunta falseável: a Wissence roda sem o dono? Só depois vem o produto.</p>
+    <div class="phases">
+      <div class="phase"><div class="idx">0</div><div><h3>Diagnóstico de transferibilidade</h3><p>Descobrir se os 60% do Leonardo são migráveis. Se for relação pessoal, pare — não há produto.</p><span class="when">Agora</span></div></div>
+      <div class="phase"><div class="idx">1</div><div><h3>Processo + alçada onde o dinheiro vaza</h3><p>Comece por caixa, agenda/no-show e estoque — não as 9 áreas de uma vez.</p><span class="when">Fundação</span></div></div>
+      <div class="phase"><div class="idx">2</div><div><h3>Gatilhos de exceção com dono e ação</h3><p>Só depois disso o "monitoramento" vira gestão, em vez de notificação.</p><span class="when">Sobre a fundação</span></div></div>
+      <div class="phase goal"><div class="idx">3</div><div><h3>Teste falseável: 1 semana sem o Leonardo 🎯</h3><p>Se falhar, você tem um app bonito sobre uma dependência — não um produto.</p><span class="when">O marco</span></div></div>
+      <div class="phase"><div class="idx">4</div><div><h3>Clínica 2 (que não seja sua)</h3><p>N=2 é o portão. Implantar o playbook fora de casa e medir o custo real de implantação.</p><span class="when">Validação do produto</span></div></div>
+      <div class="phase"><div class="idx">5</div><div><h3>Só então: rede / dado agregado</h3><p>A visão de plataforma deixa de ser fantasia e vira roadmap. Não antes.</p><span class="when">Horizonte de anos</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">O que pode dar errado</p>
+    <h2 class="sec">Riscos &amp; pontos cegos</h2>
+    <table class="risks">
+      <thead><tr><th>Risco</th><th>Mitigação</th></tr></thead>
+      <tbody>
+        <tr><td><b>Os 60% são a pessoa, não o processo</b> — nada transfere reputação pessoal</td><td>Diagnóstico de transferibilidade na Camada 0, antes de qualquer investimento</td></tr>
+        <tr><td>Dashboard sobre dado sujo acelera decisão errada</td><td>Auditar a origem de cada dado primeiro; limpar antes de exibir</td></tr>
+        <tr><td>"Palma da mão" vira coleira — dependência com verniz de tech</td><td>Meta é a clínica rodar sem o dono olhar; painel de exceção, não onisciência</td></tr>
+        <tr><td>Vender N=1 como se fosse produto</td><td>Portão N=2: 2ª clínica rodando o playbook antes de vender</td></tr>
+        <tr><td>Moat "com gente cara" não escala como SaaS</td><td>Decidir cedo: consultoria artesanal de margem alta OU produto escalável — não fingir que é os dois</td></tr>
+        <tr><td>Concorrente não entrega dados a plataforma de rival</td><td>Repensar a estrutura de propriedade/neutralidade se a rede for o objetivo</td></tr>
+        <tr><td>Construir produto e rodar a clínica ao mesmo tempo quebra as duas</td><td>Descolar os projetos; foco e caixa dedicados, não sobreposição</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Esta semana</p>
+    <h2 class="sec">Próximo passo</h2>
+    <ol class="steps">
+      <li><b>Auditoria de origem de dados:</b> lista dos indicadores que você quer controlar → "de onde sai hoje, quem digita, está certo?"</li>
+      <li><b>Diagnóstico de transferibilidade:</b> quanto dos 60% do Leonardo é processo (migrável) vs. pessoa (não migrável)</li>
+      <li>Escolher as 3 áreas onde o dinheiro vaza (caixa, agenda/no-show, estoque) e mapear processo + alçada</li>
+      <li>Definir os 5–8 gatilhos de exceção com dono e ação — nada de dashboard de 9 áreas</li>
+      <li>Marcar o teste de 1 semana sem o Leonardo como o marco de validação</li>
+    </ol>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Wissence · Controle à Distância &amp; Produto — documento de trabalho, estruturado a partir de um conselho de 5 perspectivas. A meta é a clínica rodar sem o dono, não onisciência na palma da mão. O produto de consultoria só existe após N=2; a rede de dados é destino, não plano de curto prazo.</p>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var b=document.getElementById('themeBtn');
+    b.addEventListener('click',function(){
+      var cur=document.documentElement.getAttribute('data-theme');
+      var next = cur==='dark' ? 'light' : cur==='light' ? 'dark'
+        : (matchMedia('(prefers-color-scheme: dark)').matches ? 'light' : 'dark');
+      document.documentElement.setAttribute('data-theme',next);
+    });
+  })();
+</script>
+</body>
+</html>

@@ -72,6 +72,41 @@ da mão"; relatórios que ninguém transforma em ação.
 
 ---
 
+## Controle por câmera — só nas áreas comuns
+
+A câmera entra como item do padrão que cada unidade instala: mede o **processo** (fila,
+tempo de espera, cobertura do balcão), alimenta os gatilhos de exceção (componente 5) e
+a visão de rede do CEO. Nunca o consultório — veto do CFM. Regra que guia tudo: **meça o
+processo, não o rosto.**
+
+**Onde:**
+- ✅ Recepção, sala de espera, comercial, corredores, área de estoque/farmácia.
+- ❌ Dentro do consultório (veto CFM); banheiro, copa, vestiário, descanso.
+
+**O que mede (métrica de processo):** tempo de espera e fila; ocupação da sala; balcão
+coberto ou vazio; fluxo de pacientes por horário; acesso à sala de medicamentos
+(controlados).
+
+**Como vira controle:** câmera → métrica agregada → **gatilho de exceção** (ex.:
+"espera > 20 min", "balcão vazio > 5 min") → alerta com **dono e SLA**. Não é vigilância
+contínua; liga direto nos componentes 5 e 6.
+
+**A linha da IA:** métrica agregada/anônima (fila, ocupação, tempo) = OK. Reconhecimento
+facial ou scoring individual por biometria = dado sensível (LGPD art. 11), base legal
+mais estrita e risco trabalhista = **não**.
+
+**Checklist legal (parte do componente 7):** placa "ambiente monitorado" (LGPD) · aviso
+prévio por escrito + ciência assinada dos funcionários (CLT) · nada em
+banheiro/copa/consultório · **sem áudio** de atendimento · política de retenção + acesso
+restrito + armazenamento seguro · validar com advogado antes de instalar. Descumprir:
+dano moral + multa ANPD (até 2% do faturamento).
+
+**No modelo de franquia:** especificação **padrão** de câmera + software para todas as
+unidades → dados comparáveis. **Quem assiste é o dono de processo local**, não o CEO. O
+CEO vê só o ranking/exceção de rede — governança macro, não vigilância.
+
+---
+
 ## Governança macro do CEO (gerenciar desde cima)
 
 O CEO não opera cada unidade — gere a rede por exceção. O papel muda de "fazer" para

@@ -301,6 +301,50 @@
 
 <section>
   <div class="wrap">
+    <p class="eyebrow">Parte do padrão operacional</p>
+    <h2 class="sec">Controle por câmera — só nas áreas comuns</h2>
+    <p class="sec-sub">A câmera entra como item do padrão que cada unidade instala: mede o <b>processo</b> (fila, tempo de espera, cobertura do balcão), alimenta os gatilhos de exceção e a visão de rede do CEO. Nunca o consultório — isso é veto do CFM. A regra que guia tudo: <b>meça o processo, não o rosto.</b></p>
+    <div class="grid">
+      <div class="card">
+        <span class="tag">Onde</span><h3>Cobertura</h3>
+        <ul>
+          <li><b>Sim:</b> recepção, sala de espera, comercial, corredores, área de estoque/farmácia</li>
+          <li><b>Não:</b> dentro do consultório (veto CFM), banheiro, copa, vestiário, descanso</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="tag">O que mede</span><h3>Métrica de processo</h3>
+        <ul>
+          <li>Tempo de espera e tamanho da fila</li>
+          <li>Ocupação da sala; balcão coberto ou vazio</li>
+          <li>Fluxo de pacientes por horário</li>
+          <li>Acesso à sala de medicamentos (controlados)</li>
+        </ul>
+      </div>
+      <div class="card primary">
+        <span class="tag">Como vira controle</span><h3>Câmera → exceção → ação</h3>
+        <p>Câmera → métrica agregada → <b>gatilho de exceção</b> (ex.: "espera &gt; 20 min", "balcão vazio &gt; 5 min") → alerta com <b>dono e SLA</b>. Não é vigilância contínua: liga direto nos componentes 5 e 6 do padrão.</p>
+      </div>
+      <div class="card">
+        <span class="tag">A linha da IA</span><h3>Processo, não rosto</h3>
+        <p><b>OK:</b> IA de métrica agregada/anônima (fila, ocupação, tempo). <b>Não:</b> reconhecimento facial ou scoring individual por biometria — dado sensível (LGPD art. 11), base legal mais estrita e risco trabalhista.</p>
+      </div>
+    </div>
+
+    <div class="abort" style="margin-top:22px;border-left-color:var(--veto);background:color-mix(in srgb,var(--veto) 8%,var(--surface))">
+      <p class="eyebrow" style="color:var(--veto)">Checklist legal — parte do componente 7 (conformidade)</p>
+      <p>Placa visível <b>"ambiente monitorado"</b> (transparência LGPD ao paciente) · <b>aviso prévio por escrito + ciência assinada</b> dos funcionários (CLT) · nada em banheiro/copa/consultório · <b>sem áudio</b> de atendimento · política de retenção + acesso restrito + armazenamento seguro · validar com advogado antes de instalar. Descumprir: dano moral + multa ANPD (até 2% do faturamento).</p>
+    </div>
+
+    <div class="abort" style="margin-top:16px;border-left-color:var(--brand);background:color-mix(in srgb,var(--brand) 7%,var(--surface))">
+      <p class="eyebrow" style="color:var(--brand)">No modelo de franquia</p>
+      <p><b>Especificação padrão</b> de câmera + software para todas as unidades → dados comparáveis entre elas. <b>Quem assiste é o dono de processo local</b>, não o CEO. O CEO vê só o ranking/exceção de rede (ex.: a unidade com pior tempo de espera do mês) — governança macro, não vigilância.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
     <p class="eyebrow">Gerenciar desde cima</p>
     <h2 class="sec">Governança macro do CEO</h2>
     <p class="sec-sub">O CEO não opera cada unidade — gere a rede por exceção. O papel muda de "fazer" para "definir o padrão, medir o desvio e agir onde desvia".</p>

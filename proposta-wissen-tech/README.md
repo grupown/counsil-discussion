@@ -12,6 +12,7 @@ Wissen Tech (braço de TI/IA do grupo Wissence).
 - `07-preco-justo.md` — a conta do custo-CLT-equivalente, o valor de entrada, o custo de abandonar os freelancers e a arquitetura em três camadas
 - `08-analise-cv.md` — o que o currículo sustenta, o que ele contradiz, e o que faz com o preço
 - `09-quatro-negocios.md` — o piso corrigido, delegar em vez de abandonar o freelance, e o que o restaurante revela
+- `10-teste-do-dono.md` — capacidade confirmada, a credencial do negócio que roda sem o dono, e a escada revisada
 
 **rev. 2** — premissa corrigida: o autor mantém emprego integral no Mercado Livre.
 A dedicação integral à Wissen Tech deixou de ser a recomendação e passou a ser um
@@ -42,6 +43,13 @@ equilíbrio (R$ 23.000); piso passa a R$ 26.000 e alvo a R$ 30.000. Recomenda
 **delegar** o freelance em vez de abandoná-lo, e reposiciona o restaurante como a
 evidência de P&L que faltava no currículo, como o piloto que a Wissen Tech não tem,
 e como a verdadeira restrição de capacidade.
+
+**rev. 7** — o restaurante tem gerente e o autor decide por exceção: capacidade
+confirmada. Mais importante, ele já passou no teste que o próprio plano da Wissence
+define como marco — uma operação que roda sem o dono —, o que o grupo ainda não
+atingiu. Base de participação sobe de 10 % para 12 %, a escada ganha um degrau
+para a entrega da trilha de certificação (a Camada 3, o moat ausente), e a porta
+da dedicação integral vai de 25 % para 28 %.
 
 Base analítica: os 5 documentos de planejamento (plano de cobertura, playbook por
 área, cronograma, painel de exceções, catálogo de 56 indicadores).

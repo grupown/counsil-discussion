@@ -10,6 +10,8 @@ Wissen Tech (braço de TI/IA do grupo Wissence).
 - `05-mercado-livre.md` — conflito com o emprego integral, PI e quotista vs. administrador
 - `06-central-de-custo.md` — a natureza da empresa, rateio vs. margem, e por que licenciar a PI em vez de integralizar
 - `07-preco-justo.md` — a conta do custo-CLT-equivalente, o valor de entrada, o custo de abandonar os freelancers e a arquitetura em três camadas
+- `08-analise-cv.md` — o que o currículo sustenta, o que ele contradiz, e o que faz com o preço
+- `09-quatro-negocios.md` — o piso corrigido, delegar em vez de abandonar o freelance, e o que o restaurante revela
 
 **rev. 2** — premissa corrigida: o autor mantém emprego integral no Mercado Livre.
 A dedicação integral à Wissen Tech deixou de ser a recomendação e passou a ser um
@@ -28,6 +30,18 @@ arquiteto CLT para a empresa** (≈ R$ 250/h com encargos) em vez de por faixas
 salariais, e a remuneração vira três camadas: retainer, taxa de sucesso sobre
 economia comprovada, e participação. A renda de freelance abandonada é a variável
 que define o piso e ainda não foi informada.
+
+**rev. 5** — currículo lido: 16 anos de experiência, não 19, e o resumo do próprio
+perfil ainda declara dez. Três credenciais nunca mencionadas (saúde pública
+paulista, B3, Alura) sobem o fechamento esperado; o currículo não altera a
+participação, que é limitada por estrutura e não por senioridade.
+
+**rev. 6** — freelance de R$ 10 mil/mês e restaurante com R$ 120 mil/mês de
+faturamento. O piso de R$ 20.000 foi **retirado** por estar abaixo do ponto de
+equilíbrio (R$ 23.000); piso passa a R$ 26.000 e alvo a R$ 30.000. Recomenda
+**delegar** o freelance em vez de abandoná-lo, e reposiciona o restaurante como a
+evidência de P&L que faltava no currículo, como o piloto que a Wissen Tech não tem,
+e como a verdadeira restrição de capacidade.
 
 Base analítica: os 5 documentos de planejamento (plano de cobertura, playbook por
 área, cronograma, painel de exceções, catálogo de 56 indicadores).

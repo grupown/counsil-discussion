@@ -138,7 +138,7 @@ duas, com o preço da passagem de uma para a outra escrito hoje.**
 
 | Degrau | Gatilho | Equity |
 |---|---|---|
-| **Base** | Assinatura + PI resolvida + contrato de serviços com o grupo | **10 %** |
+| **Base** | Assinatura + PI mantida com você e licenciada + contrato de serviços com o grupo | **10 %** |
 | **T1** | Marco da Etapa 2: uma semana em Jundiaí com zero alerta órfão e zero SLA estourado | **12 %** |
 | **T2** | Produto vendível fora: multi-tenant + inventário LGPD + responsável técnico por unidade | **15 %** |
 | **T3** | Primeiro cliente externo pagante, contrato ≥ 12 meses | **18 %** |
@@ -169,11 +169,19 @@ continuam intransigíveis (contrato de serviços com o grupo; quórum qualificad
 contrato social; piso de caixa independente do equity). Dois ajustes na sua nova
 situação:
 
+- **Cláusula 1 reforçada.** Antes do preço, defina a natureza: rateio de custos
+  ou prestação de serviços com margem. Se for rateio, a entidade não pode ter
+  lucro por exigência fiscal, e a sua participação vale zero até existir receita
+  externa — ver `06-central-de-custo.md`. Nesse caso mova toda a energia da
+  negociação para o retainer e para a propriedade da PI.
 - **Cláusula 3 reforçada.** Com retainer fixo em vez de horas, o piso de caixa
   é *a* cláusula. Escreva o valor, a data de reajuste anual e o que acontece se
   a Wissen Tech ficar sem caixa (o retainer vira crédito acumulado com correção,
   não desaparece).
-- **Cláusula nova, nº 11 — seja quotista, não administrador.** Ver o documento
+- **Cláusula nova, nº 11 — mantenha a titularidade da PI e licencie.** Não
+  integralize os skills como capital. Isto retifica a recomendação das revisões
+  anteriores — a justificativa está em `06-central-de-custo.md`.
+- **Cláusula nova, nº 12 — seja quotista, não administrador.** Ver o documento
   de riscos: administrar outra empresa de tecnologia enquanto é empregado do
   Mercado Livre é exposição desnecessária, e não te custa nada
   economicamente abrir mão do cargo de administrador.

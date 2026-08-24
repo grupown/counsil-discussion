@@ -38,10 +38,11 @@ número, porque define o que eu posso e o que eu não posso prometer.
    produto e roadmap técnico. Não assumo o título de CTO nem a responsabilidade
    por entrega, operação e expansão comercial enquanto estiver em regime
    paralelo — não seria honesto prometer o que a minha agenda não sustenta.
-4. **Participação de 10 %**, com a propriedade intelectual dos 6 plugins, 29
-   skills e 3 jobs em produção integralizada como aporte de capital. Vesting de
-   4 anos, cliff de 6 meses, aceleração em mudança de controle e em saída sem
-   justa causa.
+4. **Participação de 10 %.** A propriedade intelectual dos 6 plugins, 29 skills
+   e 3 jobs em produção permanece minha, e a Wissen Tech recebe **licença de uso
+   não exclusiva** — com prazo, revogável em caso de encerramento da relação — cuja
+   contrapartida é o próprio retainer, declarada no contrato. Vesting de 4 anos,
+   cliff de 6 meses, aceleração em mudança de controle e em saída sem justa causa.
 5. **Escada de participação por marcos objetivos:** 12 % na semana em Jundiaí com
    zero alerta órfão e zero SLA estourado; 15 % com o produto vendível fora
    (multi-tenant, inventário LGPD, responsável técnico por unidade); 18 % no
@@ -60,6 +61,12 @@ número, porque define o que eu posso e o que eu não posso prometer.
    tabela de preços, volume mínimo e o escopo do legado (Aurora, skills, suporte)
    delimitado. É o que dá receita previsível à nova empresa e torna a
    participação de qualquer sócio algo real em vez de simbólico.
+
+**Três coisas que eu preciso entender antes de fechar número:** (a) a Wissen Tech
+vai faturar o grupo por rateio de custos ou por contrato de prestação de serviços
+com margem; (b) a expansão para médicos e consultórios externos tem orçamento,
+meta e data, ou é intenção neste momento; (c) quem mais entra como sócio, e se a
+Wissen Tech fica sob a holding ou como empresa irmã.
 
 Proponho uma hora de conversa para fechar os pontos 2, 4 e 6 e passar a redação
 para o advogado.
@@ -80,8 +87,9 @@ Gustavo
 | 4 | Cláusula de porta com o salto para 25 % precificado | **não cede** |
 | 5 | Envelope de disponibilidade e preço do excedente | margem estreita |
 | 6 | Contratação do dev + suporte | margem estreita |
-| 7 | Participação base — 10 % pedido, 8 % aceitável | cede 2 pp |
-| 8 | Tamanho dos degraus da escada | cede |
+| 7 | Propriedade da PI mantida com você + licença de uso | **não cede** |
+| 8 | Participação base — 10 % pedido, 8 % aceitável | cede 2 pp |
+| 9 | Tamanho dos degraus da escada | cede |
 
 ### O que você tem e não está usando
 

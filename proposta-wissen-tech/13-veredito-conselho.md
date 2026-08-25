@@ -60,7 +60,7 @@ em vez de ambicioso.
 
 ## A Única Coisa pra Fazer Primeiro
 
-**Descobrir de quem é a propriedade dos 29 skills.** Contrato do Mercado Livre e
+**Descobrir de quem é a propriedade dos 29 skills.** Contrato do emprego atual e
 acordo atual com a Wissence, ao advogado, na mesma sessão. A peça pressupõe que o
 ativo é seu — se não for, você está oferecendo o que não tem.
 

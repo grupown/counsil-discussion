@@ -1,6 +1,6 @@
-# 5 · O risco que você não mencionou: o Mercado Livre
+# 5 · O risco que você não mencionou: o seu emprego atual
 
-Você trabalha em tempo integral no Mercado Livre e está a caminho de se tornar
+Você trabalha em tempo integral no emprego atual e está a caminho de se tornar
 sócio de uma empresa de tecnologia. Isso é perfeitamente legal — e tem três
 armadilhas concretas. A segunda pode destruir a base da sua participação.
 
@@ -16,9 +16,9 @@ Os riscos reais são três, e todos são específicos ao *seu* contrato:
 
 | Risco | O que verificar |
 |---|---|
-| **Cláusula de exclusividade** | Leia o seu contrato de trabalho e o código de conduta / política de conflito de interesses do Mercado Livre. Grandes empresas de tecnologia costumam ter política de *outside activities* com obrigação de declarar. |
-| **Atividade concorrente** | Concorrer com o empregador é justa causa (art. 482 da CLT). Clínica e TI para saúde não são o negócio do Mercado Livre — a leitura é favorável, mas a decisão sobre o que é "concorrente" é da política deles, não sua. |
-| **Sobreposição de jornada** | O envelope de disponibilidade da Wissen Tech não pode invadir a jornada contratada com o Mercado Livre. Isso é argumento a favor de janelas fixas combinadas, não contra. |
+| **Cláusula de exclusividade** | Leia o seu contrato de trabalho e o código de conduta / política de conflito de interesses do seu empregador. Grandes empresas de tecnologia costumam ter política de *outside activities* com obrigação de declarar. |
+| **Atividade concorrente** | Concorrer com o empregador é justa causa (art. 482 da CLT). Clínica e TI para saúde não são o negócio do seu empregador — a leitura é favorável, mas a decisão sobre o que é "concorrente" é da política deles, não sua. |
+| **Sobreposição de jornada** | O envelope de disponibilidade da Wissen Tech não pode invadir a jornada contratada com o emprego atual. Isso é argumento a favor de janelas fixas combinadas, não contra. |
 
 **Recomendação prática:** declare. Se existir canal de declaração de atividade
 externa ou conflito de interesses, use. Declaração feita e aceita transforma um
@@ -36,10 +36,10 @@ antes disso é preciso responder, com documento e não com memória:
 1. **De quem é essa PI hoje?** Você construiu para a Wissence como PJ ou
    prestador — houve cláusula de cessão? Se não houve, a titularidade é
    discutível a seu favor. Se houve, você já foi pago e ela não sustenta equity.
-2. **O Mercado Livre pode ter uma pretensão sobre parte disso?** Contratos de
+2. **O emprego atual pode ter uma pretensão sobre parte disso?** Contratos de
    trabalho em tecnologia costumam atribuir ao empregador a criação intelectual
    feita com recursos, equipamentos ou no horário da empresa. Se qualquer parte
-   dos skills foi escrita em máquina do Mercado Livre, em rede da empresa, em
+   dos skills foi escrita em máquina do emprego atual, em rede da empresa, em
    horário de trabalho, ou em repositório vinculado à conta corporativa, existe
    uma pretensão possível.
 
@@ -58,7 +58,7 @@ justificativa da sua participação.
 3. Declare no instrumento de integralização que a criação se deu fora do vínculo
    empregatício, com recursos próprios, e assuma a responsabilidade por isso com
    consciência do que está assinando.
-4. Leve o contrato do Mercado Livre para o advogado junto com o contrato social
+4. Leve o seu contrato de trabalho para o advogado junto com o contrato social
    da Wissen Tech. Os dois documentos precisam ser lidos na mesma sessão — é a
    única forma de ver o conflito.
 
@@ -89,13 +89,13 @@ Há duas leituras possíveis do que você está fazendo, e elas levam a estrutur
 opostas:
 
 **Leitura 1 — Wissen Tech é uma opção que você está comprando.** Você mantém o
-Mercado Livre, entra com 10 %, entrega escopo delimitado, e observa. Se a empresa
+emprego atual, entra com 10 %, entrega escopo delimitado, e observa. Se a empresa
 crescer, você atravessa a porta e vira sócio-fundador. Se não crescer, você perdeu
 pouco. *Nesse caso: caixa alto, escopo estreito, equity modesto, título modesto,
 nenhuma promessa de liderança.*
 
 **Leitura 2 — Wissen Tech é o negócio que você vai construir.** Então existe uma
-data em que você sai do Mercado Livre, e essa data deveria estar no contrato como
+data em que você sai do emprego atual, e essa data deveria estar no contrato como
 gatilho, com o salto de participação já precificado.
 
 **As duas são legítimas. A terceira não é:** dizer que é a leitura 2, agir como

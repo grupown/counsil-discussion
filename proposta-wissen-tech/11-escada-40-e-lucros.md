@@ -80,7 +80,7 @@ nunca e os 40 % são conversa.
 | **T2** interno | Produto legalmente vendível fora | (a) zero IDs de clínica no código, comprovado provisionando unidade de teste em < 1 dia; (b) inventário LGPD cobrindo 100 % dos skills que tocam dado pessoal; (c) responsável técnico nomeado por unidade | 12 meses | 18 % |
 | **T3** o moat | Camada 3 entregue | Certificação por pessoa em operação, ≥ 80 % do quadro das 3 unidades certificado, e 1 ciclo de auditoria de aderência concluído com nota por área | 18 meses | 21 % |
 | **T4** externo | 1º cliente externo pagante | Contrato com PJ sem relação com o grupo, ≥ 12 meses, primeira fatura paga | sem prazo | 24 % |
-| **★ Porta** | Dedicação integral | Notificação formal de saída do Mercado Livre. Gatilho unilateral seu. Retainer vira pró-labore de R$ 36.000, step-up a R$ 42.000 | 5 anos | **28 %** |
+| **★ Porta** | Dedicação integral | Notificação formal de início de dedicação integral. Gatilho unilateral seu. Retainer vira pró-labore de R$ 36.000, step-up a R$ 42.000 | 5 anos | **28 %** |
 | **T5** externo | Receita externa material | R$ 50.000/mês recorrente de fora do grupo, 3 meses consecutivos. Fonte: faturamento auditado | — | 34 % |
 | **T6** externo | Independência econômica | Receita externa ≥ 50 % do custo fixo, EBITDA positivo em 2 trimestres consecutivos | — | **40 %** |
 
@@ -125,7 +125,7 @@ escada termina em 24 %.
    mínima no contrato social, o lucro fica retido. E lembre da tributação de 2026:
    retenção de 10 % acima de R$ 50 mil/mês da mesma empresa, mais IRPF mínimo de
    até 10 % para renda global acima de R$ 600 mil/ano — e a sua renda global soma
-   Mercado Livre, restaurante, retainer e dividendos.
+   emprego atual, restaurante, retainer e dividendos.
 3. **Em rateio não existe lucro para participar.** Cenário A. Se a resposta for
    "rateio", a linha de dividendos é zero e a negociação se resume às duas
    primeiras.

@@ -7,7 +7,7 @@ Wissen Tech (braço de TI/IA do grupo Wissence).
 - `02-proposta.md` — os números, a escada de equity até 40% e as cláusulas
 - `03-riscos.md` — pontos cegos e o que checar com advogado e contador
 - `04-pedido.md` — o texto do pedido, pronto para enviar
-- `05-mercado-livre.md` — conflito com o emprego integral, PI e quotista vs. administrador
+- `05-emprego-atual.md` — conflito com o emprego atual, PI e quotista vs. administrador
 - `06-central-de-custo.md` — a natureza da empresa, rateio vs. margem, e por que licenciar a PI em vez de integralizar
 - `07-preco-justo.md` — a conta do custo-CLT-equivalente, o valor de entrada, o custo de abandonar os freelancers e a arquitetura em três camadas
 - `08-analise-cv.md` — o que o currículo sustenta, o que ele contradiz, e o que faz com o preço
@@ -18,7 +18,7 @@ Wissen Tech (braço de TI/IA do grupo Wissence).
 - `13-veredito-conselho.md` — veredito do conselho de 5 perspectivas e o desenho da peça externa
 - `apresentacao/` — **a peça que vai para o Leonardo** (documento externo, tom e conteúdo diferentes do memorando interno)
 
-**rev. 2** — premissa corrigida: o autor mantém emprego integral no Mercado Livre.
+**rev. 2** — premissa corrigida: o autor mantém outro emprego integral.
 A dedicação integral à Wissen Tech deixou de ser a recomendação e passou a ser um
 gatilho precificado na escada de participação (a "cláusula de porta").
 

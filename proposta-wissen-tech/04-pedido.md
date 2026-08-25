@@ -1,6 +1,6 @@
 # 4 · O texto do pedido  ·  rev. 2
 
-Reescrito para a premissa correta: você fica no Mercado Livre, entra como sócio
+Reescrito para a premissa correta: você fica no emprego atual, entra como sócio
 sem contrato de horas, e o caminho para dedicação integral fica precificado no
 contrato como uma opção sua.
 
@@ -47,7 +47,7 @@ número, porque define o que eu posso e o que eu não posso prometer.
    zero alerta órfão e zero SLA estourado; 15 % com o produto vendível fora
    (multi-tenant, inventário LGPD, responsável técnico por unidade); 18 % no
    primeiro cliente externo pagante com contrato de 12 meses ou mais.
-6. **Uma cláusula de porta, precificada hoje:** se eu deixar o Mercado Livre e
+6. **Uma cláusula de porta, precificada hoje:** se eu deixar o emprego atual e
    assumir dedicação integral à Wissen Tech, a participação salta para **25 %**,
    o retainer é substituído por pró-labore de R$ 32.000, e a escada segue até
    40 % por marcos de receita externa recorrente. Escrever isso agora custa nada
@@ -93,7 +93,7 @@ Gustavo
 
 ### O que você tem e não está usando
 
-**Você não precisa deste acordo.** Você tem emprego integral no Mercado Livre. O
+**Você não precisa deste acordo.** Você tem um emprego integral. O
 retainer da Wissence é renda adicional, não sobrevivência. Isso é a sua maior
 alavanca e você deve saber disso ao entrar na sala — não para ameaçar, mas para
 não aceitar um acordo ruim por medo de perder um acordo que você não precisa.
@@ -107,5 +107,5 @@ esperar, negocia melhor.
 | Sinal | O que significa |
 |---|---|
 | **Aceitam 40 % rápido e sem discussão** | Ninguém entrega 40 % de graça. O preço está escondido em diluição, na fórmula de saída ou no *bad leaver*. |
-| **Recusam a cláusula de porta** | Se eles não querem escrever o preço da sua dedicação integral, é porque não pretendem que você chegue lá — ou pretendem renegociar quando você já tiver saído do Mercado Livre e perdido a alavanca. **Este é o sinal mais grave dos três.** |
+| **Recusam a cláusula de porta** | Se eles não querem escrever o preço da sua dedicação integral, é porque não pretendem que você chegue lá — ou pretendem renegociar quando você já tiver deixado a outra atividade e perdido a alavanca. **Este é o sinal mais grave dos três.** |
 | **Oferecem "% do lucro" em vez de quotas** | Numa empresa cativa, quem define o preço de transferência define o lucro. Se insistirem, exija que a base seja receita bruta. |

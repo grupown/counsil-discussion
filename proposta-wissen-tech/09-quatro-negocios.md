@@ -98,10 +98,10 @@ de retainer e não olhou para onde a sua capacidade está sendo consumida.
   contrário.
 - **Por você** → **você não tem capacidade para a Wissen Tech**, e nenhum preço
   conserta isso. Prometer liderança técnica de uma empresa nova enquanto opera um
-  restaurante e trabalha integral no Mercado Livre é assinar um fracasso com data
+  restaurante e trabalha em tempo integral em outro lugar é assinar um fracasso com data
   marcada — e o fracasso vai ser registrado como seu, não como falta de tempo.
 
-Some tudo: **Mercado Livre integral + restaurante de R$ 1,44 mi/ano + freelance +
+Some tudo: **emprego integral + restaurante de R$ 1,44 mi/ano + freelance +
 Wissen Tech.** São quatro negócios e uma agenda. **A pergunta deixou de ser "quanto
 cobrar" e passou a ser "o que eu paro de fazer".**
 
@@ -162,7 +162,7 @@ construiu aquilo estudando clínica: construiu porque **você vive a dor.**
 
 | Fonte | Renda mensal | Ceiling | Ownership | Recomendação |
 |---|---|---|---|---|
-| Mercado Livre | a maior, estável | teto de carreira, zero ownership | não | **mantenha** — é a sua base e a sua alavanca de negociação |
+| Emprego atual | a maior, estável | teto de carreira, zero ownership | não | **mantenha** — é a sua base e a sua alavanca de negociação |
 | Restaurante | R$ 7 – 11 mil estimados | limitado pela margem do setor | sim, 100 % | **decida se é investimento ou identidade** — e se é operado por gerente |
 | Freelance | R$ 10 mil | baixo, mas alto por hora | não | **delegue, não abandone** |
 | Wissen Tech | R$ 13 mil → 26–30 mil | o único com upside real | 10 %, com porta em 25 % | **é aqui que a opção está** |

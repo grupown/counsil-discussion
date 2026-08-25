@@ -152,7 +152,7 @@ Cinco itens que mudariam a recomendação para cima, se existirem — cole aqui:
 
 | # | O que preciso | Por que muda o número |
 |---|---|---|
-| 1 | Seu cargo e nível exatos no Mercado Livre | Staff/Principal em big tech é outra faixa, acima de "Arquiteto de Software" do guia. Muda o piso. |
+| 1 | Seu cargo e nível exatos no emprego atual | Staff/Principal em big tech é outra faixa, acima de "Arquiteto de Software" do guia. Muda o piso. |
 | 2 | Escala dos 3 projetos mais relevantes — usuários, transações, volume, orçamento | Escala comprovada é o que separa "19 anos" de "19 anos de senioridade real". É o que justifica prêmio sobre a faixa. |
 | 3 | Certificações — nuvem, arquitetura, segurança, dados | 48 % dos gestores de tecnologia no Brasil dizem pagar mais por certificação, segundo o próprio guia da Robert Half. É argumento direto. |
 | 4 | Já liderou equipe? Quantas pessoas, por quanto tempo | Decide se você pode pedir papel de liderança ou só de autoridade técnica — e isso vale pontos percentuais. |

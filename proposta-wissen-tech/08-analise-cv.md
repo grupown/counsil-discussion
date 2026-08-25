@@ -107,7 +107,7 @@ existem. É por isto:
 
 | Credencial | Efeito no preço |
 |---|---|
-| Technical Leader no Mercado Livre, 5 anos e 2 meses | Coloca você no **topo** da faixa de Arquiteto de Software do Guia RH 2026 (R$ 15.450 – 25.900), com credibilidade |
+| Technical Leader, 5 anos e 2 meses | Coloca você no **topo** da faixa de Arquiteto de Software do Guia RH 2026 (R$ 15.450 – 25.900), com credibilidade |
 | 4,5 anos de sistemas de saúde no setor público | **Prêmio de domínio** — a coisa mais rara na mesa |
 | 3,5 anos em infraestrutura de mercado financeiro | Credencial direta da camada de controle e auditoria |
 | 1,5 ano como instrutor profissional | Único caminho para a Camada 3, que é o moat declarado |

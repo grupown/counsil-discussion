@@ -92,8 +92,8 @@ escrito**.
 
 **Consequência a pesar:** CTO é cargo de **administração**, o que conflita com a
 recomendação de entrar como quotista e não administrador para reduzir exposição
-perante o Mercado Livre. **Se você vai ser CTO, declarar a atividade externa ao
-Mercado Livre deixa de ser opcional.**
+perante o emprego atual. **Se você vai ser CTO, declarar a atividade externa ao
+emprego atual deixa de ser opcional.**
 
 ## 3 · Não é só transversal — e isso muda o modelo a seu favor
 

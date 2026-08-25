@@ -1,7 +1,7 @@
 # 2 · A proposta  ·  rev. 2
 
 > **Premissa corrigida.** A rev. 1 recomendava dedicação integral. Isso caiu:
-> você trabalha em tempo integral no Mercado Livre e não pretende sair. Toda a
+> você trabalha em tempo integral no emprego atual e não pretende sair. Toda a
 > proposta abaixo assume **Wissence como atividade paralela, sem contrato de
 > horas, na condição de sócio.** O cenário de dedicação integral não desaparece —
 > ele passa a ser um **gatilho da escada de equity**, com preço definido, que
@@ -23,7 +23,7 @@ combinado implícito, e combinado implícito é onde a relação apodrece.
 | Limite | Protege quem | O que acontece se você tirar |
 |---|---|---|
 | **Mínimo de horas** | Protege **você** — garante faturamento | Sem mínimo, seu caixa depende do que eles pedirem. Some se substituído por **retainer fixo**. |
-| **Máximo de horas** | Protege **você** — limita a demanda | Sem máximo, você é o plantonista de 3 clínicas + Aurora CRM + ERP + 29 skills, com um emprego integral no Mercado Livre em cima. |
+| **Máximo de horas** | Protege **você** — limita a demanda | Sem máximo, você é o plantonista de 3 clínicas + Aurora CRM + ERP + 29 skills, com um emprego integral em cima. |
 
 Tirar o mínimo é aceitável **se e somente se** ele for substituído por retainer
 fixo. Tirar o máximo, na sua situação, é irresponsável com você mesmo.
@@ -86,7 +86,7 @@ verdade, e sem ter que defender tabela cheia em contrato recorrente.
 ## Segundo: você não pode liderar a expansão do lado
 
 Você escreveu que a ideia é "liderar todo esse processo de crescimento e expansão
-em TI". Trabalhando integral no Mercado Livre, **você não pode.** Não é "é
+em TI". Trabalhando integral no emprego atual, **você não pode.** Não é "é
 difícil". É aritmética.
 
 O seu próprio cronograma: 528 h totais, **446 h de engenharia suas**. Sem contrato
@@ -126,7 +126,7 @@ de outra pessoa — contratada, com orçamento aprovado.
 | Teto da escada nesta posição | **18 %** |
 | Contratação obrigatória | 1 dev pleno + 1 analista de suporte no semestre 1. Sem isso você é o gargalo e a escada não sai do primeiro degrau. |
 
-### Posição B · Sócio-fundador e CTO  ·  se você sair do Mercado Livre
+### Posição B · Sócio-fundador e CTO  ·  se você sair do emprego atual
 
 Aqui vale a rev. 1 inteira: pró-labore R$ 32.000 (piso R$ 28.600), step-up para
 R$ 38.000, equity salta para 25 % e a escada reabre até 40 %.
@@ -142,7 +142,7 @@ duas, com o preço da passagem de uma para a outra escrito hoje.**
 | **T1** | Marco da Etapa 2: uma semana em Jundiaí com zero alerta órfão e zero SLA estourado | **12 %** |
 | **T2** | Produto vendível fora: multi-tenant + inventário LGPD + responsável técnico por unidade | **15 %** |
 | **T3** | Primeiro cliente externo pagante, contrato ≥ 12 meses | **18 %** |
-| **★ Porta** | **Você sai do Mercado Livre e assume dedicação integral** | **salta para 25 %** |
+| **★ Porta** | **Você passa a dedicação integral à Wissen Tech** | **salta para 25 %** |
 | **T4 – T6** | Escada da rev. 1 reaberta: receita externa recorrente, independência econômica | **até 40 %** |
 
 Por que isso é a melhor estrutura disponível para você:
@@ -153,12 +153,12 @@ Por que isso é a melhor estrutura disponível para você:
    negociador competente vai apontar isso, com razão. Com a porta escrita, você
    pede 10 % pelo que faz hoje e trava 25 % para o dia em que correr o risco.
 2. **A opção é sua, e é gratuita.** Você decide se e quando atravessa. Enquanto
-   não atravessar, mantém salário do Mercado Livre + R$ 24.000 + 10 % a 18 %.
+   não atravessar, mantém salário do emprego atual + R$ 24.000 + 10 % a 18 %.
 3. **Alinha os incentivos deles.** O grupo passa a ter motivo para tornar a Wissen
-   Tech boa o suficiente para você querer sair do Mercado Livre. Hoje eles não
+   Tech boa o suficiente para você querer dedicação integral a ela. Hoje eles não
    têm nenhum.
 4. **É o único caminho honesto até os 40 %.** Você perguntou como chegar a 40 %.
-   Esta é a resposta verdadeira: **você chega a 40 % saindo do Mercado Livre.**
+   Esta é a resposta verdadeira: **você chega a 40 % em dedicação integral.**
    Não existe caminho até 40 % em regime paralelo, e quem te disser que existe
    está te vendendo conforto.
 
@@ -183,5 +183,5 @@ situação:
   anteriores — a justificativa está em `06-central-de-custo.md`.
 - **Cláusula nova, nº 12 — seja quotista, não administrador.** Ver o documento
   de riscos: administrar outra empresa de tecnologia enquanto é empregado do
-  Mercado Livre é exposição desnecessária, e não te custa nada
+  emprego atual é exposição desnecessária, e não te custa nada
   economicamente abrir mão do cargo de administrador.

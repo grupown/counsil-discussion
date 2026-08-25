@@ -65,6 +65,27 @@ reescrita, e ficou mais forte:
 > que escolhe a arquitetura que escala em vez da que entrega rápido, e que constrói
 > a frente externa em vez de só manter a interna.
 
+## Também removido: o bloco de fechamento
+
+Saiu a seção final em verde — *"Próximo passo · Uma hora de conversa, e o que sair
+dela vai para o advogado."* A peça agora **termina nas três definições** que só o
+Leonardo pode tomar, e vai direto para o rodapé.
+
+Termina bem: o último que ele lê é o que ele precisa decidir, não o que você quer
+dele. Mas note o efeito — **a peça deixou de pedir qualquer coisa.** O conselho
+tinha sido explícito: o objetivo de uma peça assim não é fechar, é marcar a
+reunião.
+
+**A solução é o texto de envio.** O pedido sai do documento e vai para a mensagem
+que o acompanha. Algo como:
+
+> Leonardo, coloquei por escrito a minha posição na Wissen Tech e, junto, as três
+> definições que precisam ser tomadas para a empresa ter forma. Consegue uma hora
+> esta semana para fecharmos? O que sair da conversa eu passo para o advogado
+> redigir.
+
+Assim a peça continua sóbria e o pedido continua existindo — só muda de lugar.
+
 ## Uma consequência, dita uma vez
 
 Com a saída do SLA e da cláusula de escopo, **a peça não tem mais nenhum limite

@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Wissen Tech</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
+
+<style>
+:root{
+  --ground:#F5F7F5; --card:#FFFFFF; --card-2:#EAEFEA; --card-3:#FAFBFA;
+  --ink:#101A17; --ink-2:#455049; --ink-3:#78847C;
+  --pine:#12483F; --pine-soft:rgba(18,72,63,.08);
+  --brass:#8A6D2F; --brass-soft:rgba(138,109,47,.10);
+  --ok:#2B6B4F; --ok-soft:rgba(43,107,79,.10);
+  --clay:#9A4A38; --clay-soft:rgba(154,74,56,.09);
+  --line:rgba(16,26,23,.11); --line-2:rgba(16,26,23,.22);
+  --shadow:0 1px 2px rgba(16,26,23,.04),0 12px 32px -20px rgba(16,26,23,.30);
+  --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --sans:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ground:#0D1311; --card:#141C19; --card-2:#1D2622; --card-3:#111815;
+  --ink:#E9EDEA; --ink-2:#A4B0A9; --ink-3:#76827B;
+  --pine:#5FA894; --pine-soft:rgba(95,168,148,.12);
+  --brass:#C9A55E; --brass-soft:rgba(201,165,94,.13);
+  --ok:#6BB894; --ok-soft:rgba(107,184,148,.13);
+  --clay:#D98C76; --clay-soft:rgba(217,140,118,.12);
+  --line:rgba(233,237,234,.12); --line-2:rgba(233,237,234,.24);
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 14px 36px -22px rgba(0,0,0,.85);
+}}
+:root[data-theme="dark"]{
+  --ground:#0D1311; --card:#141C19; --card-2:#1D2622; --card-3:#111815;
+  --ink:#E9EDEA; --ink-2:#A4B0A9; --ink-3:#76827B;
+  --pine:#5FA894; --pine-soft:rgba(95,168,148,.12);
+  --brass:#C9A55E; --brass-soft:rgba(201,165,94,.13);
+  --ok:#6BB894; --ok-soft:rgba(107,184,148,.13);
+  --clay:#D98C76; --clay-soft:rgba(217,140,118,.12);
+  --line:rgba(233,237,234,.12); --line-2:rgba(233,237,234,.24);
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 14px 36px -22px rgba(0,0,0,.85);
+}
+
+*{box-sizing:border-box}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--sans);
+  font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+.wrap{max-width:960px;margin:0 auto;padding:0 26px}
+p{margin:0 0 14px;max-width:68ch}
+strong,b{font-weight:600;color:var(--ink)}
+h1,h2,h3{font-family:var(--serif);font-weight:600;letter-spacing:-.012em;line-height:1.15;margin:0;text-wrap:balance}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+/* header */
+header{background:linear-gradient(180deg,var(--pine-soft),transparent);padding:52px 0 40px;border-bottom:1px solid var(--line)}
+.brandrow{display:flex;gap:12px;align-items:baseline;flex-wrap:wrap;font-family:var(--mono);
+  font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--pine);margin:0 0 20px}
+.brandrow .sep{color:var(--ink-3)}
+header h1{font-size:clamp(30px,4.6vw,46px);max-width:20ch;margin-bottom:14px}
+header .lede{font-size:clamp(17px,2vw,20px);color:var(--ink-2);max-width:62ch;margin:0}
+
+/* executive summary */
+.exec{background:var(--card);border:1px solid var(--line-2);border-radius:14px;
+  box-shadow:var(--shadow);margin-top:34px;overflow:hidden}
+.exec-h{background:var(--pine);color:#F2F6F3;padding:14px 26px;font-family:var(--mono);
+  font-size:11px;font-weight:600;letter-spacing:.17em;text-transform:uppercase}
+:root[data-theme="dark"] .exec-h{color:#0D1311}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .exec-h{color:#0D1311}}
+.exec-b{padding:28px 26px 24px}
+.exec-b .pitch{font-family:var(--serif);font-size:clamp(18px,2.2vw,21px);color:var(--ink);
+  max-width:64ch;margin:0 0 24px;line-height:1.5}
+.quad{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:10px;overflow:hidden}
+@media(max-width:680px){.quad{grid-template-columns:1fr}}
+.qi{background:var(--card);padding:19px 20px}
+.qi .lab{font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--ink-3);margin:0 0 9px}
+.qi .big{font-family:var(--mono);font-size:25px;font-weight:600;color:var(--pine);line-height:1.1;
+  font-variant-numeric:tabular-nums;margin:0 0 7px}
+.qi p{font-size:14.5px;color:var(--ink-2);margin:0;max-width:none}
+.qi p + p{margin-top:7px}
+.ask{margin-top:24px;padding:19px 21px;background:var(--brass-soft);
+  border-left:3px solid var(--brass);border-radius:0 9px 9px 0}
+.ask .lab{font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--brass);margin:0 0 8px}
+.ask p{margin:0;font-family:var(--serif);font-size:17.5px;color:var(--ink);max-width:none}
+
+/* sections */
+section{padding:52px 0;border-bottom:1px solid var(--line)}
+.sh{display:grid;grid-template-columns:52px 1fr;gap:0 20px;align-items:start;margin-bottom:26px}
+@media(max-width:600px){.sh{grid-template-columns:1fr;gap:8px}}
+.sn{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--brass);
+  padding-top:9px;border-top:2px solid var(--brass)}
+.sh h2{font-size:clamp(22px,3vw,30px)}
+.sh .sd{color:var(--ink-2);margin:11px 0 0;font-size:17px;max-width:64ch}
+.body{margin-left:72px}
+@media(max-width:600px){.body{margin-left:0}}
+h3.sub{font-size:19px;margin:32px 0 11px}
+h3.sub:first-child{margin-top:0}
+
+/* cards + tables */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0}
+@media(max-width:760px){.grid2{grid-template-columns:1fr}}
+.c{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 21px;box-shadow:var(--shadow)}
+.c .lab{font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--ink-3);margin:0 0 8px}
+.c h4{font-family:var(--serif);font-size:17.5px;font-weight:600;margin:0 0 8px;color:var(--ink)}
+.c p{font-size:15px;color:var(--ink-2);margin:0;max-width:none}
+.c p + p{margin-top:9px}
+.c.hi{background:var(--pine-soft);border-color:color-mix(in srgb,var(--pine) 35%,transparent)}
+
+.tbox{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--card);
+  box-shadow:var(--shadow);margin:20px 0}
+table{width:100%;border-collapse:collapse;font-size:15px;min-width:520px}
+thead th{font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--ink-3);text-align:left;padding:13px 17px;background:var(--card-3);
+  border-bottom:1px solid var(--line-2);white-space:nowrap}
+tbody td{padding:14px 17px;border-bottom:1px solid var(--line);color:var(--ink-2);vertical-align:top}
+tbody tr:last-child td{border-bottom:none}
+td.k{color:var(--ink);font-weight:600}
+td.n{font-family:var(--mono);font-variant-numeric:tabular-nums;font-weight:600;color:var(--ink);white-space:nowrap}
+td.n.hi{color:var(--pine);font-size:16.5px}
+tr.mark td{background:var(--pine-soft)}
+
+.note{border-left:3px solid var(--pine);background:var(--card);border-radius:0 11px 11px 0;
+  padding:19px 22px;margin:22px 0;border-top:1px solid var(--line);
+  border-right:1px solid var(--line);border-bottom:1px solid var(--line);box-shadow:var(--shadow)}
+.note .lab{font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--pine);margin:0 0 8px}
+.note p:last-child{margin-bottom:0}
+.note.warm{border-left-color:var(--brass);background:var(--brass-soft)}
+.note.warm .lab{color:var(--brass)}
+.note.good{border-left-color:var(--ok);background:var(--ok-soft)}
+.note.good .lab{color:var(--ok)}
+
+/* schedule */
+.sched{display:grid;gap:9px;margin:20px 0}
+.sr{display:grid;grid-template-columns:132px 1fr;gap:18px;align-items:baseline;
+  background:var(--card);border:1px solid var(--line);border-radius:10px;padding:15px 19px;box-shadow:var(--shadow)}
+@media(max-width:620px){.sr{grid-template-columns:1fr;gap:5px}}
+.sr .w{font-family:var(--mono);font-size:12.5px;font-weight:600;color:var(--pine);letter-spacing:.03em}
+.sr .d{font-size:15px;color:var(--ink-2)}
+.sr .d b{color:var(--ink)}
+
+/* decisions */
+.dec{counter-reset:d;display:grid;gap:11px;margin:20px 0;list-style:none;padding:0}
+.dec li{counter-increment:d;display:grid;grid-template-columns:36px 1fr;gap:18px;
+  background:var(--card);border:1px solid var(--line-2);border-radius:11px;padding:18px 20px;box-shadow:var(--shadow)}
+.dec li::before{content:counter(d);font-family:var(--mono);font-size:16px;font-weight:600;
+  color:var(--brass);padding-top:1px}
+.dec b{display:block;font-family:var(--serif);font-size:17px;margin-bottom:5px;color:var(--ink)}
+.dec p{margin:0;font-size:15px;color:var(--ink-2);max-width:none}
+
+/* close */
+.close{background:var(--pine);color:#EEF4F0;border-radius:14px;padding:34px 32px;margin-top:8px}
+:root[data-theme="dark"] .close{color:#0D1311}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .close{color:#0D1311}}
+.close .lab{font-family:var(--mono);font-size:10.5px;font-weight:600;letter-spacing:.16em;
+  text-transform:uppercase;opacity:.72;margin:0 0 12px}
+.close h2{color:inherit;font-size:clamp(21px,2.8vw,27px);margin-bottom:12px}
+.close p{color:inherit;opacity:.9;max-width:62ch;margin-bottom:0}
+.close p + p{margin-top:11px}
+
+footer{padding:34px 0 56px;color:var(--ink-3);font-size:13.5px}
+footer p{max-width:78ch}
+.toggle{position:fixed;bottom:18px;right:18px;z-index:20;background:var(--card);
+  border:1px solid var(--line-2);color:var(--ink-2);border-radius:999px;padding:9px 15px;
+  font:600 11px/1 var(--mono);letter-spacing:.1em;cursor:pointer;box-shadow:var(--shadow)}
+.toggle:focus-visible{outline:2px solid var(--pine);outline-offset:2px}
+</style>
+
+</head>
+<body>
+<button class="toggle" id="tb" aria-label="Alternar tema">TEMA</button>
+
+<header>
+  <div class="wrap">
+    <p class="brandrow"><span>Wissen Tech</span><span class="sep">·</span><span>Proposta de estrutura</span><span class="sep">·</span><span>Gustavo Polar → Leonardo Fiuza</span></p>
+    <h1>A tecnologia pode ser uma despesa da rede ou uma alavanca de resultado. A diferença está na estrutura, não na ferramenta.</h1>
+    <p class="lede">Eu já cuido da tecnologia da Wissence hoje, como consultor contratado. Esta proposta trata da minha posição na empresa que vai formalizar isso — e de como ela nasce capaz de vender para franqueados e clínicas de fora, não só de rodar a TI das três unidades.</p>
+
+    <div class="exec">
+      <div class="exec-h">Resumo executivo — se você ler só esta parte, é o suficiente</div>
+      <div class="exec-b">
+        <p class="pitch">A tecnologia das três unidades já roda hoje, sobre trabalho que está em produção e que pertence à Wissence. O que ainda não existe é <strong>estrutura</strong>: padrão, documentação e processo. Proponho um primeiro ciclo construindo exatamente isso — comigo como CTO e sócio, sem contratar ninguém ainda — de forma que a ampliação venha depois sobre uma base pronta, e que a Wissen Tech já nasça vendável para fora.</p>
+
+        <div class="quad">
+          <div class="qi">
+            <p class="lab">O que já está no ar</p>
+            <p class="big">3 unidades</p>
+            <p>Faturamento, estoque, agenda, conciliação bancária e contas a pagar acompanhados automaticamente todos os dias, nas três clínicas. Mais o CRM e o ERP Aurora.</p>
+          </div>
+          <div class="qi">
+            <p class="lab">O que proponho</p>
+            <p class="big">Estrutura primeiro</p>
+            <p>Eu como CTO com escopo definido em contrato, montando a estrutura de trabalho que hoje não existe — padrão, documentação e processo — para que a operação possa crescer depois sem depender de improviso.</p>
+          </div>
+          <div class="qi">
+            <p class="lab">O que custa</p>
+            <p class="big">R$ 30.000<span style="font-size:15px;color:var(--ink-3)"> / mês</span></p>
+            <p>Pró-labore de sócio. Um arquiteto ou gerente de TI equivalente custa à empresa entre R$ 44 mil e R$ 60 mil por mês, com encargos, 13º, férias e risco de rescisão.</p>
+          </div>
+          <div class="qi">
+            <p class="lab">O que você decide</p>
+            <p class="big">3 definições</p>
+            <p>Como a Wissen Tech fatura o grupo; se a taxa de tecnologia entra no contrato de franquia; e quem mais entra como sócio. Sem essas três, a empresa não tem forma.</p>
+          </div>
+        </div>
+
+        <div class="ask">
+          <p class="lab">O pedido, em uma frase</p>
+          <p>Pró-labore de R$ 30.000/mês pelo papel de CTO com escopo escrito, e <strong>12 % de participação na constituição</strong> — com os degraus acima disso destravando <strong>somente contra receita de clientes de fora do grupo</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="sh">
+      <div class="sn">01</div>
+      <div>
+        <h2>Onde estamos hoje</h2>
+        <p class="sd">Não é um plano. É o que já está funcionando — e o que acontece se ninguém cuidar dele.</p>
+      </div>
+    </div>
+    <div class="body">
+      <div class="tbox"><table>
+        <thead><tr><th>O que roda hoje, automaticamente</th><th>Nas unidades</th></tr></thead>
+        <tbody>
+          <tr><td class="k">Acompanhamento diário de faturamento, meta e conversão de orçamento</td><td class="n">Jundiaí · SP · Alphaville</td></tr>
+          <tr><td class="k">Cobertura de medicação, ruptura de estoque, itens a vencer e excedente parado</td><td class="n">3 unidades</td></tr>
+          <tr><td class="k">Conciliação bancária, boletos a vencer e fluxo de caixa projetado</td><td class="n">3 unidades</td></tr>
+          <tr><td class="k">Agenda, comparecimento, reativação de pacientes e planos sem retorno</td><td class="n">3 unidades</td></tr>
+          <tr><td class="k">CRM e ERP Aurora</td><td class="n">em operação</td></tr>
+          <tr class="mark"><td class="k">Diagnóstico completo do playbook: 24 documentos, 342 itens de checklist e 56 indicadores cruzados com o que o sistema consegue medir</td><td class="n">entregue</td></tr>
+        </tbody>
+      </table></div>
+
+      <div class="note warm">
+        <p class="lab">O ponto que precisa ser dito</p>
+        <p>Tudo isso hoje depende de <strong>uma pessoa</strong>. Não há segunda pessoa que saiba operar, nem documentação suficiente para alguém assumir, nem alguém para cobrir uma ausência. <strong>Isso é o maior risco operacional de tecnologia da rede hoje.</strong></p>
+        <p>Não proponho resolver isso contratando gente agora — proponho <strong>começar a resolver pela estrutura</strong>. Padrão de trabalho, documentação de operação, runbook e processo são o que tornam a próxima contratação possível e barata. Sem isso, contratar cedo só multiplica a dependência em vez de reduzi-la. <strong>Este é o objetivo declarado do primeiro ciclo.</strong></p>
+      </div>
+
+      <h3 class="sub">O que ainda não está feito, e por que importa</h3>
+      <div class="grid2">
+        <div class="c">
+          <p class="lab">Escala</p>
+          <h4>Cada unidade nova exige mexer no código</h4>
+          <p>Os identificadores das clínicas estão fixos no sistema. Hoje isso funciona com três unidades. <strong>Com franquia, vira o teto de crescimento</strong> — cada abertura exigiria republicar sistema em vez de cadastrar uma unidade.</p>
+        </div>
+        <div class="c">
+          <p class="lab">Conformidade</p>
+          <h4>LGPD sem registro de tratamento</h4>
+          <p>Algumas rotinas exportam nome e telefone de paciente. Isso é tratamento de dado pessoal sensível acontecendo hoje, sem inventário nem política de retenção. <strong>É pré-requisito para vender para fora</strong>, e é exposição já existente.</p>
+        </div>
+        <div class="c">
+          <p class="lab">Cobrança</p>
+          <h4>56 metas escritas, nenhuma ligada</h4>
+          <p>O playbook já define metas por área — falta de medicamento em 0 %, comparecimento acima de 85 %, conversão em 85 %. O sistema já sabe medir várias delas e <strong>nunca foi perguntado</strong>. Ligar as duas coisas é barato e rende rápido.</p>
+        </div>
+        <div class="c">
+          <p class="lab">Padrão</p>
+          <h4>A trilha de treinamento não existe</h4>
+          <p>Os 24 documentos são o material, mas não há certificação por pessoa nem auditoria de aderência. <strong>É justamente isso que se vende ao franqueado</strong> — a garantia de que a operação dele fica igual à da matriz.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sh">
+      <div class="sn">02</div>
+      <div>
+        <h2>Como eu trabalho</h2>
+        <p class="sd">Antes de falar de valor, quero deixar claro o que eu posso e o que eu não posso prometer. Prefiro dizer isso agora do que descobrir depois.</p>
+      </div>
+    </div>
+    <div class="body">
+      <p>Como sócio, não trabalho por jornada — respondo por entrega. Ainda assim, prefiro deixar o ritmo combinado por escrito, porque expectativa que não é dita é a principal razão pela qual sociedade dá errado. Tenho outra atividade profissional em tempo integral, e em contrapartida encerro ou passo adiante a minha operação própria de consultoria para abrir espaço para este projeto.</p>
+
+      <div class="sched">
+        <div class="sr"><span class="w">Ritmo de trabalho</span><span class="d">Blocos fixos de trabalho por semana, definidos no início de cada mês, com agenda publicada. <b>Você sempre sabe quando eu estou.</b></span></div>
+        <div class="sr"><span class="w">Incidente fora do bloco</span><span class="d">Enquanto não houver equipe, eu sou o primeiro e o único nível — e é justamente por isso que o runbook e a documentação vêm antes de qualquer coisa. <b>O primeiro objetivo é que a operação pare de precisar de mim para o previsível.</b></span></div>
+        <div class="sr"><span class="w">Continuidade</span><span class="d">Todo código no repositório da empresa e documentação de operação escrita à medida que as coisas são feitas — não no fim. <b>O critério é simples: uma pessoa nova consegue assumir lendo o que está escrito.</b></span></div>
+      </div>
+
+      <div class="note good">
+        <p class="lab">Por que isso é diferente de hoje</p>
+        <p>Hoje a operação depende de uma pessoa disponível informalmente, e nada está escrito. A proposta acima <strong>reduz a dependência de mim</strong>, não aumenta: agenda publicada, documentação obrigatória à medida que se trabalha, e código na empresa. <strong>O objetivo declarado do primeiro ciclo é que a operação pare de precisar de mim para o que é previsível</strong>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sh">
+      <div class="sn">03</div>
+      <div>
+        <h2>A tese: a mesma empresa gera valor em dois lugares</h2>
+        <p class="sd">Este é o ponto mais importante da proposta, e ele é sobre a Wissen Tech, não sobre mim. <b>As duas frentes geram dinheiro — mas o dinheiro aparece em lugares diferentes, e isso muda como cada uma se remunera.</b></p>
+      </div>
+    </div>
+    <div class="body">
+      <div class="grid2">
+        <div class="c">
+          <p class="lab">Frente 1 · dentro do grupo</p>
+          <h4>O valor aparece no resultado das clínicas</h4>
+          <p>Controle de estoque que devolve capital de giro e corta perda por vencimento. Conversão de orçamento que sobe. Caixa sem vazamento de conciliação. Agenda mais cheia com o mesmo custo fixo. E mão de obra otimizada — processo que dispensa trabalho manual é contratação que não precisa acontecer.</p>
+          <p><strong>É dinheiro real, e é grande.</strong> Ele só não aparece no resultado da Wissen Tech: aparece no P&amp;L de cada unidade, que é exatamente onde o grupo quer que apareça.</p>
+        </div>
+        <div class="c hi">
+          <p class="lab">Frente 2 · para fora</p>
+          <h4>O valor aparece na própria Wissen Tech</h4>
+          <p>Franqueados e clínicas de fora pagam pelo mesmo trabalho — só que como receita comercial, com margem e com valor patrimonial. É a mesma tecnologia, vendida mais de uma vez.</p>
+          <p><strong>É aqui que a empresa em si passa a valer alguma coisa</strong>, e não só a economizar. E é o que transforma a área de tecnologia de uma despesa da rede numa segunda fonte de receita dela.</p>
+        </div>
+      </div>
+
+      <div class="note">
+        <p class="lab">O que eu proponho a partir disso</p>
+        <p>A participação na base remunera o que eu entrego nas duas frentes — a responsabilidade técnica da empresa e o ganho que a tecnologia produz dentro das clínicas. <strong>Esse ganho eu proponho medir e reportar</strong>, com linha de base assinada antes: estoque parado, perda por vencimento, conversão de orçamento, divergência de caixa e horas de trabalho manual eliminadas. Não como cobrança adicional — <strong>como a evidência de que a área de tecnologia se paga.</strong> É a mesma disciplina que eu proponho para o resto da operação, aplicada a mim.</p>
+        <p>Já os <strong>degraus acima da base</strong> eu proponho amarrar à receita de clientes de fora do grupo. O motivo é simples: o ganho interno melhora o resultado das clínicas, que já são suas; o crescimento externo é o que faz <em>a Wissen Tech</em> valer mais. <strong>É justo que a participação na empresa acompanhe o que faz a empresa valer</strong> — e o efeito prático é que eu só ganho mais se construir a segunda frente.</p>
+      </div>
+
+      <h3 class="sub">Por que o franqueado é o caminho, e o consultório avulso não é</h3>
+      <div class="tbox"><table>
+        <thead><tr><th></th><th>Clínica de fora, vendida a frio</th><th>Franqueado</th></tr></thead>
+        <tbody>
+          <tr><td class="k">Quanto aceita pagar</td><td class="n">R$ 89 – 499 / mês<br><span style="font-weight:400;font-size:13px;color:var(--ink-3)">é o preço de mercado de software de clínica no Brasil</span></td><td class="n hi">R$ 2.000 – 3.000 / mês<br><span style="font-weight:400;font-size:13px;color:var(--ink-3)">é pacote de franquia, não compra de software</span></td></tr>
+          <tr><td class="k">Custo para conquistar</td><td>Alto. Exige equipe comercial que ainda não existe.</td><td class="k" style="color:var(--ok)">Perto de zero. Já vem com a franquia.</td></tr>
+          <tr><td class="k">Como decide comprar</td><td>Compara com concorrente, pode dizer não</td><td>Faz parte do que ele assinou para ser franqueado</td></tr>
+          <tr class="mark"><td class="k">Para gerar R$ 540 mil por ano</td><td class="n">60 clientes conquistados um a um</td><td class="n hi">15 franqueados</td></tr>
+        </tbody>
+      </table></div>
+      <p style="font-size:15px;color:var(--ink-3)">Números de referência de mercado, não previsão. O ponto não é a projeção — é que <strong>os dois caminhos têm ordens de esforço completamente diferentes</strong>, e a rede já tem o canal do segundo.</p>
+
+      <div class="note warm">
+        <p class="lab">O detalhe que decide se isso vira dinheiro</p>
+        <p>Para que essa receita exista de verdade, a <strong>taxa de tecnologia precisa estar no contrato-padrão de franquia</strong>, com valor definido, e ser faturada pela Wissen Tech ao franqueado. Se ela ficar de fora, ou se for repassada informalmente, a Wissen Tech faz o trabalho sem a receita, e a segunda frente não sai do papel.</p>
+        <p>Além da mensalidade, sugiro considerar um <strong>valor de implantação por unidade nova</strong>: cada franquia aberta gera receita antes mesmo de começar a operar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sh">
+      <div class="sn">04</div>
+      <div>
+        <h2>A proposta</h2>
+        <p class="sd">Dois itens. Tudo o mais é detalhe de contrato e pode ser acertado com quem redigir.</p>
+      </div>
+    </div>
+    <div class="body">
+      <h3 class="sub">1 · Remuneração e papel</h3>
+      <div class="tbox"><table>
+        <thead><tr><th>Item</th><th>Proposta</th><th>Referência</th></tr></thead>
+        <tbody>
+          <tr class="mark"><td class="k">Pró-labore mensal</td><td class="n hi">R$ 30.000</td><td>Valor fixo, reajustado anualmente. Para referência: um arquiteto ou gerente de TI no topo da faixa de mercado custa à empresa entre <strong>R$ 44 mil e R$ 60 mil por mês</strong>, somados encargos, 13º, férias, provisão de rescisão e o custo de contratar. A diferença entre esses dois números é o que eu estou colocando neste projeto.</td></tr>
+          <tr><td class="k">Escopo do cargo</td><td class="n">CTO</td><td>Respondo por arquitetura e decisão tecnológica, roadmap técnico, padrão de engenharia, segurança e LGPD, e avaliação técnica de contratações. <strong>Não respondo por</strong> entrega diária, suporte de primeira linha, plantão nem meta comercial — para isso existe a equipe.</td></tr>
+          <tr><td class="k">Equipe</td><td class="n">nenhuma por ora</td><td>Não proponho contratar agora. O primeiro ciclo sou eu montando a estrutura de trabalho — padrão, documentação, runbook e processo — que torna a ampliação possível depois. <strong>A primeira contratação entra quando o volume justificar e a estrutura suportar</strong>, e proponho que isso seja uma decisão conjunta com critério definido, não uma data.</td></tr>
+          <tr><td class="k">Projeto fora do escopo</td><td class="n">orçado à parte</td><td>Aprovado por escrito antes de começar.</td></tr>
+        </tbody>
+      </table></div>
+
+      <h3 class="sub">2 · Sociedade</h3>
+      <div class="tbox"><table>
+        <thead><tr><th>Momento</th><th>Participação</th><th>Condição</th></tr></thead>
+        <tbody>
+          <tr class="mark"><td class="k">Na constituição</td><td class="n hi">12 %</td><td>Tudo o que foi desenvolvido até aqui — os sistemas em produção, o suporte e o novo sistema de clínica — <strong>é e continua sendo da Wissence</strong>, e passa naturalmente para a Wissen Tech. Não há nada a licenciar nem a negociar sobre isso. A participação corresponde ao que eu passo a trazer daqui em diante: a responsabilidade técnica da empresa, o conhecimento de operar o que já existe, e a diferença entre o pró-labore e o custo de mercado da função. Sujeita a período de carência e a aquisição progressiva ao longo de 4 anos, como é padrão.</td></tr>
+          <tr><td class="k">Degraus seguintes</td><td class="n">até 40 %</td><td><strong>Destravam exclusivamente contra receita auditada de clientes de fora do grupo</strong> — primeiro franqueado pagante, receita recorrente externa sustentada, e independência econômica da empresa. Sem receita externa, a participação permanece na base.</td></tr>
+        </tbody>
+      </table></div>
+
+      <h3 class="sub">3 · Como isso cresce</h3>
+      <p>O plano não é montar uma empresa grande de uma vez. É montar a base certa e ampliar sobre ela.</p>
+      <div class="sched">
+        <div class="sr"><span class="w">Ciclo 1 · só eu</span><span class="d"><b>Estrutura de trabalho.</b> Padrão de engenharia, documentação de operação, runbook, e as metas do playbook finalmente ligadas ao que o sistema já mede. Nenhuma contratação. O critério de sucesso é objetivo: <b>a operação para de precisar de mim para o que é previsível.</b></span></div>
+        <div class="sr"><span class="w">Ciclo 2 · ampliar</span><span class="d"><b>A primeira contratação.</b> Entra quando o volume justificar e a estrutura suportar — com uma pessoa nova conseguindo produzir a partir do que está escrito, e não me perguntando. Decisão conjunta, com critério definido, não por data.</span></div>
+        <div class="sr"><span class="w">Ciclo 3 · fora</span><span class="d"><b>O primeiro cliente externo.</b> Multi-tenant, conformidade fechada e trilha de certificação prontos. É quando a Wissen Tech deixa de ser a TI do grupo e passa a ser um negócio.</span></div>
+      </div>
+
+      <div class="note good">
+        <p class="lab">Por que estruturei assim</p>
+        <p>Porque é a única forma em que o meu interesse e o seu apontam para o mesmo lugar. <strong>Se a Wissen Tech ficar sendo só a TI do grupo, eu não ganho participação nenhuma além da base</strong> — e isso é proposital. O que me faz ganhar mais é exatamente o que faz a empresa valer mais: cliente de fora pagando.</p>
+      </div>
+
+      <p style="font-size:15px;color:var(--ink-3)">Dois pontos dependem de dados que só existem depois de medirmos a linha de base, e prefiro fechá-los pessoalmente: <strong>quais indicadores entram na medição do ganho interno</strong> — falta de medicação, estoque parado, comparecimento, conversão, conciliação — e o calendário detalhado dos degraus de participação.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sh">
+      <div class="sn">05</div>
+      <div>
+        <h2>Duas perguntas que eu faria no seu lugar</h2>
+        <p class="sd">Prefiro respondê-las agora do que deixar você respondê-las sozinho.</p>
+      </div>
+    </div>
+    <div class="body">
+      <div class="grid2">
+        <div class="c">
+          <p class="lab">Pergunta 1</p>
+          <h4>Por que não montar um time do zero e comprar um sistema pronto?</h4>
+          <p>Porque isso resolve metade do problema e cria outra. Sistema pronto de clínica existe e é barato — <strong>e nenhum deles conhece o playbook de vocês.</strong> O que está em produção hoje não é software genérico: é o cruzamento entre as 56 metas que o playbook já escreveu e o que os dados conseguem responder.</p>
+          <p>Um time novo levaria <strong>seis meses só para chegar onde já estamos</strong>, e ainda assim faltaria quem decidisse o quê. Ampliar a equipe será certo em algum momento — mas na ordem inversa: primeiro a estrutura que faz uma pessoa nova ser produtiva, depois a pessoa. Substituir o que já está rodando por um pacote de prateleira é começar de novo pagando mais.</p>
+        </div>
+        <div class="c">
+          <p class="lab">Pergunta 2</p>
+          <h4>Por que sociedade e não só um contrato de prestação de serviços?</h4>
+          <p>Contrato de serviços compra execução. Sociedade compra <strong>alguém que trata o resultado da empresa como seu</strong> — que otimiza custo quando ninguém está olhando, que escolhe a arquitetura que escala em vez da que entrega rápido, e que constrói a frente externa em vez de só manter a interna.</p>
+          <p>É por isso que os degraus estão amarrados a receita de fora. <strong>Você não está me dando participação: está me condicionando a construir o que faz a empresa valer mais.</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sh">
+      <div class="sn">06</div>
+      <div>
+        <h2>O que eu preciso de você</h2>
+        <p class="sd">Três definições. Nenhuma delas é sobre a minha proposta — são sobre a empresa existir com uma forma clara.</p>
+      </div>
+    </div>
+    <div class="body">
+      <ol class="dec">
+        <li><div><b>Como a Wissen Tech fatura o grupo</b><p>Rateio de custos ou contrato de prestação de serviços com margem. As duas opções são legítimas e têm tratamentos tributários diferentes — vale confirmar com o contador. <strong>Mas ela define se a empresa pode ter resultado próprio ou não</strong>, e isso muda tudo o que vem depois, inclusive para outros sócios.</p></div></li>
+        <li><div><b>Se a taxa de tecnologia entra no contrato de franquia</b><p>Com valor definido e faturada pela Wissen Tech ao franqueado. <strong>É o que transforma a expansão da rede em receita de tecnologia</strong> em vez de mais trabalho sem contrapartida.</p></div></li>
+        <li><div><b>Quem mais entra como sócio, e onde a empresa fica</b><p>Sob a holding ou como empresa irmã, e com qual quadro societário. É informação que qualquer sócio precisa antes de assinar, e é mais barata de definir agora do que corrigir depois.</p></div></li>
+      </ol>
+
+      <div class="note warm">
+        <p class="lab">Um item para o jurídico, de ambos os lados</p>
+        <p>Antes de qualquer assinatura, vale que o advogado confirme a titularidade do que já foi desenvolvido e de como ela se transfere ou se licencia para a nova empresa. <strong>É do interesse dos dois lados que isso esteja limpo desde o começo</strong> — é a primeira coisa que um investidor ou um comprador olha, e a mais cara de resolver depois.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Proposta de estrutura para a Wissen Tech. As referências de custo de mão de obra e de preço de mercado citadas são de fontes públicas de 2026 e servem de parâmetro, não de cotação. Os cenários de receita de franquia são ilustrativos, com premissas declaradas, e não constituem projeção. As definições tributárias e societárias mencionadas devem ser confirmadas com contador e advogado antes de qualquer formalização.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var b=document.getElementById('tb');
+  b.addEventListener('click',function(){
+    var c=document.documentElement.getAttribute('data-theme');
+    var n=c==='dark'?'light':c==='light'?'dark':(matchMedia('(prefers-color-scheme: dark)').matches?'light':'dark');
+    document.documentElement.setAttribute('data-theme',n);
+  });
+})();
+</script>
+</body>
+</html>

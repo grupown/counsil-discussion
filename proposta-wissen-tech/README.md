@@ -15,6 +15,8 @@ Wissen Tech (braço de TI/IA do grupo Wissence).
 - `10-teste-do-dono.md` — capacidade confirmada, a credencial do negócio que roda sem o dono, e a escada revisada
 - `11-escada-40-e-lucros.md` — a escada com marco mensurável em cada degrau, o modelo de quanto cada percentual vale, e os mecanismos de participação nos lucros
 - `12-defender-a-proposta.md` — o aporte de 50 %, o desenho do cargo de CTO, e a taxa de tecnologia por franqueado
+- `13-veredito-conselho.md` — veredito do conselho de 5 perspectivas e o desenho da peça externa
+- `apresentacao/` — **a peça que vai para o Leonardo** (documento externo, tom e conteúdo diferentes do memorando interno)
 
 **rev. 2** — premissa corrigida: o autor mantém emprego integral no Mercado Livre.
 A dedicação integral à Wissen Tech deixou de ser a recomendação e passou a ser um
@@ -67,6 +69,16 @@ receita não recebida. O título de CTO é aceito com escopo definido em contrat
 headcount vinculado. E a correção de que os franqueados, não os consultórios
 pequenos, são o canal externo — o que resolve o problema de preço e cria a cláusula
 da taxa de tecnologia por franqueado como receita da Wissen Tech.
+
+**rev. 10** — a proposta passou por um conselho de cinco perspectivas com revisão
+anônima entre pares. Veredito: separar os dois negócios, cortar o empilhamento de
+seis pedidos para dois, responder disponibilidade na primeira página, e condicionar
+os degraus acima da base a receita externa auditada. Pré-condição levantada pelo
+conselho: confirmar com advogado a titularidade do que já foi desenvolvido, antes
+de enviar qualquer peça. Gerada a apresentação externa em `apresentacao/`.
+
+**Atenção:** o conteúdo deste diretório é material interno de negociação e não deve
+ser enviado ao destinatário. A única peça de envio externo está em `apresentacao/`.
 
 Base analítica: os 5 documentos de planejamento (plano de cobertura, playbook por
 área, cronograma, painel de exceções, catálogo de 56 indicadores).

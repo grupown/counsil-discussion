@@ -14,6 +14,7 @@ Wissen Tech (braço de TI/IA do grupo Wissence).
 - `09-quatro-negocios.md` — o piso corrigido, delegar em vez de abandonar o freelance, e o que o restaurante revela
 - `10-teste-do-dono.md` — capacidade confirmada, a credencial do negócio que roda sem o dono, e a escada revisada
 - `11-escada-40-e-lucros.md` — a escada com marco mensurável em cada degrau, o modelo de quanto cada percentual vale, e os mecanismos de participação nos lucros
+- `12-defender-a-proposta.md` — o aporte de 50 %, o desenho do cargo de CTO, e a taxa de tecnologia por franqueado
 
 **rev. 2** — premissa corrigida: o autor mantém emprego integral no Mercado Livre.
 A dedicação integral à Wissen Tech deixou de ser a recomendação e passou a ser um
@@ -58,6 +59,14 @@ vale zero em rateio de custos, cerca de R$ 1.400/mês com margem interna de 20 %
 R$ 14 mil/mês mais R$ 1,7 milhão de valor patrimonial com receita externa real.
 Registra que 28 dos 40 pontos dependem de receita externa e que o segmento de
 pequeno consultório paga R$ 89 a R$ 499/mês, abaixo do ticket que o modelo exige.
+
+**rev. 9** — três pontos de defesa da proposta. O "aporte de 50 % do salário
+ideal" levado até o fim implica valuation de R$ 7,2 milhões e portanto justifica
+26 a 42 %, não 10 %; além disso não é juridicamente aporte, e gera imposto sobre
+receita não recebida. O título de CTO é aceito com escopo definido em contrato e
+headcount vinculado. E a correção de que os franqueados, não os consultórios
+pequenos, são o canal externo — o que resolve o problema de preço e cria a cláusula
+da taxa de tecnologia por franqueado como receita da Wissen Tech.
 
 Base analítica: os 5 documentos de planejamento (plano de cobertura, playbook por
 área, cronograma, painel de exceções, catálogo de 56 indicadores).

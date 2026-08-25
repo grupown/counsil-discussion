@@ -13,6 +13,7 @@ Wissen Tech (braço de TI/IA do grupo Wissence).
 - `08-analise-cv.md` — o que o currículo sustenta, o que ele contradiz, e o que faz com o preço
 - `09-quatro-negocios.md` — o piso corrigido, delegar em vez de abandonar o freelance, e o que o restaurante revela
 - `10-teste-do-dono.md` — capacidade confirmada, a credencial do negócio que roda sem o dono, e a escada revisada
+- `11-escada-40-e-lucros.md` — a escada com marco mensurável em cada degrau, o modelo de quanto cada percentual vale, e os mecanismos de participação nos lucros
 
 **rev. 2** — premissa corrigida: o autor mantém emprego integral no Mercado Livre.
 A dedicação integral à Wissen Tech deixou de ser a recomendação e passou a ser um
@@ -50,6 +51,13 @@ define como marco — uma operação que roda sem o dono —, o que o grupo aind
 atingiu. Base de participação sobe de 10 % para 12 %, a escada ganha um degrau
 para a entrega da trilha de certificação (a Camada 3, o moat ausente), e a porta
 da dedicação integral vai de 25 % para 28 %.
+
+**rev. 8** — a escada até 40 % ganha marco mensurável, fonte de verificação e
+prazo em cada degrau, mais o modelo financeiro que precifica cada percentual: 40 %
+vale zero em rateio de custos, cerca de R$ 1.400/mês com margem interna de 20 %, e
+R$ 14 mil/mês mais R$ 1,7 milhão de valor patrimonial com receita externa real.
+Registra que 28 dos 40 pontos dependem de receita externa e que o segmento de
+pequeno consultório paga R$ 89 a R$ 499/mês, abaixo do ticket que o modelo exige.
 
 Base analítica: os 5 documentos de planejamento (plano de cobertura, playbook por
 área, cronograma, painel de exceções, catálogo de 56 indicadores).

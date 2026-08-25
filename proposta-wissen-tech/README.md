@@ -17,6 +17,7 @@ Wissen Tech (braço de TI/IA do grupo Wissence).
 - `12-defender-a-proposta.md` — o aporte de 50 %, o desenho do cargo de CTO, e a taxa de tecnologia por franqueado
 - `13-veredito-conselho.md` — veredito do conselho de 5 perspectivas e o desenho da peça externa
 - `14-ajustes-finais.md` — PI da Wissence, pró-labore em vez de jornada, e o plano em três ciclos sem contratação
+- `15-remocoes-e-tese.md` — as remoções pedidas e a reescrita da tese de valor das duas frentes
 - `apresentacao/` — **a peça que vai para o Leonardo** (documento externo, tom e conteúdo diferentes do memorando interno)
 
 **rev. 2** — premissa corrigida: o autor mantém outro emprego integral.
@@ -88,6 +89,15 @@ haverá contratação no início. A peça externa foi ajustada e o argumento da
 participação deslocado de "aporte de ativo" para "responsabilidade técnica mais
 remuneração abaixo do mercado". O pedido de equipe foi substituído por um plano de
 três ciclos, começando por estrutura em vez de gente.
+
+**rev. 13** — removidos da peça externa o SLA de resposta, a cláusula de escopo
+orçado à parte, a frase sobre não pedir participação em negócio inexistente, e
+todas as referências ao restaurante. Reescrita a tese central: a frente interna
+deixa de ser tratada como centro de custo sem valor e passa a ser creditada pelo
+ganho que produz no resultado das clínicas — estoque, conversão, caixa, agenda e
+mão de obra otimizada —, com proposta de medir e reportar esse ganho como
+evidência, não como cobrança. Os degraus acima da base seguem amarrados a receita
+externa, agora com justificativa diferente.
 
 Base analítica: os 5 documentos de planejamento (plano de cobertura, playbook por
 área, cronograma, painel de exceções, catálogo de 56 indicadores).

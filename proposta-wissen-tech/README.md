@@ -16,6 +16,7 @@ Wissen Tech (braço de TI/IA do grupo Wissence).
 - `11-escada-40-e-lucros.md` — a escada com marco mensurável em cada degrau, o modelo de quanto cada percentual vale, e os mecanismos de participação nos lucros
 - `12-defender-a-proposta.md` — o aporte de 50 %, o desenho do cargo de CTO, e a taxa de tecnologia por franqueado
 - `13-veredito-conselho.md` — veredito do conselho de 5 perspectivas e o desenho da peça externa
+- `14-ajustes-finais.md` — PI da Wissence, pró-labore em vez de jornada, e o plano em três ciclos sem contratação
 - `apresentacao/` — **a peça que vai para o Leonardo** (documento externo, tom e conteúdo diferentes do memorando interno)
 
 **rev. 2** — premissa corrigida: o autor mantém outro emprego integral.
@@ -79,6 +80,14 @@ de enviar qualquer peça. Gerada a apresentação externa em `apresentacao/`.
 
 **Atenção:** o conteúdo deste diretório é material interno de negociação e não deve
 ser enviado ao destinatário. A única peça de envio externo está em `apresentacao/`.
+
+**rev. 12** — quatro correções de fato: o autor já é consultor contratado da
+Wissence; a propriedade intelectual de tudo o que foi desenvolvido pertence à
+Wissence; a remuneração é pró-labore de sócio e não jornada de meio período; e não
+haverá contratação no início. A peça externa foi ajustada e o argumento da
+participação deslocado de "aporte de ativo" para "responsabilidade técnica mais
+remuneração abaixo do mercado". O pedido de equipe foi substituído por um plano de
+três ciclos, começando por estrutura em vez de gente.
 
 Base analítica: os 5 documentos de planejamento (plano de cobertura, playbook por
 área, cronograma, painel de exceções, catálogo de 56 indicadores).

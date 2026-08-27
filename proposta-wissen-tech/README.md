@@ -18,6 +18,8 @@ Wissen Tech (braço de TI/IA do grupo Wissence).
 - `13-veredito-conselho.md` — veredito do conselho de 5 perspectivas e o desenho da peça externa
 - `14-ajustes-finais.md` — PI da Wissence, pró-labore em vez de jornada, e o plano em três ciclos sem contratação
 - `15-remocoes-e-tese.md` — as remoções pedidas e a reescrita da tese de valor das duas frentes
+- `16-catalogo-servicos.md` — veredito do conselho sobre o catálogo de serviços
+- `catalogo/` — **o catálogo de serviços** e a proposta de exemplo que o originou
 - `apresentacao/` — **a peça que vai para o Leonardo** (documento externo, tom e conteúdo diferentes do memorando interno)
 
 **rev. 2** — premissa corrigida: o autor mantém outro emprego integral.

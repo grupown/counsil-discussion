@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Catálogo de Serviços Wissen Tech</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght@9..144,0,400;9..144,0,600;9..144,1,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  /* Identidade visual herdada da proposta comercial da Wissen Tech.
+     Peça de coleção comercial: compromete-se deliberadamente com um único
+     tema claro, com fundo e cores pintados explicitamente. */
+  :root{
+    --ink:#0F2E2B; --paper:#F7F8F6; --teal:#1F6F68; --teal-soft:#E3EDEA;
+    --amber:#B4661A; --amber-soft:#F6EADA; --slate:#5B6A68; --line:#D6DEDB;
+    --white:#fff; --rose:#8C3B2F; --rose-soft:#F6E4E0;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:"IBM Plex Sans",system-ui,sans-serif;font-size:16px;line-height:1.62}
+  .wrap{max-width:920px;margin:0 auto;padding:56px 28px 96px}
+
+  .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--teal);margin:0 0 18px}
+  h1{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:clamp(30px,5.2vw,46px);
+    line-height:1.08;letter-spacing:-.015em;margin:0 0 14px;color:var(--ink)}
+  h1 em{font-style:italic;font-weight:400;color:var(--teal)}
+  .dek{font-size:17.5px;color:var(--slate);max-width:60ch;margin:0 0 30px}
+
+  .meta{border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:2px 26px;
+    padding:16px 0;margin-bottom:52px}
+  .meta div{padding:5px 0}
+  .meta dt{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.13em;
+    text-transform:uppercase;color:var(--slate);margin:0 0 3px}
+  .meta dd{margin:0;font-size:14.5px;font-weight:500;color:var(--ink)}
+
+  section{margin:0 0 56px}
+  h2.sec{font-family:"Fraunces",serif;font-weight:600;font-size:25px;letter-spacing:-.01em;
+    margin:0 0 6px;padding-bottom:12px;border-bottom:2px solid var(--ink);color:var(--ink)}
+  .sec-note{font-size:14px;color:var(--slate);margin:12px 0 26px}
+  h3{font-weight:600;font-size:16px;margin:0 0 7px;letter-spacing:-.005em;color:var(--ink)}
+  p{margin:0 0 14px}
+  ul.plain{margin:0 0 14px;padding-left:20px}
+  ul.plain li{margin-bottom:7px}
+
+  .lead{background:var(--ink);color:#EAF1EE;border-radius:3px;padding:28px;margin:0 0 56px}
+  .lead p{margin:0 0 12px;font-size:16.5px;color:#CFE0DC}
+  .lead p:last-child{margin:0}
+  .lead strong{color:#F2C48A;font-weight:500}
+
+  .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px}
+  .card{background:var(--white);border:1px solid var(--line);border-radius:3px;padding:22px}
+  .card p{font-size:14.5px;color:var(--slate);margin:0}
+  .card p + p{margin-top:10px}
+  .tag{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:10px;
+    letter-spacing:.12em;text-transform:uppercase;color:var(--teal);background:var(--teal-soft);
+    padding:3px 7px;border-radius:2px;margin-bottom:11px}
+  .tag.warn{color:var(--amber);background:var(--amber-soft)}
+  .tag.no{color:var(--rose);background:var(--rose-soft)}
+
+  /* linha de serviço */
+  .line{background:var(--white);border:1px solid var(--line);border-radius:3px;
+    padding:26px;margin-bottom:20px}
+  .line.on{border-left:4px solid var(--teal)}
+  .line.later{border-left:4px solid var(--amber);background:#FCFBF8}
+  .line-h{display:flex;justify-content:space-between;align-items:baseline;gap:18px;
+    flex-wrap:wrap;margin-bottom:6px}
+  .line-h h3{font-family:"Fraunces",serif;font-size:21px;font-weight:600;margin:0}
+  .badge{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.12em;
+    text-transform:uppercase;padding:4px 9px;border-radius:2px;white-space:nowrap}
+  .badge.on{background:var(--teal);color:#fff}
+  .badge.later{background:var(--amber-soft);color:var(--amber);border:1px solid var(--amber)}
+  .line .who{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;
+    color:var(--slate);margin:0 0 16px}
+  .line p{font-size:15px}
+  .grid-kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:1px;background:var(--line);border:1px solid var(--line);border-radius:2px;
+    margin:18px 0 0;overflow:hidden}
+  .kv{background:var(--white);padding:13px 15px}
+  .kv dt{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--slate);margin:0 0 5px}
+  .kv dd{margin:0;font-size:15px;font-weight:600;color:var(--ink);
+    font-variant-numeric:tabular-nums}
+  .kv dd small{display:block;font-weight:400;font-size:12.5px;color:var(--slate);
+    margin-top:3px;letter-spacing:0}
+
+  .tbl-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  table{width:100%;border-collapse:collapse;font-size:14.5px;min-width:620px}
+  th{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--slate);text-align:left;font-weight:500;
+    padding:0 12px 9px 0;border-bottom:1px solid var(--ink);white-space:nowrap}
+  td{padding:13px 12px 13px 0;border-bottom:1px solid var(--line);vertical-align:top;color:var(--ink)}
+  td.k{font-weight:600}
+  td.n{font-family:"IBM Plex Mono",monospace;white-space:nowrap;font-variant-numeric:tabular-nums}
+  td.no{color:var(--rose);font-weight:500}
+  tr:last-child td{border-bottom:1px solid var(--ink)}
+
+  .box{border-left:3px solid var(--teal);background:var(--white);padding:20px 22px;
+    border-radius:0 3px 3px 0;margin-bottom:18px}
+  .box.warn{border-left-color:var(--amber)}
+  .box.no{border-left-color:var(--rose)}
+  .box h3{font-family:"Fraunces",serif;font-size:18px;font-weight:600;margin-bottom:8px}
+  .box p{font-size:15px;color:var(--slate)}
+  .box p:last-child{margin-bottom:0}
+  .box strong{color:var(--ink);font-weight:600}
+
+  ol.num{list-style:none;counter-reset:o;padding:0;margin:0}
+  ol.num li{counter-increment:o;position:relative;padding:0 0 16px 40px;
+    border-bottom:1px solid var(--line);margin-bottom:16px}
+  ol.num li:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}
+  ol.num li::before{content:counter(o,decimal-leading-zero);position:absolute;left:0;top:1px;
+    font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--amber);letter-spacing:.05em}
+  ol.num strong{display:block;font-size:15.5px;margin-bottom:3px;color:var(--ink)}
+  ol.num span{font-size:14.5px;color:var(--slate)}
+
+  footer{border-top:1px solid var(--line);padding-top:20px;margin-top:56px;
+    font-family:"IBM Plex Mono",monospace;font-size:11.5px;line-height:1.75;
+    color:var(--slate);letter-spacing:.03em}
+
+  @media (max-width:560px){.wrap{padding:36px 20px 64px}}
+  @media print{
+    body{background:#fff}.wrap{max-width:none;padding:0}
+    .lead{background:#fff;color:var(--ink);border:1px solid var(--ink)}
+    .lead p{color:#333}.lead strong{color:var(--amber)}
+    section,.line{break-inside:avoid}
+  }
+</style>
+
+</head>
+<body>
+<div class="wrap">
+
+  <p class="eyebrow">Documento interno · Wissen Tech</p>
+  <h1>Catálogo de serviços e<br><em>regras de atendimento</em></h1>
+  <p class="dek">O que a Wissen Tech oferece, a quem, por quanto — e o que ela recusa. Construído a partir da capacidade real de entrega, não da lista de coisas que sabemos fazer.</p>
+
+  <dl class="meta">
+    <div><dt>Versão</dt><dd>1.0 · 27/08/2026</dd></div>
+    <div><dt>Uso</dt><dd>Interno — base para propostas</dd></div>
+    <div><dt>Capacidade base</dt><dd>1 pessoa · ~80 h/mês</dd></div>
+    <div><dt>Revisão</dt><dd>A cada contratação</dd></div>
+  </dl>
+
+  <div class="lead">
+    <p>Este catálogo parte de uma restrição, não de uma ambição: <strong>a Wissen Tech tem uma pessoa e cerca de 80 horas por mês</strong>, e parte dessas horas já é da operação interna das três unidades. Uma Fase 0 de diagnóstico forense consome 56 delas.</p>
+    <p>A consequência é dura e organiza o documento inteiro: <strong>não é possível ter cinco ofertas ativas.</strong> Duas linhas entram agora, duas ficam datadas, e três tipos de cliente são recusados por escrito enquanto não houver produto que os atenda sem consumir hora humana. Recusar é a decisão que torna o resto executável.</p>
+  </div>
+
+  <section>
+    <h2 class="sec">O eixo que organiza tudo: quem executa</h2>
+    <p class="sec-note">Não segmentamos por tamanho da clínica nem por "tem ou não tem TI". Tamanho é consequência; ter TI é característica do cliente. O que determina margem, prazo e risco é uma coisa só.</p>
+    <div class="cols">
+      <div class="card">
+        <span class="tag">Modelo 1</span>
+        <h3>Nós conduzimos, o time do cliente executa</h3>
+        <p>Vendemos arquitetura, plano, especificação e revisão técnica. A construção é do profissional de TI da clínica. O conhecimento fica dentro do cliente.</p>
+        <p><strong>Exige</strong> profissional de TI interno com dedicação declarada. Sem isso, o modelo não se sustenta — quem executa passa a ser a Wissen Tech, e não há horas.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Modelo 2</span>
+        <h3>Nós entregamos um produto de escopo fechado</h3>
+        <p>Documento, dossiê ou configuração com começo, meio e fim definidos. Preço fechado, horas conhecidas, sem hora aberta e sem dependência de time do cliente.</p>
+        <p><strong>É o único modelo</strong> que atende clínica sem TI e consultório pequeno sem destruir a margem, porque a hora é limitada por contrato e não por demanda.</p>
+      </div>
+      <div class="card">
+        <span class="tag warn">Modelo 3 · futuro</span>
+        <h3>O produto executa sozinho</h3>
+        <p>Assinatura de rotinas automatizadas, com implantação autoatendida e sem call de onboarding. É o que abre o segmento de consultório pequeno de verdade.</p>
+        <p><strong>Não existe hoje.</strong> Depende de o sistema ser multi-inquilino e da implantação funcionar sem intervenção. Enquanto isso, esse segmento fica fora.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec">Linhas ativas</h2>
+    <p class="sec-note">Duas linhas em operação. Juntas cabem na capacidade atual e cobrem a maior parte da demanda real.</p>
+
+    <div class="line on">
+      <div class="line-h">
+        <h3>L1 · Conformidade em IA — Resolução CFM 2.454/2026</h3>
+        <span class="badge on">Ativa</span>
+      </div>
+      <p class="who">Qualquer porte · qualquer cliente · não exige TI interno</p>
+      <p>A Resolução CFM nº 2.454/2026, aprovada em 11/02/2026, <strong>entrou em vigor em 26/08/2026</strong>. Ela exige avaliação preliminar de risco algorítmico, com classificação em baixo, médio, alto ou inaceitável, e torna obrigatória a constituição de uma <strong>Comissão de IA e Telemedicina</strong> sob coordenação médica e subordinada à diretoria técnica, para instituição que adote sistema próprio de inteligência artificial. O eixo da norma é que a decisão clínica permanece sempre humana.</p>
+      <p>Entregamos o dossiê técnico que instrui a conformidade: inventário de todo uso de IA na operação, avaliação de risco por sistema, minuta de ata de constituição da Comissão, regimento interno e política de uso. <strong>A coordenação da Comissão é médica e é do cliente</strong> — assinamos a parte técnica, nunca o parecer que só um médico pode assinar.</p>
+      <div class="grid-kv">
+        <div class="kv"><dt>Esforço</dt><dd>6 – 8 h<small>escopo fechado</small></dd></div>
+        <div class="kv"><dt>Preço</dt><dd>R$ 4.800<small>preço fechado</small></dd></div>
+        <div class="kv"><dt>Prazo</dt><dd>10 dias<small>a contar dos dados</small></dd></div>
+        <div class="kv"><dt>Recorrente</dt><dd>R$ 1.200/mês<small>secretariado técnico da Comissão, 2 h/mês — opcional</small></dd></div>
+      </div>
+    </div>
+
+    <div class="line on">
+      <div class="line-h">
+        <h3>L2 · Raio-X do dinheiro da clínica</h3>
+        <span class="badge on">Ativa</span>
+      </div>
+      <p class="who">Clínica de 1 local e multi-local · não exige TI interno · porta de entrada</p>
+      <p>Uma leitura de duas semanas sobre onde a receita está vazando, feita <strong>sem acesso aos sistemas e sem visita</strong> — trabalhamos com os relatórios e planilhas que a clínica já tem. Cobrimos os cinco lugares onde o dinheiro costuma escapar: glosa e faturamento não recebido, faltas e buracos de agenda, divergência de conciliação de caixa, estoque parado e perda por vencimento, e orçamento apresentado que não fecha.</p>
+      <p>A entrega é um documento curto com número: quanto está vazando por mês em cada frente, de onde vem a estimativa, e o que dá para corrigir em 30, 60 e 90 dias. <strong>É deliberadamente barato e rápido</strong> — existe para provar valor antes de qualquer compromisso longo, e o valor é integralmente abatido se a clínica seguir para a L3 em até 30 dias.</p>
+      <div class="grid-kv">
+        <div class="kv"><dt>Esforço</dt><dd>8 – 12 h</dd></div>
+        <div class="kv"><dt>1 local</dt><dd>R$ 3.900</dd></div>
+        <div class="kv"><dt>Multi-local</dt><dd>R$ 6.900</dd></div>
+        <div class="kv"><dt>Pagamento</dt><dd>50 / 50<small>metade na assinatura, metade na entrega</small></dd></div>
+      </div>
+    </div>
+
+    <div class="line on">
+      <div class="line-h">
+        <h3>L3 · Condução técnica — nós conduzimos, seu time executa</h3>
+        <span class="badge on">Ativa · máx. 2 clientes</span>
+      </div>
+      <p class="who">Multi-local ou clínica com TI interno · <strong>exige</strong> profissional de TI dedicado ≥ 30 h/semana</p>
+      <p>É o ciclo completo: diagnóstico forense, plano de 90 dias, condução do backlog com especificação e revisão técnica do que o time do cliente constrói, e leitura mensal das métricas contra a linha de base. É a linha de maior valor e a de maior consumo de hora — por isso tem <strong>teto de dois clientes simultâneos</strong>, e o teto não é negociável.</p>
+      <p><strong>Condição de venda:</strong> sem profissional de TI do cliente dedicado a pelo menos 30 h por semana, esta linha não é vendida. Não é preferência — é a diferença entre conduzir e executar, e executar não cabe na capacidade.</p>
+      <div class="grid-kv">
+        <div class="kv"><dt>Fase 0 · forense</dt><dd>R$ 19.600<small>4 semanas · 56 h · preço fechado</small></dd></div>
+        <div class="kv"><dt>Fase 1 · condução</dt><dd>R$ 7.600 – 15.600<small>20 h, 32 h ou 48 h/mês · mín. 3 meses</small></dd></div>
+        <div class="kv"><dt>Fase 2 · assessoria</dt><dd>R$ 3.600/mês<small>8 h/mês · a partir do 8º mês</small></dd></div>
+        <div class="kv"><dt>Ciclo de referência</dt><dd>R$ 86.800<small>7 meses, Fase 0 + 6 × 32 h</small></dd></div>
+      </div>
+    </div>
+
+    <div class="line on">
+      <div class="line-h">
+        <h3>L4 · Tecnologia de franquia</h3>
+        <span class="badge on">Ativa via contrato</span>
+      </div>
+      <p class="who">Franqueados da rede · canal contratual, não venda avulsa</p>
+      <p>Para o franqueado, tecnologia não é uma decisão de compra separada: é parte do que ele assinou. O pacote entra no <strong>contrato-padrão de franquia</strong>, com valor definido e faturado pela Wissen Tech diretamente ao franqueado — playbook instrumentado, rotinas de controle já rodando, painel de exceção e trilha de certificação da equipe.</p>
+      <p>É a linha com <strong>custo de aquisição próximo de zero</strong>, porque a distribuição já existe. E é a única em que o fato de o grupo operar clínicas deixa de ser um problema e passa a ser o argumento: o franqueado compra justamente o método da rede a que ele pertence.</p>
+      <div class="grid-kv">
+        <div class="kv"><dt>Implantação</dt><dd>R$ 8 – 15 mil<small>por unidade nova</small></dd></div>
+        <div class="kv"><dt>Mensalidade</dt><dd>R$ 2 – 3 mil<small>por unidade</small></dd></div>
+        <div class="kv"><dt>Aquisição</dt><dd>~zero<small>vem com a franquia</small></dd></div>
+        <div class="kv"><dt>Pré-condição</dt><dd>Contrato<small>taxa escrita no contrato-padrão de franquia</small></dd></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec">Linhas datadas — existem, mas não hoje</h2>
+    <p class="sec-note">Não são ideias descartadas. São ofertas com pré-condição declarada, que só entram no catálogo quando a pré-condição estiver cumprida. Anunciar antes disso é vender o que não se entrega.</p>
+
+    <div class="line later">
+      <div class="line-h">
+        <h3>L5 · Assinatura para consultório pequeno</h3>
+        <span class="badge later">Depende de produto</span>
+      </div>
+      <p class="who">Consultório de 1 médico + 1 recepcionista · alvo de R$ 300 – 900/mês</p>
+      <p>Rotinas de agenda, cobrança e fechamento de caixa empacotadas como assinatura. É o único formato viável para esse porte: quem paga R$ 400 por mês não sustenta atendimento humano, e o mercado de software de gestão para clínica no Brasil precifica entre R$ 89 e R$ 499 mensais.</p>
+      <p><strong>Pré-condição:</strong> implantação autoatendida, sem call de onboarding, e sistema multi-inquilino — hoje os identificadores de clínica estão fixos no código. Enquanto isso não existir, este segmento é recusado, não descontado.</p>
+    </div>
+
+    <div class="line later">
+      <div class="line-h">
+        <h3>L6 · Formação e certificação em gestão tecnológica de clínica</h3>
+        <span class="badge later">Depende da Camada 3</span>
+      </div>
+      <p class="who">Franqueados, equipes de clínica, mercado aberto</p>
+      <p>Trilha de formação com certificação por pessoa, aproveitando o material do playbook já existente. Tem alavancagem alta — ensina-se uma vez para muitos — e cada aluno é um cliente potencial das outras linhas.</p>
+      <p><strong>Pré-condição:</strong> a trilha de certificação e a rotina de auditoria de aderência precisam existir e ter rodado ao menos um ciclo interno. Vender formação sobre método não implantado é o inverso do que a Wissen Tech propõe aos clientes.</p>
+    </div>
+
+    <div class="line later">
+      <div class="line-h">
+        <h3>L7 · Licenciamento do método a terceiros</h3>
+        <span class="badge later">Depende de 2 casos</span>
+      </div>
+      <p class="who">Contadores de saúde, consultorias de gestão médica, outras redes</p>
+      <p>Licenciar o método de diagnóstico e o conjunto de rotinas para quem já atende clínicas, com mensalidade por licenciado e participação na receita. É a linha de maior escala potencial, porque a entrega deixa de depender de hora nossa.</p>
+      <p><strong>Pré-condição:</strong> o método precisa ter sido executado com sucesso <strong>por duas pessoas diferentes</strong>, não só pelo autor. Antes disso não há método licenciável — há uma pessoa com prática, e licenciar prática pessoal gera suporte, não receita.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec">Mapa por tipo de cliente</h2>
+    <p class="sec-note">O cruzamento que decide o que se oferece a quem — e onde a resposta é não.</p>
+    <div class="tbl-scroll">
+      <table>
+        <thead><tr><th>Tipo de cliente</th><th>Tem TI interno?</th><th>O que oferecemos</th><th>O que NÃO oferecemos</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="k">Consultório · 1 médico + 1 recepcionista</td>
+            <td>irrelevante</td>
+            <td>L1 conformidade CFM. Nada mais, hoje.</td>
+            <td class="no">Consultoria por hora, banco de horas, diagnóstico forense</td>
+          </tr>
+          <tr>
+            <td class="k">Clínica de 1 local · sem TI</td>
+            <td>não</td>
+            <td>L1 e L2. Escopo fechado, sempre.</td>
+            <td class="no">Banco de horas — quem executaria seria a Wissen Tech</td>
+          </tr>
+          <tr>
+            <td class="k">Clínica de 1 local · com TI</td>
+            <td>sim, ≥ 30 h/sem</td>
+            <td>L1, L2 e L3 em versão reduzida (20 h/mês)</td>
+            <td class="no">Fase 0 completa de 56 h — desproporcional a um local</td>
+          </tr>
+          <tr>
+            <td class="k">Clínica multi-local · sem TI</td>
+            <td>não</td>
+            <td>L1 e L2. L3 só se contratarem ou alocarem TI.</td>
+            <td class="no">L3 sem TI dedicado — é a recusa mais importante deste catálogo</td>
+          </tr>
+          <tr>
+            <td class="k">Clínica multi-local · com TI</td>
+            <td>sim, ≥ 30 h/sem</td>
+            <td><strong>Cliente ideal.</strong> L1, L2 e L3 completa.</td>
+            <td class="no">Desenvolvimento sob demanda e plantão</td>
+          </tr>
+          <tr>
+            <td class="k">Franqueado da rede</td>
+            <td>irrelevante</td>
+            <td><strong>L4</strong>, via contrato de franquia. Melhor economia do catálogo.</td>
+            <td class="no">Negociação avulsa fora do contrato-padrão</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec">O que a Wissen Tech não faz</h2>
+    <p class="sec-note">Recusas explícitas. Cada uma delas existe porque o contrário já falhou em algum lugar, ou porque não cabe na capacidade.</p>
+    <div class="box no">
+      <h3>Banco de horas para cliente sem TI dedicado</h3>
+      <p>É a recusa que sustenta o catálogo. Sem time interno, conduzir vira executar, e executar consome a capacidade de todos os outros clientes ao mesmo tempo. <strong>Cliente sem TI compra escopo fechado ou não compra.</strong></p>
+    </div>
+    <div class="box no">
+      <h3>Mais de dois clientes simultâneos na L3</h3>
+      <p>32 h/mês × 2 já são 64 das 80 horas. O terceiro contrato não é receita adicional: é inadimplência contratual programada, e arrisca também a operação interna do grupo.</p>
+    </div>
+    <div class="box no">
+      <h3>Desenvolvimento sob demanda, sustentação de código e plantão</h3>
+      <p>Especificamos e revisamos; a construção é do time do cliente ou de fornecedor dele. Assumir código de terceiro sem equipe é assumir passivo sem prazo.</p>
+    </div>
+    <div class="box no">
+      <h3>Implantação de sistema novo dentro de outro contrato</h3>
+      <p>Migração e implantação — inclusive de sistema próprio do grupo — são escopo e contrato separados, com proposta específica. Nunca embutidos em banco de horas.</p>
+    </div>
+    <div class="box no">
+      <h3>Qualquer decisão clínica</h3>
+      <p>Atuamos sobre processo, dado e sistema. Conduta, prescrição e parecer clínico são do médico, e a Resolução CFM 2.454/2026 reforça que a decisão clínica é sempre humana.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec">Pré-condições internas antes da primeira venda externa</h2>
+    <p class="sec-note">Cinco itens que não são burocracia: sem eles, o catálogo não pode ser oferecido. Os dois primeiros são bloqueantes.</p>
+    <ol class="num">
+      <li><strong>Licença de uso, por escrito, do que pertence à Wissence</strong><span>As rotinas em produção, o motor de indicadores e o método de diagnóstico foram desenvolvidos sob contrato com a Wissence e pertencem ao grupo. Para usá-los em cliente de fora, a Wissen Tech precisa de autorização formal do grupo. <strong>Isto é bloqueante:</strong> todo o catálogo pressupõe esse direito e ele ainda não está documentado.</span></li>
+      <li><strong>Autorização para atender clínicas fora do grupo, com regra sobre concorrentes</strong><span>O grupo opera clínicas. Precisa estar definido, por escrito, se e em que condições a Wissen Tech pode atender clínicas que competem com as unidades — por região, por especialidade ou caso a caso. Junto com isso, a cláusula de não uso de informação, que já consta na proposta comercial, passa a valer para os dois lados.</span></li>
+      <li><strong>Reserva de horas para a operação interna</strong><span>Antes de vender qualquer hora, é preciso saber quantas das 80 já estão comprometidas com as três unidades. A reserva vira número no catálogo, e o que sobra é o que pode ser vendido. Sem essa conta, cada venda nova é um risco de quebrar dois compromissos ao mesmo tempo.</span></li>
+      <li><strong>Contrato guarda-chuva com anexo por linha, e acordo de operador de dados</strong><span>Um contrato de três páginas com quatro anexos de escopo, em vez de quatro contratos. Junto, o acordo de tratamento de dados: as linhas L2 e L3 tocam faturamento, agenda e, eventualmente, dado de paciente — a Wissen Tech atua como operadora sob instrução do cliente, e isso precisa estar assinado antes do primeiro acesso.</span></li>
+      <li><strong>Cláusula de interrupção e substituição</strong><span>Um ciclo de sete meses conduzido por uma pessoa não tem substituto. Férias, doença ou sobrecarga interrompem entrega e receita ao mesmo tempo. O contrato precisa prever suspensão de prazo, e o preço precisa considerar que não há redundância — até que exista equipe.</span></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2 class="sec">Ordem de entrada no mercado</h2>
+    <p class="sec-note">Nem todas as linhas competem por atenção comercial ao mesmo tempo. A sequência é por urgência do cliente e por facilidade de entrega.</p>
+    <div class="tbl-scroll">
+      <table>
+        <thead><tr><th>Ordem</th><th>Linha</th><th>Por que primeiro</th><th class="n">Hora por venda</th></tr></thead>
+        <tbody>
+          <tr><td class="n">1º</td><td class="k">L1 · Conformidade CFM</td><td>O prazo da resolução venceu em 26/08/2026. É a única linha em que o cliente tem obrigação com data, e não uma melhoria adiável. Escopo fechado, material replicável, escala sem hora marginal.</td><td class="n">6 – 8 h</td></tr>
+          <tr><td class="n">2º</td><td class="k">L2 · Raio-X do dinheiro</td><td>Barata, rápida, entrega número. É a porta de entrada que converte em L3 e a forma de provar valor sem pedir compromisso longo.</td><td class="n">8 – 12 h</td></tr>
+          <tr><td class="n">3º</td><td class="k">L4 · Tecnologia de franquia</td><td>Depende só de uma decisão contratual do grupo, não de esforço comercial. Melhor economia do catálogo, e não precisa de pipeline.</td><td class="n">implantação</td></tr>
+          <tr><td class="n">4º</td><td class="k">L3 · Condução técnica</td><td>Já existe e já foi proposta. Ciclo longo, ticket alto, teto de dois clientes. Não precisa de mais divulgação — precisa de seleção.</td><td class="n">20 – 48 h/mês</td></tr>
+          <tr><td class="n">—</td><td class="k">L5, L6, L7</td><td>Só quando a pré-condição de cada uma estiver cumprida. Não entram em material comercial antes disso.</td><td class="n">—</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="box warn" style="margin-top:26px">
+      <h3>Um ponto a confirmar antes de qualquer material sobre a L1</h3>
+      <p>A obrigatoriedade da Comissão de IA e Telemedicina está descrita para instituições que adotem <strong>sistemas próprios</strong> de inteligência artificial. Falta confirmar, no texto integral da resolução, o tratamento dado a quem apenas <em>usa</em> sistema de terceiro com IA embarcada — o que muda o tamanho do mercado da linha. <strong>Confirmar com advogado antes de afirmar em peça comercial</strong>, e não vender urgência sobre interpretação não verificada.</p>
+    </div>
+  </section>
+
+  <footer>
+    Wissen Tech · Catálogo de serviços, versão 1.0<br>
+    Documento interno. Preços e escopos são referência para montagem de proposta, não tabela pública.<br>
+    Referências de mercado: mensalidade de sistema de gestão para clínica no Brasil entre R$ 89 e R$ 499 (2026).<br>
+    Referência normativa: Resolução CFM nº 2.454/2026, aprovada em 11/02/2026, em vigor desde 26/08/2026.<br>
+    As pré-condições internas 1 e 2 são bloqueantes e dependem de decisão do grupo.
+  </footer>
+
+</div>
+</body>
+</html>

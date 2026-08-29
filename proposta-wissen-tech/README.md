@@ -19,6 +19,7 @@ Wissen Tech (braço de TI/IA do grupo Wissence).
 - `14-ajustes-finais.md` — PI da Wissence, pró-labore em vez de jornada, e o plano em três ciclos sem contratação
 - `15-remocoes-e-tese.md` — as remoções pedidas e a reescrita da tese de valor das duas frentes
 - `16-catalogo-servicos.md` — veredito do conselho sobre o catálogo de serviços
+- `17-capacidade-e-modelos.md` — a capacidade real das duas pessoas, a física dos três modelos, e o que o MODELO 2 deve realmente vender
 - `catalogo/` — **o catálogo de serviços** e a proposta de exemplo que o originou
 - `apresentacao/` — **a peça que vai para o Leonardo** (documento externo, tom e conteúdo diferentes do memorando interno)
 
@@ -100,6 +101,23 @@ ganho que produz no resultado das clínicas — estoque, conversão, caixa, agen
 mão de obra otimizada —, com proposta de medir e reportar esse ganho como
 evidência, não como cobrança. Os degraus acima da base seguem amarrados a receita
 externa, agora com justificativa diferente.
+
+**rev. 14** — catálogo de serviços construído a partir da capacidade de entrega,
+com linhas ativas, linhas datadas, mapa por tipo de cliente e recusas escritas.
+
+**rev. 15** — capacidade corrigida para duas pessoas (1 desenvolvedor de 168 h +
+1 CTO de ~120 h) e catálogo reescrito em torno dos três modelos nomeados pelo
+autor. Conclusões da rodada: 288 h brutas são **128 h externas com o desenvolvedor
+e ~20 h sem ele**; o catálogo passa a ter duas fases declaradas com a contratação
+gatilhada por receita em vez de data; o MODELO 3 deixa de ser etapa futura e vira
+condição de escala do MODELO 2, que sem automação tem teto de oito contas; e o
+MODELO 2 deixa de vender sistema de clínica — passa a vender a camada de resultado
+sobre o sistema que a clínica já tem, que não concorre com software de prateleira.
+Contradição registrada entre a peça externa ("não vamos contratar por enquanto") e
+a capacidade de duas pessoas, resolvida por sequência e não por redação. Quatro
+riscos pessoais novos: operação com parte relacionada, cláusula de exclusividade do
+emprego atual, bus factor de uma pessoa, e a ausência de plano B se o CEO cobrar as
+288 h.
 
 Base analítica: os 5 documentos de planejamento (plano de cobertura, playbook por
 área, cronograma, painel de exceções, catálogo de 56 indicadores).

@@ -353,6 +353,14 @@
     </div>
 
     <div class="box">
+      <h3>O produto é um serviço web na nossa infraestrutura</h3>
+      <p>As rotinas deixam de ser configuração e viram <strong>software hospedado por nós</strong>: lê os dados do sistema da clínica, calcula os indicadores, e entrega painel e relatório mensal por navegador. O cliente entra num endereço e vê o resultado. Não instala nada, não configura nada, não assina nada além da mensalidade.</p>
+      <p><strong>Isso não é um acessório do catálogo — é o MODELO 2.</strong> A primeira versão custa cerca de <mark>260 h de desenvolvimento</mark>: integração, motor de cálculo, camada web com autenticação, base de segurança e teste com dado real. Três a quatro meses do desenvolvedor, competindo com o roadmap interno. <b>O MODELO 2 não abre no mês em que a equipe cresce; abre um trimestre depois.</b></p>
+      <p><strong>Decisão de arquitetura, tomada antes do primeiro cliente:</strong> a plataforma <mark>não armazena dado de paciente</mark>. Lê, calcula, guarda o número agregado e descarta o detalhe. Não é preciso o nome de ninguém para dizer que a conversão de orçamento caiu 12 %. Isso muda o que um incidente expõe, o que precisa ser provado numa auditoria e o custo de toda a conformidade — e custa zero se decidido agora.</p>
+      <p><strong>Nos três primeiros clientes, uma instância isolada por cliente.</strong> Multi-tenant é a produtização mais cara e a mais fácil de errar sem dados reais de clínica de fora. Vem depois dos três, não antes.</p>
+    </div>
+
+    <div class="box">
       <h3>O cliente nunca precisa comprar licença de nada</h3>
       <p>Há dois usos de inteligência artificial aqui, e confundi-los quebra o modelo de venda. <strong>IA como ferramenta de construção</strong> escreve o código; o que se entrega é software que roda sozinho, e o cliente não precisa de licença — a mesma razão pela qual ninguém pergunta que editor de texto foi usado. <strong>IA como parte do produto em execução</strong> é quando o modelo é chamado toda vez que a rotina roda.</p>
       <p><mark>A maior parte das rotinas não precisa de modelo em execução.</mark> Alerta de estoque abaixo do mínimo, régua de retorno de orçamento e conferência de divergência de caixa são lógica determinística: foram construídas com IA, não precisam de IA para rodar. Só texto livre, classificação e o atendimento do MODELO 3 exigem o modelo em execução — e esses rodam <strong>no ambiente da Wissen Tech, com chave própria, cobrados por consumo e não por assento</strong>. O custo entra na mensalidade; a licença não existe do lado do cliente.</p>
@@ -382,6 +390,14 @@
       <h3>Quem pede a informação técnica ao fornecedor é o cliente, não nós</h3>
       <p>Fornecedor de software não responde a terceiro. Responde a quem paga a mensalidade. <strong>O pedido de documentação de API ou de rotina de exportação sai por escrito do cliente</strong>, com prazo combinado, e a proposta de L5 só é emitida depois da resposta. Sem isso, o risco do silêncio do fornecedor cai sobre nós, num contrato de preço fechado.</p>
       <p>Quando há acesso direto ao banco, a Wissen Tech passa a tratar dado pessoal sensível em nome da clínica — <mark>posição de operador sob a LGPD</mark>, com a clínica permanecendo controladora. Exige contrato específico, controle de acesso por perfil e registro de tratamento. <b>Confirmar a redação com advogado antes do primeiro contrato.</b></p>
+    </div>
+
+    <div class="box">
+      <h3>Mensalidade fixa, nunca cobrança por requisição</h3>
+      <p>Cobrar por chamada precifica o insumo de centavos — o consumo de modelo — e deixa sem preço o custo que realmente limita a operação, que é a hora de suporte. <strong>Mede a coisa barata e ignora a cara.</strong></p>
+      <p>E cria atrito exatamente no hábito que segura o cliente: uma clínica que pensa duas vezes antes de puxar um relatório porque cada consulta custa é uma clínica que nunca vê o valor. <mark>A tese inteira é medir e reportar o ganho</mark> — taxar a medição contradiz o produto.</p>
+      <p>Somam-se: receita imprevisível quebra o gatilho de contratação por receita da Fase 1; dono de clínica orça mensalidade, não requisição; e preço por chamada ancora o valor em custo de computação mais margem, quando o valor real está em estoque controlado e orçamento convertido. <strong>É trocar R$ 1.400 por R$ 50.</strong></p>
+      <p><strong>Estrutura adotada:</strong> mensalidade fixa por unidade, faixas por porte, uso justo generoso. Se houver componente variável, ele acompanha <b>unidade atendida ou volume de atendimentos da clínica</b> — proxy do valor recebido —, nunca chamada de sistema.</p>
     </div>
 
     <div class="line on">

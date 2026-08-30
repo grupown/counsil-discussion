@@ -412,7 +412,92 @@ agora com número em vez de intuição.
 
 ---
 
-## 11. A única coisa a fazer primeiro
+## 11. O sistema de relatórios — a proposta, e o que corrigir nela
+
+Você propôs três coisas numa frase: montar um sistema pequeno de relatórios que
+converta os skills em software, dar acesso via web na nossa infraestrutura, e cobrar
+por requisição. **Duas estão certas. A terceira eu recomendo abandonar.**
+
+### 11.1 Converter em software na própria infraestrutura — sim, e é o MODELO 2
+
+Isso não é projeto paralelo nem ferramenta de apoio. **É o produto.** Merece linha
+própria no plano de capacidade e marco próprio na escada de participação — e é
+provavelmente o marco mais forte que você tem para justificar os degraus acima da
+base, porque é o que faz a Wissen Tech valer alguma coisa como empresa.
+
+**"Sistema pequeno" é o adjetivo errado.** Um serviço web que segura dado de clínica
+exige isolamento entre clientes, log de auditoria, criptografia em repouso e em
+trânsito, backup com recuperação testada, monitoramento — e **guarda das credenciais
+de acesso aos sistemas dos clientes.** Você vai armazenar token e senha de acesso ao
+sistema de outra empresa. Isso te torna alvo, e é a parte que ninguém lembra de
+orçar.
+
+| Bloco da v1 | h |
+|---|---:|
+| Integração e leitura dos dados | 40 |
+| Motor de cálculo dos indicadores | 60 |
+| Camada web: autenticação, painel, relatório | 80 |
+| Base de segurança: criptografia, auditoria, backup | 40 |
+| Teste com dado real de uma clínica e correção | 40 |
+| **Total** | **≈ 260** |
+
+Contra as 80 h/mês de produtização do desenvolvedor: **3 a 4 meses.**
+
+**A implicação que você ainda não precificou:** o MODELO 2 não abre no mês em que o
+desenvolvedor chega. Abre um trimestre depois. A Fase 1 tem gestação, e ela precisa
+estar no cronograma **antes** de você prometer qualquer coisa a um cliente.
+
+### 11.2 Cobrar por requisição — recomendo abandonar
+
+**Você mediria a coisa barata e deixaria a cara sem preço.** Token custa US$ 0,30 a
+1,50 por conta/mês. A restrição é hora de suporte. Preço por requisição precifica o
+insumo de centavos e não toca no custo que limita a operação.
+
+**E taxa exatamente o comportamento que precisa acontecer.** A tese inteira é medir e
+reportar o ganho. Clínica que pensa duas vezes antes de puxar um relatório porque
+cada consulta custa é clínica que nunca vê o valor e cancela no terceiro mês.
+
+| Problema | Consequência |
+|---|---|
+| Receita imprevisível | quebra o gatilho "contrata o dev no 2º contrato" — não dá para contratar em cima de faturamento que você não sabe qual é |
+| Dono de clínica não orça por requisição | orça mensalidade; preço variável obriga a pensar em custo toda vez que usa |
+| Ancora o valor no mecanismo | preço por chamada = custo de computação + margem = centavos; preço por resultado = R$ 890 a 1.490 |
+
+**É trocar R$ 1.400 por R$ 50.**
+
+**Estrutura correta:** mensalidade fixa por unidade, faixas por porte, uso justo
+generoso. Se houver componente variável, que acompanhe **unidade atendida ou volume
+de atendimentos da clínica** — proxy do valor recebido —, nunca chamada de sistema.
+
+*Onde cobrança por uso funciona de verdade:* como teto interno de uso justo para
+evitar abuso, e num produto de API vendido a outros desenvolvedores. Nenhum dos dois
+é o seu mercado.
+
+### 11.3 A decisão de arquitetura mais importante, e é grátis agora
+
+**Na v1, não armazenar dado de paciente.** Ler, calcular o indicador, guardar o
+agregado, descartar o detalhe. Não é preciso o nome de ninguém para dizer que a
+conversão de orçamento caiu 12 %.
+
+| | Armazenando prontuário | Só agregado |
+|---|---|---|
+| O que um incidente expõe | dado sensível de paciente | números |
+| Classificação de risco (CFM 2.454) | alta | baixa |
+| O que provar em auditoria | cadeia inteira de tratamento | muito menos |
+| Custo de conformidade | permanente | marginal |
+
+**É aqui que você precisa sentir medo, porque é o seu nome, não o da empresa:**
+vazamento de dado de paciente numa clínica não é um bug, é o fim da empresa — e você
+é sócio, não fornecedor. Decidir isso hoje custa zero. Decidir depois de oito
+clientes custa uma migração.
+
+**Associado:** nos três primeiros clientes, **uma instância isolada por cliente.**
+Multi-tenant é a produtização mais cara e a mais fácil de errar sem dados reais de
+clínica de fora. Vem depois dos três, não antes — e casa com o teto de oito contas.
+
+---
+
+## 12. A única coisa a fazer primeiro
 
 **Escolher, antes de qualquer proposta comercial, o que o MODELO 2 vende:** o
 sistema de clínica, ou a camada de resultado sobre o sistema que a clínica já tem.

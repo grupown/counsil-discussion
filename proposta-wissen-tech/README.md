@@ -143,5 +143,16 @@ inteiro entregue na primeira mensalidade. Estimativa de ordem de grandeza do cus
 token (US$ 0,30 a 1,50 por conta/mês) confirma que a restrição do MODELO 2 é a hora
 de suporte, não o consumo de IA.
 
+**rev. 18** — o sistema de relatórios proposto deixa de ser projeto paralelo e passa
+a ser reconhecido como o próprio MODELO 2, com estimativa de 260 h para a primeira
+versão — três a quatro meses do desenvolvedor, o que significa que o MODELO 2 não
+abre no mês em que a equipe cresce, e sim um trimestre depois. Cobrança por
+requisição foi recomendada para abandono: precifica o insumo de centavos, deixa a
+hora de suporte sem preço, taxa o comportamento que a tese precisa que aconteça, e
+torna a receita imprevisível justo onde o gatilho de contratação depende dela.
+Adotadas duas decisões de arquitetura tomadas antes do primeiro cliente: a
+plataforma não armazena dado de paciente, só agregado; e os três primeiros clientes
+recebem instância isolada, com multi-tenant depois deles.
+
 Base analítica: os 5 documentos de planejamento (plano de cobertura, playbook por
 área, cronograma, painel de exceções, catálogo de 56 indicadores).

@@ -261,6 +261,12 @@
       <p>As 120 h acima não têm folga para código. Se o CTO codar, sai de um dos três primeiros blocos — e são exatamente os que ninguém mais pode fazer. <strong>Reunião, plano de trabalho e decisão de arquitetura não se delegam. Código se delega.</strong> Enquanto não houver desenvolvedor, o CTO escreve código porque não há alternativa; no momento em que houver, ele para.</p>
     </div>
 
+    <div class="box" style="margin-top:26px">
+      <h3>O que sustenta esses números não é esforço, é ferramenta</h3>
+      <p>As horas acima só rendem o que rendem com a infraestrutura de produtividade montada: assinatura comercial de ferramenta de IA para desenvolvimento, ambiente de repositório, e nuvem. <strong>É o que faz 168 h de um desenvolvedor produzirem o que 250 h produziriam sem isso</strong> — e é a razão pela qual uma equipe de duas pessoas consegue sustentar um catálogo deste tamanho.</p>
+      <p>Custo entre <strong>R$ 600 e R$ 2.000 por mês</strong> no total. Entra em orçamento de infraestrutura, ao lado de máquina e nuvem — <mark>não é pré-condição de nada</mark>, e tratá-la como tal só enfraquece as pré-condições que realmente bloqueiam.</p>
+    </div>
+
     <div class="tbl-scroll" style="margin-top:26px">
       <table>
         <thead><tr><th></th><th>Fase 0</th><th>Fase 1</th></tr></thead>
@@ -299,6 +305,7 @@
       <p class="who">Qualquer porte, inclusive consultório de 1 médico · com ou sem TI interno</p>
       <p>Levantamento dos cinco vazamentos: estoque parado e perda por vencimento, conversão de orçamento, falta e no-show, divergência de conciliação de caixa, e horas de trabalho manual evitável. Entrega: linha de base assinada, valor estimado de cada vazamento e ordem de ataque.</p>
       <p><strong>É o produto de entrada de todo o catálogo.</strong> Barato o suficiente para ser decidido numa reunião, e produz o número que justifica tudo o que vem depois. Sem linha de base assinada antes, nenhuma linha seguinte tem como provar resultado.</p>
+      <p><strong>E faz uma segunda coisa, tão importante quanto:</strong> é dentro da L2 que se verifica <mark>como se lê os dados do sistema que a clínica já usa</mark> — API, exportação, banco ou nada. Nenhuma proposta de L5 ou L6 é orçada antes dessa verificação. É o que impede que um preço fechado seja engolido por três meses esperando o fornecedor do cliente responder um e-mail.</p>
       <dl class="grid-kv">
         <div class="kv"><dt>1 local</dt><dd>R$ 3.900</dd></div>
         <div class="kv"><dt>Multi-local</dt><dd>R$ 6.900</dd></div>
@@ -342,6 +349,31 @@
       <h3>Não vendemos sistema de clínica. Vendemos a camada que faz o sistema render.</h3>
       <p>Vender um sistema de gestão para clínica pequena é entrar numa briga contra fornecedores com anos de produto, suporte estruturado e canal, a partir de R$ 89 por mês. <strong>Essa briga não se ganha com 28 horas de suporte disponíveis.</strong></p>
       <p>Mas as rotinas automatizadas e os plugins construídos no grupo <strong>não são um sistema de gestão</strong>. São a camada que faz o sistema que a clínica <em>já tem</em> produzir dinheiro: estoque, conversão de orçamento, falta, conciliação. <mark>Isso não concorre com ninguém diretamente</mark>, não exige troca de sistema, elimina a objeção "eu já tenho sistema" — e é precificado contra dinheiro medido, não contra funcionalidade.</p>
+    </div>
+
+    <div class="box warn">
+      <h3>Sem leitura dos dados, não existe produto</h3>
+      <p>A camada de resultado depende inteiramente de conseguir ler o que já está no sistema da clínica. <strong>Isso não é detalhe técnico: é critério de qualificação, e é binário.</strong> Não é o mesmo cliente uma clínica cujo sistema tem API documentada e uma que só oferece a tela.</p>
+      <p>A verificação acontece na L2, antes de qualquer preço fechado. O nível encontrado define o preço e, em dois casos, define que não vendemos.</p>
+    </div>
+
+    <div class="tbl-scroll">
+      <table>
+        <thead><tr><th>Nível de acesso ao dado</th><th>Custo</th><th>Consequência comercial</th></tr></thead>
+        <tbody>
+          <tr><td class="k">API documentada do fornecedor</td><td class="n">4–8 h</td><td>preço de tabela</td></tr>
+          <tr><td class="k">Exportação agendada configurada pelo cliente</td><td class="n">6–12 h</td><td>preço de tabela</td></tr>
+          <tr><td class="k">Acesso direto ao banco, autorizado por escrito</td><td class="n">8–16 h</td><td>preço de tabela + contrato de operador</td></tr>
+          <tr><td class="k">Exportação manual feita por pessoa</td><td class="n">2–4 h/mês <b>permanentes</b></td><td>sobretaxa mensal, ou recusa</td></tr>
+          <tr><td class="k">Nenhum — apenas a tela do sistema</td><td class="n">quebra a cada atualização</td><td class="no">não vendemos</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="box" style="margin-top:22px">
+      <h3>Quem pede a informação técnica ao fornecedor é o cliente, não nós</h3>
+      <p>Fornecedor de software não responde a terceiro. Responde a quem paga a mensalidade. <strong>O pedido de documentação de API ou de rotina de exportação sai por escrito do cliente</strong>, com prazo combinado, e a proposta de L5 só é emitida depois da resposta. Sem isso, o risco do silêncio do fornecedor cai sobre nós, num contrato de preço fechado.</p>
+      <p>Quando há acesso direto ao banco, a Wissen Tech passa a tratar dado pessoal sensível em nome da clínica — <mark>posição de operador sob a LGPD</mark>, com a clínica permanecendo controladora. Exige contrato específico, controle de acesso por perfil e registro de tratamento. <b>Confirmar a redação com advogado antes do primeiro contrato.</b></p>
     </div>
 
     <div class="line on">
@@ -434,6 +466,14 @@
       <p>Setup cobre o que é dele. O núcleo reutilizável é investimento da empresa.</p>
     </div>
     <div class="box no">
+      <h3>Integração por raspagem de tela</h3>
+      <p>Sistema que não oferece API, exportação nem acesso ao banco não é integrado por robô que lê a tela. <strong>Quebra a cada atualização do fornecedor, e a manutenção é hora recorrente sem teto.</strong> Sem caminho de dado, a resposta é não.</p>
+    </div>
+    <div class="box no">
+      <h3>Dado de produção dentro de ferramenta de IA</h3>
+      <p>As ferramentas de IA usadas no desenvolvimento trabalham sobre estrutura de tabela, dado sintético e dado anonimizado. <strong>Base de produção de cliente não entra em prompt, em nenhuma hipótese</strong> — e a assinatura usada é de plano comercial ou de API, nunca de plano de consumidor.</p>
+    </div>
+    <div class="box no">
       <h3>Suporte por IA em qualquer coisa que toque decisão clínica</h3>
       <p>A automação do MODELO 3 atende dúvida operacional, configuração e processo administrativo. <strong>Escala para humano tudo que envolva dado sensível, erro de sistema ou qualquer proximidade com conduta assistencial</strong> — Resolução CFM 2.454/2026, em vigor desde 26/08/2026. A decisão clínica é sempre humana, e isso é cláusula de contrato, não princípio.</p>
     </div>
@@ -451,6 +491,7 @@
       <li><strong>Regra escrita de preço entre a Wissence e a Wissen Tech</strong><span>O CTO é sócio da Wissen Tech e responsável de TI do grupo — está dos dois lados do preço. Precisa de critério objetivo de rateio e de aprovação por quem não seja ele. Sem isso, qualquer sócio futuro ou auditoria lê como vantagem pessoal.</span></li>
       <li><strong>Verificação do contrato de trabalho do CTO</strong><span>Cláusula de exclusividade ou não concorrência do emprego integral precisa ser lida <b>antes</b> de o catálogo prometer qualquer janela em horário comercial.</span></li>
       <li><strong>Resposta escrita para a ausência do CTO</strong><span>Se ele adoecer na semana da implantação do primeiro cliente, o que acontece? Bus factor de uma pessoa é risco de continuidade do negócio, não problema de agenda. A resposta não pode ser "eu me viro".</span></li>
+      <li><strong>Política escrita de uso de IA no desenvolvimento</strong><span>As ferramentas de IA usadas para construir integrações e plugins operam sobre estrutura de tabela e dado sintético — nunca sobre base de produção — e sob assinatura comercial ou de API, nunca de plano de consumidor, cujo padrão é permitir treinamento com retenção de anos. <b>Vender conformidade de IA na L1 sem ter a própria política escrita é o risco de reputação mais barato de evitar e mais caro de sofrer. Bloqueante antes do primeiro cliente externo.</b></span></li>
       <li><strong>Confirmação do alcance da Resolução CFM 2.454/2026</strong><span>Falta confirmar com advogado se a exigência de comissão própria alcança apenas sistemas próprios ou também sistemas de terceiros com IA embarcada. Muda o tamanho do mercado da L1. <b>Confirmar antes de qualquer material comercial.</b></span></li>
     </ol>
   </section>
@@ -462,6 +503,7 @@
       <li><strong>Resolver as duas pré-condições bloqueantes</strong><span>Licença de PI e autorização para atender fora do grupo. Nada é vendido antes.</span></li>
       <li><strong>Franqueados primeiro — L4</strong><span>Cliente pré-qualificado, custo de aquisição zero, e é onde o reaproveitamento tem o maior índice de acerto. Prova o método com o menor risco de reputação.</span></li>
       <li><strong>Um piloto de L2 seguido de L3, com uma clínica conhecida</strong><span>É o cliente único da Fase 0. Objetivo declarado: o caso com número auditado que sustenta todo o resto.</span></li>
+      <li><strong>Levantar o nível de acesso ao dado dos cinco sistemas mais comuns na região</strong><span>Feito uma vez, serve para sempre e qualifica qualquer prospect em cinco minutos de reunião em vez de duas semanas de investigação. É o ativo comercial mais barato de construir do catálogo inteiro.</span></li>
       <li><strong>Contratar o desenvolvedor no 2º contrato assinado</strong><span>Não por data. A receita paga a folha antes de a folha existir.</span></li>
       <li><strong>Abrir o MODELO 2 com teto de 8 contas e a automação junto</strong><span>Base de respostas e roteiro de triagem desde o cliente nº 1. Cada chamado atendido à mão vira resposta automática no mesmo dia.</span></li>
       <li><strong>Medir a deflexão e só então subir o teto</strong><span>O teto sobe pelo que foi medido, nunca pelo que foi prometido.</span></li>

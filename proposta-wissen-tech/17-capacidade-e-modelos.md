@@ -257,7 +257,96 @@ de uma resposta e ela não pode ser "eu me viro".
 
 ---
 
-## 9. A única coisa a fazer primeiro
+## 9. Acesso ao dado e ferramenta de IA — a sua sugestão, corrigida em dois pontos
+
+Você propôs duas pré-condições novas: adquirir uma ferramenta de IA (Claude, Codex
+ou equivalente) para construir os plugins e integrações, e exigir que o sistema da
+clínica forneça os dados de alguma forma. **A segunda é mais importante do que
+você apresentou. A primeira não é pré-condição.**
+
+### 9.1 Acesso ao dado é critério de qualificação, não pré-condição interna
+
+A camada de resultado (L5) **não existe sem leitura dos dados do sistema que a
+clínica já usa.** Não é detalhe técnico, é o go/no-go do cliente. E não é sim ou
+não — é uma escada, e cada degrau tem consequência de preço:
+
+| Nível de acesso | Custo de integração | Consequência |
+|---|---|---|
+| API documentada do fornecedor | 4–8 h | preço de tabela |
+| Exportação agendada configurada pelo cliente | 6–12 h | preço de tabela |
+| Acesso direto ao banco, autorizado por escrito | 8–16 h | preço de tabela + contrato de operador |
+| Exportação manual feita por pessoa | **2–4 h/mês permanentes** | sobretaxa ou recusa |
+| Só a tela do sistema | quebra a cada atualização | **recusa** |
+
+**O risco que você não citou, e é o seu:** se orçar uma L5 fechada em R$ 4.900 e o
+fornecedor da clínica levar três meses para responder um e-mail sobre API, quem
+come o prejuízo é você. Duas defesas, ambas incorporadas ao catálogo:
+
+1. **A verificação de acesso acontece dentro da L2**, que já está paga. Nenhuma L5
+   é orçada antes. A L2 vira portão além de diagnóstico — ganho, não custo.
+2. **Quem pede a documentação ao fornecedor é o cliente**, por escrito e com prazo.
+   Fornecedor de software não responde a terceiro; responde a quem paga a
+   mensalidade.
+
+**E um item de conformidade:** com acesso direto ao banco, a Wissen Tech passa a
+tratar dado pessoal sensível em nome da clínica — posição de **operador** sob a
+LGPD, com a clínica permanecendo controladora. Exige contrato específico, controle
+de acesso por perfil e registro de tratamento. *Confirmar a redação com advogado
+antes do primeiro contrato — não tenho certeza da forma exigida, só do
+enquadramento.*
+
+**Ativo comercial barato:** levantar uma vez o nível de acesso dos cinco sistemas
+mais comuns na região. Feito, qualifica qualquer prospect em cinco minutos de
+reunião em vez de duas semanas de investigação.
+
+### 9.2 A ferramenta de IA não é pré-condição — e o motivo é de negociação
+
+Claude Code ou Codex custam de US$ 20 a 200 por assento/mês. Somando ambiente e
+nuvem, algo entre **R$ 600 e R$ 2.000/mês**.
+
+**Colocar um item de mil reais numa lista ao lado de "licença de propriedade
+intelectual" e "autorização para atender fora do grupo" dilui os dois bloqueantes
+de verdade.** Uma lista de oito pré-condições onde uma custa mil reais lê como
+lista de desejos, e a leitura contamina as outras sete. Vai para orçamento de
+infraestrutura.
+
+**O enquadramento que funciona a seu favor:** ferramenta de IA não é custo, é **o
+que sustenta o número de 128 h**. Toda a conta de capacidade assume produtividade
+por hora. É o que faz 168 h de um desenvolvedor renderem como 250 h — e é a razão
+pela qual duas pessoas sustentam um catálogo deste tamanho. Isso é argumento seu na
+conversa com o Leonardo, não pedido.
+
+### 9.3 O ponto cego, e este é grave
+
+Você vai usar a IA para construir integrações com o sistema da clínica. Vai colar
+estrutura de tabela, e em algum momento vai colar dado real de exemplo.
+
+**Verificado:** nos planos de consumidor da Anthropic (Free, Pro e Max), desde
+agosto de 2025 o treinamento com as conversas vem **ligado por padrão**, com
+retenção de até **cinco anos** para quem mantém ligado. Dá para desligar nas
+configurações de privacidade, e há ressalva para conversas sinalizadas em revisão
+de segurança. Planos comerciais e de API têm tratamento diferente — confirme os
+termos vigentes do plano que for assinar, porque isso muda.
+
+Dado de paciente é **dado pessoal sensível** (LGPD art. 11). Colar isso num plano
+de consumidor com treinamento ligado é exportar dado sensível de terceiro.
+
+**E o agravante é o que mata:** você vai estar vendendo a L1 — conformidade de IA
+sob a Resolução CFM 2.454/2026 — enquanto viola exatamente o que a L1 vende. Um
+cliente que descobre isso não cancela um contrato; cancela a empresa.
+
+**Regra escrita antes do primeiro cliente externo, e ela é bloqueante:**
+
+> Assinatura comercial ou de API, nunca plano de consumidor. A ferramenta toca
+> estrutura de tabela, dado sintético e dado anonimizado. **Base de produção de
+> cliente não entra em prompt, em nenhuma hipótese.**
+
+Escrita, essa regra deixa de ser restrição e vira argumento de venda da L1: você
+mostra a sua política antes de vender a dele.
+
+---
+
+## 10. A única coisa a fazer primeiro
 
 **Escolher, antes de qualquer proposta comercial, o que o MODELO 2 vende:** o
 sistema de clínica, ou a camada de resultado sobre o sistema que a clínica já tem.

@@ -119,5 +119,17 @@ riscos pessoais novos: operação com parte relacionada, cláusula de exclusivid
 emprego atual, bus factor de uma pessoa, e a ausência de plano B se o CEO cobrar as
 288 h.
 
+**rev. 16** — duas adições de escopo. Acesso aos dados do sistema que a clínica já
+usa passa a ser **critério de qualificação por cliente**, com escada de cinco
+níveis e consequência de preço em cada um, verificado dentro da L2 antes de
+qualquer preço fechado e pedido ao fornecedor pelo próprio cliente. Aquisição de
+ferramenta de IA para desenvolvimento foi **recusada como pré-condição** — vai para
+orçamento de infraestrutura, porque diluir os bloqueantes com um item de mil reais
+enfraquece a lista inteira. Em contrapartida, entrou como pré-condição bloqueante a
+**política escrita de uso de IA no desenvolvimento**: assinatura comercial ou de
+API e nunca de plano de consumidor (cujo padrão permite treinamento com retenção de
+anos), e proibição de base de produção em prompt. Vender conformidade de IA na L1
+sem ter a própria política é o risco de reputação mais barato de evitar.
+
 Base analítica: os 5 documentos de planejamento (plano de cobertura, playbook por
 área, cronograma, painel de exceções, catálogo de 56 indicadores).

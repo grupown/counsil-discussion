@@ -22,6 +22,7 @@ Wissen Tech (braço de TI/IA do grupo Wissence).
 - `17-capacidade-e-modelos.md` — a capacidade real das duas pessoas, a física dos três modelos, e o que o MODELO 2 deve realmente vender
 - `18-veredito-diretoria.md` — veredito do conselho sobre a proposta à diretoria: o que sai, o que é reenquadrado, e o que não vai para o papel
 - `19-refino-catalogo.md` — veredito do conselho sobre o próprio catálogo: o que ele deixou de ser e no que virou
+- `20-validacao-propostas.md` — o catálogo conferido contra duas propostas reais: o que bateu, o que estava inventado, e o que faltava
 - `diretoria/` — **o memorando de decisão que vai à diretoria** e o anexo técnico-contratual que vai ao jurídico
 - `catalogo/` — **o catálogo de serviços** e a proposta de exemplo que o originou
 - `apresentacao/` — **a peça que vai para o Leonardo** (documento externo, tom e conteúdo diferentes do memorando interno)
@@ -205,6 +206,18 @@ linha e a remissão; cada linha de serviço ganhou a objeção esperada com resp
 achado que nenhum conselheiro viu e os cinco revisores marcaram: ninguém era dono da
 sincronia entre os três documentos — entrou regra de manutenção com dono e gatilho de
 15 dias.
+
+**rev. 23** — o catálogo foi validado contra duas peças reais, a proposta à Clínica
+Dr. M. Batista e o plano comercial do CRM. Reprovou em quatro pontos. Os preços da
+condução técnica estavam inventados e até 48 % acima do praticado — substituídos pelos
+valores reais, com o desconto por volume que faltava. O teto da linha caiu de 3 para 2
+clientes por aritmética de capacidade, e a Fase 0 passa a ser uma por vez. Três linhas
+que existiam na prática e não no catálogo foram acrescentadas: assessoria continuada,
+CRM Aurora e serviços avulsos. Quatro cláusulas da proposta real entraram como seção
+própria: declaração de interesse no Aurora, uso restrito da informação, D-0 com
+checklist, e tratamento de dados. E ficou registrada uma incoerência que é urgente e
+não é de redação: a política de capacidade pede um piloto por vez enquanto o plano do
+CRM prevê venda de licenças em 5 de setembro — as duas não podem estar certas.
 
 Base analítica: os 5 documentos de planejamento (plano de cobertura, playbook por
 área, cronograma, painel de exceções, catálogo de 56 indicadores).

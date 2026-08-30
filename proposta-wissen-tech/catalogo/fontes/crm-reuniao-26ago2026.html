@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CRM — Reunião 26/08/2026 · Resumo e plano de ação</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;800&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EDEFEA;
+    --card:#F7F8F5;
+    --ink:#15181A;
+    --slate:#5C6670;
+    --rule:#C9CEC4;
+    --firm:#0C6B4F;      /* decidido */
+    --open:#A8760A;      /* pendente */
+    --alert:#A32E1C;     /* risco */
+    --deep:#1F2A63;      /* estrutura */
+    --disp:'Archivo',system-ui,sans-serif;
+    --body:'Source Serif 4',Georgia,serif;
+    --mono:'IBM Plex Mono',ui-monospace,monospace;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:var(--body);font-size:16.5px;line-height:1.62;
+  }
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px 96px}
+
+  /* ---------- cabeçalho ---------- */
+  header{padding:52px 0 30px;border-bottom:2px solid var(--ink)}
+  .eyebrow{
+    font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--slate);margin:0 0 18px
+  }
+  h1{
+    font-family:var(--disp);font-weight:800;font-size:clamp(30px,5.4vw,50px);
+    line-height:1.02;letter-spacing:-.022em;margin:0 0 16px;max-width:22ch
+  }
+  .dek{font-size:18px;color:var(--slate);margin:0;max-width:62ch}
+  .meta{
+    display:flex;flex-wrap:wrap;gap:6px 30px;margin-top:26px;
+    font-family:var(--mono);font-size:12px;color:var(--slate)
+  }
+  .meta b{color:var(--ink);font-weight:600}
+
+  /* ---------- seções ---------- */
+  section{padding-top:52px}
+  h2{
+    font-family:var(--disp);font-weight:700;font-size:13px;letter-spacing:.13em;
+    text-transform:uppercase;color:var(--ink);margin:0 0 6px;
+    padding-bottom:8px;border-bottom:1px solid var(--rule)
+  }
+  .sub{font-size:15px;color:var(--slate);margin:14px 0 26px;max-width:70ch}
+  h3{font-family:var(--disp);font-weight:600;font-size:19px;letter-spacing:-.01em;margin:34px 0 10px}
+
+  /* ---------- régua de setembro (assinatura) ---------- */
+  .ruler{background:var(--card);border:1px solid var(--rule);padding:26px 22px 20px;margin-top:26px}
+  .ruler-title{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--slate);margin:0 0 20px}
+  .days{display:grid;grid-template-columns:repeat(30,1fr);gap:2px;align-items:end}
+  .day{height:26px;background:#DEE2D9;position:relative;border-radius:1px}
+  .day span{
+    position:absolute;top:-17px;left:50%;transform:translateX(-50%);
+    font-family:var(--mono);font-size:9.5px;color:var(--slate)
+  }
+  .day.mark{background:var(--deep);height:44px}
+  .day.mark.go{background:var(--firm)}
+  .day.mark.hol{background:#B9BEB4}
+  .day.band{background:#C6CFC1}
+  .legend{display:flex;flex-wrap:wrap;gap:8px 24px;margin-top:22px}
+  .legend div{font-family:var(--mono);font-size:11.5px;color:var(--slate);display:flex;gap:8px;align-items:baseline}
+  .chip{display:inline-block;width:9px;height:9px;flex:0 0 9px;margin-top:4px}
+  .capacity{margin-top:26px;padding-top:20px;border-top:1px dashed var(--rule)}
+  .cap-row{display:flex;align-items:center;gap:12px;margin:7px 0;font-family:var(--mono);font-size:11.5px;color:var(--slate)}
+  .cap-label{flex:0 0 92px;color:var(--ink)}
+  .cap-bar{height:12px;background:var(--alert);opacity:.82}
+  .cap-when{white-space:nowrap}
+
+  /* ---------- decisões ---------- */
+  .dec{border-left:3px solid var(--firm);padding:2px 0 2px 18px;margin:0 0 22px}
+  .dec.pend{border-left-color:var(--open)}
+  .dec-tag{
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--firm);display:block;margin-bottom:4px
+  }
+  .dec.pend .dec-tag{color:var(--open)}
+  .dec-h{font-family:var(--disp);font-weight:600;font-size:17px;margin:0 0 4px}
+  .dec p{margin:0;font-size:15.5px;color:var(--slate)}
+
+  /* ---------- tabelas ---------- */
+  table{width:100%;border-collapse:collapse;margin-top:22px;font-size:15px}
+  th{
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--slate);text-align:left;font-weight:500;
+    padding:0 14px 9px 0;border-bottom:1px solid var(--ink)
+  }
+  td{padding:13px 14px 13px 0;border-bottom:1px solid var(--rule);vertical-align:top}
+  td.who{font-family:var(--mono);font-size:12.5px;white-space:nowrap;color:var(--deep)}
+  td.when{font-family:var(--mono);font-size:12.5px;white-space:nowrap;color:var(--ink)}
+  .in{color:var(--firm);font-family:var(--mono);font-size:12px;font-weight:600}
+  .out{color:var(--open);font-family:var(--mono);font-size:12px;font-weight:600}
+
+  /* ---------- métricas ---------- */
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:24px}
+  .cell{background:var(--card);padding:16px 15px}
+  .num{font-family:var(--disp);font-weight:800;font-size:27px;letter-spacing:-.02em;line-height:1}
+  .num.bad{color:var(--alert)}
+  .lbl{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--slate);margin-top:7px;line-height:1.4}
+
+  /* ---------- riscos ---------- */
+  .risk{border-top:1px solid var(--rule);padding:24px 0}
+  .risk:first-of-type{border-top:2px solid var(--alert)}
+  .risk-n{font-family:var(--mono);font-size:11px;color:var(--alert);letter-spacing:.1em}
+  .risk h3{margin:6px 0 8px;font-size:20px}
+  .risk p{margin:0 0 10px}
+  .risk .verdict{
+    font-family:var(--mono);font-size:12.5px;line-height:1.6;
+    background:var(--card);border-left:3px solid var(--alert);padding:12px 14px;margin-top:12px
+  }
+  .risk .verdict b{color:var(--alert)}
+
+  .checklist{list-style:none;padding:0;margin:24px 0 0;counter-reset:c}
+  .checklist li{
+    counter-increment:c;position:relative;padding:14px 0 14px 44px;border-bottom:1px solid var(--rule)
+  }
+  .checklist li::before{
+    content:counter(c,decimal-leading-zero);position:absolute;left:0;top:15px;
+    font-family:var(--mono);font-size:12px;color:var(--open);font-weight:600
+  }
+  .checklist strong{font-family:var(--disp);font-weight:600}
+  .checklist span{display:block;color:var(--slate);font-size:15px;margin-top:2px}
+
+  /* ---------- planos ---------- */
+  .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:24px}
+  .plan{background:var(--card);padding:22px 18px}
+  .plan.hero{background:#E4E8DE;box-shadow:inset 0 3px 0 var(--deep)}
+  .plan-name{font-family:var(--disp);font-weight:700;font-size:18px;margin:0 0 3px;letter-spacing:-.01em}
+  .plan-for{font-family:var(--mono);font-size:10.5px;color:var(--slate);letter-spacing:.08em;text-transform:uppercase;margin:0 0 16px}
+  .plan-price{font-family:var(--disp);font-weight:800;font-size:30px;letter-spacing:-.025em;line-height:1}
+  .plan-price small{font-family:var(--mono);font-size:11px;font-weight:400;color:var(--slate);letter-spacing:0;display:block;margin-top:6px}
+  .plan ul{list-style:none;padding:0;margin:16px 0 0;font-size:14.5px}
+  .plan li{padding:5px 0 5px 15px;position:relative;color:var(--slate);line-height:1.45}
+  .plan li::before{content:"—";position:absolute;left:0;color:var(--rule)}
+  .plan li b{color:var(--ink);font-weight:600}
+  .brl{font-family:var(--mono);font-size:13px;white-space:nowrap}
+  .flag{
+    font-family:var(--mono);font-size:12.5px;line-height:1.6;color:var(--slate);
+    background:var(--card);border-left:3px solid var(--open);padding:12px 14px;margin-top:24px
+  }
+  .flag b{color:var(--open)}
+  footer{margin-top:64px;padding-top:22px;border-top:1px solid var(--rule);
+    font-family:var(--mono);font-size:11px;color:var(--slate);line-height:1.7}
+
+  @media (max-width:640px){
+    .days{grid-template-columns:repeat(15,1fr);gap:2px 2px;row-gap:26px}
+    .cap-label{flex:0 0 74px}
+    td.who,td.when{white-space:normal}
+  }
+  @media print{
+    body{background:#fff}
+    .ruler,.cell,.risk .verdict{background:#fff}
+    section{page-break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="eyebrow">Wissence · Tecnologia · Ata de decisão</p>
+  <h1>CRM como produto: o que foi decidido e o que ainda não tem dono</h1>
+  <p class="dek">Alinhamento técnico e comercial sobre arquitetura, integração com WhatsApp/Meta e o cronograma de venda das primeiras licenças por Leonardo. Seis decisões fechadas, uma em aberto, e um conjunto de riscos que precisa ser resolvido antes de 5 de setembro.</p>
+  <div class="meta">
+    <span><b>26/08/2026</b> · 12:03 GMT-03</span>
+    <span>Duração <b>1h16</b></span>
+    <span>Gustavo Polar Sanchez · Felipe Leal</span>
+    <span>Mencionados: Leonardo, Adriana, Jefferson, Dr. Moisés</span>
+  </div>
+</header>
+
+<section>
+  <h2>O que a reunião realmente decidiu</h2>
+  <p class="sub">A reunião foi um cronograma negociado de trás para frente a partir de uma data de venda. Tudo abaixo depende dessa data existir.</p>
+
+  <div class="ruler">
+    <p class="ruler-title">Setembro de 2026 — a régua que a reunião construiu</p>
+    <div class="days">
+      <div class="day"><span>1</span></div>
+      <div class="day"><span>2</span></div>
+      <div class="day band"><span>3</span></div>
+      <div class="day band"><span>4</span></div>
+      <div class="day mark"><span>5</span></div>
+      <div class="day band"><span>6</span></div>
+      <div class="day mark hol"><span>7</span></div>
+      <div class="day band"><span>8</span></div>
+      <div class="day band"><span>9</span></div>
+      <div class="day band"><span>10</span></div>
+      <div class="day band"><span>11</span></div>
+      <div class="day band"><span>12</span></div>
+      <div class="day band"><span>13</span></div>
+      <div class="day band"><span>14</span></div>
+      <div class="day mark"><span>15</span></div>
+      <div class="day band"><span>16</span></div>
+      <div class="day band"><span>17</span></div>
+      <div class="day band"><span>18</span></div>
+      <div class="day band"><span>19</span></div>
+      <div class="day band"><span>20</span></div>
+      <div class="day mark go"><span>21</span></div>
+      <div class="day"><span>22</span></div>
+      <div class="day"><span>23</span></div>
+      <div class="day"><span>24</span></div>
+      <div class="day"><span>25</span></div>
+      <div class="day"><span>26</span></div>
+      <div class="day"><span>27</span></div>
+      <div class="day"><span>28</span></div>
+      <div class="day"><span>29</span></div>
+      <div class="day"><span>30</span></div>
+    </div>
+    <div class="legend">
+      <div><i class="chip" style="background:var(--deep)"></i><span><b>05</b> — Leonardo apresenta e vende o CRM na aula do ValorMed. Precisa de proposta e preço prontos.</span></div>
+      <div><i class="chip" style="background:#B9BEB4"></i><span><b>07</b> — feriado.</span></div>
+      <div><i class="chip" style="background:#C6CFC1"></i><span><b>03–20</b> — ajustes, testes e configuração das contas vendidas.</span></div>
+      <div><i class="chip" style="background:var(--deep)"></i><span><b>15</b> — alvo interno; antecipa o go-live se tudo correr bem.</span></div>
+      <div><i class="chip" style="background:var(--firm)"></i><span><b>21</b> — go-live oficial das implantações (segunda, semana cheia).</span></div>
+    </div>
+
+    <div class="capacity">
+      <p class="ruler-title" style="margin-bottom:14px">Capacidade real de implantação, com os próprios números da reunião<br>
+      <span style="letter-spacing:0;text-transform:none;font-size:11px">45 dias por implantação · 2 em paralelo · se Leonardo vender 5 licenças no dia 5</span></p>
+      <div class="cap-row"><span class="cap-label">Clientes 1–2</span><span class="cap-bar" style="width:22%"></span><span class="cap-when">21/set → 04/nov</span></div>
+      <div class="cap-row"><span class="cap-label">Clientes 3–4</span><span class="cap-bar" style="width:44%"></span><span class="cap-when">05/nov → 19/dez</span></div>
+      <div class="cap-row"><span class="cap-label">Cliente 5</span><span class="cap-bar" style="width:66%"></span><span class="cap-when">20/dez → 03/fev/2027</span></div>
+      <div class="cap-row" style="margin-top:14px;color:var(--alert)"><span class="cap-label" style="color:var(--alert)">→</span><span>O quinto cliente que assinar em 5 de setembro só fica de pé em fevereiro. Isso não foi dito na venda.</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Decisões</h2>
+
+  <div class="dec">
+    <span class="dec-tag">Alinhada · arquitetura</span>
+    <p class="dec-h">Multi-tenant, não duplicação de infra</p>
+    <p>Gustavo propôs duplicar a infraestrutura e cobrar por ela. Felipe rejeitou pelo custo de manter duas infras. Fechou-se em SaaS centralizado na infra atual, com <strong>banco de dados isolado por clínica</strong> (schema/DB dedicado no mesmo PostgreSQL) e releases segmentados por tenant.</p>
+  </div>
+
+  <div class="dec">
+    <span class="dec-tag">Alinhada · implantação</span>
+    <p class="dec-h">Cliente novo nasce com base vazia</p>
+    <p>Sem migração de dados no primeiro momento. Importação de sistema legado ou integração via API do ERP do cliente entram como projeto separado, com cronograma próprio.</p>
+  </div>
+
+  <div class="dec">
+    <span class="dec-tag">Alinhada · comercial</span>
+    <p class="dec-h">Uma clínica por conta no plano inicial</p>
+    <p>Piso comercial de uma clínica por licença, com porta aberta para cobrar upgrade por clínica adicional. Decisão tomada por motivo arquitetural, para não deixar a definição para depois.</p>
+  </div>
+
+  <div class="dec">
+    <span class="dec-tag">Alinhada · cronograma</span>
+    <p class="dec-h">Go-live em 21 de setembro</p>
+    <p>Felipe pediu uma quinzena a partir de setembro. Gustavo propôs 15/09; Felipe puxou para 21/09 por ser segunda-feira de semana cheia, com antecipação para o dia 15 no melhor cenário. Apresentação comercial mantida no dia 5.</p>
+  </div>
+
+  <div class="dec">
+    <span class="dec-tag">Alinhada · escopo</span>
+    <p class="dec-h">Piloto sai com chatbot, equipe e relatórios; campanhas fica fora</p>
+    <p>Campanhas aparece na interface marcado como "em desenvolvimento". Relatórios precisam ser limpos de qualquer dado que venha de base externa (Clínica nas Nuvens, Club) antes de ir para cliente externo.</p>
+  </div>
+
+  <div class="dec">
+    <span class="dec-tag">Alinhada · produto</span>
+    <p class="dec-h">Encerramento automático de conversa em 24h</p>
+    <p>Vale para conversa parada com o robô e com atendente. Objetivo declarado é limpar o painel e melhorar a métrica. Já existe regra de 15 min para mensagem automática e mais 15 min para <em>handoff</em> ao humano.</p>
+  </div>
+
+  <div class="dec pend">
+    <span class="dec-tag">Em aberto · precisa de decisão, não de mais dado</span>
+    <p class="dec-h">Pausar os disparos em massa pelo CRM</p>
+    <p>Gustavo pediu a pausa imediata de tudo, exceto confirmação de agenda, e voltar ao RD Station enquanto o CRM é polido. Felipe pediu antes analisar a significância do volume e prometeu reporte no sábado. <strong>Ficou sem dono e sem prazo.</strong> A atualização com pausa automática já estava pronta e aguardando deploy no dia da reunião.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Escopo do lançamento</h2>
+  <table>
+    <thead><tr><th style="width:32%">Módulo</th><th style="width:14%">Piloto</th><th>Observação levantada na reunião</th></tr></thead>
+    <tbody>
+      <tr><td>Conversas / inbox</td><td class="in">ENTRA</td><td>Núcleo do produto. É onde estão os problemas de qualidade que hoje aparecem no nosso próprio uso.</td></tr>
+      <tr><td>Chatbot / SDR</td><td class="in">ENTRA</td><td>Cliente monta o próprio fluxo ou compra a montagem como serviço.</td></tr>
+      <tr><td>Serviços</td><td class="in">ENTRA</td><td>Cadastro de consulta, duração e valor, vinculado ao lead.</td></tr>
+      <tr><td>Equipe / permissões</td><td class="in">ENTRA</td><td>Imprescindível. Segmentação de acesso por cargo já implementada.</td></tr>
+      <tr><td>Relatórios</td><td class="in">ENTRA</td><td>Condicionado à limpeza: só relatórios que leem o banco do próprio CRM. Retirar o que puxa API do Club.</td></tr>
+      <tr><td>Agenda</td><td class="in">ENTRA</td><td>Funciona sem Clínica nas Nuvens, integrando Google Calendar ou conta Microsoft.</td></tr>
+      <tr><td>Campanhas em massa</td><td class="out">FORA</td><td>Tecnicamente funcional (WhatsApp e e-mail), mas sai marcado como "em desenvolvimento". Prazo mencionado: um mês.</td></tr>
+      <tr><td>Automações</td><td class="out">FORA</td><td>São específicas da operação Wissence. Viram item do pacote customizado, precificado por escolha.</td></tr>
+      <tr><td>Integração Clínica nas Nuvens</td><td class="out">FORA</td><td>Única integração que precisa ser segmentada fora do tenant genérico.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2>Plano de ação</h2>
+  <table>
+    <thead><tr><th style="width:20%">Responsável</th><th style="width:15%">Prazo</th><th>Entrega</th></tr></thead>
+    <tbody>
+      <tr><td class="who">Gustavo</td><td class="when">sex 28/08</td><td><strong>Proposta comercial</strong> com valores para clínica pequena, incluindo modelo de custo da Meta (WhatsApp) e e-mail. Revisar com Felipe antes de levar ao Leonardo.</td></tr>
+      <tr><td class="who">Gustavo</td><td class="when">sáb 29/08</td><td><strong>Alinhar cronograma com Leonardo:</strong> apresentação no dia 5, implantações a partir do dia 21. Reunião pode ser remarcada — Leonardo estende atendimento na clínica por causa do fechamento.</td></tr>
+      <tr><td class="who">Felipe</td><td class="when">sáb 29/08</td><td><strong>Reporte dos disparos:</strong> volume, duplicidade por lead, e quantas das 460 mensagens sem resposta são únicas. É o insumo da decisão de pausa.</td></tr>
+      <tr><td class="who">Felipe</td><td class="when">26/08 (pós-almoço)</td><td><strong>Deploy da pausa automática</strong> e da limpeza de conversas paradas há mais de 24h. Janela estimada de 15 min de indisponibilidade.</td></tr>
+      <tr><td class="who">Felipe</td><td class="when">até 02/09</td><td><strong>Arquitetura multi-tenant:</strong> finalizar a estrutura e entregar duas telas novas — gestão de tenants (nossa, com <em>impersonation</em>) e configuração para o dono da clínica.</td></tr>
+      <tr><td class="who">Felipe</td><td class="when">até 02/09</td><td><strong>Limpar relatórios:</strong> remover tudo que lê base externa; deixar somente o que consulta o banco do CRM.</td></tr>
+      <tr><td class="who">Equipe</td><td class="when">03–15/09</td><td><strong>Testes e ajustes</strong> da infra multi-tenant. Semana de 15 dedicada só a teste. Configuração das contas vendidas em paralelo.</td></tr>
+      <tr><td class="who">Gustavo</td><td class="when">feito</td><td>Enviar a transcrição desta reunião ao Felipe.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2>Quanto custa entregar um cliente</h2>
+  <p class="sub">O preço tem que sair daqui, não da sensação de que "médico com uma recepcionista não paga muito". Horas estimadas a partir do que Felipe descreveu na reunião, a R$ 130/hora técnica carregada.</p>
+
+  <table>
+    <thead><tr><th style="width:52%">Implantação — custo único por cliente</th><th style="width:14%">Horas</th><th>Custo</th></tr></thead>
+    <tbody>
+      <tr><td>Descoberta, criação do tenant, banco dedicado, usuários e permissões</td><td class="when">4h</td><td class="brl">R$ 520</td></tr>
+      <tr><td>Meta Business + WhatsApp API: validação de número, templates para aprovação (até 2 dias), cartão de crédito, aquecimento</td><td class="when">10h</td><td class="brl">R$ 1.300</td></tr>
+      <tr><td>Cadastro de serviços, agenda (Google/Microsoft), fluxo operacional</td><td class="when">4h</td><td class="brl">R$ 520</td></tr>
+      <tr><td>Montagem do chatbot base</td><td class="when">8h</td><td class="brl">R$ 1.040</td></tr>
+      <tr><td>Treinamento (2 sessões) e material</td><td class="when">4h</td><td class="brl">R$ 520</td></tr>
+      <tr><td>Acompanhamento assistido nas duas primeiras semanas</td><td class="when">6h</td><td class="brl">R$ 780</td></tr>
+      <tr><td><strong>Total</strong></td><td class="when"><strong>36h</strong></td><td class="brl"><strong>R$ 4.680</strong></td></tr>
+    </tbody>
+  </table>
+
+  <table>
+    <thead><tr><th style="width:66%">Recorrente — custo mensal por cliente</th><th>Primeiros 6 meses</th><th>Estabilizado</th></tr></thead>
+    <tbody>
+      <tr><td>Infra: share de servidor, banco dedicado, backup, monitoramento</td><td class="brl">R$ 120</td><td class="brl">R$ 120</td></tr>
+      <tr><td>Suporte (3h/mês no início, 1,5h depois)</td><td class="brl">R$ 390</td><td class="brl">R$ 195</td></tr>
+      <tr><td>Manutenção evolutiva e release por tenant (rateado)</td><td class="brl">R$ 150</td><td class="brl">R$ 150</td></tr>
+      <tr><td><strong>Total</strong></td><td class="brl"><strong>R$ 660</strong></td><td class="brl"><strong>R$ 465</strong></td></tr>
+    </tbody>
+  </table>
+
+  <div class="flag"><b>Consequência direta:</b> mensalidade abaixo de R$ 700 dá prejuízo no primeiro semestre de qualquer cliente. Qualquer número de R$ 300 ou R$ 400 discutido no dia 5 é subsídio, não venda. Se a decisão for subsidiar para entrar no mercado, que seja consciente e com prazo, não por engano de precificação.</div>
+</section>
+
+<section>
+  <h2>Tabela de preços proposta</h2>
+  <p class="sub">Duas linhas separadas: implantação paga à parte, mensalidade recorrente. Não diluir a implantação na mensalidade para a venda parecer mais fácil — é assim que o caixa some.</p>
+
+  <h3>Mensalidade · contrato de 12 meses</h3>
+  <div class="plans">
+    <div class="plan">
+      <p class="plan-name">Consultório</p>
+      <p class="plan-for">Médico + recepção</p>
+      <p class="plan-price">R$ 890<small>por mês · 1 clínica</small></p>
+      <ul>
+        <li>Até <b>3 usuários</b></li>
+        <li><b>1 número</b> de WhatsApp oficial</li>
+        <li>Conversas, agenda, serviços, equipe</li>
+        <li>Relatórios do próprio CRM</li>
+        <li>Suporte em horário comercial</li>
+      </ul>
+    </div>
+    <div class="plan hero">
+      <p class="plan-name">Clínica</p>
+      <p class="plan-for">Recomendado · alvo do dia 5</p>
+      <p class="plan-price">R$ 1.490<small>por mês · 1 clínica</small></p>
+      <ul>
+        <li>Até <b>8 usuários</b></li>
+        <li><b>2 números</b> de WhatsApp oficial</li>
+        <li>Tudo do Consultório, mais <b>chatbot</b></li>
+        <li><b>Assessoria de disparo</b>: limites, aquecimento e prevenção de banimento</li>
+        <li>Campanhas quando liberar, sem custo adicional</li>
+      </ul>
+    </div>
+    <div class="plan">
+      <p class="plan-name">Rede</p>
+      <p class="plan-for">Grupo com mais de uma unidade</p>
+      <p class="plan-price">R$ 2.690<small>por mês · até 3 clínicas</small></p>
+      <ul>
+        <li><b>Usuários ilimitados</b></li>
+        <li>Até <b>4 números</b> de WhatsApp</li>
+        <li>Relatórios consolidados por unidade</li>
+        <li>Canal direto de suporte</li>
+        <li>Fila prioritária em release e correção</li>
+      </ul>
+    </div>
+  </div>
+
+  <table>
+    <thead><tr><th style="width:62%">Implantação e serviços</th><th>Valor</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Implantação Essencial</strong> — tenant, agenda, equipe, serviços, WhatsApp API do cliente configurada, 2 treinamentos</td><td class="brl">R$ 4.900</td></tr>
+      <tr><td><strong>Implantação Completa</strong> — tudo acima + chatbot customizado, fluxos e migração de contatos</td><td class="brl">R$ 8.900</td></tr>
+      <tr><td><strong>Integração com ERP do cliente via API</strong> — escopo variável, exige documentação da API e projeto próprio</td><td class="brl">a partir de R$ 12.000</td></tr>
+      <tr><td>Clínica adicional</td><td class="brl">+ R$ 690/mês</td></tr>
+      <tr><td>Usuário adicional</td><td class="brl">+ R$ 90/mês</td></tr>
+      <tr><td>Número de WhatsApp adicional (configuração)</td><td class="brl">R$ 1.200</td></tr>
+      <tr><td>Hora técnica avulsa</td><td class="brl">R$ 280</td></tr>
+      <tr><td>Fluxo de chatbot adicional</td><td class="brl">R$ 1.800</td></tr>
+      <tr><td>Treinamento extra (2h)</td><td class="brl">R$ 600</td></tr>
+      <tr><td>Recuperação de número banido / reaquecimento</td><td class="brl">R$ 1.200</td></tr>
+      <tr><td><strong>Conversas da Meta (WhatsApp)</strong> — cobradas na conta Meta e no cartão do próprio cliente</td><td class="brl">repasse · R$ 0</td></tr>
+    </tbody>
+  </table>
+
+  <div class="flag"><b>Não verificado:</b> não tenho como conferir aqui o preço atual dos concorrentes — meu conhecimento vai até maio de 2026 e não há busca nesta sessão. Pela referência que tenho, sistemas de gestão para clínica no Brasil ficavam na faixa de R$ 150 a R$ 500 por mês, e ferramentas de multiatendimento WhatsApp entre R$ 200 e R$ 600. Se essas faixas ainda valerem, <b>o plano Clínica está 3x acima do mercado de software</b> — e só se sustenta se for vendido como operação assistida de WhatsApp, não como CRM. Validar a tabela contra iClinic, Ninsaúde, Feegow, Kommo, RD Station e Huggy antes do dia 5.</div>
+</section>
+
+<section>
+  <h2>Como vender</h2>
+  <p class="sub">A venda do dia 5 não é de software. Nenhum médico com uma recepcionista acorda querendo um CRM — ele quer parar de perder retorno e parar de ter número banido.</p>
+
+  <h3>A oferta em uma frase</h3>
+  <p>WhatsApp oficial da clínica funcionando, com confirmação de agenda automática, um robô que atende fora do horário e alguém que responde quando a Meta reclamar. O software vem junto.</p>
+
+  <h3>Safra fundadora — 3 vagas, encerra no dia 5</h3>
+  <table>
+    <thead><tr><th style="width:50%">O cliente recebe</th><th>O cliente entrega</th></tr></thead>
+    <tbody>
+      <tr><td>Implantação Essencial por <strong>R$ 3.430</strong> (30% de desconto)</td><td>Contrato de 12 meses assinado</td></tr>
+      <tr><td>Mensalidade travada por 12 meses, sem reajuste</td><td>Implantação paga à vista</td></tr>
+      <tr><td>Prioridade na fila de implantação (go-live em 21/09)</td><td>Autorização de uso como caso e depoimento</td></tr>
+      <tr><td>Canal direto com o time técnico</td><td>Duas sessões de feedback de produto</td></tr>
+    </tbody>
+  </table>
+  <div class="flag"><b>Desconto sim, implantação grátis não.</b> Implantação grátis transforma cada cliente novo em R$ 4.680 de caixa negativo com payback de seis meses. Se o cliente não paga a implantação, ele também não trata a implantação como compromisso — some do treinamento e a culpa do fracasso volta para nós.</div>
+
+  <h3>O funil do dia 5</h3>
+  <ol class="checklist">
+    <li><strong>Leonardo apresenta</strong><span>Demonstração de 10 minutos com um caso real: confirmação de agenda, conversa com o robô e o relatório de resposta. Não mostrar tela em desenvolvimento.</span></li>
+    <li><strong>Lista de interesse, não fechamento em sala</strong><span>Quem se interessa preenche um formulário com: quantas clínicas, quantos atendentes, se já tem WhatsApp Business API, qual sistema usa hoje. Isso é a qualificação e evita vender para quem não cabe na capacidade.</span></li>
+    <li><strong>Diagnóstico de 30 minutos</strong><span>Feito por Gustavo na semana do dia 8. É onde o preço é apresentado, já ancorado no problema que o médico descreveu.</span></li>
+    <li><strong>Proposta com data de go-live nominal</strong><span>Cada proposta traz a data real da fila, não "setembro". Três propostas, três datas diferentes.</span></li>
+    <li><strong>Assinatura com anexo de tratamento de dados</strong><span>Sem contrato e anexo LGPD, não há implantação agendada. Sem exceção para o primeiro cliente.</span></li>
+  </ol>
+
+  <h3>Remuneração do Leonardo</h3>
+  <p>A reunião listou "discutir faturamento com Leonardo" como pendência sem data. Recomendação: <strong>comissão de indicação</strong> — 15% sobre a implantação e 10% sobre a mensalidade nos 12 primeiros meses — com a Wissen Tech faturando o cliente diretamente.</p>
+  <p>O modelo de revenda, em que Leonardo compra com desconto e revende, parece mais simples e é pior: ele passa a controlar o preço, e a pressão de fechar no dia da aula vai virar desconto na nossa margem, com o custo de implantação intacto. Quem carrega o custo precisa controlar o preço.</p>
+</section>
+
+<section>
+  <h2>Quanto isso dá, de verdade</h2>
+  <p class="sub">Cenário da safra fundadora: 3 clientes no plano Clínica, implantação Essencial com desconto.</p>
+  <div class="grid">
+    <div class="cell"><div class="num">R$ 10,3k</div><div class="lbl">receita de implantação · 3 × R$ 3.430</div></div>
+    <div class="cell"><div class="num bad">−R$ 3,7k</div><div class="lbl">resultado da implantação · custo de R$ 4.680 por cliente</div></div>
+    <div class="cell"><div class="num">R$ 830</div><div class="lbl">margem mensal por cliente nos 6 primeiros meses</div></div>
+    <div class="cell"><div class="num">1,5 mês</div><div class="lbl">payback do prejuízo da implantação</div></div>
+    <div class="cell"><div class="num">R$ 53,6k</div><div class="lbl">receita recorrente em 12 meses</div></div>
+    <div class="cell"><div class="num">R$ 26,2k</div><div class="lbl">margem bruta no ano, com os 3 clientes</div></div>
+  </div>
+  <div class="flag"><b>Este é o número que decide setembro.</b> Três clientes rendem cerca de R$ 26 mil de margem bruta em doze meses — antes de contar qualquer hora de Gustavo, e sem contar o custo de atrasar Aurora e ValorMed. Como produto de software, só faz sentido a partir de 20 a 30 clientes. Na capacidade atual, de dois a cada 45 dias, chegar a 20 leva quase dois anos. Ou a implantação vira produto (onboarding assistido, templates prontos, número de horas caindo pela metade a cada safra), ou isso não é um SaaS — é uma consultoria com software junto, e precisa ser precificada e vendida como consultoria.</div>
+</section>
+
+<section>
+  <h2>O retrato de hoje no painel</h2>
+  <p class="sub">Números lidos no BI Aurora durante a reunião. Este é o estado do produto que se pretende vender em dez dias.</p>
+  <div class="grid">
+    <div class="cell"><div class="num bad">460</div><div class="lbl">aguardando primeira resposta</div></div>
+    <div class="cell"><div class="num bad">144</div><div class="lbl">conversas ativas com humano, distribuídas entre 3–5 pessoas</div></div>
+    <div class="cell"><div class="num">16</div><div class="lbl">resolvidas no dia</div></div>
+    <div class="cell"><div class="num">3</div><div class="lbl">conversas ativas com o Aurora</div></div>
+    <div class="cell"><div class="num">1.294</div><div class="lbl">mensagens trocadas no dia</div></div>
+    <div class="cell"><div class="num bad">83</div><div class="lbl">falhas de entrega no dia</div></div>
+    <div class="cell"><div class="num">93 <span style="font-size:14px;color:var(--slate)">/ 241</span></div><div class="lbl">confirmações hoje / no mês · taxa 32%</div></div>
+    <div class="cell"><div class="num">70 <span style="font-size:14px;color:var(--slate)">/ 523</span></div><div class="lbl">confirmações de médicos hoje / no mês · taxa total 68%</div></div>
+  </div>
+  <p class="sub" style="margin-top:22px">Falhas não são cobradas pela Meta — só disparo com retorno 200 gera custo, e número com falha entra em <em>blacklist</em> local. O custo das falhas não é financeiro, é reputacional: número errado por erro de digitação no cadastro, DDD trocado por código de país (55 comendo os dois últimos dígitos), e o incidente de infraestrutura da Meta no dia 25 que também derrubou disparos do RD Station.</p>
+</section>
+
+<section>
+  <h2>Riscos e pontos cegos</h2>
+  <p class="sub">Esta seção não saiu da reunião. Ela existe porque a reunião fechou cronograma antes de fechar premissa.</p>
+
+  <div class="risk">
+    <span class="risk-n">RISCO 01</span>
+    <h3>Vender uma data de entrega que a capacidade não sustenta</h3>
+    <p>Os números são do próprio Felipe: 15 a 45 dias por implantação, duas em paralelo por janela de 45 dias. Se Leonardo vender cinco licenças no dia 5, o quinto cliente entra em produção em fevereiro de 2027. O dia 21 de setembro não é a data de entrega das licenças vendidas — é a data em que a primeira dupla começa.</p>
+    <div class="verdict"><b>Antes do dia 5:</b> definir e comunicar ao Leonardo um teto de licenças para esta primeira safra (sugestão: 2, no máximo 3) e uma fila com data por cliente. Vender sem teto é vender atraso.</div>
+  </div>
+
+  <div class="risk">
+    <span class="risk-n">RISCO 02</span>
+    <h3>Banco separado por clínica resolve o problema técnico, não o jurídico</h3>
+    <p>Gustavo levantou LGPD e a resposta foi isolamento de banco. São coisas diferentes. Operando SaaS com dado de paciente, a Wissence é <strong>operadora de dado pessoal sensível</strong> — isolar schema não transfere responsabilidade, e o modelo white-label instalado no cliente também não, se o software é nosso e a licença é nossa. Nada disso apareceu na conversa: contrato de tratamento de dados, encarregado designado, plano de resposta a incidente, retenção, direito de eliminação.</p>
+    <div class="verdict"><b>Antes do dia 5:</b> nenhuma assinatura sem contrato com anexo de tratamento de dados. Isso é jurídico, não engenharia, e não cabe em quinze dias se começar no dia 20.</div>
+  </div>
+
+  <div class="risk">
+    <span class="risk-n">RISCO 03</span>
+    <h3>O chatbot é o módulo mais arriscado e é o que está entrando</h3>
+    <p>Campanhas ficou fora e chatbot ficou dentro — a ordem inversa do risco. Um bot conversando com paciente de médico terceiro, hospedado na nossa infra, é exatamente o cenário que a Resolução CFM 2.454/2026 endereça, com exigência de avaliação de risco documentada e comissão sob coordenação médica. <em>Não tenho como verificar aqui o texto e o alcance exato da resolução para software de terceiro — isso precisa de leitura jurídica antes do dia 5, não depois.</em></p>
+    <div class="verdict"><b>Antes do dia 5:</b> definir por escrito o que o bot pode e não pode dizer, e quem responde clinicamente por isso na ponta do cliente. Se a resposta for "o médico que comprou", precisa estar no contrato.</div>
+  </div>
+
+  <div class="risk">
+    <span class="risk-n">RISCO 04</span>
+    <h3>Preço baixo com implantação de alto toque é margem negativa</h3>
+    <p>A intenção é "não cobrar muito" para médico com uma recepcionista, e ir pelo massivo. Mas a entrega inclui 15 a 45 dias de trabalho humano: configuração de conta Meta, validação de número, aprovação de template (até dois dias), cartão de crédito, aquecimento de número e treinamento. Esse é o padrão que mata software pequeno — ticket de autoatendimento com custo de consultoria.</p>
+    <div class="verdict"><b>Na proposta:</b> separar em duas linhas — implantação (valor único, que cubra as horas reais) e assinatura mensal. Não diluir implantação na mensalidade para a venda parecer mais fácil no dia 5.</div>
+  </div>
+
+  <div class="risk">
+    <span class="risk-n">RISCO 05</span>
+    <h3>Bus factor 1</h3>
+    <p>Felipe está, ao mesmo tempo: construindo o multi-tenant, subindo LP e campanha para ajudar no fechamento, gastando mais de uma hora por dia limpando conversas retroativas à mão, devendo a integração da ValorMed (declarou estar postergando) e sendo a única pessoa que faz deploy — evitando horário comercial para não derrubar a operação. O apoio citado é o Jefferson, também alocado no fechamento. Não há CI/CD, e migração de schema por tenant multiplica cada release pelo número de clientes.</p>
+    <div class="verdict"><b>Antes do go-live:</b> automação de migração e deploy por tenant deixa de ser melhoria e passa a ser pré-requisito. Cinco tenants na mão de uma pessoa que faz deploy na madrugada não escala nem para dez.</div>
+  </div>
+
+  <div class="risk">
+    <span class="risk-n">RISCO 06</span>
+    <h3>A única oportunidade real conhecida contradiz a decisão comercial</h3>
+    <p>O plano foi fechado em uma clínica por conta. O único prospect concreto citado, Dr. Moisés, tem três clínicas e já visitou a operação. As cinco licenças do dia 5 são hipótese sem evidência — a demanda validada hoje é uma, e ela não cabe no plano que acabou de ser desenhado.</p>
+    <div class="verdict"><b>Antes do dia 5:</b> ter o preço da clínica adicional definido, ou o primeiro cliente negocia em cima de uma tabela que não existe.</div>
+  </div>
+
+  <div class="risk">
+    <span class="risk-n">RISCO 07</span>
+    <h3>Instalável criptografado não protege o código</h3>
+    <p>A alternativa white-label foi descrita como entregar um instalável criptografado "para ninguém conseguir descriptar". Ofuscação atrasa engenharia reversa, não impede. Somado a dado de saúde rodando em servidor de cliente sem área de TI, esse é o pior cenário de suporte e o pior de conformidade ao mesmo tempo.</p>
+    <div class="verdict"><b>Recomendação:</b> tirar o white-label do discurso comercial do dia 5. Vender SaaS, e tratar on-premise como exceção contratada, com preço que reflita o custo real.</div>
+  </div>
+
+  <div class="risk">
+    <span class="risk-n">RISCO 08</span>
+    <h3>Colisão com o Aurora e o ValorMed</h3>
+    <p>A reunião reconheceu que as prioridades precisam ser definidas com Leonardo, e então seguiu adiante sem definir. Setembro já tem a feira do Aurora e a integração pendente da ValorMed. Este CRM adiciona uma venda no dia 5, um go-live no dia 21 e ciclos de implantação de 45 dias. Três produtos, um desenvolvedor. Nenhum foi despriorizado.</p>
+    <div class="verdict"><b>É a decisão mais importante da semana</b> e ela não é técnica: o que sai de setembro para outubro. Levar essa pergunta ao Leonardo já com uma recomendação, não como pergunta aberta.</div>
+  </div>
+
+  <div class="risk">
+    <span class="risk-n">RISCO 09</span>
+    <h3>O que justifica o preço é serviço, e serviço não tem barreira</h3>
+    <p>O plano Clínica só se sustenta acima do mercado por causa da operação assistida de WhatsApp: configurar a API, aprovar template, aquecer número, segurar limite de disparo. Isso é conhecimento tácito de duas pessoas, não é produto — qualquer agência que aprenda o mesmo caminho oferece igual mais barato. E o cliente que aprende a operar sozinho depois de seis meses cancela e fica só com o software, que aí custa caro demais para o que faz.</p>
+    <div class="verdict"><b>Contrapeso a construir:</b> o que prende o cliente é o histórico de conversa, o fluxo do bot montado e a agenda integrada — não a assessoria. Isso precisa entrar no plano de produto agora, junto do preço, e não depois da primeira renovação.</div>
+  </div>
+</section>
+
+<section>
+  <h2>O que precisa estar resolvido antes de 5 de setembro</h2>
+  <ol class="checklist">
+    <li><strong>Decisão sobre a pausa dos disparos</strong><span>Com dono e horário. Hoje o produto manda mensagem duplicada e exibe número no lugar do nome do paciente — já houve reclamação de paciente. Vender isso em dez dias é opcional; corrigir não é.</span></li>
+    <li><strong>Teto de licenças da primeira safra</strong><span>Com fila e data por cliente, comunicado ao Leonardo antes da apresentação.</span></li>
+    <li><strong>Validar a tabela de preços contra o mercado</strong><span>A proposta deste documento vem do custo de entrega. Falta o outro lado: conferir preço atual de iClinic, Ninsaúde, Feegow, Kommo, RD Station e Huggy. Se o plano Clínica ficar muito acima, a venda tem que ser de operação assistida, não de CRM.</span></li>
+    <li><strong>Modelo de remuneração do Leonardo</strong><span>Comissão de indicação ou revenda. Decidir antes da apresentação — depois do dia 5 quem define o preço é quem estava na sala.</span></li>
+    <li><strong>Contrato com anexo de tratamento de dados</strong><span>Inclui limite de disparo diário assumido pelo cliente por escrito — "por conta e risco dele" precisa estar no papel, não no verbal.</span></li>
+    <li><strong>Quem fatura e como se divide</strong><span>Leonardo é revendedor com comissão ou canal? A reunião listou "discutir faturamento" como pendência sem data.</span></li>
+    <li><strong>Escopo do bot e responsabilidade clínica</strong><span>Definido por escrito, com leitura jurídica da CFM 2.454/2026 aplicada a software vendido a terceiro.</span></li>
+    <li><strong>Prioridade entre CRM, Aurora e ValorMed</strong><span>Uma recomendação levada ao Leonardo, não uma pergunta.</span></li>
+  </ol>
+</section>
+
+<footer>
+  Documento gerado a partir das notas e da transcrição integral da reunião de 26/08/2026 (1h16). Decisões, prazos e métricas são da reunião. A seção de riscos e a lista final são análise crítica adicionada por fora dela — inclusive as objeções à posição do próprio autor da reunião. Referências regulatórias precisam de validação jurídica antes de uso comercial.
+</footer>
+
+</div>
+</body>
+</html>

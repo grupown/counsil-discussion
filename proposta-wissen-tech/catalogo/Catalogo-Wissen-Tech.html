@@ -178,12 +178,12 @@
 
 <div class="wrap">
 
-  <p class="eyebrow">Documento interno · Wissen Tech · rev. 3</p>
+  <p class="eyebrow">Documento interno · Wissen Tech · rev. 4</p>
   <h1>Catálogo de serviços e<br><em>regras de atendimento</em></h1>
   <p class="dek">Manual de quem vende e de quem entrega. Diz qual linha oferecer, para quem, por quanto, e quando recusar — com o roteiro de reunião e o modelo de proposta prontos para usar.</p>
 
   <dl class="meta">
-    <div><dt>Versão</dt><dd>3.0 · 30/08/2026</dd></div>
+    <div><dt>Versão</dt><dd>4.0 · 30/08/2026</dd></div>
     <div><dt>Uso</dt><dd>Venda e atendimento</dd></div>
     <div><dt>Responsável</dt><dd>CTO</dd></div>
     <div><dt>Revisar</dt><dd>a cada emenda dos documentos-fonte</dd></div>
@@ -191,59 +191,68 @@
 
   <div class="lead">
     <p><strong>Este documento não decide nada e não vale como contrato.</strong> Ele traduz, em linguagem de reunião, o que já foi decidido em outros dois lugares — e aponta para eles quando o detalhe importa.</p>
-    <p><strong>Memorando de Decisão 01/2026</strong> — o que a diretoria autorizou: uso comercial da tecnologia, atendimento fora do grupo, preço intragrupo, capacidade por fase, orçamento do desenvolvedor, e a política de dado e de IA. <strong>Base Técnico-Contratual</strong> — o que o jurídico redige: objeto, obrigações, LGPD, propriedade intelectual, rescisão e responsabilidade.</p>
-    <p><strong>Regra de manutenção, e ela é o que impede este documento de inchar de novo:</strong> aqui não entra texto de decisão nem de cláusula, só a regra operacional em uma linha e a remissão. <strong>Toda emenda a qualquer dos dois documentos-fonte obriga a revisão desta peça em até 15 dias</strong>, e a revisão é do CTO. Sem dono e sem gatilho, um catálogo volta a virar arquivo morto em seis meses — foi o que aconteceu com a versão anterior.</p>
+    <p><strong>Memorando de Decisão 01/2026</strong> — o que a diretoria autorizou. <strong>Base Técnico-Contratual</strong> — o que o jurídico redige. <strong>Esta revisão foi conferida contra duas peças reais</strong>: a proposta à Clínica Dr. M. Batista de 27/08 e o plano comercial do CRM discutido em 26/08. Os preços e as horas abaixo são os que foram efetivamente praticados, não estimativas.</p>
+    <p><strong>Regra de manutenção:</strong> aqui não entra texto de decisão nem de cláusula, só a regra operacional em uma linha e a remissão. <strong>Toda emenda a qualquer dos dois documentos-fonte obriga a revisão desta peça em até 15 dias</strong>, e a revisão é do CTO.</p>
   </div>
 
   <section>
     <h2 class="sec">01 · Qualificação — a quem se vende o quê</h2>
-    <p class="sec-note">Esta é a seção que se abre numa reunião. Cinco perguntas levam a uma linha de serviço, ou a um não.</p>
+    <p class="sec-note">Esta é a seção que se abre numa reunião. Seis perguntas levam a uma linha de serviço, ou a um não.</p>
 
     <div class="q">
       <p class="qn">Pergunta 1 · define tudo o que vem depois</p>
       <h3>Existe alguém aí dentro responsável por executar o que a gente combinar?</h3>
-      <p>Não precisa ser de tecnologia. Precisa ter nome, agenda e poder de mandar fazer.</p>
-      <div class="ans"><b>Se sim</b>Modelo 1 está aberto — a clínica executa e nós conduzimos.</div>
-      <div class="ans" style="border-left-color:var(--rose)"><b>Se não</b>Modelo 1 está fechado, sem exceção. Só Modelo 2, em que quem executa é o produto. Vender condução técnica sem responsável do outro lado vira banco de horas.</div>
+      <p>Não precisa ser de tecnologia. Precisa ter nome, agenda e poder de mandar fazer. <strong>Pergunte quantas horas por semana essa pessoa terá.</strong></p>
+      <div class="ans"><b>Se sim, com 30 h/semana ou mais</b>L3 no plano Condução ou Intensivo.</div>
+      <div class="ans"><b>Se sim, mas com menos tempo</b>L3 no plano Essencial, e o cronograma se estende na mesma proporção — dito na proposta, não descoberto no mês três.</div>
+      <div class="ans" style="border-left-color:var(--rose)"><b>Se não</b>L3 fechada, sem exceção. Só produto, em que quem executa é a máquina.</div>
     </div>
 
     <div class="q">
       <p class="qn">Pergunta 2 · decide se existe produto</p>
       <h3>Qual sistema de gestão vocês usam, e ele consegue exportar os dados?</h3>
-      <p>Anotar o nome do fornecedor. A resposta detalhada vem depois, na L2 — aqui só se busca o nível aproximado.</p>
-      <div class="ans"><b>Se tem interface documentada ou exportação programada</b>Segue normalmente.</div>
-      <div class="ans" style="border-left-color:var(--amber)"><b>Se só há exportação manual</b>Sobretaxa mensal ou recusa. Custa 2 a 4 h por mês, para sempre.</div>
-      <div class="ans" style="border-left-color:var(--rose)"><b>Se não há saída de dado nenhuma</b>Não se vende. Nenhuma linha funciona lendo tela.</div>
+      <p>Anotar o nome do fornecedor. O nível exato é apurado depois, na L2.</p>
+      <div class="ans"><b>Interface documentada ou exportação programada</b>Segue normalmente.</div>
+      <div class="ans" style="border-left-color:var(--amber)"><b>Só exportação manual</b>Sobretaxa mensal ou recusa. Custa 2 a 4 h por mês, para sempre.</div>
+      <div class="ans" style="border-left-color:var(--rose)"><b>Nenhuma saída de dado</b>L5 e L6 fechadas. <strong>A L8 continua aberta</strong> — o CRM não depende do sistema do cliente.</div>
     </div>
 
     <div class="q">
-      <p class="qn">Pergunta 3 · dimensiona o preço</p>
+      <p class="qn">Pergunta 3 · abre a linha de maior ticket</p>
+      <h3>Como vocês atendem o paciente no WhatsApp hoje, e quantas pessoas respondem?</h3>
+      <p>Perguntar também: já tem WhatsApp Business API oficial, ou é número comum? Já teve número banido?</p>
+      <div class="ans"><b>Número comum, várias pessoas no mesmo aparelho, ou já foi banido</b>É a L8. <mark>Esta é a dor que paga mais caro</mark> — e o médico a reconhece sem precisar entender de tecnologia.</div>
+    </div>
+
+    <div class="q">
+      <p class="qn">Pergunta 4 · dimensiona o preço</p>
       <h3>Quantas unidades, quantos profissionais atendendo, e qual o faturamento por mês?</h3>
-      <p>Multi-local muda faixa de preço em todas as linhas. Faturamento serve para dimensionar o valor dos vazamentos na L2, não para cobrar percentual.</p>
+      <p>Multi-local muda faixa em todas as linhas. Número de atendentes define o plano da L8.</p>
     </div>
 
     <div class="q">
-      <p class="qn">Pergunta 4 · encontra a dor que paga</p>
+      <p class="qn">Pergunta 5 · encontra a dor que paga</p>
       <h3>Dos cinco, qual dói mais hoje: estoque parado, orçamento que não fecha, paciente que não aparece, caixa que não bate, ou gente fazendo à mão o que a máquina faria?</h3>
-      <p>A resposta define por onde a L2 começa e o que entra no relatório mensal. <strong>É a pergunta que transforma tecnologia em dinheiro na cabeça de quem decide.</strong></p>
+      <p>Define por onde a L2 começa. <strong>É a pergunta que transforma tecnologia em dinheiro na cabeça de quem decide.</strong></p>
     </div>
 
     <div class="q">
-      <p class="qn">Pergunta 5 · abre a linha de conformidade</p>
+      <p class="qn">Pergunta 6 · abre a linha de conformidade</p>
       <h3>Vocês já usam algum sistema com inteligência artificial, ou pretendem usar?</h3>
-      <p>Se sim, a L1 entra na conversa por obrigação regulatória, não por venda — a Resolução CFM 2.454/2026 está em vigor desde 26 de agosto.</p>
+      <p>Se sim, a L1 entra por obrigação regulatória, não por venda — Resolução CFM 2.454/2026, em vigor desde 26/08/2026. <strong>Se a clínica for contratar a L8, a resposta passa a ser sim</strong>, porque o CRM tem robô de atendimento.</p>
     </div>
 
     <div class="tbl-scroll" style="margin-top:26px">
       <table>
-        <thead><tr><th>Perfil</th><th>Responsável nomeado</th><th>Entrada</th><th>Linha principal</th><th>Se não couber</th></tr></thead>
+        <thead><tr><th>Perfil</th><th>Responsável nomeado</th><th>Entrada</th><th>Linha principal</th><th>Também cabe</th></tr></thead>
         <tbody>
-          <tr><td class="k">Consultório · 1 médico + 1 recepcionista</td><td>não</td><td class="n">L2</td><td class="n">L6</td><td>L1 avulsa</td></tr>
-          <tr><td class="k">Clínica de 1 local · até 15 pessoas</td><td>não</td><td class="n">L2</td><td class="n">L5</td><td>L6 reduzida</td></tr>
-          <tr><td class="k">Clínica de 1 local</td><td>sim</td><td class="n">L2</td><td class="n">L3</td><td>L5</td></tr>
-          <tr><td class="k">Clínica multi-local</td><td>sim</td><td class="n">L1 ou L2</td><td class="n">L3</td><td>L5 multi</td></tr>
-          <tr><td class="k">Clínica multi-local</td><td>não</td><td class="n">L2</td><td class="n">L5</td><td class="no">não vender L3</td></tr>
-          <tr><td class="k">Franqueado da rede</td><td>indiferente</td><td class="n">direto</td><td class="n">L4</td><td>—</td></tr>
+          <tr><td class="k">Consultório · 1 médico + 1 recepcionista</td><td>não</td><td class="n">L2</td><td class="n">L8 · Consultório</td><td>L6</td></tr>
+          <tr><td class="k">Clínica de 1 local · até 15 pessoas</td><td>não</td><td class="n">L2</td><td class="n">L8 · Clínica</td><td>L5</td></tr>
+          <tr><td class="k">Clínica de 1 local</td><td>sim</td><td class="n">L2</td><td class="n">L3</td><td>L8, L5</td></tr>
+          <tr><td class="k">Clínica multi-local</td><td>sim</td><td class="n">L3 Fase 0</td><td class="n">L3 · Condução</td><td>L8 · Rede</td></tr>
+          <tr><td class="k">Clínica multi-local</td><td>não</td><td class="n">L2</td><td class="n">L8 · Rede</td><td class="no">não vender L3</td></tr>
+          <tr><td class="k">Franqueado da rede</td><td>indiferente</td><td class="n">direto</td><td class="n">L4</td><td>L8</td></tr>
+          <tr><td class="k">Cliente do 8º mês em diante</td><td>—</td><td class="n">—</td><td class="n">L7 · assessoria</td><td>L9 avulso</td></tr>
           <tr><td class="k">Qualquer porte usando IA assistencial</td><td>indiferente</td><td class="n">L1</td><td class="n">L1</td><td>—</td></tr>
         </tbody>
       </table>
@@ -251,31 +260,34 @@
 
     <div class="box no" style="margin-top:24px">
       <h3>Os quatro nãos, decididos antes da reunião</h3>
-      <p>Não se negocia nenhum destes na mesa. Se aparecer, a resposta é não e o motivo é dito com naturalidade — recusa explicada vende mais do que aceitação forçada.</p>
       <ul class="plain">
         <li><strong>Cliente sem responsável nomeado</strong> pedindo condução técnica.</li>
-        <li><strong>Sistema sem saída de dado.</strong></li>
+        <li><strong>Sistema sem saída de dado</strong>, para L5 e L6. A L8 não é afetada.</li>
         <li><strong>Desenvolvimento sob demanda, sustentação de código de terceiro ou plantão.</strong></li>
-        <li><strong>Modelo 2 enquanto estivermos na Fase 0.</strong> A plataforma não está disponível; assinar agora só é possível com condição suspensiva e data limite, conforme a Base Técnico-Contratual, cláusula B.5. <mark>Na dúvida, não assine.</mark></li>
+        <li><strong>Venda acima do teto da fila.</strong> Cada linha tem um teto e uma fila com data por cliente. <mark>Vender sem teto é vender atraso</mark>, e o atraso aparece como falha nossa três meses depois.</li>
       </ul>
-      <p style="margin-top:12px">A lista completa de recusas é política aprovada pela diretoria e está no Memorando de Decisão 01/2026. <strong>Antes de fechar qualquer contrato, confira a Base Técnico-Contratual</strong> — há pontos ainda pendentes de parecer jurídico que mudam o que pode ser prometido.</p>
+      <p style="margin-top:12px">A lista completa de recusas é política aprovada pela diretoria e está no Memorando 01/2026. <strong>Antes de fechar, confira a Base Técnico-Contratual</strong> — há pontos pendentes de parecer jurídico que mudam o que pode ser prometido.</p>
     </div>
   </section>
 
   <section>
     <h2 class="sec">02 · Preço e capacidade numa página</h2>
-    <p class="sec-note">A tabela que se consulta antes de dizer um número. Horas declaradas para conferir se cabe, não como base de cobrança.</p>
+    <p class="sec-note">Valores praticados. Horas declaradas para conferir se cabe na fila, não como base de cobrança.</p>
 
     <div class="tbl-scroll">
       <table>
-        <thead><tr><th>Linha</th><th>Implantação</th><th>Recorrente</th><th>Horas uma vez</th><th>Horas/mês</th><th>Teto</th></tr></thead>
+        <thead><tr><th>Linha</th><th>Uma vez</th><th>Recorrente</th><th>Horas uma vez</th><th>Horas/mês</th><th>Teto</th></tr></thead>
         <tbody>
           <tr><td class="k">L1 · Conformidade CFM</td><td class="n">R$ 4.800</td><td class="n">R$ 1.200<small>opcional</small></td><td class="n">6–8 h</td><td class="n">1 h</td><td class="n">—</td></tr>
           <tr><td class="k">L2 · Raio-X do dinheiro</td><td class="n">R$ 3.900<small>multi R$ 6.900</small></td><td class="n">—</td><td class="n">8–12 h</td><td class="n">—</td><td class="n">—</td></tr>
-          <tr><td class="k">L3 · Condução técnica</td><td class="n">R$ 16.800<small>multi R$ 24.800</small></td><td class="n">R$ 5.900 a 11.800</td><td class="n">32–48 h</td><td class="n">16–32 h</td><td class="n">3</td></tr>
+          <tr><td class="k">L3 · Condução · Fase 0</td><td class="n">R$ 11.200<small>multi R$ 19.600</small></td><td class="n">—</td><td class="n">32 h<small>multi 56 h</small></td><td class="n">—</td><td class="n">1 por vez</td></tr>
+          <tr><td class="k">L3 · Condução · Fase 1</td><td class="n">—</td><td class="n">R$ 7.600 a 15.600<small>20 a 48 h/mês</small></td><td class="n">—</td><td class="n">20–48 h</td><td class="n">2</td></tr>
           <tr><td class="k">L4 · Tecnologia de franquia</td><td class="n">R$ 8.000 a 15.000</td><td class="n">R$ 2.000 a 3.000<small>por unidade</small></td><td class="n">20–30 h</td><td class="n">2–3 h</td><td class="n">—</td></tr>
-          <tr><td class="k">L5 · Camada de resultado</td><td class="n">R$ 4.900<small>multi R$ 8.900</small></td><td class="n">R$ 890 a 1.490</td><td class="n">12–24 h</td><td class="n">2–4 h</td><td class="n">8 contas</td></tr>
-          <tr><td class="k">L6 · Assinatura de consultório</td><td class="n">R$ 1.900</td><td class="n">R$ 490</td><td class="n">8–12 h</td><td class="n">2–4 h</td><td class="n">com a L5</td></tr>
+          <tr><td class="k">L5 · Camada de resultado</td><td class="n">R$ 4.900<small>multi R$ 8.900</small></td><td class="n">R$ 890 a 1.490</td><td class="n">12–24 h</td><td class="n">2–4 h</td><td class="n">8 com a L6</td></tr>
+          <tr><td class="k">L6 · Assinatura de consultório</td><td class="n">R$ 1.900</td><td class="n">R$ 490</td><td class="n">8–12 h</td><td class="n">2–4 h</td><td class="n">8 com a L5</td></tr>
+          <tr><td class="k">L7 · Assessoria continuada</td><td class="n">—</td><td class="n">R$ 3.600<small>8 h/mês</small></td><td class="n">—</td><td class="n">8 h</td><td class="n">4</td></tr>
+          <tr><td class="k">L8 · CRM Aurora</td><td class="n">R$ 4.900<small>completa R$ 8.900</small></td><td class="n">R$ 890 a 2.690</td><td class="n">36 h</td><td class="n">3 h<small>1,5 h após 6 meses</small></td><td class="n">2 por 45 dias</td></tr>
+          <tr><td class="k">L9 · Serviços avulsos</td><td class="n">tabela própria</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
         </tbody>
       </table>
     </div>
@@ -285,21 +297,28 @@
         <h3>Regras de preço</h3>
         <ul>
           <li><strong>Mensalidade fixa, nunca por requisição ou por uso.</strong></li>
-          <li>A L2 é dedutível da L3 ou da L5 contratada em seguida.</li>
-          <li>L2 em duas parcelas, metade no início.</li>
+          <li><strong>Implantação nunca é diluída na mensalidade</strong> para a venda parecer mais fácil. São duas linhas separadas, sempre — é assim que o caixa some.</li>
+          <li>A L2 é dedutível da L3 contratada em seguida.</li>
           <li>A implantação cobre a configuração, a migração e o treinamento <strong>daquele</strong> cliente. Nunca a construção do produto.</li>
+          <li><strong>Duas horas diferentes:</strong> R$ 450/h de condução técnica autorizada além do banco, R$ 280/h de hora técnica de implantação. Não confundir na proposta.</li>
           <li>Fora do escopo é orçado à parte e aprovado por escrito <strong>antes</strong> de começar.</li>
         </ul>
       </div>
       <div class="card2">
-        <h3>Capacidade por fase</h3>
+        <h3>Capacidade e fila</h3>
         <ul>
-          <li><strong>Fase 0, hoje:</strong> 1 cliente piloto de Modelo 1. Modelo 2 fechado.</li>
-          <li><strong>Fase 1</strong> abre quando o piloto for entregue e o segundo contrato assinado — é isso que libera a contratação do desenvolvedor.</li>
-          <li><strong>Fase 1:</strong> até 3 clientes de L3 simultâneos e até 8 contas de L5 e L6 somadas.</li>
-          <li>O teto de contas sobe pelo que for <strong>medido</strong> em automação de atendimento, nunca pelo que for prometido.</li>
+          <li><strong>L3:</strong> a Fase 0 consome 32 a 56 h de CTO — mais de um mês de capacidade externa. <strong>Uma Fase 0 por vez.</strong></li>
+          <li><strong>L3 Fase 1:</strong> o plano Condução consome cerca de 19 h de CTO por mês. Em 40 h externas, <mark>cabem dois clientes, não três.</mark></li>
+          <li><strong>L8:</strong> 36 h de implantação por cliente, duas em paralelo por janela de 45 dias. <strong>Cerca de 1,3 implantações por mês.</strong></li>
+          <li><strong>Toda proposta traz a data real da fila</strong>, nominal — não "setembro". Três propostas, três datas diferentes.</li>
         </ul>
       </div>
+    </div>
+
+    <div class="box no" style="margin-top:20px">
+      <h3>Antes de vender L8, conferir a fila com quem implanta</h3>
+      <p>A capacidade de implantação do CRM não é do CTO — é de quem constrói e sobe o produto, e essa pessoa está dividida entre mais de um produto. <strong>Nenhuma licença é vendida sem que a data de go-live daquele cliente esteja confirmada com quem vai entregá-la.</strong></p>
+      <p>A conta é simples e não perdoa: cinco licenças vendidas numa mesma data significam que o quinto cliente entra em produção cerca de <mark>cinco meses depois</mark>. Se isso não for dito na venda, vira reclamação com razão.</p>
     </div>
   </section>
 
@@ -311,22 +330,32 @@
       <div class="line-h"><h3>L1 · Conformidade em IA — Resolução CFM 2.454/2026</h3><span class="badge on">Ativa</span></div>
       <p class="who">Qualquer porte que use ou pretenda usar sistema com IA · pré-requisito: nenhum</p>
       <p><strong>Entrega:</strong> classificação de risco dos sistemas em uso, desenho da Comissão de IA e Telemedicina sob a diretoria técnica, política de uso, registro de decisão humana e trilha de auditoria. Sai em parecer, matriz de risco, minuta de política e ata de constituição.</p>
-      <p><strong>Por que abre porta:</strong> é obrigação com data, não venda de tecnologia. O médico não precisa ser convencido de que precisa — e quem faz a conformidade fica na sala quando o assunto vira sistema.</p>
-      <p class="obj"><b>Objeção · "meu sistema é de terceiro, a obrigação é dele"</b> A obrigação de governança é da instituição que adota o sistema, não de quem o vende. O alcance sobre sistemas de terceiros está em verificação jurídica — não prometer cobertura além disso.</p>
+      <p><strong>É obrigação com data, não venda de tecnologia.</strong> O médico não precisa ser convencido de que precisa — e quem faz a conformidade fica na sala quando o assunto vira sistema. <mark>Toda venda de L8 abre uma L1</mark>, porque o CRM tem robô conversando com paciente.</p>
+      <p class="obj"><b>Objeção · "meu sistema é de terceiro, a obrigação é dele"</b> A obrigação de governança é da instituição que adota o sistema. O alcance sobre sistemas de terceiros está em verificação jurídica — não prometer cobertura além disso.</p>
     </div>
 
     <div class="line on">
       <div class="line-h"><h3>L2 · Raio-X do dinheiro da clínica</h3><span class="badge on">Ativa · entrada</span></div>
       <p class="who">Qualquer porte · pré-requisito: nenhum</p>
-      <p><strong>Entrega:</strong> linha de base assinada, com valor estimado de cada um dos cinco vazamentos — estoque parado e perda por vencimento, conversão de orçamento, falta e no-show, divergência de caixa, e horas de trabalho manual evitável — mais a ordem de ataque.</p>
-      <p><strong>E faz uma segunda coisa, tão importante quanto:</strong> é dentro da L2 que se apura <mark>como se lê o dado do sistema do cliente</mark>. Nenhum preço fechado de L3, L5 ou L6 sai antes dessa apuração. É o que impede que um preço fechado seja engolido por três meses esperando o fornecedor do cliente responder um e-mail.</p>
-      <p class="obj"><b>Objeção · "isso eu já sei de cabeça"</b> Então a linha de base vai confirmar em uma semana, e passa a ser número em vez de impressão — que é o que permite provar o ganho depois.</p>
+      <p><strong>Entrega:</strong> linha de base assinada, com valor estimado de cada um dos cinco vazamentos, mais a ordem de ataque. É o marco zero contra o qual todo ganho será comparado.</p>
+      <p><strong>E apura como se lê o dado</strong> do sistema do cliente. Nenhum preço fechado de L3, L5 ou L6 sai antes disso.</p>
+      <p class="obj"><b>Objeção · "isso eu já sei de cabeça"</b> Então a linha de base confirma em uma semana, e passa a ser número em vez de impressão — que é o que permite provar o ganho depois.</p>
     </div>
 
     <div class="line on">
-      <div class="line-h"><h3>L3 · Condução técnica</h3><span class="badge on">Ativa · teto 3</span></div>
-      <p class="who">Clínica com equipe própria · <strong>pré-requisito: responsável nomeado, com nome e agenda</strong></p>
-      <p><strong>Entrega:</strong> plano de trabalho, prioridade, desenho de processo, escolha e negociação de ferramenta, indicadores e ritual de acompanhamento. Reunião quinzenal, painel atualizado entre elas. <strong>Quem executa é o time do cliente.</strong></p>
+      <div class="line-h"><h3>L3 · Condução técnica</h3><span class="badge on">Ativa · 1 Fase 0 · teto 2</span></div>
+      <p class="who">Clínica com equipe própria · <strong>pré-requisito: responsável nomeado com carga declarada em horas por semana</strong></p>
+      <p><strong>Fase 0 — diagnóstico forense.</strong> Quatro semanas, preço fechado. Sessões forenses por função, estudo dos sistemas contratados, auditoria de estoque e compras, linha de base de métricas, e plano de ação priorizado de 90 dias com responsável, prazo e métrica por item.</p>
+      <p><strong>Fase 1 — plano em execução, banco de horas mensal.</strong> Nós conduzimos, o time do cliente executa. Ritual semanal, condução do backlog, especificação do que o time constrói, revisão do que foi construído, e leitura das métricas contra a linha de base.</p>
+      <div class="grid-kv">
+        <div class="kv"><dt>Fase 0 · 1 local</dt><dd>R$ 11.200<small>32 h · 4 semanas</small></dd></div>
+        <div class="kv"><dt>Fase 0 · multi-local</dt><dd>R$ 19.600<small>56 h · 4 semanas</small></dd></div>
+        <div class="kv"><dt>Fase 1 · Essencial</dt><dd>R$ 7.600<small>20 h/mês · R$ 380/h</small></dd></div>
+        <div class="kv"><dt>Fase 1 · Condução</dt><dd>R$ 11.200<small>32 h/mês · R$ 350/h</small></dd></div>
+        <div class="kv"><dt>Fase 1 · Intensivo</dt><dd>R$ 15.600<small>48 h/mês · R$ 325/h</small></dd></div>
+        <div class="kv"><dt>Prazo mínimo</dt><dd>3 meses<small>ideal 6</small></dd></div>
+      </div>
+      <p style="margin-top:16px"><strong>Regras do banco de horas:</strong> horas não usadas acumulam até 25 % do saldo para o mês seguinte e não são reembolsáveis. Horas além do banco, autorizadas por escrito, a R$ 450/h. Relatório mensal de apontamento por frente, com saldo aberto — <strong>e com a carga real do responsável do cliente comparada à acordada, sem absorção silenciosa.</strong></p>
       <p><strong>Obrigação de meio, não de resultado.</strong> Nunca prometer resultado financeiro: o serviço mede e reporta o ganho, quem o produz é a execução do cliente.</p>
       <p class="obj"><b>Objeção · "vocês não executam?"</b> Não, e é isso que faz funcionar depois que a gente sai. Time que só recebe pronto não sustenta; time que executa com condução aprende e mantém.</p>
     </div>
@@ -334,8 +363,8 @@
     <div class="line on">
       <div class="line-h"><h3>L4 · Tecnologia de franquia</h3><span class="badge on">Ativa · prioritária</span></div>
       <p class="who">Franqueado da rede · pré-requisito: autorização da franqueadora</p>
-      <p><strong>Entrega:</strong> pacote padrão da rede — sistemas configurados, rotinas automatizadas, painel de indicadores da unidade e integração com a operação da franqueadora. O franqueado recebe pronto o que as unidades próprias levaram anos para construir.</p>
-      <p><strong>É por onde se começa.</strong> Cliente já conhecido e pré-qualificado, custo de aquisição próximo de zero, e o preço não é comparado com software de prateleira — é comparado com o padrão da rede. <mark>É onde o reaproveitamento tem o maior índice de acerto</mark>, porque a unidade franqueada se parece com as unidades próprias.</p>
+      <p><strong>Entrega:</strong> pacote padrão da rede — sistemas configurados, rotinas automatizadas, painel de indicadores da unidade e integração com a operação da franqueadora.</p>
+      <p><strong>É por onde se começa.</strong> Cliente pré-qualificado, custo de aquisição próximo de zero, e o preço é comparado com o padrão da rede, não com software de prateleira.</p>
       <p class="obj"><b>Objeção · "já tenho meu sistema"</b> Não se troca o sistema. O pacote roda sobre o que já existe — o que muda é o que se extrai dele.</p>
     </div>
 
@@ -343,33 +372,121 @@
       <div class="line-h"><h3>L5 · Camada de resultado</h3><span class="badge on">Fase 1</span></div>
       <p class="who">Clínica de 1 ou mais locais, sem TI interno · pré-requisito: via de acesso ao dado apurada na L2</p>
       <p><strong>Entrega:</strong> alerta de estoque e vencimento, régua de retorno de orçamento, confirmação e recuperação de falta, conferência de conciliação, e relatório mensal do dinheiro. Escopo fechado, sem personalização.</p>
-      <p><strong>Como funciona:</strong> nós puxamos o dado, o cliente não empurra nada — ele autoriza o acesso uma vez e recebe. Serviço hospedado por nós; nada é instalado, integrado ou operado do lado dele, e <strong>nenhuma licença de terceiro é necessária</strong>. A primeira versão entrega relatório e alerta; o painel vem depois, quando um cliente pedir.</p>
-      <p class="obj"><b>Objeção · "quanto custa a inteligência artificial?"</b> Nada à parte. O que exige modelo roda no nosso ambiente e o custo está na mensalidade. O cliente não assina nem contrata ferramenta nenhuma.</p>
+      <p><strong>Não substitui o sistema de gestão da clínica</strong> — lê o que já existe e faz render. Nós puxamos o dado; o cliente autoriza o acesso uma vez e recebe. <strong>Nenhuma licença de terceiro é necessária.</strong> A primeira versão entrega relatório e alerta; o painel vem quando um cliente pedir.</p>
+      <p class="obj"><b>Objeção · "quanto custa a inteligência artificial?"</b> Nada à parte. O que exige modelo roda no nosso ambiente e o custo está na mensalidade.</p>
     </div>
 
     <div class="line on">
       <div class="line-h"><h3>L6 · Assinatura de consultório</h3><span class="badge on">Fase 1 · teto 8</span></div>
       <p class="who">Consultório de 1 médico e 1 recepcionista · pré-requisito: via de acesso ao dado</p>
-      <p><strong>Entrega:</strong> versão mínima da camada de resultado — agenda com confirmação automática, controle simples de insumo, fechamento de caixa e um relatório mensal legível por quem não é de tecnologia. Implantação guiada, sem visita.</p>
-      <p><strong>O teto é a regra, não a exceção:</strong> são 2 a 4 h de atendimento por conta contra 28 h disponíveis. <mark>Oito contas somadas com a L5, e para.</mark> Sobe quando a automação de atendimento for medida.</p>
-      <p class="obj"><b>Objeção · "R$ 490 é caro, o sistema que eu uso custa R$ 129"</b> São coisas diferentes. O sistema guarda o dado; isto faz o dado render — e o retorno é medido contra a linha de base que a L2 assinou.</p>
+      <p><strong>Entrega:</strong> versão mínima da camada de resultado — agenda com confirmação automática, controle simples de insumo, fechamento de caixa e relatório mensal legível por quem não é de tecnologia. Implantação guiada, sem visita.</p>
+      <p><strong>Atenção ao que a L6 não tem, e por isso custa R$ 490:</strong> sem WhatsApp oficial, sem robô de atendimento, sem gestão de conta na Meta. <mark>Se o cliente quiser qualquer uma dessas três, a linha é a L8 e o preço muda de patamar</mark> — vender L6 e entregar L8 dá prejuízo desde o primeiro mês.</p>
+      <p class="obj"><b>Objeção · "R$ 490 é caro, meu sistema custa R$ 129"</b> São coisas diferentes. O sistema guarda o dado; isto faz o dado render — e o retorno é medido contra a linha de base que a L2 assinou.</p>
+    </div>
+
+    <div class="line on">
+      <div class="line-h"><h3>L7 · Assessoria continuada</h3><span class="badge on">Ativa · teto 4</span></div>
+      <p class="who">Cliente que concluiu a Fase 1 da L3 · a partir do 8º mês</p>
+      <p><strong>Entrega:</strong> presença leve e permanente que mantém de pé o que foi construído. Ritual mensal de leitura das métricas contra a linha de base, revisão técnica do que o time do cliente alterou, resposta a dúvida técnica em até 2 dias úteis, curadoria da fila de oportunidades com estimativa antes de qualquer compromisso, e alerta antecipado quando um número começa a se deteriorar.</p>
+      <div class="grid-kv">
+        <div class="kv"><dt>Preço</dt><dd>R$ 3.600/mês<small>8 h · R$ 450/h</small></dd></div>
+        <div class="kv"><dt>Vigência</dt><dd>12 meses<small>renovação automática · 30 dias para cancelar</small></dd></div>
+        <div class="kv"><dt>Hora adicional</dt><dd>R$ 450<small>autorizada por escrito</small></dd></div>
+        <div class="kv"><dt>Acima de 16 h/mês</dt><dd>vira projeto<small>proposta própria</small></dd></div>
+      </div>
+      <p style="margin-top:16px"><strong>Por que a hora é mais cara aqui:</strong> volume baixo com disponibilidade reservada tem custo unitário maior — é o inverso do desconto por volume da Fase 1. Dizer isso na proposta, porque o cliente compara com o que pagava antes.</p>
+      <p class="obj"><b>Objeção · "por que continuar pagando se já está rodando?"</b> Porque o que foi construído se deteriora sem alguém olhando o número. A assessoria custa uma fração da Fase 1 e existe para que não seja preciso voltar a ela.</p>
+    </div>
+
+    <div class="line on">
+      <div class="line-h"><h3>L8 · CRM Aurora — atendimento e WhatsApp</h3><span class="badge on">Ativa · fila de 2 por 45 dias</span></div>
+      <p class="who">Consultório a rede · pré-requisito: nenhum do lado do sistema de gestão · exige conta Meta do cliente</p>
+      <p><strong>É a única linha em que a Wissen Tech entrega o próprio sistema</strong>, e não uma camada sobre o sistema do cliente. Plataforma multi-tenant hospedada por nós, com banco isolado por clínica.</p>
+      <p><strong>A venda não é de software.</strong> Nenhum médico com uma recepcionista acorda querendo um CRM — ele quer parar de perder retorno e parar de ter número banido. <mark>A oferta em uma frase:</mark> WhatsApp oficial da clínica funcionando, com confirmação de agenda automática, um robô que atende fora do horário, e alguém que responde quando a Meta reclamar. O software vem junto.</p>
+
+      <div class="tbl-scroll" style="margin:18px 0">
+        <table>
+          <thead><tr><th>Plano</th><th>Para</th><th>Mensal</th><th>Inclui</th></tr></thead>
+          <tbody>
+            <tr><td class="k">Consultório</td><td>médico + recepção</td><td class="n">R$ 890</td><td>3 usuários, 1 número oficial, conversas, agenda, serviços, equipe, relatórios</td></tr>
+            <tr><td class="k">Clínica</td><td>recomendado</td><td class="n">R$ 1.490</td><td>8 usuários, 2 números, tudo acima mais robô e assessoria de disparo</td></tr>
+            <tr><td class="k">Rede</td><td>grupo com mais de uma unidade</td><td class="n">R$ 2.690</td><td>usuários ilimitados, 4 números, até 3 clínicas, relatórios consolidados, fila prioritária</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="grid-kv">
+        <div class="kv"><dt>Implantação Essencial</dt><dd>R$ 4.900<small>tenant, agenda, equipe, serviços, WhatsApp API, 2 treinamentos</small></dd></div>
+        <div class="kv"><dt>Implantação Completa</dt><dd>R$ 8.900<small>e mais robô customizado, fluxos e migração de contatos</small></dd></div>
+        <div class="kv"><dt>Clínica adicional</dt><dd>+ R$ 690/mês</dd></div>
+        <div class="kv"><dt>Usuário adicional</dt><dd>+ R$ 90/mês</dd></div>
+        <div class="kv"><dt>Contrato</dt><dd>12 meses</dd></div>
+        <div class="kv"><dt>Conversas da Meta</dt><dd>repasse<small>cobradas no cartão do próprio cliente</small></dd></div>
+      </div>
+
+      <p style="margin-top:18px"><strong>Piso de preço, e ele não é negociável:</strong> o custo de entrega é de <mark>R$ 4.680 de implantação e cerca de R$ 660 por mês nos seis primeiros meses.</mark> Mensalidade abaixo de R$ 700 dá prejuízo no primeiro semestre de qualquer cliente. Desconto na implantação, sim, e com contrapartida escrita. <strong>Implantação grátis, não</strong> — transforma cada cliente novo em caixa negativo, e cliente que não paga a implantação também não a trata como compromisso: some do treinamento e a culpa do fracasso volta para nós.</p>
+      <p><strong>Integração com o ERP do cliente</strong> não entra na implantação: exige documentação da API e projeto próprio, a partir de R$ 12.000.</p>
+      <p class="obj"><b>Objeção · "existe ferramenta de WhatsApp por R$ 300"</b> Existe, e ela te entrega a ferramenta. O que muda o preço aqui é a operação assistida: quem configura a conta na Meta, aprova o template, aquece o número e segura o limite de disparo para você não ser banido. <b>Confirmar as faixas de mercado antes de usar este argumento.</b></p>
+    </div>
+
+    <div class="line on">
+      <div class="line-h"><h3>L9 · Serviços avulsos</h3><span class="badge on">Ativa</span></div>
+      <p class="who">Cliente já contratado em qualquer linha</p>
+      <p>Demanda pontual que não cabe no escopo contratado. <strong>Sempre aprovada por escrito antes de executar</strong>, e nunca absorvida em silêncio.</p>
+      <div class="grid-kv">
+        <div class="kv"><dt>Hora técnica</dt><dd>R$ 280</dd></div>
+        <div class="kv"><dt>Hora de condução</dt><dd>R$ 450<small>além do banco de horas</small></dd></div>
+        <div class="kv"><dt>Fluxo de robô adicional</dt><dd>R$ 1.800</dd></div>
+        <div class="kv"><dt>Treinamento extra · 2 h</dt><dd>R$ 600</dd></div>
+        <div class="kv"><dt>Número de WhatsApp adicional</dt><dd>R$ 1.200<small>configuração</small></dd></div>
+        <div class="kv"><dt>Recuperação de número banido</dt><dd>R$ 1.200<small>reaquecimento</small></dd></div>
+      </div>
+      <p style="margin-top:16px">Existe uma razão para esta linha existir: <strong>sem tabela de avulso, toda demanda pequena vira favor</strong>, e favor pequeno repetido é o que consome a capacidade sem aparecer em lugar nenhum.</p>
     </div>
 
     <div class="line later">
-      <div class="line-h"><h3>L7 · Formação e certificação</h3><span class="badge later">Datada</span></div>
+      <div class="line-h"><h3>L10 · Formação e certificação</h3><span class="badge later">Datada</span></div>
       <p class="who">Abre quando o método tiver resultado medido em ao menos 3 clientes externos</p>
-      <p>Programa para gestor e proprietário de clínica. Escala sem hora recorrente e cria demanda para as outras linhas. Treinamento de método não validado destrói reputação mais rápido do que qualquer erro de entrega.</p>
+      <p>Programa para gestor e proprietário de clínica. Escala sem hora recorrente. Treinamento de método não validado destrói reputação mais rápido do que qualquer erro de entrega.</p>
     </div>
 
     <div class="line later">
-      <div class="line-h"><h3>L8 · Licenciamento do método a terceiros</h3><span class="badge later">Datada</span></div>
-      <p class="who">Abre quando houver método documentado, L7 rodando, e licença de PI formalizada</p>
-      <p>Licenciar a outros consultores e redes. É a linha de maior alavancagem do catálogo e a de maior risco jurídico — a propriedade intelectual pertence ao grupo Wissence.</p>
+      <div class="line-h"><h3>L11 · Licenciamento do método a terceiros</h3><span class="badge later">Datada</span></div>
+      <p class="who">Abre quando houver método documentado, L10 rodando, e licença de PI formalizada</p>
+      <p>Licenciar a outros consultores e redes. Maior alavancagem do catálogo e maior risco jurídico — a propriedade intelectual pertence ao grupo Wissence.</p>
     </div>
   </section>
 
   <section>
-    <h2 class="sec">04 · Roteiro da reunião de diagnóstico</h2>
+    <h2 class="sec">04 · Cláusulas que toda proposta carrega</h2>
+    <p class="sec-note">Quatro blocos que entram em qualquer proposta, em qualquer linha. Não são formalidade — cada um resolve um problema que já apareceu.</p>
+
+    <div class="cols">
+      <div class="card2">
+        <h3>Declaração de interesse</h3>
+        <p>A Wissen Tech tem interesse comercial no Aurora. Quando a proposta envolver diagnóstico ou recomendação de ferramenta, <strong>isso é declarado por escrito</strong>, e o diagnóstico parte das ferramentas que a clínica já paga.</p>
+        <p>Se o Aurora vier a ser a recomendação, ela vem com pelo menos duas alternativas de mercado avaliadas nos mesmos critérios, e a negociação é separada. <strong>Declarar o conflito é o que torna o parecer confiável.</strong></p>
+      </div>
+      <div class="card2">
+        <h3>Uso restrito da informação</h3>
+        <p>O grupo também opera clínicas. Toda proposta assume por contrato confidencialidade e <strong>cláusula de não uso</strong>: nenhum dado operacional, comercial, de preço, de fornecedor ou de paciente do cliente é usado ou referenciado em qualquer outra operação do grupo.</p>
+        <p>Aprendizado metodológico é reutilizável; informação do cliente, não. <strong>Sem essa cláusula, um concorrente do cliente pode ser motivo para não fechar.</strong></p>
+      </div>
+      <div class="card2">
+        <h3>D-0 e checklist de partida</h3>
+        <p>O prazo não conta da assinatura. Conta do <strong>D-0</strong>: pagamento confirmado <em>e</em> checklist cumprido — acessos, dados dos últimos meses, agenda das sessões, contato dos fornecedores, e o responsável do cliente alocado e comunicado internamente.</p>
+        <p><strong>Cada dia de atraso suspende o cronograma em igual número de dias</strong>, comunicado por escrito no mesmo dia. Acima de 15 dias acumulados, reabre-se escopo e janela.</p>
+      </div>
+      <div class="card2">
+        <h3>Dados e conformidade</h3>
+        <p>A Wissen Tech atua como <strong>operadora</strong>, sob instrução do cliente como controlador, com acordo de tratamento de dados assinado junto ao contrato. Padrão de trabalho: dado agregado ou pseudonimizado.</p>
+        <p><strong>Sem contrato e anexo de tratamento de dados, não há implantação agendada</strong> — nem para o primeiro cliente. A constituição da comissão de IA é obrigação do cliente; nós apoiamos a documentação técnica.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec">05 · Roteiro da reunião de diagnóstico</h2>
     <p class="sec-note">Noventa minutos. O objetivo não é fechar: é sair com a linha de base contratada e a via de acesso ao dado identificada.</p>
 
     <div class="tbl-scroll">
@@ -377,44 +494,45 @@
         <thead><tr><th>Bloco</th><th>Tempo</th><th>O que se faz</th><th>Sai com</th></tr></thead>
         <tbody>
           <tr><td class="k">Abertura</td><td class="n">10 min</td><td>Como a rede opera três unidades e o que se aprendeu operando-as. Sem slide de empresa.</td><td>contexto e credibilidade</td></tr>
-          <tr><td class="k">As cinco perguntas</td><td class="n">25 min</td><td>Qualificação da seção 01, na ordem. Anotar o nome do sistema de gestão.</td><td>perfil e linha provável</td></tr>
-          <tr><td class="k">A dor que paga</td><td class="n">20 min</td><td>Aprofundar a resposta da pergunta 4 com números da clínica, mesmo aproximados.</td><td>ordem de grandeza do vazamento</td></tr>
+          <tr><td class="k">As seis perguntas</td><td class="n">25 min</td><td>Qualificação da seção 01, na ordem. Anotar o sistema de gestão e a situação do WhatsApp.</td><td>perfil e linha provável</td></tr>
+          <tr><td class="k">A dor que paga</td><td class="n">20 min</td><td>Aprofundar com números da clínica, mesmo aproximados.</td><td>ordem de grandeza do vazamento</td></tr>
           <tr><td class="k">O que existe hoje</td><td class="n">15 min</td><td>Sistemas em uso, quem mexe, o que já tentaram e não funcionou.</td><td>histórico e restrições</td></tr>
-          <tr><td class="k">Proposta da L2</td><td class="n">15 min</td><td>Explicar a linha de base e por que ela vem antes de qualquer preço fechado.</td><td class="n">decisão sobre a L2</td></tr>
-          <tr><td class="k">Próximo passo</td><td class="n">5 min</td><td>Data da proposta e o pedido de documentação técnica que o <strong>cliente</strong> faz ao fornecedor dele.</td><td>data e responsável</td></tr>
+          <tr><td class="k">Proposta da entrada</td><td class="n">15 min</td><td>L2 ou L3 Fase 0, e por que ela vem antes de qualquer preço fechado.</td><td class="n">decisão sobre a entrada</td></tr>
+          <tr><td class="k">Próximo passo</td><td class="n">5 min</td><td>Data da proposta, <strong>data real da fila</strong>, e o pedido de documentação que o cliente faz ao fornecedor dele.</td><td>data e responsável</td></tr>
         </tbody>
       </table>
     </div>
 
     <div class="box warn" style="margin-top:22px">
-      <h3>A única coisa que não pode faltar na saída</h3>
-      <p><strong>O pedido de documentação técnica sai do cliente, por escrito, com prazo.</strong> Fornecedor de software não responde a terceiro — responde a quem paga a mensalidade dele. Sem esse pedido feito, o risco do silêncio do fornecedor cai sobre um contrato de preço fechado que é nosso.</p>
+      <h3>As duas coisas que não podem faltar na saída</h3>
+      <p><strong>O pedido de documentação técnica sai do cliente</strong>, por escrito, com prazo. Fornecedor de software não responde a terceiro — responde a quem paga a mensalidade dele.</p>
+      <p><strong>E a data nominal de entrega.</strong> Não "setembro", não "em quinze dias": a data que aquele cliente ocupa na fila. Se ele é o terceiro, a data dele é diferente da do primeiro, e isso se diz na reunião.</p>
     </div>
   </section>
 
   <section>
-    <h2 class="sec">05 · Modelo de proposta</h2>
+    <h2 class="sec">06 · Modelo de proposta</h2>
     <p class="sec-note">Sete blocos, nesta ordem. Duas a quatro páginas. Quem lê é dono de clínica entre consultas.</p>
 
     <ol class="num">
       <li><strong>O que você nos contou</strong><span>Devolver o problema nas palavras do cliente, com os números que ele deu. Se não houver número, dizer que a linha de base vai produzi-lo. <b>Este bloco vende sozinho quando bem escrito.</b></span></li>
-      <li><strong>O que propomos</strong><span>A linha, em uma frase, sem nome de código. "Levantamento do dinheiro que está vazando na clínica", não "L2".</span></li>
+      <li><strong>Como o trabalho é organizado</strong><span>Quem define o caminho, quem executa, quem decide e patrocina — os três papéis nomeados. É o que evita a expectativa de execução terceirizada.</span></li>
       <li><strong>O que você recebe</strong><span>Entregáveis nomeados, um por linha. Nada de "suporte" ou "acompanhamento" solto — escopo vago é escopo infinito.</span></li>
-      <li><strong>O que precisamos de você</strong><span>Responsável nomeado, autorização de acesso ao dado, e o pedido de documentação ao fornecedor, com prazo. <b>Sem este bloco a proposta está incompleta</b>, e o atraso do cliente vira culpa nossa.</span></li>
-      <li><strong>Prazo e etapas</strong><span>Datas condicionadas aos atos do cliente, explicitamente.</span></li>
-      <li><strong>Investimento</strong><span>Valor, forma de pagamento, o que está incluído e o que é orçado à parte. Se houver dedução da L2, mostrar a conta.</span></li>
+      <li><strong>O que precisamos de você</strong><span>Responsável nomeado com carga em horas, autorização de acesso, e o pedido ao fornecedor com prazo. <b>Sem este bloco a proposta está incompleta</b>, e o atraso do cliente vira culpa nossa.</span></li>
+      <li><strong>Prazo, etapas e a data da fila</strong><span>Contados do D-0, com a regra de suspensão por atraso escrita.</span></li>
+      <li><strong>Investimento</strong><span>Implantação e recorrente em <b>linhas separadas</b>. O que está incluído, o que é orçado à parte, e a dedução da entrada se houver.</span></li>
       <li><strong>O que não está incluído</strong><span>Curto e direto. Proposta que não diz o que não faz gera a primeira discussão do terceiro mês.</span></li>
     </ol>
 
     <div class="box" style="margin-top:20px">
       <h3>Três coisas que nunca entram numa proposta</h3>
-      <p><strong>Promessa de resultado financeiro.</strong> Medimos e reportamos o ganho; não o garantimos. <strong>Prazo que dependa de terceiro sem estar condicionado.</strong> <strong>Linha que ainda não esteja aberta na fase atual</strong> — e na Fase 0 isso significa toda a L5 e a L6.</p>
+      <p><strong>Promessa de resultado financeiro.</strong> Medimos e reportamos o ganho; não o garantimos. <strong>Prazo que dependa de terceiro sem estar condicionado.</strong> <strong>Data de entrega que a fila não sustenta</strong> — é a forma mais rápida de transformar uma venda boa em um cliente insatisfeito.</p>
     </div>
   </section>
 
   <section>
-    <h2 class="sec">06 · Acesso ao dado</h2>
-    <p class="sec-note">Apurado na L2, antes de qualquer preço fechado. O nível encontrado define o preço e, em dois casos, define que não se vende.</p>
+    <h2 class="sec">07 · Acesso ao dado</h2>
+    <p class="sec-note">Apurado na L2, antes de qualquer preço fechado de L3, L5 ou L6. A L8 não depende disto.</p>
     <div class="tbl-scroll">
       <table>
         <thead><tr><th>Nível</th><th>Custo de integração</th><th>Consequência</th></tr></thead>
@@ -427,11 +545,11 @@
         </tbody>
       </table>
     </div>
-    <p class="sec-note" style="margin-top:16px">Com acesso direto ao banco a Wissen Tech passa a tratar dado pessoal sensível em nome da clínica, o que exige contrato próprio — <strong>ver Base Técnico-Contratual, cláusulas 2.3 e 2.4.</strong></p>
+    <p class="sec-note" style="margin-top:16px">Com acesso direto ao banco a Wissen Tech passa a tratar dado pessoal sensível em nome da clínica — <strong>ver Base Técnico-Contratual, cláusulas 2.3 e 2.4.</strong></p>
   </section>
 
   <section>
-    <h2 class="sec">07 · Por que o catálogo é assim</h2>
+    <h2 class="sec">08 · Por que o catálogo é assim</h2>
     <p class="sec-note">Material de bastidor. Não se usa em reunião, mas explica por que os tetos existem — e quem vende precisa acreditar neles para defendê-los.</p>
 
     <div class="cols">
@@ -441,31 +559,33 @@
       </div>
       <div class="card">
         <span class="tag warn">Hora recorrente</span>
-        <p>Atendimento, acompanhamento, ajuste. <mark>Não escala contratando</mark> — cada cliente novo é hora fixa a mais, para sempre. O teto é a agenda, e é por isso que os tetos por linha existem.</p>
+        <p>Atendimento, acompanhamento, ajuste. <mark>Não escala contratando</mark> — cada cliente novo é hora fixa a mais, para sempre. O teto é a agenda.</p>
       </div>
       <div class="card">
         <span class="tag">Sem hora</span>
-        <p>O que o produto faz sozinho. Única categoria em que a receita cresce sem a equipe crescer — e a razão pela qual a automação de atendimento entra desde o primeiro cliente do Modelo 2, não depois.</p>
+        <p>O que o produto faz sozinho. Única categoria em que a receita cresce sem a equipe crescer — e a razão pela qual a automação de atendimento entra desde o primeiro cliente.</p>
       </div>
     </div>
 
     <div class="box" style="margin-top:24px">
-      <h3>A conta que produz os tetos</h3>
-      <p>O atendimento recorrente do Modelo 2 custa 2 a 4 h por conta e por mês, contra 28 h disponíveis. <strong>Dá oito contas.</strong> A oito contas de R$ 490 são R$ 3.920 por mês, o que não paga nem um quinto de quem as atende. É por isso que o Modelo 2 sem automação não é um negócio, e por isso que o teto não é negociável na mesa.</p>
-      <p>No Modelo 1 o gargalo é outro: reunião e plano de trabalho são as horas que não se delegam. Contratar desenvolvedor não aumenta o teto de 3 clientes.</p>
+      <h3>As três contas que produzem os tetos</h3>
+      <p><strong>L3.</strong> O plano Condução consome 32 h por mês, das quais cerca de 19 h são de CTO — reunião, plano, especificação e revisão, que não se delegam. Contra 40 h de capacidade externa, <strong>cabem dois clientes.</strong> Contratar desenvolvedor não muda isso.</p>
+      <p><strong>L5 e L6.</strong> Atendimento recorrente de 2 a 4 h por conta e por mês, contra 28 h disponíveis. <strong>Oito contas somadas</strong>, e o teto sobe apenas conforme a automação for medida.</p>
+      <p><strong>L8.</strong> 36 h de implantação por cliente, duas em paralelo por janela de 45 dias. <strong>Cerca de 1,3 por mês</strong>, e a pessoa que implanta está dividida com outros produtos. Este é o teto mais fácil de estourar numa venda, porque a licença se vende em minutos e a implantação leva semanas.</p>
     </div>
 
     <div class="box warn">
       <h3>O que a diretoria autorizou, e o que ainda não</h3>
-      <p>Capacidade por fase, política de dado e de IA, uso comercial da tecnologia e atendimento fora do grupo são <strong>decisões da diretoria</strong>, registradas no Memorando 01/2026. Não se altera nada disso numa negociação comercial, por melhor que seja o cliente.</p>
-      <p><strong>Há pontos ainda pendentes de parecer jurídico</strong> — entre eles o alcance da Resolução CFM 2.454 sobre sistemas de terceiros e a forma do contrato de operador. Estão listados na Base Técnico-Contratual, seção 06. <mark>Consulte antes de prometer.</mark></p>
+      <p>Capacidade por fase, política de dado e de IA, uso comercial da tecnologia e atendimento fora do grupo são <strong>decisões da diretoria</strong>, registradas no Memorando 01/2026. Não se altera nada disso numa negociação comercial.</p>
+      <p><strong>Há pontos pendentes de parecer jurídico</strong> — entre eles o alcance da Resolução CFM 2.454 sobre sistemas de terceiros, a forma do contrato de operador, e a responsabilidade clínica sobre o que o robô da L8 diz a um paciente de médico terceiro. Estão na Base Técnico-Contratual, seção 06. <mark>Consulte antes de prometer.</mark></p>
     </div>
   </section>
 
   <footer>
-    Wissen Tech · Catálogo de serviços e regras de atendimento · rev. 3 · 30/08/2026<br>
+    Wissen Tech · Catálogo de serviços e regras de atendimento · rev. 4 · 30/08/2026<br>
     Documento operacional de venda e atendimento. Não é proposta comercial, não decide e não vale como contrato.<br>
-    Fontes: Memorando de Decisão 01/2026 (diretoria) e Base Técnico-Contratual (jurídico).<br>
+    Preços e horas conferidos contra a proposta à Clínica Dr. M. Batista (27/08/2026) e o plano comercial do CRM (26/08/2026).<br>
+    Fontes de decisão: Memorando 01/2026 (diretoria) e Base Técnico-Contratual (jurídico).<br>
     Revisão obrigatória em até 15 dias após qualquer emenda a esses documentos. Responsável: CTO.
   </footer>
 

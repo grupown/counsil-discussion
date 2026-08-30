@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proposta de Consultoria — Wissen Tech × Clínica Dr. M. Batista</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght@9..144,0,400;9..144,0,600;9..144,1,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0F2E2B; --paper:#F7F8F6; --teal:#1F6F68; --teal-soft:#E3EDEA;
+    --amber:#B4661A; --amber-soft:#F6EADA; --slate:#5B6A68; --line:#D6DEDB; --white:#fff;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:"IBM Plex Sans",system-ui,sans-serif;font-size:16px;line-height:1.62}
+  .wrap{max-width:880px;margin:0 auto;padding:56px 28px 96px}
+
+  .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--teal);margin:0 0 18px}
+  h1{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:clamp(30px,5.2vw,46px);
+    line-height:1.08;letter-spacing:-.015em;margin:0 0 12px}
+  h1 em{font-style:italic;font-weight:400;color:var(--teal)}
+  .dek{font-size:17.5px;color:var(--slate);max-width:58ch;margin:0 0 30px}
+
+  .meta{border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:2px 26px;
+    padding:16px 0;margin-bottom:52px}
+  .meta div{padding:5px 0}
+  .meta dt{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.13em;
+    text-transform:uppercase;color:var(--slate);margin:0 0 3px}
+  .meta dd{margin:0;font-size:14.5px;font-weight:500}
+
+  section{margin:0 0 54px}
+  h2.sec{font-family:"Fraunces",serif;font-weight:600;font-size:25px;letter-spacing:-.01em;
+    margin:0 0 6px;padding-bottom:12px;border-bottom:2px solid var(--ink)}
+  .sec-note{font-size:14px;color:var(--slate);margin:12px 0 26px}
+  h3{font-weight:600;font-size:16px;margin:0 0 7px;letter-spacing:-.005em}
+  p{margin:0 0 14px}
+  ul.plain{margin:0 0 14px;padding-left:20px}
+  ul.plain li{margin-bottom:7px}
+
+  .lead{background:var(--ink);color:#EAF1EE;border-radius:3px;padding:28px;margin:0 0 56px}
+  .lead p{margin:0 0 12px;font-size:16.5px;color:#CFE0DC}
+  .lead p:last-child{margin:0}
+  .lead strong{color:#F2C48A;font-weight:500}
+
+  .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px}
+  .card{background:var(--white);border:1px solid var(--line);border-radius:3px;padding:20px}
+  .card p{font-size:14.5px;color:var(--slate);margin:0}
+  .tag{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:10px;
+    letter-spacing:.12em;text-transform:uppercase;color:var(--teal);background:var(--teal-soft);
+    padding:3px 7px;border-radius:2px;margin-bottom:11px}
+  .tag.warn{color:var(--amber);background:var(--amber-soft)}
+
+  .tbl-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  table{width:100%;border-collapse:collapse;font-size:14.5px;min-width:560px}
+  th{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--slate);text-align:left;font-weight:500;
+    padding:0 12px 9px 0;border-bottom:1px solid var(--ink);white-space:nowrap}
+  td{padding:13px 12px 13px 0;border-bottom:1px solid var(--line);vertical-align:top}
+  td.n{font-family:"IBM Plex Mono",monospace;white-space:nowrap;text-align:right;padding-right:0}
+  th.n{text-align:right;padding-right:0}
+  tr:last-child td{border-bottom:1px solid var(--ink)}
+  tr.total td{font-weight:600;border-bottom:2px solid var(--ink)}
+
+  .plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+  .plan{background:var(--white);border:1px solid var(--line);border-radius:3px;padding:22px 20px}
+  .plan.pick{border:2px solid var(--teal);position:relative}
+  .plan.pick::after{content:"Recomendado";position:absolute;top:-10px;left:18px;
+    background:var(--teal);color:#fff;font-family:"IBM Plex Mono",monospace;font-size:9.5px;
+    letter-spacing:.12em;text-transform:uppercase;padding:3px 8px;border-radius:2px}
+  .plan .nm{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.13em;
+    text-transform:uppercase;color:var(--slate);display:block;margin-bottom:10px}
+  .plan .hr{font-family:"Fraunces",serif;font-size:30px;font-weight:600;line-height:1;display:block}
+  .plan .hrl{font-size:13px;color:var(--slate);display:block;margin:4px 0 14px}
+  .plan .pr{font-size:19px;font-weight:600;display:block}
+  .plan .prl{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--slate);
+    display:block;margin-top:4px;letter-spacing:.04em}
+  .plan .use{font-size:14px;color:var(--slate);margin:14px 0 0;padding-top:14px;
+    border-top:1px solid var(--line)}
+
+  .box{border-left:3px solid var(--teal);background:var(--white);padding:20px 22px;border-radius:0 3px 3px 0;margin-bottom:20px}
+  .box.warn{border-left-color:var(--amber)}
+  .box h3{font-family:"Fraunces",serif;font-size:18px;font-weight:600;margin-bottom:8px}
+  .box p:last-child{margin-bottom:0}
+
+  ol.num{list-style:none;counter-reset:o;padding:0;margin:0}
+  ol.num li{counter-increment:o;position:relative;padding:0 0 16px 40px;
+    border-bottom:1px solid var(--line);margin-bottom:16px}
+  ol.num li:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}
+  ol.num li::before{content:counter(o,decimal-leading-zero);position:absolute;left:0;top:1px;
+    font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--amber);letter-spacing:.05em}
+  ol.num strong{display:block;font-size:15.5px;margin-bottom:3px}
+  ol.num span{font-size:14.5px;color:var(--slate)}
+
+  .sign{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:34px;margin-top:34px}
+  .sign div{border-top:1px solid var(--ink);padding-top:10px;
+    font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--slate);letter-spacing:.05em}
+
+  footer{border-top:1px solid var(--line);padding-top:20px;margin-top:56px;
+    font-family:"IBM Plex Mono",monospace;font-size:11.5px;line-height:1.75;
+    color:var(--slate);letter-spacing:.03em}
+
+  @media (max-width:560px){.wrap{padding:36px 20px 64px}}
+  @media print{
+    body{background:#fff}.wrap{max-width:none;padding:0}
+    .lead{background:#fff;color:var(--ink);border:1px solid var(--ink)}
+    .lead p{color:#333}.lead strong{color:var(--amber)}
+    section{break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <p class="eyebrow">Proposta comercial · Wissen Tech</p>
+  <h1>Diagnóstico forense e<br><em>plano de eficiência operacional</em></h1>
+  <p class="dek">Consultoria de processos, dados e automação para as três unidades da Clínica Dr. M. Batista, com execução acompanhada pelo time interno de TI.</p>
+
+  <dl class="meta">
+    <div><dt>Para</dt><dd>Victor Gouvêa — Clínica Dr. M. Batista</dd></div>
+    <div><dt>De</dt><dd>Wissen Tech</dd></div>
+    <div><dt>Data</dt><dd>27/08/2026</dd></div>
+    <div><dt>Validade</dt><dd>30 dias</dd></div>
+  </dl>
+
+  <div class="lead">
+    <p>A reunião de 27/08 deixou o diagnóstico claro: o gargalo não está no tráfego nem na demanda, e sim no <strong>tempo de resposta</strong> e no <strong>controle de estoque</strong>. O SLA de 48 horas convive com uma janela real de venda de minutos, e o sistema de estoque aceita saldo negativo em ativos que concentram a maior margem da clínica.</p>
+    <p>Esta proposta não parte de troca de sistema. Parte de extrair das ferramentas já contratadas — Cloud e MedX — o que elas podem entregar, com processo escrito, métrica medida e alerta automático. <strong>A execução fica com o time interno;</strong> a Wissen Tech entra como arquitetura, plano e acompanhamento técnico.</p>
+  </div>
+
+  <section>
+    <h2 class="sec">Como o trabalho é organizado</h2>
+    <p class="sec-note">Modelo de plano e acompanhamento — não de execução terceirizada.</p>
+    <div class="cols">
+      <div class="card">
+        <span class="tag">Wissen Tech</span>
+        <h3>Define o caminho</h3>
+        <p>Levantamento forense, engenharia de processo, arquitetura de dados e integração, desenho de métricas e alertas, revisão técnica do que o time entrega e priorização do que fazer em cada semana.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Time interno · Douglas</span>
+        <h3>Executa e sustenta</h3>
+        <p>Configuração das ferramentas, construção das integrações e rotinas, ajuste dos fluxos com as equipes e operação do dia a dia. O conhecimento fica dentro da clínica, não com o consultor.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Clínica · Victor</span>
+        <h3>Decide e patrocina</h3>
+        <p>Prioriza, aprova investimento, cobra meta das áreas e destrava acesso a sistema, fornecedor e dado. Nenhuma métrica de atendimento melhora sem esse patrocínio explícito.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec">Fase 0 — Diagnóstico forense</h2>
+    <p class="sec-note">4 semanas · 56 horas · preço fechado. Precede qualquer recomendação de ferramenta.</p>
+
+    <div class="tbl-scroll">
+      <table>
+        <thead><tr><th>Frente</th><th>O que é feito</th><th class="n">Horas</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Sessões forenses por função</td>
+            <td>Entrevistas gravadas com recepção, comercial, injetáveis, médico e financeiro: como o trabalho acontece hoje, onde trava, o que a ferramenta não faz.</td>
+            <td class="n">10</td>
+          </tr>
+          <tr>
+            <td>Estudo dos sistemas</td>
+            <td>Participação nos treinamentos do Cloud e do MedX, levantamento de recursos contratados e não usados, mapeamento de campos, tabelas e limites de API.</td>
+            <td class="n">14</td>
+          </tr>
+          <tr>
+            <td>Auditoria de estoque e compras</td>
+            <td>Rastreio dos saldos negativos e lotes divergentes, conferência físico × sistema em ativos de alto custo, análise da fragmentação de compras por fornecedor e data.</td>
+            <td class="n">12</td>
+          </tr>
+          <tr>
+            <td>Linha de base de métricas</td>
+            <td>Medição real de SLA de primeira resposta, taxa de conversão por origem, comparecimento, cancelamento de última hora e perda por vencimento. É o marco zero contra o qual todo ganho será comparado.</td>
+            <td class="n">10</td>
+          </tr>
+          <tr>
+            <td>Plano de ação e apresentação</td>
+            <td>Backlog priorizado por impacto e esforço, com responsável, prazo e métrica por item; recomendação fundamentada sobre manter, integrar ou substituir cada ferramenta.</td>
+            <td class="n">10</td>
+          </tr>
+          <tr class="total">
+            <td colspan="2">Fase 0 — preço fechado</td>
+            <td class="n">R$ 19.600</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p style="margin-top:22px"><strong>Entregáveis:</strong> relatório de diagnóstico com evidência por frente; linha de base de métricas documentada; plano de ação priorizado de 90 dias; parecer técnico sobre integração do MedX (viabilidade de API, export ou data lake); apresentação de fechamento à diretoria.</p>
+    <p><strong>Pagamento:</strong> integral na assinatura, como condição de mobilização e abertura do projeto. Se ao final da Fase 0 a clínica decidir não seguir para a Fase 1, o material entregue é seu — sem carência e sem multa.</p>
+
+    <div class="box warn" style="margin-top:26px">
+      <h3>Gatilho de início e prazo condicionado</h3>
+      <p>As 4 semanas passam a contar do <strong>D‑0</strong>, definido como a data em que o pagamento estiver confirmado <em>e</em> o checklist abaixo estiver cumprido. Diagnóstico forense não se faz com dado parcial: sem acesso e sem agenda, a hora é consumida em espera e a conclusão sai frágil.</p>
+      <p>Cada dia de atraso na entrega de qualquer item do checklist suspende o cronograma em igual número de dias, comunicado por escrito no mesmo dia em que ocorrer. Atraso acumulado superior a 15 dias reabre a discussão de escopo e de janela de execução.</p>
+    </div>
+
+    <p><strong>Checklist de partida (D‑0):</strong></p>
+    <ul class="plain">
+      <li>Acesso de leitura ao Cloud e ao MedX, em perfil que permita ver relatórios, configurações e histórico.</li>
+      <li>Planilhas de controle de estoque e de compras dos últimos 6 meses, no formato em que existem hoje.</li>
+      <li>Agenda confirmada das sessões forenses com recepção, comercial, injetáveis, financeiro e ao menos um médico usuário do MedX.</li>
+      <li>Contato nominal do suporte e do responsável comercial do Cloud e do MedX, com apresentação feita pela clínica.</li>
+      <li>Douglas alocado e comunicado internamente como ponto focal técnico do projeto.</li>
+      <li>Memória de cálculo, ou os dados brutos, por trás da estimativa de R$ 1,2 milhão de perda semestral.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 class="sec">Fase 1 — Plano em execução</h2>
+    <p class="sec-note">Banco de horas mensal. Mínimo de 3 meses, ideal de 6. O time interno executa; a Wissen Tech conduz, revisa e destrava.</p>
+
+    <div class="plans">
+      <div class="plan">
+        <span class="nm">Essencial</span>
+        <span class="hr">20 h</span>
+        <span class="hrl">por mês · ~5 h/semana</span>
+        <span class="pr">R$ 7.600 / mês</span>
+        <span class="prl">R$ 380 / hora</span>
+        <p class="use">Ritual semanal, revisão técnica e desbloqueio. Serve se o Douglas já estiver com autonomia alta.</p>
+      </div>
+      <div class="plan pick">
+        <span class="nm">Condução</span>
+        <span class="hr">32 h</span>
+        <span class="hrl">por mês · ~8 h/semana</span>
+        <span class="pr">R$ 11.200 / mês</span>
+        <span class="prl">R$ 350 / hora</span>
+        <p class="use">Dimensionamento adequado ao plano de 90 dias: condução do backlog, construção conjunta das primeiras rotinas e alertas, acompanhamento das métricas com as áreas.</p>
+      </div>
+      <div class="plan">
+        <span class="nm">Intensivo</span>
+        <span class="hr">48 h</span>
+        <span class="hrl">por mês · ~12 h/semana</span>
+        <span class="pr">R$ 15.600 / mês</span>
+        <span class="prl">R$ 325 / hora</span>
+        <p class="use">Para os dois primeiros meses, se a decisão for atacar atendimento e estoque em paralelo em vez de em série.</p>
+      </div>
+    </div>
+
+    <p style="margin-top:24px"><strong>Regras do banco de horas:</strong> horas não utilizadas acumulam até 25% do saldo para o mês seguinte e não são reembolsáveis. Horas além do banco, quando autorizadas por escrito, a R$ 450/h. Relatório mensal de apontamento por frente, com saldo aberto.</p>
+    <p><strong>O que acontece em cada mês:</strong> ritual semanal de 1 hora com Victor e Douglas; condução do backlog priorizado; especificação técnica do que o time constrói; revisão do que foi construído; leitura das métricas contra a linha de base; relatório executivo mensal com o que mudou nos números.</p>
+  </section>
+
+  <section>
+    <h2 class="sec">Fase 2 — Manutenção e assessoria</h2>
+    <p class="sec-note">A partir do 8º mês, quando o plano de 90 dias já estiver absorvido pela operação e o time interno rodando sozinho.</p>
+
+    <div class="plans">
+      <div class="plan pick">
+        <span class="nm">Assessoria continuada</span>
+        <span class="hr">8 h</span>
+        <span class="hrl">por mês</span>
+        <span class="pr">R$ 3.600 / mês</span>
+        <span class="prl">R$ 450 / hora</span>
+        <p class="use">Presença leve e permanente: mantém o que foi construído de pé e abre caminho para o que vem depois.</p>
+      </div>
+      <div class="plan" style="border-style:dashed">
+        <span class="nm">Projeto novo</span>
+        <span class="hr">—</span>
+        <span class="hrl">escopo e proposta próprios</span>
+        <span class="pr">sob orçamento</span>
+        <span class="prl">a partir de R$ 350 / hora</span>
+        <p class="use">Quarta unidade, novo módulo, integração adicional, troca de sistema. Sai da assessoria e vira proposta separada, com preço fechado.</p>
+      </div>
+    </div>
+
+    <p style="margin-top:24px"><strong>O que a assessoria cobre:</strong> ritual mensal de leitura de métricas contra a linha de base; revisão técnica do que o time alterou no período; resposta a dúvida técnica em até 2 dias úteis; curadoria da fila de oportunidades novas, com estimativa de impacto e esforço antes de qualquer compromisso; alerta antecipado quando um número começar a se deteriorar.</p>
+    <p><strong>Por que a hora é mais cara aqui:</strong> volume baixo com disponibilidade reservada tem custo unitário maior — é o inverso do desconto por volume da Fase 1. Vigência de 12 meses, renovação automática, cancelamento com 30 dias. Horas adicionais autorizadas por escrito a R$ 450/h; acima de 16 h em um mesmo mês, a demanda deixa de ser manutenção e vira projeto.</p>
+  </section>
+
+  <section>
+    <h2 class="sec">Investimento consolidado</h2>
+    <div class="tbl-scroll">
+      <table>
+        <thead><tr><th>Item</th><th>Período</th><th class="n">Valor</th></tr></thead>
+        <tbody>
+          <tr><td>Fase 0 — Diagnóstico forense</td><td>4 semanas · integral na assinatura</td><td class="n">R$ 19.600</td></tr>
+          <tr><td>Fase 1 — Condução, 32 h/mês</td><td>6 meses · mensal</td><td class="n">R$ 67.200</td></tr>
+          <tr class="total"><td>Ciclo de implantação — 7 meses</td><td></td><td class="n">R$ 86.800</td></tr>
+          <tr><td>Fase 2 — Assessoria continuada, 8 h/mês</td><td>a partir do 8º mês · mensal</td><td class="n">R$ 3.600 / mês</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:20px">Valores em reais, líquidos de impostos retidos na fonte, contra nota fiscal de serviço emitida pela Wissen Tech. Não incluem deslocamento e hospedagem para visitas presenciais às unidades, que serão acordados previamente e reembolsados pelo custo.</p>
+    <p>Referência de comparação: o montante estimado pela própria clínica como perda semestral por falha de conversão e atendimento é de R$ 1,2 milhão. O ciclo completo acima representa cerca de 7% desse valor — e a Fase 0 existe justamente para verificar se esse número se sustenta.</p>
+  </section>
+
+  <section>
+    <h2 class="sec">O que não está incluído</h2>
+    <ul class="plain">
+      <li>Desenvolvimento de software sob demanda, sustentação de código ou plantão. A construção é do time interno; a Wissen Tech especifica e revisa.</li>
+      <li>Licenças, mensalidades e custos de terceiros (Cloud, MedX, nuvem, APIs, WhatsApp Business).</li>
+      <li>Migração de dados entre sistemas e implantação de qualquer novo sistema — inclusive o Aurora. Se essa hipótese avançar, é escopo e contrato separados.</li>
+      <li>Treinamento em escala das equipes operacionais. A Wissen Tech forma multiplicadores; a aplicação recorrente é da clínica.</li>
+      <li>Qualquer decisão clínica, prescrição ou conduta médica. A consultoria atua sobre processo, dado e sistema.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 class="sec">O que precisamos da clínica</h2>
+    <p class="sec-note">São condições de viabilidade, não formalidade. A ausência de qualquer uma delas altera prazo e resultado.</p>
+    <ol class="num">
+      <li><strong>Douglas dedicado com no mínimo 30 h/semana</strong><span>Esta é a condição mais determinante da proposta. A Wissen Tech especifica e revisa; a construção é interna. Com dedicação abaixo de 30 h/semana o plano de 90 dias não é executável, e o efeito não é perda de qualidade — é o cronograma se estendendo na mesma proporção. A carga real será apontada no relatório mensal e comparada ao acordado, sem absorção silenciosa. Se outras frentes (tráfego pago, demandas ad hoc) competirem por essas horas, é melhor redimensionar o plano agora do que descobrir no mês três.</span></li>
+      <li><strong>Acesso de leitura aos sistemas</strong><span>Cloud e MedX, além dos relatórios e planilhas de estoque e compras em uso hoje.</span></li>
+      <li><strong>Um sponsor único com poder de decisão</strong><span>Victor. Priorização e cobrança de meta junto às áreas não podem ser delegadas ao consultor.</span></li>
+      <li><strong>Interlocução direta com os fornecedores</strong><span>Participação da Wissen Tech nas conversas com Cloud e MedX sobre treinamento e liberação de API ou export de dados.</span></li>
+      <li><strong>Meta de atendimento assumida pela operação</strong><span>Alerta automático informa; pessoa responde. Sem meta, medição e consequência definidas pela clínica, o SLA não cai por efeito de ferramenta.</span></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2 class="sec">Dados, LGPD e conformidade</h2>
+    <div class="box">
+      <h3>Tratamento de dados de paciente</h3>
+      <p>A Wissen Tech atua como operadora, sob instrução da clínica como controladora, com acordo de tratamento de dados assinado junto ao contrato. Trabalhamos por padrão com dado agregado ou pseudonimizado; extração de prontuário identificado só ocorre com base legal definida, finalidade escrita e minimização — nunca por conveniência técnica.</p>
+    </div>
+    <div class="box warn">
+      <h3>Resolução CFM 2.454/2026</h3>
+      <p>Em vigor desde 26/08/2026, aplica-se inclusive a sistemas já em produção. Qualquer uso de inteligência artificial sobre informação clínica exige avaliação preliminar de risco documentada e comissão de IA e telemedicina sob coordenação médica. A constituição dessa comissão é obrigação da clínica; a Wissen Tech apoia a documentação técnica e a avaliação de risco, e não avança em frente que dependa dela antes de estar formalizada.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec">Transparência e confidencialidade</h2>
+    <div class="box">
+      <h3>Declaração de interesse</h3>
+      <p>A Wissen Tech tem interesse comercial no Aurora, sistema de gestão para clínicas em desenvolvimento. Por isso a Fase 0 é deliberadamente neutra: o diagnóstico e o plano de ação partem das ferramentas que a clínica já paga, e o parecer sobre substituição de sistema virá com critério e evidência, não com preferência de fornecedor. Se em algum momento o Aurora for a recomendação, ela vem acompanhada de pelo menos duas alternativas de mercado avaliadas nos mesmos critérios, e a negociação é separada desta.</p>
+    </div>
+    <div class="box">
+      <h3>Uso restrito da informação</h3>
+      <p>A Wissen Tech integra um grupo que também opera clínicas, em outra região e mercado. Assumimos por contrato confidencialidade e cláusula de não uso: nenhum dado operacional, comercial, de precificação, de fornecedor ou de paciente da Clínica Dr. M. Batista é utilizado, compartilhado ou referenciado em qualquer outra operação do grupo. Aprendizado metodológico é reutilizável; informação da clínica, não.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec">Condições comerciais</h2>
+    <div class="tbl-scroll">
+      <table>
+        <tbody>
+          <tr><td style="width:34%"><strong>Contratante</strong></td><td>Clínica Dr. M. Batista (razão social a confirmar)</td></tr>
+          <tr><td><strong>Contratada</strong></td><td>Wissen Tech (razão social e CNPJ a confirmar)</td></tr>
+          <tr><td><strong>Faturamento</strong></td><td>Fase 0 integral na assinatura, como condição de abertura do projeto. Fases 1 e 2 mensais, nota emitida no dia 1º, pagamento até o dia 10.</td></tr>
+          <tr><td><strong>Início</strong></td><td>Condicionado ao D‑0: pagamento confirmado e checklist de partida cumprido. Atraso na entrega das informações suspende o cronograma em igual número de dias.</td></tr>
+          <tr><td><strong>Prazo mínimo</strong></td><td>Fase 1 com compromisso de 3 meses, renovação mensal automática. Fase 2 com vigência de 12 meses.</td></tr>
+          <tr><td><strong>Rescisão</strong></td><td>Por qualquer das partes, com aviso de 30 dias. Horas já apontadas são devidas; saldo não utilizado não é reembolsado.</td></tr>
+          <tr><td><strong>Reajuste</strong></td><td>IPCA após 12 meses de vigência.</td></tr>
+          <tr><td><strong>Formato</strong></td><td>Remoto, com ritual semanal em vídeo. Visitas presenciais às unidades sob agendamento, com custos à parte.</td></tr>
+          <tr><td><strong>Validade da proposta</strong></td><td>30 dias a contar de 27/08/2026.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sign">
+      <div>Victor Gouvêa · Clínica Dr. M. Batista · Data</div>
+      <div>Wissen Tech · Data</div>
+    </div>
+  </section>
+
+  <footer>
+    Wissen Tech · Proposta de consultoria em processos, dados e automação<br>
+    Documento elaborado a partir da reunião de diagnóstico de 27/08/2026.<br>
+    Escopo, horas e prazos podem ser ajustados antes da assinatura.
+  </footer>
+
+</div>
+</body>
+</html>

@@ -473,6 +473,56 @@ de atendimentos da clínica** — proxy do valor recebido —, nunca chamada de 
 evitar abuso, e num produto de API vendido a outros desenvolvedores. Nenhum dos dois
 é o seu mercado.
 
+### 11.4 A direção da integração, e por que a v1 não tem painel
+
+Duas correções que surgiram de uma leitura errada da estimativa de 260 h — a
+conclusão delas melhora o produto.
+
+**Primeiro, a estimativa nunca disse que o sistema web é inviável.** Ela disse que
+"pequeno" é o adjetivo errado e que o MODELO 2 abre um trimestre depois da
+contratação. É prazo e sequência, não viabilidade. O serviço hospedado por nós
+continua sendo a recomendação.
+
+**Segundo, "o cliente integra com a nossa IA via token" é pior, não melhor:**
+
+| Problema | Por quê |
+|---|---|
+| Consultório não tem quem integre | vender API para quem compra software; o MODELO 2 existe para exigir zero trabalho técnico do cliente |
+| Inverte quem faz o trabalho | o fornecedor de software do cliente teria que construir contra a nossa API, e não tem motivo nenhum para isso |
+| Expõe a IA como se fosse o produto | acesso a modelo é commodity que o cliente compra mais barato na fonte; **o produto é a lógica** — quais indicadores, quais limites, como interpretar |
+| Reintroduz cobrança por uso | pela porta dos fundos, depois de já descartada |
+
+**Regra de direção, escrita no catálogo: nós puxamos, o cliente não empurra nada.**
+O cliente faz duas coisas na vida: autoriza o acesso uma vez, e recebe.
+
+**Onde a API cabe de verdade:** somente-leitura dos números já calculados, como
+acessório da L3 e da L4, para cliente com TI interno que quer o indicador dentro do
+painel dele. Quase de graça, porque o número já existe. Nunca como produto da L2.
+
+### 11.5 O corte que reduz a v1 de 260 h para 190 h
+
+O instinto de que o sistema web era pesado demais para clínica pequena estava certo.
+A saída não é token — é **tirar a camada web da v1.**
+
+**Painel de gestão em negócio pequeno não é usado.** O dono não lembra de entrar. O
+valor está no alerta que chega, não na página que ele precisa visitar. Para um
+consultório de um médico, relatório mensal em PDF por e-mail e alerta quando um
+limite estoura é **produto melhor** que painel — não é só mais barato de construir.
+
+| Bloco | Só relatório e alerta | Com painel web |
+|---|---:|---:|
+| Integração e leitura | 40 h | 40 h |
+| Motor de cálculo | 60 h | 60 h |
+| Entrega ao cliente | 30 h (PDF, e-mail, alerta) | 80 h (painel, login, usuários) |
+| Base de segurança | 30 h (sem login público) | 40 h |
+| Teste com dado real | 30 h | 40 h |
+| **Total** | **≈ 190 h · 2,5 meses** | **≈ 260 h · 3,5 meses** |
+
+**O painel vira incremento posterior de 80 a 100 h, construído quando um cliente
+pedir.** E há um ganho colateral que vale mais que as 70 h: sem login público, a
+superfície de ataque cai a quase nada — o que compõe com a decisão de não armazenar
+dado de paciente.
+
 ### 11.3 A decisão de arquitetura mais importante, e é grátis agora
 
 **Na v1, não armazenar dado de paciente.** Ler, calcular o indicador, guardar o

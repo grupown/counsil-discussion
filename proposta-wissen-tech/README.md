@@ -164,5 +164,16 @@ hora de conversa, com a ordem de prioridade do que ceder e a condição de não 
 **As peças que valem hoje são a apresentação em `apresentacao/`, o catálogo em
 `catalogo/`, e os memorandos 17 em diante.**
 
+**rev. 20** — duas correções de arquitetura do MODELO 2. Fixada a regra de direção:
+nós puxamos o dado, o cliente não empurra nada — ele autoriza o acesso uma vez e
+recebe. Expor o modelo para o cliente chamar com token foi descartado: vende acesso
+a modelo, que é commodity, em vez da lógica, que é o produto; exige integração de
+quem não tem quem integre; e reintroduz cobrança por uso. Uma API somente-leitura dos
+números já calculados fica como acessório da L3 e da L4, para cliente com TI interno.
+E a v1 perde a camada web: relatório mensal em PDF com alerta por limite é produto
+melhor para clínica pequena do que painel, e derruba a primeira versão de 260 h para
+190 h, com a superfície de ataque quase eliminada. O painel vira incremento de 80 a
+100 h, construído quando um cliente pedir.
+
 Base analítica: os 5 documentos de planejamento (plano de cobertura, playbook por
 área, cronograma, painel de exceções, catálogo de 56 indicadores).

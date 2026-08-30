@@ -169,6 +169,23 @@
   .obj{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--slate);
     letter-spacing:.02em;margin:14px 0 0;padding-top:11px;border-top:1px dashed var(--line)}
   .obj b{color:var(--amber);font-weight:500}
+  .bg{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+  .mchip{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.12em;
+    text-transform:uppercase;padding:4px 9px;border-radius:2px;white-space:nowrap;
+    background:var(--ink);color:#EAF1EE;font-weight:500}
+  .mchip.m2{background:var(--teal)}
+  .mchip.m3{background:var(--amber)}
+  .mchip.mx{background:var(--white);color:var(--slate);border:1px solid var(--line)}
+  .mdef{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1px;
+    background:var(--line);border:1px solid var(--line);border-radius:3px;
+    margin:0 0 26px;overflow:hidden}
+  .mdef > div{background:var(--white);padding:18px 20px}
+  .mdef h4{font-family:"Fraunces",serif;font-size:16px;font-weight:600;margin:9px 0 6px;
+    color:var(--ink)}
+  .mdef p{font-size:14px;color:var(--slate);margin:0}
+  .mdef p + p{margin-top:8px}
+  .mdef .lines{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--ink);
+    letter-spacing:.04em;margin-top:11px;padding-top:10px;border-top:1px solid var(--line)}
   .stamp{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.05em;
     color:var(--slate);background:var(--teal-soft);border-radius:2px;padding:9px 13px;
     display:inline-block;margin-bottom:14px}
@@ -244,16 +261,16 @@
 
     <div class="tbl-scroll" style="margin-top:26px">
       <table>
-        <thead><tr><th>Perfil</th><th>Responsável nomeado</th><th>Entrada</th><th>Linha principal</th><th>Também cabe</th></tr></thead>
+        <thead><tr><th>Perfil</th><th>Responsável nomeado</th><th>Entrada</th><th>Linha principal</th><th>Modelo</th><th>Também cabe</th></tr></thead>
         <tbody>
-          <tr><td class="k">Consultório · 1 médico + 1 recepcionista</td><td>não</td><td class="n">L2</td><td class="n">L8 · Consultório</td><td>L6</td></tr>
-          <tr><td class="k">Clínica de 1 local · até 15 pessoas</td><td>não</td><td class="n">L2</td><td class="n">L8 · Clínica</td><td>L5</td></tr>
-          <tr><td class="k">Clínica de 1 local</td><td>sim</td><td class="n">L2</td><td class="n">L3</td><td>L8, L5</td></tr>
-          <tr><td class="k">Clínica multi-local</td><td>sim</td><td class="n">L3 Fase 0</td><td class="n">L3 · Condução</td><td>L8 · Rede</td></tr>
-          <tr><td class="k">Clínica multi-local</td><td>não</td><td class="n">L2</td><td class="n">L8 · Rede</td><td class="no">não vender L3</td></tr>
-          <tr><td class="k">Franqueado da rede</td><td>indiferente</td><td class="n">direto</td><td class="n">L4</td><td>L8</td></tr>
-          <tr><td class="k">Cliente do 8º mês em diante</td><td>—</td><td class="n">—</td><td class="n">L7 · assessoria</td><td>L9 avulso</td></tr>
-          <tr><td class="k">Qualquer porte usando IA assistencial</td><td>indiferente</td><td class="n">L1</td><td class="n">L1</td><td>—</td></tr>
+          <tr><td class="k">Consultório · 1 médico + 1 recepcionista</td><td>não</td><td class="n">L2</td><td class="n">L8 · Consultório</td><td class="n">2</td><td>L6</td></tr>
+          <tr><td class="k">Clínica de 1 local · até 15 pessoas</td><td>não</td><td class="n">L2</td><td class="n">L8 · Clínica</td><td class="n">2</td><td>L5</td></tr>
+          <tr><td class="k">Clínica de 1 local</td><td>sim</td><td class="n">L2</td><td class="n">L3</td><td class="n">1</td><td>L8, L5</td></tr>
+          <tr><td class="k">Clínica multi-local</td><td>sim</td><td class="n">L3 Fase 0</td><td class="n">L3 · Condução</td><td class="n">1</td><td>L8 · Rede</td></tr>
+          <tr><td class="k">Clínica multi-local</td><td>não</td><td class="n">L2</td><td class="n">L8 · Rede</td><td class="n">2</td><td class="no">não vender L3</td></tr>
+          <tr><td class="k">Franqueado da rede</td><td>indiferente</td><td class="n">direto</td><td class="n">L4</td><td class="n">1 + 2</td><td>L8</td></tr>
+          <tr><td class="k">Cliente do 8º mês em diante</td><td>—</td><td class="n">—</td><td class="n">L7 · assessoria</td><td class="n">1</td><td>L9 avulso</td></tr>
+          <tr><td class="k">Qualquer porte usando IA assistencial</td><td>indiferente</td><td class="n">L1</td><td class="n">L1</td><td class="n">1</td><td>—</td></tr>
         </tbody>
       </table>
     </div>
@@ -327,10 +344,34 @@
 
   <section>
     <h2 class="sec">03 · As linhas</h2>
-    <p class="sec-note">O que cada uma entrega, o pré-requisito, e a objeção que aparece em quase toda reunião.</p>
+    <p class="sec-note">Cada linha carrega o modelo a que pertence. O modelo diz <strong>quem executa</strong> e, por consequência, o que limita quantos clientes cabem.</p>
+
+    <div class="mdef">
+      <div>
+        <span class="mchip">Modelo 1</span>
+        <h4>Nós conduzimos, o cliente executa</h4>
+        <p>O trabalho duro está nas reuniões e na elaboração do plano. Depois, CTO e desenvolvedor dividem o acompanhamento das atividades que o time do cliente executa.</p>
+        <p><strong>O que limita:</strong> a agenda do CTO. Reunião e plano não se delegam, e contratar não aumenta o teto.</p>
+        <p class="lines">L1 · L2 · L3 · L7</p>
+      </div>
+      <div>
+        <span class="mchip m2">Modelo 2</span>
+        <h4>O produto executa, com suporte</h4>
+        <p>O que foi construído nas unidades do grupo, implantado em clínicas de fora. Escopo fechado, sem personalização.</p>
+        <p><strong>O que limita:</strong> a hora de suporte recorrente, que cresce com cada conta nova e não escala contratando.</p>
+        <p class="lines">L4 · L5 · L6 · L8</p>
+      </div>
+      <div>
+        <span class="mchip m3">Modelo 3</span>
+        <h4>A automação do recorrente</h4>
+        <p><strong>Não é uma linha, e nunca será.</strong> É a camada que reduz a hora de suporte do Modelo 2, entregue desde o primeiro cliente — nem que em versão rústica.</p>
+        <p><strong>O que ela destrava:</strong> cada 25 % de deflexão medida vale cerca de três contas a mais no teto.</p>
+        <p class="lines">dentro de L5 · L6 · L8</p>
+      </div>
+    </div>
 
     <div class="line on">
-      <div class="line-h"><h3>L1 · Conformidade em IA — Resolução CFM 2.454/2026</h3><span class="badge on">Ativa</span></div>
+      <div class="line-h"><h3>L1 · Conformidade em IA — Resolução CFM 2.454/2026</h3><span class="bg"><span class="mchip">Modelo 1</span><span class="badge on">Ativa</span></span></div>
       <p class="who">Qualquer porte que use ou pretenda usar sistema com IA · pré-requisito: nenhum</p>
       <p><strong>Entrega:</strong> classificação de risco dos sistemas em uso, desenho da Comissão de IA e Telemedicina sob a diretoria técnica, política de uso, registro de decisão humana e trilha de auditoria. Sai em parecer, matriz de risco, minuta de política e ata de constituição.</p>
       <p><strong>É obrigação com data, não venda de tecnologia.</strong> O médico não precisa ser convencido de que precisa — e quem faz a conformidade fica na sala quando o assunto vira sistema. <mark>Toda venda de L8 abre uma L1</mark>, porque o CRM tem robô conversando com paciente.</p>
@@ -338,7 +379,7 @@
     </div>
 
     <div class="line on">
-      <div class="line-h"><h3>L2 · Raio-X do dinheiro da clínica</h3><span class="badge on">Ativa · entrada</span></div>
+      <div class="line-h"><h3>L2 · Raio-X do dinheiro da clínica</h3><span class="bg"><span class="mchip">Modelo 1</span><span class="badge on">Ativa · entrada</span></span></div>
       <p class="who">Qualquer porte · pré-requisito: nenhum</p>
       <p><strong>Entrega:</strong> linha de base assinada, com valor estimado de cada um dos cinco vazamentos, mais a ordem de ataque. É o marco zero contra o qual todo ganho será comparado.</p>
       <p><strong>E apura como se lê o dado</strong> do sistema do cliente. Nenhum preço fechado de L3, L5 ou L6 sai antes disso.</p>
@@ -346,7 +387,7 @@
     </div>
 
     <div class="line on">
-      <div class="line-h"><h3>L3 · Condução técnica</h3><span class="badge on">Ativa · 1 Fase 0 · teto 2</span></div>
+      <div class="line-h"><h3>L3 · Condução técnica</h3><span class="bg"><span class="mchip">Modelo 1</span><span class="badge on">Ativa · 1 Fase 0 · teto 2</span></span></div>
       <p class="who">Clínica com equipe própria · <strong>pré-requisito: responsável nomeado com carga declarada em horas por semana</strong></p>
       <p><strong>Fase 0 — diagnóstico forense.</strong> Quatro semanas, preço fechado. Sessões forenses por função, estudo dos sistemas contratados, auditoria de estoque e compras, linha de base de métricas, e plano de ação priorizado de 90 dias com responsável, prazo e métrica por item.</p>
       <p><strong>Fase 1 — plano em execução, banco de horas mensal.</strong> Nós conduzimos, o time do cliente executa. Ritual semanal, condução do backlog, especificação do que o time constrói, revisão do que foi construído, e leitura das métricas contra a linha de base.</p>
@@ -364,7 +405,7 @@
     </div>
 
     <div class="line on">
-      <div class="line-h"><h3>L4 · Tecnologia de franquia</h3><span class="badge on">Ativa · prioritária</span></div>
+      <div class="line-h"><h3>L4 · Tecnologia de franquia</h3><span class="bg"><span class="mchip m2">Modelo 1 + 2</span><span class="badge on">Ativa · prioritária</span></span></div>
       <p class="who">Franqueado da rede · pré-requisito: autorização da franqueadora</p>
       <p><strong>Entrega:</strong> pacote padrão da rede — sistemas configurados, rotinas automatizadas, painel de indicadores da unidade e integração com a operação da franqueadora.</p>
       <p><strong>É por onde se começa.</strong> Cliente pré-qualificado, custo de aquisição próximo de zero, e o preço é comparado com o padrão da rede, não com software de prateleira.</p>
@@ -372,7 +413,7 @@
     </div>
 
     <div class="line on">
-      <div class="line-h"><h3>L5 · Camada de resultado</h3><span class="badge later">Não lançada</span></div>
+      <div class="line-h"><h3>L5 · Camada de resultado</h3><span class="bg"><span class="mchip m2">Modelo 2</span><span class="badge later">Não lançada</span></span></div>
       <p class="who">Clínica de 1 ou mais locais, sem TI interno · pré-requisito: via de acesso ao dado apurada na L2</p>
       <p><strong>Entrega:</strong> alerta de estoque e vencimento, régua de retorno de orçamento, confirmação e recuperação de falta, conferência de conciliação, e relatório mensal do dinheiro. Escopo fechado, sem personalização.</p>
       <p><b>Esta linha ainda não existe como produto.</b> São cerca de 190 h de construção que competem com o CRM, o Aurora e a ValorMed — e a prioridade entre eles é decisão pendente da diretoria. <strong>Não vender enquanto não houver data.</strong></p>
@@ -381,7 +422,7 @@
     </div>
 
     <div class="line on">
-      <div class="line-h"><h3>L6 · Assinatura de consultório</h3><span class="badge later">Não lançada · teto 8</span></div>
+      <div class="line-h"><h3>L6 · Assinatura de consultório</h3><span class="bg"><span class="mchip m2">Modelo 2</span><span class="badge later">Não lançada · teto 8</span></span></div>
       <p class="who">Consultório de 1 médico e 1 recepcionista · pré-requisito: via de acesso ao dado</p>
       <p><strong>Entrega:</strong> versão mínima da camada de resultado — agenda com confirmação automática, controle simples de insumo, fechamento de caixa e relatório mensal legível por quem não é de tecnologia. Implantação guiada, sem visita.</p>
       <p><b>Como a L5, ainda não existe como produto</b> e depende da mesma decisão de prioridade.</p>
@@ -390,7 +431,7 @@
     </div>
 
     <div class="line on">
-      <div class="line-h"><h3>L7 · Assessoria continuada</h3><span class="badge on">Ativa · teto 4</span></div>
+      <div class="line-h"><h3>L7 · Assessoria continuada</h3><span class="bg"><span class="mchip">Modelo 1</span><span class="badge on">Ativa · teto 4</span></span></div>
       <p class="who">Cliente que concluiu a Fase 1 da L3 · a partir do 8º mês</p>
       <p><strong>Entrega:</strong> presença leve e permanente que mantém de pé o que foi construído. Ritual mensal de leitura das métricas contra a linha de base, revisão técnica do que o time do cliente alterou, resposta a dúvida técnica em até 2 dias úteis, curadoria da fila de oportunidades com estimativa antes de qualquer compromisso, e alerta antecipado quando um número começa a se deteriorar.</p>
       <div class="grid-kv">
@@ -404,7 +445,7 @@
     </div>
 
     <div class="line on">
-      <div class="line-h"><h3>L8 · CRM Aurora — atendimento e WhatsApp</h3><span class="badge on">Ativa · fila de 2 por 45 dias</span></div>
+      <div class="line-h"><h3>L8 · CRM Aurora — atendimento e WhatsApp</h3><span class="bg"><span class="mchip m2">Modelo 2 + 3</span><span class="badge on">Ativa · fila de 2 por 45 dias</span></span></div>
       <p class="who">Consultório a rede · pré-requisito: nenhum do lado do sistema de gestão · exige conta Meta do cliente</p>
       <p><strong>É a única linha em que a Wissen Tech entrega o próprio sistema</strong>, e não uma camada sobre o sistema do cliente. Plataforma multi-tenant hospedada por nós, com banco isolado por clínica.</p>
       <p><strong>A venda não é de software.</strong> Nenhum médico com uma recepcionista acorda querendo um CRM — ele quer parar de perder retorno e parar de ter número banido. <mark>A oferta em uma frase:</mark> WhatsApp oficial da clínica funcionando, com confirmação de agenda automática, um robô que atende fora do horário, e alguém que responde quando a Meta reclamar. O software vem junto.</p>
@@ -435,7 +476,7 @@
     </div>
 
     <div class="line on">
-      <div class="line-h"><h3>L9 · Serviços avulsos</h3><span class="badge on">Ativa</span></div>
+      <div class="line-h"><h3>L9 · Serviços avulsos</h3><span class="bg"><span class="mchip mx">Transversal</span><span class="badge on">Ativa</span></span></div>
       <p class="who">Cliente já contratado em qualquer linha</p>
       <p>Demanda pontual que não cabe no escopo contratado. <strong>Sempre aprovada por escrito antes de executar</strong>, e nunca absorvida em silêncio.</p>
       <div class="grid-kv">
@@ -450,13 +491,13 @@
     </div>
 
     <div class="line later">
-      <div class="line-h"><h3>L10 · Formação e certificação</h3><span class="badge later">Datada</span></div>
+      <div class="line-h"><h3>L10 · Formação e certificação</h3><span class="bg"><span class="mchip mx">Sem hora recorrente</span><span class="badge later">Datada</span></span></div>
       <p class="who">Abre quando o método tiver resultado medido em ao menos 3 clientes externos</p>
       <p>Programa para gestor e proprietário de clínica. Escala sem hora recorrente. Treinamento de método não validado destrói reputação mais rápido do que qualquer erro de entrega.</p>
     </div>
 
     <div class="line later">
-      <div class="line-h"><h3>L11 · Licenciamento do método a terceiros</h3><span class="badge later">Datada</span></div>
+      <div class="line-h"><h3>L11 · Licenciamento do método a terceiros</h3><span class="bg"><span class="mchip mx">Sem hora recorrente</span><span class="badge later">Datada</span></span></div>
       <p class="who">Abre quando houver método documentado, L10 rodando, e licença de PI formalizada</p>
       <p>Licenciar a outros consultores e redes. Maior alavancagem do catálogo e maior risco jurídico — a propriedade intelectual pertence ao grupo Wissence.</p>
     </div>
@@ -561,14 +602,17 @@
       <div class="card">
         <span class="tag">Hora concentrada</span>
         <p>Diagnóstico, plano, implantação, integração. Custa caro e <strong>termina</strong>. Escala contratando gente; o teto é orçamento.</p>
+        <p><strong>É a Fase 0 do Modelo 1 e a implantação do Modelo 2.</strong></p>
       </div>
       <div class="card">
         <span class="tag warn">Hora recorrente</span>
         <p>Atendimento, acompanhamento, ajuste. <mark>Não escala contratando</mark> — cada cliente novo é hora fixa a mais, para sempre. O teto é a agenda.</p>
+        <p><strong>É o acompanhamento do Modelo 1 e o suporte do Modelo 2</strong> — e é o que produz todos os tetos do catálogo.</p>
       </div>
       <div class="card">
         <span class="tag">Sem hora</span>
-        <p>O que o produto faz sozinho. Única categoria em que a receita cresce sem a equipe crescer — e a razão pela qual a automação de atendimento entra desde o primeiro cliente.</p>
+        <p>O que o produto faz sozinho. Única categoria em que a receita cresce sem a equipe crescer.</p>
+        <p><strong>É o Modelo 3</strong>, e é a razão pela qual ele entra desde o primeiro cliente em vez de ser uma etapa futura.</p>
       </div>
     </div>
 

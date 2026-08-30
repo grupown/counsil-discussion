@@ -233,5 +233,14 @@ conversas, 13 % da capacidade do único desenvolvedor. E a automação de public
 de melhoria e vira pré-condição antes do primeiro cliente externo, porque bus factor de
 uma pessoa deixa de ser risco interno no dia em que há cliente externo pagando.
 
+**rev. 25** — regressão corrigida no catálogo: a associação de cada linha ao Modelo 1,
+2 ou 3 tinha se perdido no enxugamento da rev. 3, quando a seção dos três modelos foi
+removida e a coluna de modelo saiu do mapa de qualificação. Volta em três lugares, sem
+recuperar a seção longa que o conselho havia cortado: marcador no cabeçalho de cada uma
+das onze linhas, coluna própria no mapa, e um bloco compacto no topo da seção das
+linhas que diz, para cada modelo, quem executa, o que limita o teto e quais linhas
+pertencem a ele. A física do negócio no fim do documento passa a nomear qual modelo
+corresponde a cada categoria de hora.
+
 Base analítica: os 5 documentos de planejamento (plano de cobertura, playbook por
 área, cronograma, painel de exceções, catálogo de 56 indicadores).

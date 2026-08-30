@@ -20,6 +20,8 @@ Wissen Tech (braço de TI/IA do grupo Wissence).
 - `15-remocoes-e-tese.md` — as remoções pedidas e a reescrita da tese de valor das duas frentes
 - `16-catalogo-servicos.md` — veredito do conselho sobre o catálogo de serviços
 - `17-capacidade-e-modelos.md` — a capacidade real das duas pessoas, a física dos três modelos, e o que o MODELO 2 deve realmente vender
+- `18-veredito-diretoria.md` — veredito do conselho sobre a proposta à diretoria: o que sai, o que é reenquadrado, e o que não vai para o papel
+- `diretoria/` — **o memorando de decisão que vai à diretoria** e o anexo técnico-contratual que vai ao jurídico
 - `catalogo/` — **o catálogo de serviços** e a proposta de exemplo que o originou
 - `apresentacao/` — **a peça que vai para o Leonardo** (documento externo, tom e conteúdo diferentes do memorando interno)
 
@@ -174,6 +176,20 @@ E a v1 perde a camada web: relatório mensal em PDF com alerta por limite é pro
 melhor para clínica pequena do que painel, e derruba a primeira versão de 260 h para
 190 h, com a superfície de ataque quase eliminada. O painel vira incremento de 80 a
 100 h, construído quando um cliente pedir.
+
+**rev. 21** — o catálogo passou por um segundo conselho, com a pergunta de como
+virar proposta formal à diretoria e base para as minutas. Veredito unânime em quatro
+pontos: dois documentos e não um; a capacidade fica, reenquadrada como parâmetro de
+governança; as sete recusas ficam, como política operacional aprovada; e um documento
+que não nomeia decisões binárias é arquivado. Duas mudanças estruturais adotadas: **o
+equity sai do memorando à diretoria** — pedido de sócio e pedido de operador são
+votações diferentes —, e a **cláusula de exclusividade do emprego atual não vai para
+o papel em lugar nenhum**, porque escrevê-la é produzir prova datada de possível
+violação com terceiro; resolve-se antes, com advogado, fora do documento. A defesa
+contra o risco de causa própria virou a decisão D3: o proponente pede, ele mesmo, que
+a decisão de preço saia das suas mãos. Correção de conteúdo: os três modelos não são
+três contratos — o MODELO 3 é anexo do contrato do MODELO 2, e o terceiro instrumento
+que falta é o contrato entre a Wissen Tech e as empresas do grupo.
 
 Base analítica: os 5 documentos de planejamento (plano de cobertura, playbook por
 área, cronograma, painel de exceções, catálogo de 56 indicadores).

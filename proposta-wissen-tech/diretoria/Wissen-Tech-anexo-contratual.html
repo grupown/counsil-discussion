@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Base Contratual Wissen Tech</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght@9..144,0,400;9..144,0,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  /* Documento de trabalho jurídico. Mesma identidade da casa Wissen Tech.
+     Numeração de cláusula é o dispositivo estrutural: o advogado referencia
+     por número. Tema claro único e deliberado — este documento é impresso e
+     anotado à mão. */
+  :root{
+    --ink:#0F2E2B; --paper:#F7F8F6; --teal:#1F6F68; --teal-soft:#E3EDEA;
+    --amber:#B4661A; --amber-soft:#F6EADA; --slate:#5B6A68; --line:#D6DEDB;
+    --white:#fff; --rose:#8C3B2F; --rose-soft:#F6E4E0;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:"IBM Plex Sans",system-ui,sans-serif;font-size:15.5px;line-height:1.6}
+  .wrap{max-width:860px;margin:0 auto;padding:56px 28px 96px}
+  :focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+
+  .head{border-bottom:3px double var(--ink);padding-bottom:20px;margin-bottom:24px}
+  .org{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.2em;
+    text-transform:uppercase;color:var(--teal);margin:0 0 14px}
+  h1{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:clamp(26px,4.4vw,36px);
+    line-height:1.1;letter-spacing:-.015em;margin:0 0 8px;text-wrap:balance}
+  .sub{font-size:16px;color:var(--slate);margin:0;max-width:62ch}
+
+  h2{font-family:"Fraunces",serif;font-weight:600;font-size:21px;letter-spacing:-.01em;
+    margin:0 0 4px;padding-bottom:10px;border-bottom:2px solid var(--ink);text-wrap:balance}
+  h2 .num{font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--teal);
+    letter-spacing:.1em;margin-right:10px;vertical-align:2px}
+  section{margin:0 0 48px}
+  .note{font-size:14px;color:var(--slate);margin:11px 0 22px;max-width:70ch}
+  p{margin:0 0 12px}
+  h3{font-weight:600;font-size:15.5px;margin:0 0 6px}
+
+  /* cláusula numerada — o advogado referencia por número */
+  .cl{display:grid;grid-template-columns:64px 1fr;gap:0 16px;
+    padding:14px 0;border-bottom:1px solid var(--line);align-items:start}
+  .cl:last-child{border-bottom:0}
+  .cl-n{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--teal);
+    letter-spacing:.04em;padding-top:2px;font-variant-numeric:tabular-nums}
+  .cl-b h3{font-family:"IBM Plex Sans",sans-serif;font-size:15.5px;font-weight:600;margin-bottom:4px}
+  .cl-b p{font-size:14.5px;color:var(--slate);margin:0 0 8px}
+  .cl-b p:last-child{margin:0}
+  .cl-b strong{color:var(--ink);font-weight:600}
+  .cl-b ul{margin:0 0 8px;padding-left:18px}
+  .cl-b li{font-size:14.5px;color:var(--slate);margin-bottom:5px}
+  .cl-b li:last-child{margin-bottom:0}
+  .cl-b li strong{color:var(--ink)}
+
+  .flag{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:9.5px;
+    letter-spacing:.13em;text-transform:uppercase;padding:3px 7px;border-radius:2px;
+    margin-left:8px;vertical-align:2px;white-space:nowrap}
+  .flag.dec{color:var(--amber);background:var(--amber-soft);border:1px solid var(--amber)}
+  .flag.hard{color:var(--rose);background:var(--rose-soft);border:1px solid var(--rose)}
+
+  .doc{background:var(--white);border:1px solid var(--line);border-top:5px solid var(--teal);
+    border-radius:2px;padding:26px 28px;margin-bottom:22px}
+  .doc.grp{border-top-color:var(--amber)}
+  .doc-h{margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+  .doc-h .lab{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.15em;
+    text-transform:uppercase;color:var(--slate);margin:0 0 5px}
+  .doc-h h3{font-family:"Fraunces",serif;font-size:21px;font-weight:600;margin:0 0 6px}
+  .doc-h p{font-size:14.5px;color:var(--slate);margin:0}
+
+  .tbl{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  table{width:100%;border-collapse:collapse;font-size:14px;min-width:580px}
+  th{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.13em;
+    text-transform:uppercase;color:var(--slate);text-align:left;font-weight:500;
+    padding:0 12px 8px 0;border-bottom:1px solid var(--ink);white-space:nowrap}
+  td{padding:11px 12px 11px 0;border-bottom:1px solid var(--line);vertical-align:top}
+  td.k{font-weight:600}
+  td.n{font-family:"IBM Plex Mono",monospace;white-space:nowrap;font-variant-numeric:tabular-nums}
+  td.no{color:var(--rose);font-weight:500}
+  tr:last-child td{border-bottom:1px solid var(--ink)}
+
+  .panel{background:var(--white);border:1px solid var(--line);border-left:3px solid var(--teal);
+    border-radius:0 2px 2px 0;padding:19px 22px;margin-bottom:16px}
+  .panel.warn{border-left-color:var(--amber)}
+  .panel.no{border-left-color:var(--rose)}
+  .panel h3{font-family:"Fraunces",serif;font-size:17px;margin-bottom:7px}
+  .panel p{font-size:14.5px;color:var(--slate);margin-bottom:9px}
+  .panel p:last-child{margin-bottom:0}
+  .panel strong{color:var(--ink)}
+  .panel ul{margin:0 0 9px;padding-left:19px}
+  .panel li{font-size:14.5px;color:var(--slate);margin-bottom:6px}
+  .panel li strong{color:var(--ink)}
+
+  footer{border-top:1px solid var(--line);padding-top:18px;margin-top:48px;
+    font-family:"IBM Plex Mono",monospace;font-size:11px;line-height:1.75;
+    color:var(--slate);letter-spacing:.03em}
+
+  @media (max-width:600px){
+    .wrap{padding:34px 20px 60px}
+    .cl{grid-template-columns:1fr;gap:4px}
+    .cl-n{padding-top:0}
+  }
+  @media print{
+    body{background:#fff}.wrap{max-width:none;padding:0}
+    section,.doc,.cl{break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <div class="head">
+    <p class="org">Wissen Tech · Anexo ao Memorando de Decisão 01/2026</p>
+    <h1>Base técnico-contratual para elaboração das minutas</h1>
+    <p class="sub">Documento de trabalho destinado ao jurídico. Reúne o que cada contrato precisa conter, o que é decisão comercial já tomada, e o que ainda depende de parecer.</p>
+  </div>
+
+  <div class="panel warn">
+    <h3>Nota ao jurídico</h3>
+    <p>Este anexo <strong>não é uma minuta</strong> e não pretende usar redação contratual. Ele descreve a operação real com precisão suficiente para que as minutas sejam redigidas sem rodadas de descoberta.</p>
+    <p>Marcações no texto: <span class="flag dec">a decidir</span> indica ponto que depende de parecer ou de escolha jurídica; <span class="flag hard">inegociável</span> indica condição operacional que, se alterada, inviabiliza a entrega — pode mudar de redação, não de efeito.</p>
+    <p><strong>Três verificações independentes são pedidas antes de qualquer assinatura:</strong> o alcance da Resolução CFM 2.454/2026 sobre sistemas de terceiros com IA embarcada; a forma exigida do contrato de operador sob a LGPD quando houver acesso direto a base de clínica; e a validade da estrutura de preço entre partes relacionadas descrita na seção 06.</p>
+  </div>
+
+  <section>
+    <h2><span class="num">01</span>Três instrumentos, não três modelos</h2>
+    <p class="note">Correção importante em relação ao material comercial: os três modelos de entrega não correspondem a três contratos.</p>
+
+    <div class="tbl">
+      <table>
+        <thead><tr><th>Instrumento</th><th>Cobre</th><th>Partes</th></tr></thead>
+        <tbody>
+          <tr><td class="k">Contrato A</td><td>Modelo 1 — consultoria conduzida, com acompanhamento recorrente</td><td>Wissen Tech e cliente</td></tr>
+          <tr><td class="k">Contrato B</td><td>Modelo 2 — assinatura de serviço de indicadores. O Modelo 3 (automação) é <strong>anexo técnico do B</strong>, não instrumento próprio</td><td>Wissen Tech e cliente</td></tr>
+          <tr><td class="k">Contrato C</td><td>Prestação de serviço entre a Wissen Tech e as empresas do grupo</td><td>Wissen Tech e cada unidade</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="panel" style="margin-top:20px">
+      <h3>Por que o Modelo 3 não tem contrato próprio</h3>
+      <p>A automação de atendimento não é vendida separadamente — ela é o meio pelo qual o Modelo 2 é entregue com custo sustentável. Criar um instrumento para ela seria formalizar uma relação comercial que não existe.</p>
+      <p>O que ela exige do contrato B é um <strong>anexo de tratamento automatizado</strong>: o que a automação resolve, o que ela obrigatoriamente encaminha a pessoa humana, e a vedação expressa de qualquer atuação sobre decisão clínica.</p>
+    </div>
+
+    <div class="panel">
+      <h3>Franquia</h3>
+      <p>O atendimento a franqueados não é um quarto instrumento: é o <strong>contrato B com estrutura de partes ampliada</strong>, em que a franqueadora comparece como interveniente — porque é ela quem define o padrão tecnológico da rede e quem autoriza o uso da tecnologia do grupo na unidade franqueada.</p>
+      <p><span class="flag dec">a decidir</span> se a contratação é feita diretamente pela unidade franqueada com anuência da franqueadora, ou pela franqueadora com repasse à unidade. Tem efeito tributário e de inadimplência.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">02</span>Cláusulas comuns aos três instrumentos</h2>
+    <p class="note">Aplicam-se a A, B e C salvo indicação em contrário nas seções seguintes.</p>
+
+    <div class="cl">
+      <div class="cl-n">2.1</div>
+      <div class="cl-b">
+        <h3>Objeto e limites do objeto</h3>
+        <p>O objeto descreve entregáveis nomeados, não disponibilidade genérica. <strong>Contrato de tecnologia que define o objeto como "suporte" ou "atendimento" produz escopo infinito</strong> — é a principal causa de perda de margem em contratos deste tipo.</p>
+        <p>Todo instrumento traz uma lista expressa de <strong>o que não está incluído</strong>, com remissão à política operacional aprovada pela diretoria.</p>
+      </div>
+    </div>
+
+    <div class="cl">
+      <div class="cl-n">2.2</div>
+      <div class="cl-b">
+        <h3>Obrigações do contratante <span class="flag hard">inegociável</span></h3>
+        <p>A entrega depende de atos do cliente. Sem eles previstos como obrigação, o atraso do cliente vira inadimplemento da Wissen Tech.</p>
+        <ul>
+          <li><strong>Responsável nomeado</strong> — pessoa identificada, com poder de decisão sobre o escopo contratado.</li>
+          <li><strong>Autorização e viabilização do acesso aos dados</strong> do sistema de gestão que o cliente já utiliza, incluindo a solicitação formal de documentação técnica ao próprio fornecedor dele.</li>
+          <li><strong>Prazo para os atos do cliente</strong>, com suspensão automática de cronograma e de marcos de pagamento em caso de atraso não imputável à Wissen Tech.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cl">
+      <div class="cl-n">2.3</div>
+      <div class="cl-b">
+        <h3>Dados pessoais e LGPD <span class="flag dec">a decidir</span></h3>
+        <p>Dado de saúde é dado pessoal sensível. O cliente permanece <strong>controlador</strong>; a Wissen Tech atua como <strong>operadora</strong> nos limites do contrato.</p>
+        <p>Deve constar expressamente que <strong>a plataforma não armazena dado de paciente</strong> — lê, calcula o indicador, retém o agregado e descarta o detalhe. Essa é uma característica técnica do serviço e reduz materialmente a exposição das duas partes; pedimos que seja redigida como obrigação, não como declaração.</p>
+        <p>Necessário: finalidade, prazo de retenção do agregado, controle de acesso por perfil, registro de operações, obrigação de notificação de incidente, e destino dos dados na rescisão.</p>
+      </div>
+    </div>
+
+    <div class="cl">
+      <div class="cl-n">2.4</div>
+      <div class="cl-b">
+        <h3>Credenciais de acesso a sistemas do cliente</h3>
+        <p>A operação exige guarda de credenciais de acesso a sistemas de terceiros. Precisa de cláusula própria: forma de guarda, limitação de uso à finalidade contratada, vedação de compartilhamento, e <strong>obrigação de devolução ou destruição comprovada na rescisão</strong>.</p>
+      </div>
+    </div>
+
+    <div class="cl">
+      <div class="cl-n">2.5</div>
+      <div class="cl-b">
+        <h3>Propriedade intelectual e licença de retorno <span class="flag hard">inegociável</span></h3>
+        <p>Tudo o que a Wissen Tech desenvolve — inclusive o que for construído durante a execução de um contrato — <strong>permanece da Wissen Tech</strong>. O cliente recebe licença de uso, não exclusiva, limitada ao prazo do contrato e à sua própria operação.</p>
+        <p>Configuração, parametrização e dados do cliente são dele, e devem ser exportáveis em formato legível na rescisão.</p>
+        <p><span class="flag dec">a decidir</span> a redação que distingue núcleo reutilizável (da Wissen Tech) de configuração específica (do cliente), de modo a não gerar cotitularidade acidental sobre melhorias sugeridas pelo cliente.</p>
+      </div>
+    </div>
+
+    <div class="cl">
+      <div class="cl-n">2.6</div>
+      <div class="cl-b">
+        <h3>Suspensão por indisponibilidade de capacidade <span class="flag hard">inegociável</span></h3>
+        <p>Cláusula incomum e essencial aqui. A empresa opera com teto declarado de clientes simultâneos. É preciso poder <strong>recusar ampliação de escopo e não renovar</strong> sem que isso configure descumprimento — desde que com aviso prévio e devolução proporcional.</p>
+        <p>Sem esta cláusula, o contrato obriga a empresa a aceitar volume que ela não entrega, e o inadimplemento vira questão de tempo.</p>
+      </div>
+    </div>
+
+    <div class="cl">
+      <div class="cl-n">2.7</div>
+      <div class="cl-b">
+        <h3>Nível de serviço declarado</h3>
+        <p>Prazos de resposta e de restabelecimento, janelas de atendimento, e o que expressamente <strong>não</strong> é coberto — plantão fora de janela, indisponibilidade do sistema de gestão do próprio cliente, e falha do fornecedor dele.</p>
+        <p><span class="flag dec">a decidir</span> se haverá penalidade por descumprimento de nível de serviço, e se ela é limitada a desconto proporcional na mensalidade. Recomenda-se que sim, e que seja o único remédio.</p>
+      </div>
+    </div>
+
+    <div class="cl">
+      <div class="cl-n">2.8</div>
+      <div class="cl-b">
+        <h3>Preço, reajuste e inadimplemento</h3>
+        <p>Preço fixo por período. <strong>Não há cobrança por chamada, por requisição ou por consumo de processamento</strong> — isso é decisão comercial firme e deve estar refletido na redação.</p>
+        <p>Reajuste anual por índice a definir <span class="flag dec">a decidir</span>. Suspensão do serviço por inadimplemento com prazo de purga, e retomada condicionada à quitação.</p>
+      </div>
+    </div>
+
+    <div class="cl">
+      <div class="cl-n">2.9</div>
+      <div class="cl-b">
+        <h3>Prazo, renovação e rescisão</h3>
+        <p>Prazo determinado com renovação automática e denúncia imotivada por qualquer das partes mediante aviso prévio. Rescisão por justa causa com prazo de cura.</p>
+        <p>Na rescisão: exportação dos dados e agregados do cliente, revogação dos acessos, destruição de credenciais, e prazo para tudo isso.</p>
+      </div>
+    </div>
+
+    <div class="cl">
+      <div class="cl-n">2.10</div>
+      <div class="cl-b">
+        <h3>Limitação de responsabilidade <span class="flag dec">a decidir</span></h3>
+        <p>Teto de responsabilidade referenciado ao valor pago nos doze meses anteriores, exclusão de lucros cessantes, e <strong>exclusão expressa de responsabilidade por decisão de negócio ou de conduta tomada pelo cliente a partir de indicador fornecido.</strong></p>
+        <p>Esta última é central: o serviço informa; quem decide é o cliente.</p>
+      </div>
+    </div>
+
+    <div class="cl">
+      <div class="cl-n">2.11</div>
+      <div class="cl-b">
+        <h3>Vedação de atuação clínica <span class="flag hard">inegociável</span></h3>
+        <p>Nenhuma funcionalidade, automação ou recomendação da Wissen Tech constitui orientação diagnóstica, terapêutica ou de conduta. A decisão clínica é sempre humana e do profissional habilitado, nos termos da Resolução CFM 2.454/2026.</p>
+      </div>
+    </div>
+
+    <div class="cl">
+      <div class="cl-n">2.12</div>
+      <div class="cl-b">
+        <h3>Confidencialidade, não aliciamento e cessão</h3>
+        <p>Confidencialidade recíproca com sobrevivência à rescisão. Vedação de aliciamento de pessoal durante a vigência e por período posterior. Cessão do contrato apenas com anuência, ressalvada reorganização societária.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">03</span>Contrato A — Modelo 1 · consultoria conduzida</h2>
+
+    <div class="doc">
+      <div class="doc-h">
+        <p class="lab">Instrumento A</p>
+        <h3>Condução técnica com execução pelo cliente</h3>
+        <p>A Wissen Tech conduz: diagnóstico, plano de trabalho, prioridade, desenho de processo, indicadores e ritual de acompanhamento. <strong>A execução é do time do cliente.</strong></p>
+      </div>
+
+      <div class="cl">
+        <div class="cl-n">A.1</div>
+        <div class="cl-b">
+          <h3>Natureza da obrigação <span class="flag hard">inegociável</span></h3>
+          <p>Obrigação de <strong>meio</strong>, não de resultado. A Wissen Tech responde pela condução técnica e pelos entregáveis nomeados; não responde pelo resultado operacional, que depende da execução pelo cliente.</p>
+          <p>Redação que sugira compromisso com resultado financeiro deve ser evitada — o serviço mede e reporta ganho, mas não o garante.</p>
+        </div>
+      </div>
+
+      <div class="cl">
+        <div class="cl-n">A.2</div>
+        <div class="cl-b">
+          <h3>Entregáveis nomeados</h3>
+          <ul>
+            <li>Diagnóstico com linha de base assinada pelas duas partes antes do início.</li>
+            <li>Plano de trabalho com atividades, responsáveis do lado do cliente e prazos.</li>
+            <li>Reuniões de acompanhamento em periodicidade definida.</li>
+            <li>Painel de indicadores atualizado entre as reuniões.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="cl">
+        <div class="cl-n">A.3</div>
+        <div class="cl-b">
+          <h3>Responsável do cliente <span class="flag hard">inegociável</span></h3>
+          <p>Condição de eficácia do contrato, não mera obrigação: pessoa nomeada, identificada no instrumento, com agenda e poder de determinar a execução interna. <strong>A vacância do cargo por prazo definido autoriza a suspensão do contrato</strong> sem ônus para a Wissen Tech.</p>
+        </div>
+      </div>
+
+      <div class="cl">
+        <div class="cl-n">A.4</div>
+        <div class="cl-b">
+          <h3>Escopo de horas e regra de estouro</h3>
+          <p>O contrato declara a dedicação prevista por período. Demanda além dela é orçada à parte e aprovada por escrito antes de iniciada — <strong>sem aprovação prévia escrita, não há execução nem cobrança.</strong></p>
+          <p>Não há acúmulo de horas não utilizadas entre períodos <span class="flag dec">a decidir</span>.</p>
+        </div>
+      </div>
+
+      <div class="cl">
+        <div class="cl-n">A.5</div>
+        <div class="cl-b">
+          <h3>Preço</h3>
+          <p>Valor de implantação em parcelas vinculadas a marcos de entrega, mais valor mensal de acompanhamento por prazo determinado. O diagnóstico contratado previamente é dedutível do valor de implantação, conforme condição comercial vigente.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">04</span>Contrato B — Modelo 2 · assinatura de indicadores</h2>
+
+    <div class="doc">
+      <div class="doc-h">
+        <p class="lab">Instrumento B</p>
+        <h3>Serviço recorrente de leitura, cálculo e reporte</h3>
+        <p>A Wissen Tech conecta-se ao sistema de gestão que o cliente já utiliza, calcula indicadores e entrega relatório periódico e alertas. <strong>O cliente não instala, não integra e não opera nada.</strong></p>
+      </div>
+
+      <div class="cl">
+        <div class="cl-n">B.1</div>
+        <div class="cl-b">
+          <h3>Objeto — serviço, não licença de software <span class="flag dec">a decidir</span></h3>
+          <p>O enquadramento correto é <strong>prestação de serviço</strong>, e não licenciamento de programa de computador. Não há entrega de software ao cliente, não há instalação no ambiente dele e não há cessão de cópia.</p>
+          <p>Pedimos confirmação do enquadramento e de seus efeitos fiscais, porque ele muda a incidência aplicável.</p>
+        </div>
+      </div>
+
+      <div class="cl">
+        <div class="cl-n">B.2</div>
+        <div class="cl-b">
+          <h3>Acesso ao dado como condição de eficácia <span class="flag hard">inegociável</span></h3>
+          <p>O serviço não existe sem leitura dos dados do sistema do cliente. O contrato deve prever:</p>
+          <ul>
+            <li>A <strong>via de acesso apurada antes da contratação</strong> — interface documentada do fornecedor, exportação programada, ou acesso direto autorizado por escrito.</li>
+            <li>Obrigação do cliente de manter a via ativa durante a vigência.</li>
+            <li><strong>Direito de rescisão sem ônus para a Wissen Tech</strong> caso o fornecedor do cliente altere, restrinja ou encerre a via de acesso.</li>
+          </ul>
+          <p>Este último ponto é essencial: o serviço depende de um terceiro que não é parte do contrato.</p>
+        </div>
+      </div>
+
+      <div class="cl">
+        <div class="cl-n">B.3</div>
+        <div class="cl-b">
+          <h3>Escopo fechado e vedação de personalização</h3>
+          <p>Conjunto de indicadores definido em anexo. <strong>Alteração de escopo só por aditivo</strong>, e a Wissen Tech não é obrigada a aceitá-la — é o que preserva a natureza padronizada do serviço e o preço.</p>
+        </div>
+      </div>
+
+      <div class="cl">
+        <div class="cl-n">B.4</div>
+        <div class="cl-b">
+          <h3>Anexo de tratamento automatizado — Modelo 3 <span class="flag hard">inegociável</span></h3>
+          <p>Onde houver atendimento automatizado, o anexo deve declarar:</p>
+          <ul>
+            <li>O que a automação resolve — dúvida operacional, configuração, processo administrativo.</li>
+            <li>O que é <strong>obrigatoriamente encaminhado a pessoa humana</strong> — dado sensível, erro de sistema, e qualquer proximidade com conduta assistencial.</li>
+            <li>Vedação expressa de uso de base de produção do cliente em ferramenta de terceiro de inteligência artificial.</li>
+            <li>Direito do cliente de ser atendido por pessoa humana quando solicitar.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="cl">
+        <div class="cl-n">B.5</div>
+        <div class="cl-b">
+          <h3>Disponibilidade do serviço e início da vigência <span class="flag dec">a decidir</span></h3>
+          <p>A plataforma está em construção. Contratos assinados antes da disponibilidade devem trazer <strong>condição suspensiva</strong>: a obrigação de prestar nasce na data de disponibilização, informada por escrito ao cliente.</p>
+          <p>Deve prever <strong>data limite</strong>, findo o prazo sem disponibilização, com resolução automática e devolução integral de valores adiantados. <strong>Sem essa data limite o contrato é uma promessa aberta</strong>, e não deve ser assinado assim.</p>
+        </div>
+      </div>
+
+      <div class="cl">
+        <div class="cl-n">B.6</div>
+        <div class="cl-b">
+          <h3>Teto de contratações simultâneas</h3>
+          <p>Remissão à cláusula 2.6. O contrato B é o instrumento em que o teto de capacidade tem efeito prático mais imediato, por ser o de maior volume esperado.</p>
+        </div>
+      </div>
+
+      <div class="cl">
+        <div class="cl-n">B.7</div>
+        <div class="cl-b">
+          <h3>Preço</h3>
+          <p>Valor de implantação pago no início — <strong>correspondente exclusivamente à configuração, migração e treinamento daquele cliente</strong>, jamais ao desenvolvimento do produto — mais assinatura mensal por faixa de escopo. Preço fixo. Sem cobrança por uso.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">05</span>Contrato C — prestação de serviço ao grupo</h2>
+
+    <div class="doc grp">
+      <div class="doc-h">
+        <p class="lab">Instrumento C · parte relacionada</p>
+        <h3>Wissen Tech e as unidades do grupo</h3>
+        <p>É o contrato que precisa existir primeiro, e o único em que as duas partes se comunicam por sócios em comum. Exige tratamento diferente dos demais.</p>
+      </div>
+
+      <div class="cl">
+        <div class="cl-n">C.1</div>
+        <div class="cl-b">
+          <h3>Declaração de parte relacionada <span class="flag hard">inegociável</span></h3>
+          <p>O instrumento deve <strong>declarar expressamente</strong> a existência de sócios e administradores comuns, identificar quem assina por cada lado, e registrar que o signatário pelo grupo não possui interesse na Wissen Tech.</p>
+          <p>A declaração protege as duas empresas. Contrato entre partes relacionadas que não se declara como tal é o que se questiona depois.</p>
+        </div>
+      </div>
+
+      <div class="cl">
+        <div class="cl-n">C.2</div>
+        <div class="cl-b">
+          <h3>Critério objetivo de preço <span class="flag dec">a decidir</span></h3>
+          <p>O preço deve resultar de <strong>critério objetivo, escrito e verificável</strong> — não de negociação caso a caso entre pessoas com interesse dos dois lados.</p>
+          <p>Duas estruturas possíveis, com efeitos fiscais distintos, e pedimos parecer sobre qual adotar: <strong>rateio de custos sem margem</strong> entre empresas do mesmo grupo, com critério de divisão declarado e notas de débito; ou <strong>prestação de serviço com margem</strong>, sujeita à tributação correspondente.</p>
+          <p>A escolha afeta a apuração de resultado da Wissen Tech e, por consequência, a distribuição de lucros e a avaliação da empresa.</p>
+        </div>
+      </div>
+
+      <div class="cl">
+        <div class="cl-n">C.3</div>
+        <div class="cl-b">
+          <h3>Mecanismo permanente de revisão <span class="flag hard">inegociável</span></h3>
+          <p>O conflito de interesse não é um evento — repete-se a cada reajuste, renovação e mudança de escopo. O contrato deve instituir <strong>mecanismo fixo</strong>: quem revisa, com que periodicidade, e quem arbitra em caso de divergência.</p>
+          <p>Aprovação avulsa não resolve. Se o mecanismo depender das mesmas pessoas em ambos os lados, ele é formal e não real.</p>
+        </div>
+      </div>
+
+      <div class="cl">
+        <div class="cl-n">C.4</div>
+        <div class="cl-b">
+          <h3>Licença de uso comercial da tecnologia do grupo <span class="flag hard">inegociável</span></h3>
+          <p>Instrumento apartado ou capítulo próprio, formalizando a autorização da decisão D1: escopo do que é licenciado, prazo, se é exclusiva ou não, remuneração se houver, restrições de uso, e o que acontece com a licença no encerramento da relação.</p>
+          <p><strong>Sem este instrumento, os contratos A e B não podem ser firmados com terceiros.</strong></p>
+        </div>
+      </div>
+
+      <div class="cl">
+        <div class="cl-n">C.5</div>
+        <div class="cl-b">
+          <h3>Restrição territorial e de concorrência</h3>
+          <p>Formalização da decisão D2: critério de quais clínicas não podem ser atendidas, e procedimento de consulta prévia em caso de dúvida sobre um prospect.</p>
+        </div>
+      </div>
+
+      <div class="cl">
+        <div class="cl-n">C.6</div>
+        <div class="cl-b">
+          <h3>Continuidade e transferência de conhecimento</h3>
+          <p>Obrigação da Wissen Tech de manter documentação de operação e runbook atualizados, entregues ao grupo, em padrão que permita a um terceiro assumir a operação. Prazo e forma de verificação definidos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">06</span>Pontos que dependem de decisão do jurídico</h2>
+    <p class="note">Reunidos aqui para que sejam respondidos de uma vez, antes da redação.</p>
+
+    <div class="tbl">
+      <table>
+        <thead><tr><th>Ponto</th><th>Onde</th><th>Efeito da resposta</th></tr></thead>
+        <tbody>
+          <tr><td class="k">Alcance da Resolução CFM 2.454/2026 sobre sistemas de terceiros com IA embarcada</td><td class="n">2.11 · B.4</td><td>define o tamanho do mercado da linha de conformidade e o que é obrigatório em cada cliente</td></tr>
+          <tr><td class="k">Forma exigida do contrato de operador quando houver acesso direto a base de clínica</td><td class="n">2.3 · 2.4</td><td>condiciona o nível de acesso que a empresa pode aceitar</td></tr>
+          <tr><td class="k">Rateio sem margem ou prestação com margem entre grupo e Wissen Tech</td><td class="n">C.2</td><td>muda a apuração de resultado, a tributação e a avaliação da empresa</td></tr>
+          <tr><td class="k">Enquadramento do Modelo 2 como serviço e não como licenciamento</td><td class="n">B.1</td><td>muda a incidência fiscal e a redação do objeto</td></tr>
+          <tr><td class="k">Redação que separa núcleo reutilizável de configuração do cliente</td><td class="n">2.5</td><td>evita cotitularidade acidental sobre melhorias</td></tr>
+          <tr><td class="k">Penalidade por descumprimento de nível de serviço e se é remédio único</td><td class="n">2.7</td><td>define a exposição da empresa em contrato recorrente</td></tr>
+          <tr><td class="k">Estrutura de partes no contrato de franquia</td><td class="n">01</td><td>efeito tributário e de responsabilidade por inadimplência</td></tr>
+          <tr><td class="k">Índice de reajuste e periodicidade</td><td class="n">2.8</td><td>preserva a margem em contrato de prazo longo</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">07</span>Anexos que cada instrumento requer</h2>
+    <div class="tbl">
+      <table>
+        <thead><tr><th>Anexo</th><th>A</th><th>B</th><th>C</th></tr></thead>
+        <tbody>
+          <tr><td class="k">Escopo e entregáveis nomeados</td><td class="n">sim</td><td class="n">sim</td><td class="n">sim</td></tr>
+          <tr><td class="k">Lista de indicadores e definição de cálculo</td><td class="n">sim</td><td class="n">sim</td><td class="n">sim</td></tr>
+          <tr><td class="k">Linha de base assinada antes do início</td><td class="n">sim</td><td class="n">sim</td><td class="n">—</td></tr>
+          <tr><td class="k">Via de acesso ao dado e responsável por mantê-la</td><td class="n">sim</td><td class="n">sim</td><td class="n">sim</td></tr>
+          <tr><td class="k">Tratamento de dados pessoais</td><td class="n">sim</td><td class="n">sim</td><td class="n">sim</td></tr>
+          <tr><td class="k">Tratamento automatizado e limites da automação</td><td class="n">—</td><td class="n">sim</td><td class="n">sim</td></tr>
+          <tr><td class="k">Nível de serviço</td><td class="n">sim</td><td class="n">sim</td><td class="n">sim</td></tr>
+          <tr><td class="k">Tabela de preços e condições de reajuste</td><td class="n">sim</td><td class="n">sim</td><td class="n">sim</td></tr>
+          <tr><td class="k">Licença de uso comercial da tecnologia do grupo</td><td class="n">—</td><td class="n">—</td><td class="n">sim</td></tr>
+          <tr><td class="k">Critério de rateio ou de preço e mecanismo de revisão</td><td class="n">—</td><td class="n">—</td><td class="n">sim</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer>
+    Wissen Tech · Anexo técnico-contratual ao Memorando de Decisão 01/2026 · 30/08/2026<br>
+    Documento de trabalho para o jurídico. Não é minuta, não é proposta comercial e não vincula as partes.<br>
+    A elaboração das minutas pressupõe as decisões D1 a D6 aprovadas pela diretoria.
+  </footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Memorando de Decisão Wissen Tech</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght@9..144,0,400;9..144,0,600;9..144,1,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  /* Instrumento de decisão. Identidade da casa Wissen Tech, mesma família da
+     proposta comercial e do catálogo. Tema claro único e deliberado: este
+     documento é impresso, rubricado e arquivado. */
+  :root{
+    --ink:#0F2E2B; --paper:#F7F8F6; --teal:#1F6F68; --teal-soft:#E3EDEA;
+    --amber:#B4661A; --amber-soft:#F6EADA; --slate:#5B6A68; --line:#D6DEDB;
+    --white:#fff; --rose:#8C3B2F; --rose-soft:#F6E4E0; --rule:#0F2E2B;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:"IBM Plex Sans",system-ui,sans-serif;font-size:16px;line-height:1.6}
+  .wrap{max-width:760px;margin:0 auto;padding:56px 28px 96px}
+  :focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+
+  /* cabeçalho de documento formal */
+  .head{border-bottom:3px double var(--rule);padding-bottom:20px;margin-bottom:26px}
+  .org{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.2em;
+    text-transform:uppercase;color:var(--teal);margin:0 0 14px}
+  h1{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:clamp(27px,4.6vw,38px);
+    line-height:1.1;letter-spacing:-.015em;margin:0 0 6px;text-wrap:balance}
+  .sub{font-size:16px;color:var(--slate);margin:0}
+  dl.route{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+    gap:2px 26px;margin:22px 0 0}
+  dl.route div{padding:4px 0}
+  dl.route dt{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--slate);margin:0 0 3px}
+  dl.route dd{margin:0;font-size:14.5px;font-weight:500}
+
+  h2{font-family:"Fraunces",serif;font-weight:600;font-size:22px;letter-spacing:-.01em;
+    margin:0 0 4px;padding-bottom:10px;border-bottom:2px solid var(--ink);text-wrap:balance}
+  section{margin:0 0 46px}
+  .note{font-size:14px;color:var(--slate);margin:11px 0 22px}
+  p{margin:0 0 13px}
+  h3{font-weight:600;font-size:16px;margin:0 0 6px}
+
+  /* a cédula de decisão — o dispositivo central deste documento */
+  .ballot{display:flex;flex-direction:column;gap:0;border:1px solid var(--line);
+    border-radius:2px;background:var(--white);overflow:hidden}
+  .dec{border-bottom:1px solid var(--line);padding:22px 24px}
+  .dec:last-child{border-bottom:0}
+  .dec-h{display:flex;align-items:baseline;gap:12px;margin-bottom:8px}
+  .dec-n{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:500;
+    color:var(--white);background:var(--ink);padding:3px 8px;border-radius:2px;
+    letter-spacing:.06em;white-space:nowrap}
+  .dec-h h3{font-family:"Fraunces",serif;font-size:19px;font-weight:600;margin:0;
+    letter-spacing:-.005em}
+  .dec p{font-size:15px;margin:0 0 10px}
+  .dec p:last-of-type{margin-bottom:14px}
+  .ask{border-left:3px solid var(--teal);padding-left:14px;margin:0 0 12px}
+  .ask b{display:block;font-family:"IBM Plex Mono",monospace;font-size:10px;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--teal);
+    margin-bottom:4px;font-weight:500}
+  .cost{border-left:3px solid var(--rose);padding-left:14px;background:var(--rose-soft);
+    padding:11px 14px;border-radius:0 2px 2px 0}
+  .cost b{display:block;font-family:"IBM Plex Mono",monospace;font-size:10px;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--rose);
+    margin-bottom:4px;font-weight:500}
+  .cost span{font-size:14px;color:var(--ink)}
+  .mark{display:flex;gap:20px;flex-wrap:wrap;margin-top:16px;padding-top:14px;
+    border-top:1px dashed var(--line);font-family:"IBM Plex Mono",monospace;
+    font-size:11.5px;letter-spacing:.06em;color:var(--slate)}
+  .mark span::before{content:"";display:inline-block;width:13px;height:13px;
+    border:1.5px solid var(--slate);margin-right:7px;vertical-align:-2px;border-radius:1px}
+
+  .tbl{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  table{width:100%;border-collapse:collapse;font-size:14.5px;min-width:560px}
+  th{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.13em;
+    text-transform:uppercase;color:var(--slate);text-align:left;font-weight:500;
+    padding:0 12px 8px 0;border-bottom:1px solid var(--ink);white-space:nowrap}
+  td{padding:12px 12px 12px 0;border-bottom:1px solid var(--line);vertical-align:top}
+  td.k{font-weight:600}
+  td.n{font-family:"IBM Plex Mono",monospace;white-space:nowrap;font-variant-numeric:tabular-nums}
+  td.no{color:var(--rose);font-weight:500}
+  tr:last-child td{border-bottom:1px solid var(--ink)}
+
+  .panel{background:var(--white);border:1px solid var(--line);border-left:3px solid var(--teal);
+    border-radius:0 2px 2px 0;padding:19px 22px;margin-bottom:16px}
+  .panel.warn{border-left-color:var(--amber)}
+  .panel.no{border-left-color:var(--rose)}
+  .panel h3{font-family:"Fraunces",serif;font-size:17px;margin-bottom:7px}
+  .panel p{font-size:14.5px;color:var(--slate);margin-bottom:9px}
+  .panel p:last-child{margin-bottom:0}
+  .panel strong{color:var(--ink)}
+
+  ul.tight{margin:0 0 13px;padding-left:19px}
+  ul.tight li{margin-bottom:6px;font-size:14.5px}
+
+  .sign{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px 34px;margin-top:32px}
+  .sig{border-top:1px solid var(--ink);padding-top:9px;
+    font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--slate)}
+  .sig em{display:block;font-style:normal;font-size:10px;margin-top:3px;color:var(--slate)}
+
+  footer{border-top:1px solid var(--line);padding-top:18px;margin-top:48px;
+    font-family:"IBM Plex Mono",monospace;font-size:11px;line-height:1.75;
+    color:var(--slate);letter-spacing:.03em}
+
+  @media (max-width:560px){.wrap{padding:34px 20px 60px}}
+  @media print{
+    body{background:#fff}.wrap{max-width:none;padding:0}
+    section,.dec{break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <div class="head">
+    <p class="org">Wissen Tech · Memorando de decisão · 01/2026</p>
+    <h1>Estrutura comercial da Wissen Tech e as seis autorizações necessárias</h1>
+    <p class="sub">Este documento pede seis decisões. Cada uma tem uma consequência declarada caso não seja aprovada.</p>
+    <dl class="route">
+      <div><dt>Para</dt><dd>Diretoria do Grupo Wissence</dd></div>
+      <div><dt>De</dt><dd>Gustavo Polar · Tecnologia</dd></div>
+      <div><dt>Data</dt><dd>30/08/2026</dd></div>
+      <div><dt>Anexo</dt><dd>Base técnico-contratual</dd></div>
+    </dl>
+  </div>
+
+  <section>
+    <h2>Em uma página</h2>
+    <p class="note">O necessário para decidir. O detalhe está no anexo.</p>
+    <p>A Wissen Tech nasce com <strong>duas frentes</strong>. Dentro do grupo, ela cuida da tecnologia das três unidades — e o retorno aparece no resultado de cada clínica: estoque, conversão de orçamento, comparecimento, conciliação de caixa, e trabalho manual que deixa de ser necessário. Fora do grupo, ela vende o mesmo trabalho a franqueados e clínicas externas — e aí o retorno aparece como receita e como valor da própria empresa.</p>
+    <p><strong>A segunda frente é o motivo deste memorando.</strong> Ela não depende de tecnologia nova: depende de seis autorizações que só a diretoria pode dar. Sem elas, a Wissen Tech existe como área interna e nada mais.</p>
+
+    <div class="tbl">
+      <table>
+        <thead><tr><th>Modelo</th><th>O que é</th><th>Para quem</th><th>Receita</th></tr></thead>
+        <tbody>
+          <tr><td class="k">Modelo 1</td><td>Consultoria conduzida — nós conduzimos, o time do cliente executa</td><td>Clínica com equipe própria</td><td class="n">projeto + mensal</td></tr>
+          <tr><td class="k">Modelo 2</td><td>Produto reaproveitado do grupo, entregue como serviço</td><td>Consultório e clínica pequena</td><td class="n">setup + assinatura</td></tr>
+          <tr><td class="k">Modelo 3</td><td>Automação da camada de suporte — não é um negócio separado, é a condição de escala do Modelo 2</td><td>—</td><td class="n">embutida</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>As seis decisões</h2>
+    <p class="note">Marque uma opção em cada bloco. As duas primeiras são bloqueantes: sem elas, nenhuma venda externa acontece.</p>
+
+    <div class="ballot">
+
+      <div class="dec">
+        <div class="dec-h"><span class="dec-n">D1</span><h3>Uso comercial do que já foi construído</h3></div>
+        <p>Os sistemas, plugins e rotinas em produção foram desenvolvidos dentro do grupo e pertencem a ele. Para que a Wissen Tech os reaproveite em clientes de fora, precisa de autorização escrita — com prazo, escopo e condição de encerramento definidos.</p>
+        <div class="ask"><b>Decisão pedida</b>Autorizar a Wissen Tech a usar comercialmente, junto a terceiros, a tecnologia desenvolvida pelo grupo, nos termos a serem formalizados pelo jurídico.</div>
+        <div class="cost"><b>Se não for aprovada</b><span>Nenhum dos três modelos pode ser vendido fora do grupo. A Wissen Tech fica sendo a área de TI interna, e este memorando perde objeto.</span></div>
+        <div class="mark"><span>Aprovado</span><span>Aprovado com ajuste</span><span>Não aprovado</span></div>
+      </div>
+
+      <div class="dec">
+        <div class="dec-h"><span class="dec-n">D2</span><h3>Atendimento fora do grupo, e a lista de restrição</h3></div>
+        <p>Autorizar o atendimento de franqueados e clínicas externas — e, no mesmo ato, definir por escrito <strong>quais clínicas não podem ser atendidas</strong> por proximidade ou concorrência com as unidades do grupo.</p>
+        <p>A lista importa tanto quanto a autorização. Sem ela, o primeiro cliente que incomodar uma unidade vira discussão societária em vez de decisão comercial.</p>
+        <div class="ask"><b>Decisão pedida</b>Autorizar o atendimento externo e aprovar o critério de restrição por praça, especialidade ou proximidade.</div>
+        <div class="cost"><b>Se não for aprovada</b><span>Mesmo efeito da D1. E aprovar a D1 sem a D2 é pior do que não aprovar nenhuma: cria o direito de vender sem definir onde.</span></div>
+        <div class="mark"><span>Aprovado</span><span>Aprovado com ajuste</span><span>Não aprovado</span></div>
+      </div>
+
+      <div class="dec">
+        <div class="dec-h"><span class="dec-n">D3</span><h3>Preço entre o grupo e a Wissen Tech — e quem assina por cada lado</h3></div>
+        <p>A Wissen Tech vai prestar serviço às três unidades. O preço disso precisa de critério objetivo e escrito, e de <strong>uma pessoa nomeada que assine pelo grupo</strong>.</p>
+        <p><strong>Peço expressamente que essa pessoa não seja eu.</strong> Sou responsável pela tecnologia do grupo e serei sócio da Wissen Tech — estou dos dois lados da mesa, e nenhuma boa-fé resolve isso sozinha. A proteção precisa ser estrutural, não pessoal: uma pessoa com poder real de dizer não, e um critério que não dependa de julgamento de quem se beneficia.</p>
+        <p>Como o preço será revisto a cada renovação e a cada mudança de escopo, <strong>o mecanismo precisa ser permanente</strong>, não uma aprovação avulsa.</p>
+        <div class="ask"><b>Decisão pedida</b>Aprovar o critério de preço intragrupo, nomear quem assina pelo grupo, e definir quem arbitra em caso de divergência.</div>
+        <div class="cost"><b>Se não for aprovada</b><span>Toda cobrança entre as empresas fica sem base defensável. Qualquer sócio futuro, auditoria ou fiscalização pode ler como vantagem pessoal de quem está dos dois lados — e o problema recai sobre o grupo, não apenas sobre mim.</span></div>
+        <div class="mark"><span>Aprovado</span><span>Aprovado com ajuste</span><span>Não aprovado</span></div>
+      </div>
+
+      <div class="dec">
+        <div class="dec-h"><span class="dec-n">D4</span><h3>Capacidade autorizada por fase</h3></div>
+        <p>A capacidade de atendimento externo é um parâmetro de governança, e proponho que seja aprovada como tal — para que ninguém venda o que a empresa não entrega.</p>
+        <div class="tbl">
+          <table>
+            <thead><tr><th></th><th>Fase 0 — hoje</th><th>Fase 1 — após o gatilho</th></tr></thead>
+            <tbody>
+              <tr><td class="k">Equipe</td><td>tecnologia atual</td><td>+ 1 desenvolvedor</td></tr>
+              <tr><td class="k">Modelo 1</td><td class="n">1 cliente piloto</td><td class="n">até 3 simultâneos</td></tr>
+              <tr><td class="k">Modelo 2</td><td class="no">não aberto</td><td class="n">até 8 contas</td></tr>
+              <tr><td class="k">Gatilho da Fase 1</td><td colspan="2">piloto entregue e segundo contrato assinado</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="margin-top:14px">O teto do Modelo 2 sobe conforme a automação de atendimento for <strong>medida</strong>, não conforme for prometida.</p>
+        <div class="ask"><b>Decisão pedida</b>Aprovar os tetos por fase e o gatilho de passagem da Fase 0 para a Fase 1.</div>
+        <div class="cost"><b>Se não for aprovada</b><span>A empresa assume compromissos acima do que entrega. Quem paga a conta é o primeiro cliente externo — e o custo não é o contrato, é a reputação do grupo na praça.</span></div>
+        <div class="mark"><span>Aprovado</span><span>Aprovado com ajuste</span><span>Não aprovado</span></div>
+      </div>
+
+      <div class="dec">
+        <div class="dec-h"><span class="dec-n">D5</span><h3>Orçamento condicional do primeiro desenvolvedor</h3></div>
+        <p>Não peço contratação agora. Peço o valor <strong>aprovado desde já e liberado pelo gatilho da D4</strong> — segundo contrato assinado. A receita paga a folha antes de a folha existir.</p>
+        <p>Aprovar por gatilho e não por data faz duas coisas: o grupo não assume custo antes de receita, e a empresa não fica parada esperando uma decisão que teria de ser tomada de novo no pior momento — com um cliente já assinado e sem quem entregue.</p>
+        <div class="ask"><b>Decisão pedida</b>Aprovar a faixa orçamentária de um desenvolvedor, com liberação automática ao atingir o gatilho, sem nova deliberação.</div>
+        <div class="cost"><b>Se não for aprovada</b><span>A Fase 1 não existe. O Modelo 2 não sai do papel e a empresa fica limitada a consultoria, com teto de um a três clientes — o que não sustenta a tese de expansão.</span></div>
+        <div class="mark"><span>Aprovado</span><span>Aprovado com ajuste</span><span>Não aprovado</span></div>
+      </div>
+
+      <div class="dec">
+        <div class="dec-h"><span class="dec-n">D6</span><h3>Política de dado e de uso de inteligência artificial</h3></div>
+        <p>A Resolução CFM 2.454/2026 está em vigor desde 26 de agosto. Uma das linhas de serviço é justamente ajudar clínicas a se adequarem a ela. <strong>Não é defensável vender conformidade sem ter a própria política escrita</strong>, e o risco disso é do grupo inteiro, não só da Wissen Tech.</p>
+        <ul class="tight">
+          <li>A plataforma <strong>não armazena dado de paciente</strong> — lê, calcula o indicador, guarda o número e descarta o detalhe.</li>
+          <li>Base de produção de qualquer clínica <strong>não entra em ferramenta de inteligência artificial</strong>, em nenhuma hipótese.</li>
+          <li>As ferramentas de IA usadas no desenvolvimento operam sob assinatura comercial, nunca de plano pessoal.</li>
+          <li>Nenhuma automação toca decisão clínica. Isso é cláusula de contrato, não princípio.</li>
+        </ul>
+        <div class="ask"><b>Decisão pedida</b>Aprovar a política acima como norma da Wissen Tech e das unidades, e determinar sua verificação jurídica quanto ao alcance da Resolução CFM 2.454/2026.</div>
+        <div class="cost"><b>Se não for aprovada</b><span>A empresa opera sem política de dado num setor onde o dado é sensível por definição. Incompatível com a linha de conformidade, e expõe as três unidades.</span></div>
+        <div class="mark"><span>Aprovado</span><span>Aprovado com ajuste</span><span>Não aprovado</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>O que este memorando não trata</h2>
+    <div class="panel warn">
+      <h3>Participação societária</h3>
+      <p><strong>Minha participação na Wissen Tech não é objeto deste documento</strong>, e é deliberado. São duas decisões diferentes, com pesos diferentes: uma é sobre como a empresa opera e vende; a outra é sobre quem é sócio de quê.</p>
+      <p>Misturar as duas prejudica as duas — quem avalia a estrutura comercial passa a avaliar a minha remuneração, e quem avalia a minha remuneração passa a decidir sobre o negócio. <strong>A proposta de participação segue em documento próprio.</strong></p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Continuidade e limites operacionais</h2>
+    <p class="note">Dois pontos de governança que peço que a diretoria fixe como norma da empresa.</p>
+
+    <div class="panel">
+      <h3>A operação não pode depender de uma pessoa</h3>
+      <p>Hoje o conhecimento de operar a tecnologia das três unidades está concentrado. Isso é risco de continuidade do negócio, não questão de agenda.</p>
+      <p><strong>Proposta:</strong> documentação de operação e runbook passam a ser entregável obrigatório de cada ciclo, verificável pela diretoria; e nenhum cliente externo do Modelo 2 é aceito além do quarto sem que exista uma segunda pessoa habilitada a operar. <strong>É um limite que eu proponho contra mim mesmo</strong>, porque a alternativa é o grupo descobrir o problema no pior dia possível.</p>
+    </div>
+
+    <div class="panel no">
+      <h3>O que a Wissen Tech não faz — política operacional</h3>
+      <p>Estas recusas protegem a empresa de virar prestadora de sustentação sob demanda, que é como áreas de tecnologia deixam de gerar valor. Peço que sejam aprovadas como norma, para que não dependam de quem estiver na mesa daqui a seis meses.</p>
+      <ul class="tight">
+        <li>Banco de horas para cliente que não nomeie um responsável pela execução.</li>
+        <li>Desenvolvimento sob demanda, sustentação de código de terceiro e plantão.</li>
+        <li>Compromisso de capacidade que dependa de contratação ainda não aprovada.</li>
+        <li>Cobrar do cliente a construção do produto — o núcleo reutilizável é investimento da empresa; o cliente paga a implantação dele.</li>
+        <li>Produto que exija do cliente a compra de licença de terceiro para funcionar.</li>
+        <li>Integração por leitura de tela em sistema que não ofereça acesso a dado.</li>
+        <li>Qualquer automação que toque decisão, protocolo ou conduta clínica.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Sequência, se as decisões forem aprovadas</h2>
+    <div class="tbl">
+      <table>
+        <thead><tr><th>Etapa</th><th>Depende de</th><th>Resultado</th></tr></thead>
+        <tbody>
+          <tr><td class="k">Formalização jurídica das autorizações</td><td class="n">D1 · D2 · D3</td><td>a empresa passa a poder vender</td></tr>
+          <tr><td class="k">Primeiros franqueados</td><td class="n">D2</td><td>cliente pré-qualificado, sem custo de aquisição</td></tr>
+          <tr><td class="k">Um piloto externo, escopo travado</td><td class="n">D4</td><td>o caso com número auditado</td></tr>
+          <tr><td class="k">Contratação do desenvolvedor</td><td class="n">D5 + gatilho</td><td>abre a Fase 1</td></tr>
+          <tr><td class="k">Construção do produto do Modelo 2</td><td class="n">D5 · D6</td><td>cerca de um trimestre após a contratação</td></tr>
+          <tr><td class="k">Abertura do Modelo 2 com teto</td><td class="n">D4 · D6</td><td>receita recorrente</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:16px">Chamo atenção para a penúltima linha: <strong>o Modelo 2 não abre no mês em que a equipe cresce.</strong> O produto leva cerca de um trimestre para existir depois da contratação. Prefiro que isso esteja escrito agora a explicá-lo depois.</p>
+  </section>
+
+  <section>
+    <h2>Deliberação</h2>
+    <p class="note">Registro das seis decisões. O anexo técnico-contratual segue ao jurídico para elaboração das minutas.</p>
+    <div class="sign">
+      <div class="sig">Diretoria — assinatura<em>Nome e data</em></div>
+      <div class="sig">Diretoria — assinatura<em>Nome e data</em></div>
+      <div class="sig">Responsável pelo grupo na relação com a Wissen Tech (D3)<em>Nome e data</em></div>
+      <div class="sig">Proponente<em>Gustavo Polar · Tecnologia</em></div>
+    </div>
+  </section>
+
+  <footer>
+    Wissen Tech · Memorando de decisão 01/2026 · 30/08/2026<br>
+    Documento de deliberação. Não constitui contrato nem proposta comercial a terceiros.<br>
+    Acompanha o Anexo Técnico-Contratual, destinado à elaboração das minutas pelo jurídico.
+  </footer>
+
+</div>
+</body>
+</html>

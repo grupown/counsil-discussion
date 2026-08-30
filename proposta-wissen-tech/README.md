@@ -219,5 +219,19 @@ checklist, e tratamento de dados. E ficou registrada uma incoerência que é urg
 não é de redação: a política de capacidade pede um piloto por vez enquanto o plano do
 CRM prevê venda de licenças em 5 de setembro — as duas não podem estar certas.
 
+**rev. 24** — correção de premissa confirmada pelo autor: **o desenvolvedor existe e é
+da Wissen Tech.** O memorando à diretoria pedia orçamento para contratar quem já está
+na folha, e teria ido assim. A correção piora o plano em vez de melhorá-lo: a restrição
+deixa de ser orçamento, que se resolve com dinheiro, e passa a ser prioridade, que só
+se resolve adiando alguma coisa — e a ata registra que nenhuma das quatro frentes foi
+despriorizada. Reconstruída a alocação real das 168 horas: sobram 38 h/mês para cliente
+externo, pouco mais de uma implantação, o que confere com a conta que a própria equipe
+fez por outro caminho. A D5 passa a pedir a decisão de prioridade entre CRM, Aurora e
+ValorMed, com recomendação anexa, mais a faixa orçamentária de uma segunda pessoa
+técnica. Achado de maior retorno disponível: 22 h/mês perdidas em limpeza manual de
+conversas, 13 % da capacidade do único desenvolvedor. E a automação de publicação sai
+de melhoria e vira pré-condição antes do primeiro cliente externo, porque bus factor de
+uma pessoa deixa de ser risco interno no dia em que há cliente externo pagando.
+
 Base analítica: os 5 documentos de planejamento (plano de cobertura, playbook por
 área, cronograma, painel de exceções, catálogo de 56 indicadores).

@@ -265,6 +265,7 @@
         <li><strong>Sistema sem saída de dado</strong>, para L5 e L6. A L8 não é afetada.</li>
         <li><strong>Desenvolvimento sob demanda, sustentação de código de terceiro ou plantão.</strong></li>
         <li><strong>Venda acima do teto da fila.</strong> Cada linha tem um teto e uma fila com data por cliente. <mark>Vender sem teto é vender atraso</mark>, e o atraso aparece como falha nossa três meses depois.</li>
+        <li><strong>L5 e L6, enquanto não forem construídas.</strong> Não têm data porque dependem de uma decisão de prioridade que ainda não foi tomada.</li>
       </ul>
       <p style="margin-top:12px">A lista completa de recusas é política aprovada pela diretoria e está no Memorando 01/2026. <strong>Antes de fechar, confira a Base Técnico-Contratual</strong> — há pontos pendentes de parecer jurídico que mudam o que pode ser prometido.</p>
     </div>
@@ -307,9 +308,11 @@
       <div class="card2">
         <h3>Capacidade e fila</h3>
         <ul>
-          <li><strong>L3:</strong> a Fase 0 consome 32 a 56 h de CTO — mais de um mês de capacidade externa. <strong>Uma Fase 0 por vez.</strong></li>
-          <li><strong>L3 Fase 1:</strong> o plano Condução consome cerca de 19 h de CTO por mês. Em 40 h externas, <mark>cabem dois clientes, não três.</mark></li>
-          <li><strong>L8:</strong> 36 h de implantação por cliente, duas em paralelo por janela de 45 dias. <strong>Cerca de 1,3 implantações por mês.</strong></li>
+          <li><strong>A equipe é de duas pessoas:</strong> um CTO e um desenvolvedor. <mark>As 168 h do desenvolvedor já estão comprometidas</mark> com o CRM interno, o Aurora, a ValorMed e a operação das três unidades — sobram cerca de 38 h/mês para cliente externo.</li>
+          <li><strong>L3 · diagnóstico:</strong> 32 a 56 h de CTO, mais de um mês de capacidade externa. <strong>Um por vez.</strong></li>
+          <li><strong>L3 · acompanhamento:</strong> o plano Condução consome cerca de 19 h de CTO por mês. Em 40 h externas, <mark>cabem dois clientes, não três.</mark></li>
+          <li><strong>L8:</strong> 36 h por cliente, duas em paralelo por janela de 45 dias — <strong>pouco mais de uma por mês.</strong></li>
+          <li><strong>L5 e L6 ainda não existem como produto.</strong> Só entram na fila quando a prioridade entre os produtos for decidida pela diretoria. <b>Não vender.</b></li>
           <li><strong>Toda proposta traz a data real da fila</strong>, nominal — não "setembro". Três propostas, três datas diferentes.</li>
         </ul>
       </div>
@@ -317,7 +320,7 @@
 
     <div class="box no" style="margin-top:20px">
       <h3>Antes de vender L8, conferir a fila com quem implanta</h3>
-      <p>A capacidade de implantação do CRM não é do CTO — é de quem constrói e sobe o produto, e essa pessoa está dividida entre mais de um produto. <strong>Nenhuma licença é vendida sem que a data de go-live daquele cliente esteja confirmada com quem vai entregá-la.</strong></p>
+      <p>A capacidade de implantação do CRM não é do CTO — é do desenvolvedor, e ele está dividido entre o CRM, o Aurora, a ValorMed e a operação interna, <strong>sem que nenhuma dessas frentes tenha sido despriorizada.</strong> Nenhuma licença é vendida sem que a data de go-live daquele cliente esteja confirmada com quem vai entregá-la.</p>
       <p>A conta é simples e não perdoa: cinco licenças vendidas numa mesma data significam que o quinto cliente entra em produção cerca de <mark>cinco meses depois</mark>. Se isso não for dito na venda, vira reclamação com razão.</p>
     </div>
   </section>
@@ -369,17 +372,19 @@
     </div>
 
     <div class="line on">
-      <div class="line-h"><h3>L5 · Camada de resultado</h3><span class="badge on">Fase 1</span></div>
+      <div class="line-h"><h3>L5 · Camada de resultado</h3><span class="badge later">Não lançada</span></div>
       <p class="who">Clínica de 1 ou mais locais, sem TI interno · pré-requisito: via de acesso ao dado apurada na L2</p>
       <p><strong>Entrega:</strong> alerta de estoque e vencimento, régua de retorno de orçamento, confirmação e recuperação de falta, conferência de conciliação, e relatório mensal do dinheiro. Escopo fechado, sem personalização.</p>
+      <p><b>Esta linha ainda não existe como produto.</b> São cerca de 190 h de construção que competem com o CRM, o Aurora e a ValorMed — e a prioridade entre eles é decisão pendente da diretoria. <strong>Não vender enquanto não houver data.</strong></p>
       <p><strong>Não substitui o sistema de gestão da clínica</strong> — lê o que já existe e faz render. Nós puxamos o dado; o cliente autoriza o acesso uma vez e recebe. <strong>Nenhuma licença de terceiro é necessária.</strong> A primeira versão entrega relatório e alerta; o painel vem quando um cliente pedir.</p>
       <p class="obj"><b>Objeção · "quanto custa a inteligência artificial?"</b> Nada à parte. O que exige modelo roda no nosso ambiente e o custo está na mensalidade.</p>
     </div>
 
     <div class="line on">
-      <div class="line-h"><h3>L6 · Assinatura de consultório</h3><span class="badge on">Fase 1 · teto 8</span></div>
+      <div class="line-h"><h3>L6 · Assinatura de consultório</h3><span class="badge later">Não lançada · teto 8</span></div>
       <p class="who">Consultório de 1 médico e 1 recepcionista · pré-requisito: via de acesso ao dado</p>
       <p><strong>Entrega:</strong> versão mínima da camada de resultado — agenda com confirmação automática, controle simples de insumo, fechamento de caixa e relatório mensal legível por quem não é de tecnologia. Implantação guiada, sem visita.</p>
+      <p><b>Como a L5, ainda não existe como produto</b> e depende da mesma decisão de prioridade.</p>
       <p><strong>Atenção ao que a L6 não tem, e por isso custa R$ 490:</strong> sem WhatsApp oficial, sem robô de atendimento, sem gestão de conta na Meta. <mark>Se o cliente quiser qualquer uma dessas três, a linha é a L8 e o preço muda de patamar</mark> — vender L6 e entregar L8 dá prejuízo desde o primeiro mês.</p>
       <p class="obj"><b>Objeção · "R$ 490 é caro, meu sistema custa R$ 129"</b> São coisas diferentes. O sistema guarda o dado; isto faz o dado render — e o retorno é medido contra a linha de base que a L2 assinou.</p>
     </div>
@@ -571,7 +576,8 @@
       <h3>As três contas que produzem os tetos</h3>
       <p><strong>L3.</strong> O plano Condução consome 32 h por mês, das quais cerca de 19 h são de CTO — reunião, plano, especificação e revisão, que não se delegam. Contra 40 h de capacidade externa, <strong>cabem dois clientes.</strong> Contratar desenvolvedor não muda isso.</p>
       <p><strong>L5 e L6.</strong> Atendimento recorrente de 2 a 4 h por conta e por mês, contra 28 h disponíveis. <strong>Oito contas somadas</strong>, e o teto sobe apenas conforme a automação for medida.</p>
-      <p><strong>L8.</strong> 36 h de implantação por cliente, duas em paralelo por janela de 45 dias. <strong>Cerca de 1,3 por mês</strong>, e a pessoa que implanta está dividida com outros produtos. Este é o teto mais fácil de estourar numa venda, porque a licença se vende em minutos e a implantação leva semanas.</p>
+      <p><strong>L8.</strong> 36 h de implantação por cliente, duas em paralelo por janela de 45 dias. <strong>Cerca de 1,3 por mês.</strong> Este é o teto mais fácil de estourar numa venda, porque a licença se vende em minutos e a implantação leva semanas.</p>
+      <p><strong>E a conta que está por trás de todas as outras:</strong> o desenvolvedor tem 168 h por mês e quatro frentes ativas — CRM, Aurora, ValorMed e a operação interna —, das quais <mark>22 h por mês vão para limpeza manual de conversas, feita à mão.</mark> Sobram cerca de 38 h para cliente externo. Não é falta de orçamento: é falta de escolha entre as quatro frentes, e essa escolha é decisão da diretoria.</p>
     </div>
 
     <div class="box warn">

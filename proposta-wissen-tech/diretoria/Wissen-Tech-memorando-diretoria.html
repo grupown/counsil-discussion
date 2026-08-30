@@ -182,31 +182,54 @@
       </div>
 
       <div class="dec">
-        <div class="dec-h"><span class="dec-n">D4</span><h3>Capacidade autorizada por fase</h3></div>
+        <div class="dec-h"><span class="dec-n">D4</span><h3>Capacidade autorizada e regra de fila</h3></div>
         <p>A capacidade de atendimento externo é um parâmetro de governança, e proponho que seja aprovada como tal — para que ninguém venda o que a empresa não entrega.</p>
         <div class="tbl">
           <table>
-            <thead><tr><th></th><th>Fase 0 — hoje</th><th>Fase 1 — após o gatilho</th></tr></thead>
+            <thead><tr><th>Linha</th><th>Quem entrega</th><th>Consumo</th><th>Teto simultâneo</th></tr></thead>
             <tbody>
-              <tr><td class="k">Equipe</td><td>tecnologia atual</td><td>+ 1 desenvolvedor</td></tr>
-              <tr><td class="k">Modelo 1</td><td class="n">1 cliente piloto</td><td class="n">até 3 simultâneos</td></tr>
-              <tr><td class="k">Modelo 2</td><td class="no">não aberto</td><td class="n">até 8 contas</td></tr>
-              <tr><td class="k">Gatilho da Fase 1</td><td colspan="2">piloto entregue e segundo contrato assinado</td></tr>
+              <tr><td class="k">Consultoria conduzida</td><td>CTO</td><td class="n">32 h/mês, das quais 19 h de CTO</td><td class="n">2 clientes</td></tr>
+              <tr><td class="k">Diagnóstico forense</td><td>CTO</td><td class="n">32 a 56 h, uma vez</td><td class="n">1 por vez</td></tr>
+              <tr><td class="k">Implantação do CRM</td><td>desenvolvedor</td><td class="n">36 h por cliente</td><td class="n">2 por 45 dias</td></tr>
+              <tr><td class="k">Assinatura de indicadores</td><td>desenvolvedor</td><td class="n">2 a 4 h/mês por conta</td><td class="n">8 contas</td></tr>
             </tbody>
           </table>
         </div>
-        <p style="margin-top:14px">O teto do Modelo 2 sobe conforme a automação de atendimento for <strong>medida</strong>, não conforme for prometida.</p>
-        <div class="ask"><b>Decisão pedida</b>Aprovar os tetos por fase e o gatilho de passagem da Fase 0 para a Fase 1.</div>
+        <p style="margin-top:14px"><strong>A regra que decorre disso:</strong> nenhuma licença ou contrato é vendido sem que a data de entrega daquele cliente esteja confirmada na fila. Cinco licenças vendidas numa mesma data significam que o quinto cliente entra em produção quase três meses depois. <strong>Vender sem teto é vender atraso</strong> — e o atraso aparece como falha da empresa, não como excesso de sucesso comercial. O teto da assinatura sobe conforme a automação de atendimento for <strong>medida</strong>, não conforme for prometida.</p>
+        <div class="ask"><b>Decisão pedida</b>Aprovar os tetos acima como política da empresa, e a regra de que toda proposta traga data nominal de entrega conforme a fila.</div>
         <div class="cost"><b>Se não for aprovada</b><span>A empresa assume compromissos acima do que entrega. Quem paga a conta é o primeiro cliente externo — e o custo não é o contrato, é a reputação do grupo na praça.</span></div>
         <div class="mark"><span>Aprovado</span><span>Aprovado com ajuste</span><span>Não aprovado</span></div>
       </div>
 
       <div class="dec">
-        <div class="dec-h"><span class="dec-n">D5</span><h3>Orçamento condicional do primeiro desenvolvedor</h3></div>
-        <p>Não peço contratação agora. Peço o valor <strong>aprovado desde já e liberado pelo gatilho da D4</strong> — segundo contrato assinado. A receita paga a folha antes de a folha existir.</p>
-        <p>Aprovar por gatilho e não por data faz duas coisas: o grupo não assume custo antes de receita, e a empresa não fica parada esperando uma decisão que teria de ser tomada de novo no pior momento — com um cliente já assinado e sem quem entregue.</p>
-        <div class="ask"><b>Decisão pedida</b>Aprovar a faixa orçamentária de um desenvolvedor, com liberação automática ao atingir o gatilho, sem nova deliberação.</div>
-        <div class="cost"><b>Se não for aprovada</b><span>A Fase 1 não existe. O Modelo 2 não sai do papel e a empresa fica limitada a consultoria, com teto de um a três clientes — o que não sustenta a tese de expansão.</span></div>
+        <div class="dec-h"><span class="dec-n">D5</span><h3>Prioridade entre os produtos, e a segunda pessoa técnica</h3></div>
+        <p>A Wissen Tech tem <strong>um desenvolvedor</strong> e quatro frentes ativas: o CRM, o Aurora, a integração da ValorMed e a operação diária das três unidades. <strong>Nenhuma foi despriorizada.</strong> Esta é a restrição real da empresa — e ela não é orçamento, é escolha.</p>
+
+        <div class="tbl" style="margin:14px 0">
+          <table>
+            <thead><tr><th>Onde as 168 horas do desenvolvedor já estão</th><th>h/mês</th></tr></thead>
+            <tbody>
+              <tr><td class="k">Limpeza manual de conversas — mais de uma hora por dia, à mão</td><td class="n">22</td></tr>
+              <tr><td class="k">Operação e manutenção do CRM nas três unidades</td><td class="n">18</td></tr>
+              <tr><td class="k">Publicação e infraestrutura — sem automação, uma única pessoa habilitada</td><td class="n">15</td></tr>
+              <tr><td class="k">Construção do multi-tenant e das telas de gestão</td><td class="n">25</td></tr>
+              <tr><td class="k">Aurora</td><td class="n">30</td></tr>
+              <tr><td class="k">ValorMed</td><td class="n">20</td></tr>
+              <tr><td class="k">Sobra para implantar cliente externo</td><td class="n">38</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p><strong>Trinta e oito horas são pouco mais de uma implantação por mês.</strong> É a mesma conta que a equipe já havia feito por outro caminho — duas implantações em paralelo por janela de 45 dias — e as duas chegam ao mesmo lugar.</p>
+
+        <p><strong>Recomendação, não pergunta:</strong> concentrar o próximo trimestre no CRM, adiar formalmente a ValorMed, e manter o Aurora apenas no que a feira de setembro exigir. Se a diretoria preferir outra ordem, tudo bem. <strong>O que não funciona é manter as quatro frentes com prioridade igual</strong>, porque na prática isso significa que quem escolhe é a urgência do dia.</p>
+
+        <p><strong>E há um item que se paga sozinho:</strong> as 22 horas por mês gastas limpando conversas à mão são <mark>13 % da capacidade do único desenvolvedor da empresa</mark>. Automatizar isso devolve mais de meia implantação por mês, todos os meses, e é a melhor aplicação de tempo técnico disponível hoje.</p>
+
+        <p><strong>Sobre a segunda pessoa:</strong> hoje uma única pessoa constrói, publica e é a única habilitada a publicar, sem automação. Isso era um risco interno tolerável. <strong>No dia em que houver cliente externo pagando, deixa de ser</strong> — e o risco passa a ser do grupo, não apenas da Wissen Tech.</p>
+
+        <div class="ask"><b>Decisão pedida</b>Definir a ordem de prioridade entre CRM, Aurora e ValorMed para o próximo trimestre; e aprovar a faixa orçamentária de uma segunda pessoa técnica, liberada pelo segundo contrato externo assinado, sem nova deliberação.</div>
+        <div class="cost"><b>Se não for aprovada</b><span>As quatro frentes seguem com prioridade igual e quem decide passa a ser a urgência do dia. O primeiro cliente externo entra numa fila que ninguém dimensionou, e a empresa descobre o próprio teto pelo atraso em vez de pelo planejamento.</span></div>
         <div class="mark"><span>Aprovado</span><span>Aprovado com ajuste</span><span>Não aprovado</span></div>
       </div>
 
@@ -242,8 +265,8 @@
 
     <div class="panel">
       <h3>A operação não pode depender de uma pessoa</h3>
-      <p>Hoje o conhecimento de operar a tecnologia das três unidades está concentrado. Isso é risco de continuidade do negócio, não questão de agenda.</p>
-      <p><strong>Proposta:</strong> documentação de operação e runbook passam a ser entregável obrigatório de cada ciclo, verificável pela diretoria; e nenhum cliente externo do Modelo 2 é aceito além do quarto sem que exista uma segunda pessoa habilitada a operar. <strong>É um limite que eu proponho contra mim mesmo</strong>, porque a alternativa é o grupo descobrir o problema no pior dia possível.</p>
+      <p>Hoje há <strong>uma única pessoa</strong> que constrói, publica e é a única habilitada a publicar, sem automação de publicação — e o conhecimento de operar a tecnologia das três unidades também está concentrado. Isso é risco de continuidade do negócio, não questão de agenda.</p>
+      <p><strong>Proposta:</strong> automação de publicação deixa de ser melhoria e passa a ser pré-requisito antes do primeiro cliente externo; documentação de operação e runbook passam a ser entregável obrigatório de cada ciclo, verificável pela diretoria; e <strong>nenhum cliente externo é aceito além do quarto sem uma segunda pessoa habilitada a operar e publicar.</strong> <strong>É um limite que eu proponho contra mim mesmo</strong>, porque a alternativa é o grupo descobrir o problema no pior dia possível.</p>
     </div>
 
     <div class="panel no">
@@ -270,13 +293,14 @@
           <tr><td class="k">Formalização jurídica das autorizações</td><td class="n">D1 · D2 · D3</td><td>a empresa passa a poder vender</td></tr>
           <tr><td class="k">Primeiros franqueados</td><td class="n">D2</td><td>cliente pré-qualificado, sem custo de aquisição</td></tr>
           <tr><td class="k">Um piloto externo, escopo travado</td><td class="n">D4</td><td>o caso com número auditado</td></tr>
-          <tr><td class="k">Contratação do desenvolvedor</td><td class="n">D5 + gatilho</td><td>abre a Fase 1</td></tr>
-          <tr><td class="k">Construção do produto do Modelo 2</td><td class="n">D5 · D6</td><td>cerca de um trimestre após a contratação</td></tr>
-          <tr><td class="k">Abertura do Modelo 2 com teto</td><td class="n">D4 · D6</td><td>receita recorrente</td></tr>
+          <tr><td class="k">Definição de prioridade entre os produtos</td><td class="n">D5</td><td>libera horas para a frente escolhida</td></tr>
+          <tr><td class="k">Automação da limpeza manual de conversas</td><td class="n">D5</td><td>devolve 22 h/mês de capacidade</td></tr>
+          <tr><td class="k">Automação de publicação, antes do 1º cliente externo</td><td class="n">D5</td><td>encerra o ponto único de falha</td></tr>
+          <tr><td class="k">Segunda pessoa técnica</td><td class="n">D5 + 2º contrato</td><td>destrava a fila de implantação</td></tr>
         </tbody>
       </table>
     </div>
-    <p style="margin-top:16px">Chamo atenção para a penúltima linha: <strong>o Modelo 2 não abre no mês em que a equipe cresce.</strong> O produto leva cerca de um trimestre para existir depois da contratação. Prefiro que isso esteja escrito agora a explicá-lo depois.</p>
+    <p style="margin-top:16px">Chamo atenção para a primeira linha. <strong>A restrição da empresa hoje não é orçamento — é escolha.</strong> Há uma pessoa construindo quatro coisas ao mesmo tempo, e a decisão de prioridade da D5 é a que mais muda o resultado dos próximos três meses. Prefiro que isso esteja escrito agora a explicá-lo depois.</p>
   </section>
 
   <section>

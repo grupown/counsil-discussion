@@ -154,7 +154,98 @@ catálogo herdou os preços sem essa validação. **Estão marcados como a confi
 objeção da L8**, e não devem ser usados como argumento de venda antes de conferidos
 contra iClinic, Ninsaúde, Feegow, Kommo, RD Station e Huggy.
 
-## 9. O que o catálogo cobriu bem
+## 11. Resposta confirmada: o Felipe é da Wissen Tech
+
+Isso resolve a dúvida da seção 8, e a resposta **piora o plano em vez de melhorá-lo.**
+
+### O que estava errado
+
+O memorando à diretoria pedia, na decisão D5, **"orçamento condicional do primeiro
+desenvolvedor"**, e a tabela de capacidade dizia *"Fase 0: só o CTO · Fase 1: mais um
+desenvolvedor"*. **Isso é falso, e teria ido para a diretoria assim.** Pedir orçamento
+para contratar quem já está na folha é o tipo de erro que custa a credibilidade do
+documento inteiro, não só do item.
+
+### Por que a boa notícia é a má notícia
+
+O problema não desapareceu — **mudou de natureza, e para pior:**
+
+| | Antes, com o dev inexistente | Agora, com o dev real |
+|---|---|---|
+| Natureza da restrição | orçamento | **prioridade** |
+| Como se resolve | com dinheiro | **matando ou adiando alguma coisa** |
+| Quando aparece | no futuro | **agora** |
+| Quem decide | a diretoria, aprovando um valor | a diretoria, escolhendo entre quatro frentes |
+
+Restrição de orçamento é confortável: pede-se, aprova-se ou não, e a vida segue.
+**Restrição de prioridade obriga alguém a dizer que uma coisa vai esperar** — e a ata
+de 26/08 registra explicitamente que *"nenhum foi despriorizado."*
+
+### A alocação real das 168 horas
+
+Reconstruída a partir do que a própria ata descreve:
+
+| Onde as horas já estão | h/mês |
+|---|---:|
+| Limpeza manual de conversas — "mais de uma hora por dia", à mão | 22 |
+| Operação e manutenção do CRM nas três unidades | 18 |
+| Publicação e infraestrutura — sem automação, único habilitado | 15 |
+| Construção do multi-tenant e das telas de gestão | 25 |
+| Aurora — feira de setembro | 30 |
+| ValorMed — integração pendente, declarada postergada | 20 |
+| **Sobra para implantar cliente externo** | **38** |
+
+**Trinta e oito horas contra 36 h por implantação de CRM: pouco mais de uma por mês.**
+Confere com a conta que a própria equipe fez por outro caminho — duas em paralelo por
+janela de 45 dias. Duas rotas independentes, mesmo resultado.
+
+**E isso confirma a incoerência da seção 1 pela aritmética, não pela política:** se o
+Leonardo vender cinco licenças em 5 de setembro, os dois primeiros clientes começam em
+21/09, o terceiro e o quarto em 05/11, e o quinto em 20/12.
+
+### O item de melhor retorno que existe hoje
+
+**As 22 horas por mês de limpeza manual de conversas são 13 % da capacidade do único
+desenvolvedor da empresa.** Automatizar isso devolve mais de meia implantação de CRM
+por mês, todos os meses, para sempre.
+
+Não há nada no roadmap com esse retorno. E é exatamente a tese do MODELO 3 aplicada
+para dentro antes de ser vendida para fora — o que também a torna um caso demonstrável
+na venda.
+
+### O que a D5 virou
+
+De *"aprove orçamento para o primeiro desenvolvedor"* para:
+
+> **Definir a ordem de prioridade entre CRM, Aurora e ValorMed para o próximo
+> trimestre; e aprovar a faixa orçamentária de uma segunda pessoa técnica, liberada
+> pelo segundo contrato externo assinado.**
+
+Com recomendação anexa, como a própria ata mandou: concentrar o trimestre no CRM,
+adiar formalmente a ValorMed, manter o Aurora só no que a feira exigir. **Levar
+recomendação, não pergunta aberta.**
+
+### E o bus factor deixou de ser tolerável
+
+A ata descreve uma pessoa que constrói, publica, é a única habilitada a publicar, não
+tem automação de publicação, e evita horário comercial para não derrubar a operação.
+
+**Enquanto o cliente era o próprio grupo, isso era um risco interno tolerável.** No dia
+em que houver cliente externo pagando, deixa de ser — e o risco passa a ser do grupo,
+não da Wissen Tech. **Automação de publicação sai de melhoria e vira pré-condição
+antes do primeiro cliente externo.**
+
+### O que foi corrigido
+
+| Documento | Correção |
+|---|---|
+| Memorando à diretoria | D5 reescrita; D4 abandona o gating por fase e fixa teto e fila por linha; sequência e continuidade atualizadas |
+| Catálogo | acaba o gating Fase 0/Fase 1; L5 e L6 passam a "Não lançadas" com o motivo declarado e entram nas recusas; alocação real do desenvolvedor no bloco de capacidade |
+| Memorando 17 | bloco de capacidade marcado com a correção e o cenário real de ~78 h/mês |
+
+---
+
+## 12. O que o catálogo cobriu bem
 
 Para ser justo com ele, três coisas passaram no teste:
 
@@ -165,7 +256,7 @@ Para ser justo com ele, três coisas passaram no teste:
   definição do MODELO 1 e apareceram idênticos na proposta real.
 - **A exigência de linha de base assinada antes** estava nos dois documentos.
 
-## 10. A única coisa a fazer primeiro
+## 13. A única coisa a fazer primeiro
 
 **Resolver a incoerência entre a política de capacidade e a venda de 5 de setembro,
 antes do dia 5.** Não é escolher qual documento reescrever: é decidir quantas

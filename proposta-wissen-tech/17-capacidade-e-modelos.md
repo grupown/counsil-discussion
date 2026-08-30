@@ -43,6 +43,13 @@ e os três primeiros são exatamente os que ninguém mais pode fazer. O conselho
 unânime: **o CTO deixa de ser desenvolvedor.** Isso não é rebaixamento — é o que
 torna as outras 120 h reais.
 
+> **CORREÇÃO — rev. 24.** Este bloco foi escrito sob a premissa de que o
+> desenvolvedor ainda não existia. **Ele existe: o Felipe é da Wissen Tech.** A
+> conta de horas abaixo continua válida como dimensionamento de esforço, mas a
+> alocação real é outra e está em `20-validacao-propostas.md`, seção 11 — as 168 h
+> já estão comprometidas com quatro frentes, e sobram cerca de 38 h/mês para
+> cliente externo. **A restrição da empresa não é orçamento; é prioridade.**
+
 ### As 168 h do desenvolvedor
 
 | Bloco | h/mês |
@@ -57,8 +64,8 @@ torna as outras 120 h reais.
 | Cenário | Capacidade voltada para fora |
 |---|---:|
 | Bruto declarado | 288 h/mês |
-| **Com o desenvolvedor contratado** | **128 h/mês** |
-| **Sem o desenvolvedor** | **~20 h/mês — um cliente piloto, e só** |
+| Teórico, se o desenvolvedor estivesse livre | 128 h/mês |
+| **Real, com as quatro frentes ativas** | **~78 h/mês — 40 h de CTO + 38 h do desenvolvedor** |
 
 Sem o dev, as 80 h de produtização e as 60 h de implantação caem no colo do CTO,
 e as 40 h de entrega externa dele evaporam. **A capacidade externa hoje é

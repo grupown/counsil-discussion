@@ -1,111 +1,82 @@
-# 4 · O texto do pedido  ·  rev. 2
+# 4 · O texto do pedido
 
-Reescrito para a premissa correta: você fica no emprego atual, entra como sócio
-sem contrato de horas, e o caminho para dedicação integral fica precificado no
-contrato como uma opção sua.
+> **rev. 19 — reescrito do zero.** A versão anterior era da rev. 2 e estava
+> desatualizada em quase tudo: citava a empresa do emprego atual pelo nome, trazia
+> retainer de R$ 24.000, participação de 10 %, propriedade intelectual como sua,
+> recusa do título de CTO, SLA de resposta e contratação de duas pessoas no primeiro
+> semestre. **Nenhuma dessas coisas continua valendo.** Se você abrisse aquele
+> arquivo na véspera da reunião, mandaria a proposta errada.
+
+## O princípio
+
+**A mensagem não repete os termos.** A proposta já existe como documento próprio e é
+ela que carrega os números. A mensagem tem uma única função: **conseguir uma hora de
+conversa** e chegar nela com o documento já lido.
+
+Mensagem longa dá margem para ser respondida por escrito, ponto a ponto, sem reunião.
+É o pior resultado possível — negociação de sociedade por e-mail vira leilão de
+concessões.
 
 ---
 
-**Assunto: Wissen Tech — minha posição na constituição**
+## A mensagem
+
+**Assunto: Wissen Tech — minha posição antes da constituição**
 
 Leonardo,
 
-Antes de a Wissen Tech ser constituída, quero deixar a minha posição por escrito.
-É mais barato definir a estrutura agora do que corrigi-la depois.
+Antes de a Wissen Tech ser constituída formalmente, quero deixar a minha posição por
+escrito. É mais barato definir a estrutura agora do que corrigi-la depois de a empresa
+existir.
 
-**Onde estou hoje:** R$ 13.000 por 80 h/mês — R$ 162,50/hora. O que mudou não é o
-valor da hora, é o escopo: arquitetura das 29 skills, CRM e ERP Aurora, suporte à
-clínica, o cruzamento do playbook com os 56 indicadores, o desenho do motor de
-exceção, o inventário de risco de LGPD. Isso não é escopo de especialista
-executor.
+Preparei um documento com a proposta completa — remuneração, participação, o que eu
+assumo como responsabilidade e como a participação evolui por marcos. Está em anexo.
+A primeira página resume tudo; o resto é o detalhe de cada ponto.
 
-**Contexto que precisa estar na mesa:** eu trabalho em tempo integral no Mercado
-Livre e não pretendo sair no curto prazo. Prefiro dizer isso antes de qualquer
-número, porque define o que eu posso e o que eu não posso prometer.
+Três coisas que eu prefiro dizer aqui, direto:
 
-**O que proponho:**
+**A primeira** é que eu tenho outra atividade profissional em tempo integral, e digo
+isso antes de qualquer número porque define o que eu posso e o que eu não posso
+prometer.
 
-1. **Entrada como sócio quotista**, sem contrato de horas, com envelope de
-   disponibilidade definido: até 80 h/mês em janelas combinadas, com SLA de
-   resposta para o que for crítico. Sem mínimo de horas faturáveis, porque a
-   remuneração passa a ser fixa e não por hora.
-2. **Retainer fixo de R$ 24.000/mês**, com reajuste anual. Ele compra
-   disponibilidade, responsabilidade técnica e a manutenção do que já está no ar
-   — não compra horas. Trabalho acima do envelope ou fora do escopo é cobrado a
-   **R$ 350/hora**, que é a minha tabela de especialista, ou orçado como projeto
-   fechado.
-3. **Papel de sócio técnico e arquiteto-chefe.** Respondo por arquitetura,
-   produto e roadmap técnico. Não assumo o título de CTO nem a responsabilidade
-   por entrega, operação e expansão comercial enquanto estiver em regime
-   paralelo — não seria honesto prometer o que a minha agenda não sustenta.
-4. **Participação de 10 %.** A propriedade intelectual dos 6 plugins, 29 skills
-   e 3 jobs em produção permanece minha, e a Wissen Tech recebe **licença de uso
-   não exclusiva** — com prazo, revogável em caso de encerramento da relação — cuja
-   contrapartida é o próprio retainer, declarada no contrato. Vesting de 4 anos,
-   cliff de 6 meses, aceleração em mudança de controle e em saída sem justa causa.
-5. **Escada de participação por marcos objetivos:** 12 % na semana em Jundiaí com
-   zero alerta órfão e zero SLA estourado; 15 % com o produto vendível fora
-   (multi-tenant, inventário LGPD, responsável técnico por unidade); 18 % no
-   primeiro cliente externo pagante com contrato de 12 meses ou mais.
-6. **Uma cláusula de porta, precificada hoje:** se eu deixar o emprego atual e
-   assumir dedicação integral à Wissen Tech, a participação salta para **25 %**,
-   o retainer é substituído por pró-labore de R$ 32.000, e a escada segue até
-   40 % por marcos de receita externa recorrente. Escrever isso agora custa nada
-   e resolve a pergunta mais importante entre nós dois: em que condições eu viro
-   sócio de dedicação total.
-7. **Contratação de 1 desenvolvedor pleno e 1 analista de suporte no primeiro
-   semestre.** A auditoria que eu mesmo fiz aponta que hoje o controle da
-   operação é uma pessoa, não um sistema. Em regime paralelo, sem equipe, eu sou
-   o gargalo — e nenhum dos marcos acima acontece.
-8. **Contrato de serviços entre a Wissen Tech e as empresas do grupo**, com
-   tabela de preços, volume mínimo e o escopo do legado (Aurora, skills, suporte)
-   delimitado. É o que dá receita previsível à nova empresa e torna a
-   participação de qualquer sócio algo real em vez de simbólico.
+**A segunda** é que tudo o que foi construído até aqui pertence à Wissence e passa
+naturalmente para a Wissen Tech. Não há nada a licenciar nem a negociar sobre isso, e
+a proposta não pede participação por causa disso.
 
-**Três coisas que eu preciso entender antes de fechar número:** (a) a Wissen Tech
-vai faturar o grupo por rateio de custos ou por contrato de prestação de serviços
-com margem; (b) a expansão para médicos e consultórios externos tem orçamento,
-meta e data, ou é intenção neste momento; (c) quem mais entra como sócio, e se a
-Wissen Tech fica sob a holding ou como empresa irmã.
+**A terceira** é que há dois pontos que precisam estar resolvidos no contrato antes de
+a empresa atender qualquer cliente de fora do grupo, e nenhum deles é sobre mim: a
+autorização escrita para a Wissen Tech usar comercialmente o que foi desenvolvido, e
+a definição de quais clínicas ela pode e não pode atender. São os dois que travam a
+expansão, e é melhor resolvê-los na constituição do que depois do primeiro cliente.
 
-Proponho uma hora de conversa para fechar os pontos 2, 4 e 6 e passar a redação
-para o advogado.
+Consegue uma hora esta semana ou na próxima? O que sair da conversa a gente leva para
+o advogado formalizar.
 
+Obrigado,
 Gustavo
 
 ---
 
-## Como conduzir a conversa
+## Ordem de prioridade na conversa
 
-### Ordem real de prioridade — negocie nesta ordem, não revele
+Se for preciso ceder, ceda nesta ordem — de baixo para cima.
 
-| # | Item | Postura |
+| Prioridade | Item | Por quê |
 |---|---|---|
-| 1 | Contrato de serviços com o grupo, com preço e volume mínimo | **não cede** |
-| 2 | Quórum qualificado e matérias reservadas no contrato social | **não cede** |
-| 3 | Retainer fixo — R$ 20.000 é o piso abaixo do qual você recusa | **não cede** |
-| 4 | Cláusula de porta com o salto para 25 % precificado | **não cede** |
-| 5 | Envelope de disponibilidade e preço do excedente | margem estreita |
-| 6 | Contratação do dev + suporte | margem estreita |
-| 7 | Propriedade da PI mantida com você + licença de uso | **não cede** |
-| 8 | Participação base — 10 % pedido, 8 % aceitável | cede 2 pp |
-| 9 | Tamanho dos degraus da escada | cede |
+| **1 — não ceder** | Autorização escrita de uso comercial da PI e de atendimento fora do grupo | Sem isso, a participação não vale nada e a expansão não existe. É o item que transforma o resto em conversa real. |
+| **2 — não ceder** | Escada acima da base amarrada a receita externa, com marco escrito | É o que faz a participação crescer por resultado e não por negociação futura. |
+| **3 — quase não ceder** | Pró-labore em faixa que não fique abaixo do que você recebe hoje somado ao que abandona | Abaixo disso você assume mais responsabilidade recebendo menos. |
+| **4 — negociável** | O percentual de entrada | 12 % é o pedido; 10 % com a escada intacta é melhor do que 15 % sem ela. |
+| **5 — negociável** | Título de CTO | Importa menos que o escopo escrito. Escopo sem título vale mais que título sem escopo. |
+| **6 — ceder cedo** | Calendário de contratação | Já está proposto como gatilho por receita. Ceder aqui não custa nada e compra crédito nos itens de cima. |
 
-### O que você tem e não está usando
+## Quando não fechar
 
-**Você não precisa deste acordo.** Você tem um emprego integral. O
-retainer da Wissence é renda adicional, não sobrevivência. Isso é a sua maior
-alavanca e você deve saber disso ao entrar na sala — não para ameaçar, mas para
-não aceitar um acordo ruim por medo de perder um acordo que você não precisa.
+Se o Leonardo não assinar a autorização de uso comercial e de atendimento externo,
+**a participação é papel.** Nesse cenário a recomendação muda: peça pró-labore mais
+alto e participação menor — ou nenhuma. Sociedade sem direito de vender para fora é
+um centro de custo com nome de empresa, e você estaria trocando dinheiro presente por
+uma promessa que o contrato não sustenta.
 
-O corolário: **você pode dizer "então vamos deixar como está".** Continuar em
-R$ 13.000 por 80 h enquanto eles pensam é uma posição confortável. Quem pode
-esperar, negocia melhor.
-
-### Os três sinais de alerta
-
-| Sinal | O que significa |
-|---|---|
-| **Aceitam 40 % rápido e sem discussão** | Ninguém entrega 40 % de graça. O preço está escondido em diluição, na fórmula de saída ou no *bad leaver*. |
-| **Recusam a cláusula de porta** | Se eles não querem escrever o preço da sua dedicação integral, é porque não pretendem que você chegue lá — ou pretendem renegociar quando você já tiver deixado a outra atividade e perdido a alavanca. **Este é o sinal mais grave dos três.** |
-| **Oferecem "% do lucro" em vez de quotas** | Numa empresa cativa, quem define o preço de transferência define o lucro. Se insistirem, exija que a base seja receita bruta. |
+Não é ameaça e não se diz na reunião. É a sua linha, e serve para você saber onde ela
+está antes de entrar na sala.

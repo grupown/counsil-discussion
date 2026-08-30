@@ -154,5 +154,15 @@ Adotadas duas decisões de arquitetura tomadas antes do primeiro cliente: a
 plataforma não armazena dado de paciente, só agregado; e os três primeiros clientes
 recebem instância isolada, com multi-tenant depois deles.
 
+**rev. 19** — auditoria de coerência do material interno. Os documentos 01 a 16 são
+**registro histórico do raciocínio**, não especificação: carregam números que foram
+superados ao longo das revisões (retainer, 10 %, PI como sua, meio período,
+contratação no primeiro semestre). O log acima é o que diz o que vale. A única
+exceção perigosa era o `04-pedido.md`, que é o texto que seria efetivamente enviado
+e estava na rev. 2 — reescrito do zero: mensagem curta cuja função é conseguir uma
+hora de conversa, com a ordem de prioridade do que ceder e a condição de não fechar.
+**As peças que valem hoje são a apresentação em `apresentacao/`, o catálogo em
+`catalogo/`, e os memorandos 17 em diante.**
+
 Base analítica: os 5 documentos de planejamento (plano de cobertura, playbook por
 área, cronograma, painel de exceções, catálogo de 56 indicadores).

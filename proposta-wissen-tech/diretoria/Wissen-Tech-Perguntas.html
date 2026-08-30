@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Perguntas Antes de Rubricar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  /* Instrumento de trabalho: levado para a sala, impresso e anotado à mão.
+     Identidade da casa Wissen Tech. Tema claro único e deliberado. */
+  :root{
+    --ink:#0F2E2B; --paper:#F7F8F6; --teal:#1F6F68; --teal-soft:#E3EDEA;
+    --amber:#B4661A; --amber-soft:#F6EADA; --slate:#5B6A68; --line:#D6DEDB;
+    --white:#fff; --rose:#8C3B2F; --rose-soft:#F6E4E0; --rule:#B9C4C0;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:"IBM Plex Sans",system-ui,sans-serif;font-size:15.5px;line-height:1.55}
+  .wrap{max-width:800px;margin:0 auto;padding:52px 28px 90px}
+  :focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+
+  .head{border-bottom:3px double var(--ink);padding-bottom:18px;margin-bottom:22px}
+  .org{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.19em;
+    text-transform:uppercase;color:var(--teal);margin:0 0 13px}
+  h1{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:clamp(27px,4.8vw,38px);
+    line-height:1.08;letter-spacing:-.015em;margin:0 0 9px;text-wrap:balance}
+  .dek{font-size:16px;color:var(--slate);margin:0;max-width:64ch}
+
+  .howto{background:var(--white);border:1px solid var(--line);border-left:3px solid var(--amber);
+    border-radius:0 3px 3px 0;padding:17px 20px;margin-bottom:34px}
+  .howto p{font-size:14.5px;color:var(--slate);margin:0 0 8px}
+  .howto p:last-child{margin:0}
+  .howto strong{color:var(--ink)}
+
+  h2{font-family:"Fraunces",serif;font-weight:600;font-size:21px;letter-spacing:-.01em;
+    margin:0 0 5px;padding-bottom:9px;border-bottom:2px solid var(--ink);text-wrap:balance}
+  h2 .who{display:block;font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--teal);
+    font-weight:500;margin-bottom:6px}
+  section{margin:0 0 42px}
+  .note{font-size:13.5px;color:var(--slate);margin:11px 0 22px;max-width:70ch}
+
+  .q{display:grid;grid-template-columns:34px 1fr;gap:0 12px;
+    padding:15px 0 13px;border-bottom:1px solid var(--line);align-items:start}
+  .q:last-child{border-bottom:0}
+  .qn{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--teal);
+    padding-top:2px;font-variant-numeric:tabular-nums}
+  .qt{font-size:15.5px;font-weight:500;margin:0 0 5px;color:var(--ink)}
+  .qw{font-size:13.5px;color:var(--slate);margin:0}
+  .qw strong{color:var(--ink);font-weight:600}
+  .ans{margin-top:11px;border-bottom:1px solid var(--rule);height:19px}
+  .ans + .ans{margin-top:9px}
+
+  .tag{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:9px;
+    letter-spacing:.13em;text-transform:uppercase;padding:2px 7px;border-radius:2px;
+    margin-left:7px;vertical-align:2px;white-space:nowrap;font-weight:500}
+  .tag.must{background:var(--rose);color:#fff}
+  .tag.val{background:var(--amber-soft);color:var(--amber);border:1px solid var(--amber)}
+
+  .close{background:var(--ink);color:#EAF1EE;border-radius:3px;padding:26px 28px;margin-top:8px}
+  .close h3{font-family:"Fraunces",serif;font-size:20px;font-weight:600;margin:0 0 10px;color:#fff}
+  .close p{font-size:15.5px;color:#CFE0DC;margin:0 0 11px}
+  .close p:last-child{margin:0}
+  .close strong{color:#F2C48A;font-weight:500}
+
+  footer{border-top:1px solid var(--line);padding-top:17px;margin-top:44px;
+    font-family:"IBM Plex Mono",monospace;font-size:11px;line-height:1.75;
+    color:var(--slate);letter-spacing:.03em}
+
+  @media (max-width:560px){
+    .wrap{padding:34px 20px 60px}
+    .q{grid-template-columns:1fr;gap:3px}
+    .qn{padding-top:0}
+  }
+  @media print{
+    body{background:#fff;font-size:11.5pt}
+    .wrap{max-width:none;padding:0}
+    .close{background:#fff;color:var(--ink);border:1.5px solid var(--ink)}
+    .close h3,.close p{color:var(--ink)}
+    .close strong{color:var(--amber)}
+    section,.q,.howto{break-inside:avoid}
+    h2{break-after:avoid}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <div class="head">
+    <p class="org">Wissen Tech · Term Sheet v3 · folha de trabalho</p>
+    <h1>As perguntas antes de rubricar</h1>
+    <p class="dek">Vinte e duas perguntas, separadas por quem responde cada uma. As marcadas em vermelho não podem ficar sem resposta escrita.</p>
+  </div>
+
+  <div class="howto">
+    <p><strong>Como usar:</strong> imprima e escreva a resposta na linha. Resposta que não couber na linha é resposta que precisa virar cláusula.</p>
+    <p><strong>Ordem:</strong> as perguntas do bloco C — as que são para você mesmo — vêm por último no papel, mas <strong>respondem-se antes de entrar na sala.</strong> Se você não souber as suas, não adianta saber as dele.</p>
+  </div>
+
+  <section>
+    <h2><span class="who">Bloco A · para o Leonardo</span>Participação — o que eu tenho e quando</h2>
+    <p class="note">Este é o bloco que mais vale dinheiro. Uma resposta vaga aqui custa mais que qualquer discussão de pró-labore.</p>
+
+    <div class="q"><span class="qn">01</span><div>
+      <p class="qt">Na assinatura eu entro no contrato social, ou sou titular de uma opção de compra?<span class="tag must">Escrita</span></p>
+      <p class="qw">E se for opção: em que momento exato eu viro quotista de fato — no aceite das entregas, ou só depois?</p>
+      <div class="ans"></div><div class="ans"></div>
+    </div></div>
+
+    <div class="q"><span class="qn">02</span><div>
+      <p class="qt">Se a empresa for vendida antes de eu ter adquirido tudo, o que acontece com o que ainda não venceu?<span class="tag must">Escrita</span></p>
+      <p class="qw">Vale <strong>4 % da empresa</strong> no cenário do mês 12. Se a resposta for "nada", peça aceleração integral em mudança de controle.</p>
+      <div class="ans"></div><div class="ans"></div>
+    </div></div>
+
+    <div class="q"><span class="qn">03</span><div>
+      <p class="qt">Se eu for desligado sem justa causa no mês 11, eu saio com quanto?<span class="tag must">Escrita</span></p>
+      <p class="qw">Hoje o documento responde <strong>zero</strong>, com a propriedade intelectual já cedida. É a cláusula mais importante que falta.</p>
+      <div class="ans"></div><div class="ans"></div>
+    </div></div>
+
+    <div class="q"><span class="qn">04</span><div>
+      <p class="qt">O Bloco Externo vesta quando o marco ocorrer, ou fica preso até o fim da carência?<span class="tag val">Vale 3 %</span></p>
+      <p class="qw">Concreto: se o primeiro cliente do evento de setembro pagar três meses seguidos, fecha em <strong>dezembro</strong>. Eu tenho os 3 % em dezembro, ou só em setembro do ano seguinte?</p>
+      <div class="ans"></div><div class="ans"></div>
+    </div></div>
+
+    <div class="q"><span class="qn">05</span><div>
+      <p class="qt">"Aceitas no critério único do grupo" — quem assina o aceite, em que prazo?<span class="tag must">Escrita</span></p>
+      <p class="qw">E se o prazo passar sem manifestação, vale aceite tácito? Os testes já estão descritos no material — proponha elevá-los de exemplo a <strong>definição contratual</strong>.</p>
+      <div class="ans"></div><div class="ans"></div>
+    </div></div>
+
+    <div class="q"><span class="qn">06</span><div>
+      <p class="qt">Se uma entrega for recusada, tenho direito ao motivo por escrito e a um prazo para refazer?</p>
+      <div class="ans"></div>
+    </div></div>
+  </section>
+
+  <section>
+    <h2><span class="who">Bloco A · para o Leonardo</span>Dinheiro e a régua da receita</h2>
+
+    <div class="q"><span class="qn">07</span><div>
+      <p class="qt">R$ 20 mil por 130 horas dá R$ 154 por hora. Eu recebo R$ 162,50 hoje, por 80 horas. Como você enxerga isso?</p>
+      <p class="qw">Deixe a pergunta no ar. Não ofereça a solução antes de ouvir a reação.</p>
+      <div class="ans"></div><div class="ans"></div>
+    </div></div>
+
+    <div class="q"><span class="qn">08</span><div>
+      <p class="qt">Se a partida for R$ 25 mil, isso reprecifica a participação, ou as duas réguas são independentes?<span class="tag val">Vale 4,8 %</span></p>
+      <p class="qw">Precisa sair explícito: <strong>a escada de caixa corrige um valor-hora, não compra participação.</strong></p>
+      <div class="ans"></div><div class="ans"></div>
+    </div></div>
+
+    <div class="q"><span class="qn">09</span><div>
+      <p class="qt">A fotografia da base de 30/09: qual é o número hoje, e ele conta para o degrau ou é só linha de partida?</p>
+      <div class="ans"></div>
+    </div></div>
+
+    <div class="q"><span class="qn">10</span><div>
+      <p class="qt">O que exatamente entra em "receita recorrente de clientes de fora do grupo"?</p>
+      <p class="qw">Franqueado conta? Assinatura do Aurora vendida pelo próprio grupo conta? Implantação conta, ou só a mensalidade? <strong>Toda a escada depende desta definição</strong>, e ela não pode ficar para depois.</p>
+      <div class="ans"></div><div class="ans"></div>
+    </div></div>
+  </section>
+
+  <section>
+    <h2><span class="who">Bloco A · para o Leonardo</span>Entrega, capacidade e as métricas</h2>
+    <p class="note">Três das métricas que destravam a sua participação estão fora do seu controle ou contradizem o que a própria equipe mediu.</p>
+
+    <div class="q"><span class="qn">11</span><div>
+      <p class="qt">Implantação em 15 dias: o Felipe mediu 15 a 45 dias, duas em paralelo. Como conciliamos a métrica com a capacidade?<span class="tag must">Escrita</span></p>
+      <div class="ans"></div><div class="ans"></div>
+    </div></div>
+
+    <div class="q"><span class="qn">12</span><div>
+      <p class="qt">Uso ativo em 70 % dos clientes: as vendas são do canal do grupo. Como eu respondo por adoção de cliente que eu não escolhi nem vendi?<span class="tag must">Escrita</span></p>
+      <div class="ans"></div><div class="ans"></div>
+    </div></div>
+
+    <div class="q"><span class="qn">13</span><div>
+      <p class="qt">Resposta em 48 horas com uma pessoa que faz todas as publicações e sem automação — qual é o plano até existir a segunda pessoa?</p>
+      <div class="ans"></div>
+    </div></div>
+
+    <div class="q"><span class="qn">14</span><div>
+      <p class="qt">Quantas licenças você pretende vender em 5 de setembro?<span class="tag val">Urgente</span></p>
+      <p class="qw">E você sabe que a fila entrega <strong>duas a cada 45 dias</strong>? Cinco licenças vendidas no dia 5 põem o quinto cliente em produção em dezembro. Leve a recomendação: <strong>teto de duas, no máximo três, nesta primeira safra.</strong></p>
+      <div class="ans"></div><div class="ans"></div>
+    </div></div>
+
+    <div class="q"><span class="qn">15</span><div>
+      <p class="qt">Entre CRM, Aurora e ValorMed, qual é a prioridade do trimestre?<span class="tag val">Urgente</span></p>
+      <p class="qw">Uma pessoa, quatro frentes, nenhuma despriorizada. <strong>Leve recomendação, não pergunta aberta:</strong> concentrar no CRM, adiar formalmente a ValorMed, manter o Aurora só no que a feira exigir.</p>
+      <div class="ans"></div><div class="ans"></div>
+    </div></div>
+
+    <div class="q"><span class="qn">16</span><div>
+      <p class="qt">O Felipe passa a reportar a mim em 1º de setembro, com R$ 10 mil no orçamento. Ele sabe e concordou?</p>
+      <p class="qw">E quem é a Bianca, que aparece no orçamento com R$ 4 mil e não estava em nenhum material anterior?</p>
+      <div class="ans"></div><div class="ans"></div>
+    </div></div>
+  </section>
+
+  <section>
+    <h2><span class="who">Bloco A · para o Leonardo</span>Governança e o conflito de interesse</h2>
+
+    <div class="q"><span class="qn">17</span><div>
+      <p class="qt">Quem assina pela Wissence no contrato entre as duas empresas?<span class="tag must">Escrita</span></p>
+      <p class="qw">Peça você mesmo que <strong>não seja você</strong>. É a melhor prova de boa-fé que existe, e protege os dois.</p>
+      <div class="ans"></div><div class="ans"></div>
+    </div></div>
+
+    <div class="q"><span class="qn">18</span><div>
+      <p class="qt">Os R$ 12 mil por mês de intragrupo: com margem, já validado com o contador? A partir de quando é pago?</p>
+      <p class="qw">É o número que sustenta o resultado próprio — e, por consequência, a avaliação que precifica a sua participação.</p>
+      <div class="ans"></div><div class="ans"></div>
+    </div></div>
+
+    <div class="q"><span class="qn">19</span><div>
+      <p class="qt">Se eu discordar de uma decisão técnica e o controlador decidir contra, como isso fica registrado?</p>
+      <div class="ans"></div>
+    </div></div>
+  </section>
+
+  <section>
+    <h2><span class="who">Bloco B · para o advogado, antes de rubricar</span>As três que decidem se você assina</h2>
+    <p class="note">Uma hora de consulta. Leve o term sheet, os slides e <strong>o seu contrato de trabalho atual.</strong></p>
+
+    <div class="q"><span class="qn">20</span><div>
+      <p class="qt">A cessão de propriedade intelectual é irrevogável e vale desde a rubrica, e o resto do documento não vincula. A que isso me expõe se os definitivos não forem assinados?<span class="tag must">Escrita</span></p>
+      <p class="qw">Pergunte também: <strong>"inclusive o que foi produzido na consultoria anterior" captura o quê exatamente?</strong> Como delimitar para não pegar o que fiz fora do escopo do grupo, sem usar recursos deles?</p>
+      <div class="ans"></div><div class="ans"></div><div class="ans"></div>
+    </div></div>
+
+    <div class="q"><span class="qn">21</span><div>
+      <p class="qt">A cláusula de exclusividade do meu contrato de trabalho atual permite isto?<span class="tag must">Escrita</span></p>
+      <p class="qw">A cláusula de interinidade já me bota trabalhando 30 horas por semana em 1º de setembro. <strong>Esta pergunta se responde antes da rubrica, não depois.</strong></p>
+      <div class="ans"></div><div class="ans"></div>
+    </div></div>
+
+    <div class="q"><span class="qn">22</span><div>
+      <p class="qt">Não concorrência de 24 meses, "saída de mal pelo valor nominal", e a minha exposição pessoal como administrador.</p>
+      <p class="qw">A não concorrência vale se eu sair por não ter recebido? "Justa causa" está definida em lista fechada, ou é cláusula aberta? E como administrador, qual é a minha exposição por dívida tributária e trabalhista da empresa?</p>
+      <div class="ans"></div><div class="ans"></div><div class="ans"></div>
+    </div></div>
+  </section>
+
+  <section>
+    <h2><span class="who">Bloco C · para você mesmo</span>Antes de entrar na sala</h2>
+    <p class="note">Estas não têm linha para escrever porque a resposta não é para mostrar a ninguém. Mas se você não souber as suas, não adianta saber as dele.</p>
+
+    <div class="close">
+      <h3>Três perguntas, e a última decide tudo</h3>
+      <p><strong>Você consegue 130 horas por mês, todo mês, por doze meses</strong> — somadas ao emprego integral e ao restaurante? Se a resposta honesta for não, então negociar <em>horas</em> importa mais do que negociar dinheiro, e a boa notícia é que reduzir horas custa zero para o outro lado.</p>
+      <p><strong>Você aceita doze meses a R$ 154 por hora com a possibilidade real de sair com 0 %?</strong> Não é o cenário provável. É o cenário que o documento, como está hoje, permite.</p>
+      <p><strong>E se ele disser não às três travas — aceleração por desligamento, aceleração em mudança de controle e aceite objetivo — você assina mesmo assim?</strong> Decida isto antes. Quem descobre a própria linha dentro da sala sempre a descobre depois de já tê-la cruzado.</p>
+    </div>
+  </section>
+
+  <footer>
+    Wissen Tech · Perguntas antes de rubricar · 30/08/2026<br>
+    Folha de trabalho pessoal. Não é parecer jurídico — é preparação para a conversa e para a consulta.<br>
+    As três marcadas como "escrita" precisam de resposta em texto, não verbal.
+  </footer>
+
+</div>
+</body>
+</html>

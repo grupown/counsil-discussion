@@ -257,5 +257,16 @@ causa. A conta de retorno em 48 meses: empata no cenário conservador, 2,5 a 3 v
 base. E as projeções do term sheet põem o marco integral no mês 9-10 quando a capacidade
 de implantação medida coloca no mês 14.
 
+**rev. 28** — folha de trabalho com as 22 perguntas para levar à mesa, em
+`diretoria/Wissen-Tech-Perguntas.html`, com linha para anotar a resposta na própria
+folha. Organizada por quem responde: as comerciais e societárias para o controlador,
+três para o advogado antes da rubrica, e três para o próprio autor antes de entrar na
+sala. Sete estão marcadas como exigindo resposta escrita, não verbal — entre elas o
+que acontece com o não adquirido em mudança de controle, o que ele recebe se for
+desligado sem justa causa antes do mês 12, e se a partida em R$ 25 mil reprecifica
+participação. Duas perguntas de urgência tratam do evento de 5 de setembro: quantas
+licenças serão vendidas contra uma fila que entrega duas a cada 45 dias, e qual a
+prioridade entre CRM, Aurora e ValorMed.
+
 Base analítica: os 5 documentos de planejamento (plano de cobertura, playbook por
 área, cronograma, painel de exceções, catálogo de 56 indicadores).

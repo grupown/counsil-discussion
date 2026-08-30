@@ -21,6 +21,7 @@ Wissen Tech (braço de TI/IA do grupo Wissence).
 - `16-catalogo-servicos.md` — veredito do conselho sobre o catálogo de serviços
 - `17-capacidade-e-modelos.md` — a capacidade real das duas pessoas, a física dos três modelos, e o que o MODELO 2 deve realmente vender
 - `18-veredito-diretoria.md` — veredito do conselho sobre a proposta à diretoria: o que sai, o que é reenquadrado, e o que não vai para o papel
+- `19-refino-catalogo.md` — veredito do conselho sobre o próprio catálogo: o que ele deixou de ser e no que virou
 - `diretoria/` — **o memorando de decisão que vai à diretoria** e o anexo técnico-contratual que vai ao jurídico
 - `catalogo/` — **o catálogo de serviços** e a proposta de exemplo que o originou
 - `apresentacao/` — **a peça que vai para o Leonardo** (documento externo, tom e conteúdo diferentes do memorando interno)
@@ -190,6 +191,20 @@ contra o risco de causa própria virou a decisão D3: o proponente pede, ele mes
 a decisão de preço saia das suas mãos. Correção de conteúdo: os três modelos não são
 três contratos — o MODELO 3 é anexo do contrato do MODELO 2, e o terceiro instrumento
 que falta é o contrato entre a Wissen Tech e as empresas do grupo.
+
+**rev. 22** — o catálogo passou por um terceiro conselho, agora sobre ele mesmo, com
+a medição real na mesa: a seção do MODELO 2 tinha 9.375 caracteres e a de
+qualificação, a única usável numa reunião, tinha 551. Veredito unânime: o documento
+perdeu o trabalho próprio quando o memorando e a base contratual passaram a existir,
+e argumentava uma tese que ninguém discute mais em vez de instruir quem vende.
+Refeito: cai de 28.000 para 16.700 caracteres, a qualificação vira a primeira seção
+e cresce seis vezes, e entram três instrumentos que o documento prometia e não tinha
+— tabela consolidada de preço, roteiro de reunião e modelo de proposta. Regra de
+duplicação adotada: quem decide fica com o texto, o catálogo fica com a regra em uma
+linha e a remissão; cada linha de serviço ganhou a objeção esperada com resposta. E o
+achado que nenhum conselheiro viu e os cinco revisores marcaram: ninguém era dono da
+sincronia entre os três documentos — entrou regra de manutenção com dono e gatilho de
+15 dias.
 
 Base analítica: os 5 documentos de planejamento (plano de cobertura, playbook por
 área, cronograma, painel de exceções, catálogo de 56 indicadores).

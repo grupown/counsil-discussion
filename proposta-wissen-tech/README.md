@@ -23,6 +23,7 @@ Wissen Tech (braço de TI/IA do grupo Wissence).
 - `18-veredito-diretoria.md` — veredito do conselho sobre a proposta à diretoria: o que sai, o que é reenquadrado, e o que não vai para o papel
 - `19-refino-catalogo.md` — veredito do conselho sobre o próprio catálogo: o que ele deixou de ser e no que virou
 - `20-validacao-propostas.md` — o catálogo conferido contra duas propostas reais: o que bateu, o que estava inventado, e o que faltava
+- `21-analise-term-sheet.md` — o Term Sheet v3 analisado contra a nossa proposta: o que ele faz melhor, os três defeitos, e a conta de quanto a participação vale
 - `diretoria/` — **o memorando de decisão que vai à diretoria** e o anexo técnico-contratual que vai ao jurídico
 - `catalogo/` — **o catálogo de serviços** e a proposta de exemplo que o originou
 - `apresentacao/` — **a peça que vai para o Leonardo** (documento externo, tom e conteúdo diferentes do memorando interno)
@@ -241,6 +242,20 @@ das onze linhas, coluna própria no mapa, e um bloco compacto no topo da seção
 linhas que diz, para cada modelo, quem executa, o que limita o teto e quais linhas
 pertencem a ele. A física do negócio no fim do documento passa a nomear qual modelo
 corresponde a cada categoria de hora.
+
+**rev. 26** — chegou o Term Sheet v3 do outro lado, com apresentação de 20 slides e
+manual. Analisado contra a nossa proposta. A estrutura é séria e em seis pontos supera
+o que construímos — DRE apartada com margem, orçamento aprovado sem aporte de capital
+dele, governança com ritmo trimestral auditado, as duas rotas escritas hoje, proteção
+recíproca se a fila de vendas falhar, e meta comercial fora do escopo dele no ano 1. Mas
+o valor-hora cai 5 % abaixo do que ele recebe hoje: R$ 20 mil por 130 h dá R$ 154/h
+contra os R$ 162,50 atuais. Três defeitos foram registrados: a cessão de PI é
+irrevogável e vale desde a rubrica enquanto os números não vinculam; três métricas que
+destravam participação estão fora do controle dele ou contradizem a capacidade medida
+pela própria equipe; e o cliff de 12 meses não tem aceleração por desligamento sem justa
+causa. A conta de retorno em 48 meses: empata no cenário conservador, 2,5 a 3 vezes no
+base. E as projeções do term sheet põem o marco integral no mês 9-10 quando a capacidade
+de implantação medida coloca no mês 14.
 
 Base analítica: os 5 documentos de planejamento (plano de cobertura, playbook por
 área, cronograma, painel de exceções, catálogo de 56 indicadores).

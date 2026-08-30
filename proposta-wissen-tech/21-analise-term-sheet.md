@@ -180,3 +180,125 @@ otimista.**
 Nenhuma delas mexe em número. Todas as quatro são de simetria — e é exatamente por
 isso que são fáceis de conceder se a intenção do outro lado for genuína. **A resposta
 a esse pedido diz mais sobre o acordo do que qualquer cláusula.**
+
+
+---
+
+## 10. Como chegar aos R$ 25 mil de pró-labore
+
+> Acrescentado depois. **Atenção ao custo:** na seção 9 eu recomendei usar o
+> pró-labore como moeda de troca pelas três proteções do nível 1. Ir atrás dos
+> R$ 5 mil gasta capital que talvez seja necessário na aceleração da carência.
+> As rotas abaixo estão ranqueadas por **custo para o outro lado**, que é o que
+> determina a chance de sim.
+
+### O argumento, em uma frase
+
+> *"R$ 20 mil por 130 horas me paga R$ 154 por hora. Eu recebo R$ 162,50 hoje, por
+> 80 horas. Estou aumentando 62 % as minhas horas para receber menos por hora do que
+> já recebo. R$ 25 mil me põe em R$ 192 — ainda 45 % abaixo do que a própria
+> WissenTech vai cobrar do cliente."*
+
+É factual, sai dos números do documento deles, e não pede favor.
+
+### Rota A — deslocar a escada inteira · **a mais barata para eles**
+
+A escada do slide 6 já tem R$ 25 mil. O pedido não é "aumento", é **"o primeiro
+degrau está no lugar errado"**:
+
+| | Term sheet | Proposta |
+|---|---|---|
+| Partida | R$ 20.000 | **R$ 25.000** |
+| Receita externa R$ 15 mil/mês | R$ 25.000 | **R$ 30.000** |
+| Receita externa R$ 35 mil/mês | R$ 30.000 | **R$ 35.000** |
+| Dedicação integral | R$ 50.000 | R$ 50.000 |
+
+**Por que é barata:** os R$ 5 mil extras só valem até o degrau 1 ser atingido. Se o
+degrau 1 chegar no mês 6 — cenário base deles —, o custo total é de **R$ 30 mil, uma
+vez.** Não é R$ 60 mil por ano; é R$ 30 mil no total.
+
+Preserva a lógica inteira do documento, não toca em participação, e o teto de
+R$ 50 mil na dedicação integral fica igual.
+
+### Rota B — mesmo dinheiro, menos horas · **custo zero para eles**
+
+Se a resposta for não ao dinheiro, o valor-hora se resolve pelo outro lado:
+
+| Horas/mês | Por semana | Valor-hora |
+|---:|---:|---:|
+| 130 | 30 h | R$ 153,85 |
+| 110 | 25 h | R$ 181,82 |
+| **100** | **23 h** | **R$ 200,00** |
+
+**Custa zero e resolve dois problemas ao mesmo tempo.** O segundo é o que ninguém
+tratou nesta série: 30 h/semana somadas a um emprego integral são 70 h/semana, mais o
+restaurante. Reduzir para 23 h é a versão honesta do compromisso.
+
+*Contrapeso:* menos horas tornam as quatro Entregas de Fundação mais difíceis de
+concluir em 12 meses, e são elas que destravam os primeiros 2 %.
+
+### Rota C — interino de setembro a R$ 25 mil · **âncora barata**
+
+Só o mês de setembro, justificado pelo evento do dia 5 e pela migração do Felipe.
+Custo: R$ 5 mil, uma vez. Não resolve o problema, mas fixa o número na mesa antes da
+discussão do definitivo.
+
+### Rota D — parte fixa mais parte variável · **eu não recomendo**
+
+R$ 20 mil fixos mais R$ 5 mil atrelados a métrica. **Rejeitar:** as métricas
+disponíveis são justamente as três que já identificamos como fora do seu controle.
+Transformar caixa em risco que você não controla é piorar duas coisas de uma vez.
+
+### A objeção que vem, e a resposta
+
+> *"Isso muda o orçamento e atrasa o ponto de equilíbrio."*
+
+Verdade, e o tamanho é conhecido:
+
+| | Custo mensal | Ponto de equilíbrio |
+|---|---:|---:|
+| Term sheet | R$ 44 mil | R$ 32 mil de receita externa |
+| Com R$ 25 mil | R$ 49 mil | R$ 37 mil |
+
+No cenário base deles — R$ 22 mil no mês 3, R$ 38 mil no mês 6 —, **o equilíbrio
+atrasa cerca de um mês.** Diga o número antes que ele calcule.
+
+### O risco de pedir — e ele é real
+
+Se eles aceitarem os R$ 25 mil mas **reprecificarem a participação pela mesma
+mecânica do slide 7**, o aporte em trabalho cai de R$ 12.500 para R$ 7.500 por mês:
+
+| | Aporte/mês | Em 48 meses | Participação a R$ 5 M implícitos |
+|---|---:|---:|---:|
+| R$ 20 mil | R$ 12.500 | R$ 600 mil | **12,0 %** |
+| R$ 25 mil | R$ 7.500 | R$ 360 mil | **7,2 %** |
+
+**Você trocaria 4,8 pontos de participação por R$ 240 mil de caixa em 48 meses.**
+Quanto valem esses 4,8 pontos:
+
+| Cenário | Empresa | 4,8 % valem | Veredito |
+|---|---:|---:|---|
+| Conservador | R$ 3,6–4,5 M | R$ 173–216 mil | **menos que o caixa — trocar é bom** |
+| Base | R$ 7,2–9,0 M | R$ 346–432 mil | mais que o caixa — trocar é ruim |
+
+E há a assimetria que decide: **o caixa é certo, a participação não.** Ela depende de
+carência cumprida, quatro entregas aceitas, receita externa chegando, e de haver
+liquidez algum dia.
+
+**Como se protege disso:** peça os R$ 25 mil **explicitamente sem reprecificar a
+participação** — *"a escada de caixa e os blocos de participação são independentes;
+o degrau de partida corrige um valor-hora abaixo do que eu já recebo, não compra
+participação"*. Se eles recusarem essa separação, aí sim é um trade, e aí a resposta
+depende do cenário em que você acredita.
+
+### O que eu recomendo
+
+**Peça a Rota A.** É a mais barata para eles, a mais defensável, e não mexe em
+participação. Se recusarem o dinheiro, caia para a **Rota B** — que corrige o
+valor-hora de graça e ainda resolve o excesso de compromisso.
+
+**E a hierarquia, se for preciso escolher:** os R$ 5 mil por 12 meses valem R$ 60 mil.
+A cláusula de aceleração da carência vale 2 % da empresa — R$ 90 a 180 mil no cenário
+base — e é a diferença entre sair com zero e sair com algo se te desligarem no mês 11.
+
+**Se só der para conseguir uma coisa, é a aceleração.**

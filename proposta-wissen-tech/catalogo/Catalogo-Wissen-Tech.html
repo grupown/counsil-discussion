@@ -225,6 +225,7 @@
       <h3>Por que o MODELO 3 não pode vir depois</h3>
       <p>Suporte de clínica pequena custa 3–6 h/mês nos primeiros 90 dias e estabiliza em 2–4 h/mês. O desenvolvedor tem 28 h/mês para suporte. <strong>Isso dá oito contas.</strong> A R$ 490/mês, oito contas são R$ 3.920/mês — não pagam nem um quinto do desenvolvedor que as atende.</p>
       <p><strong>MODELO 2 sem MODELO 3 não é um negócio: é um passivo de suporte com aparência de receita.</strong> Por isso o cliente nº 1 do MODELO 2 não é vendido para faturar — é vendido para gerar o histórico de chamados que treina a automação. Cada chamado atendido à mão vira, no mesmo dia, uma resposta na base.</p>
+      <p><strong>O custo de token não é a restrição — a hora de suporte é.</strong> Ordem de grandeza, a medir no piloto: um relatório mensal de resultado de uma clínica consome algo como 200 mil tokens de entrada e 20 mil de saída, o que dá entre <strong>US$ 0,30 e US$ 1,50 por conta por mês</strong> conforme o modelo usado, contra uma mensalidade de R$ 490. <mark>Automação é barata; gente é cara.</mark> É a razão econômica pela qual o MODELO 3 se paga sozinho.</p>
       <p><strong>Sobre a deflexão:</strong> trabalhamos com 20–30 % no primeiro ano. É estimativa, não benchmark — não existe histórico de chamados para calibrar. Números de 60–80 % vêm de fornecedor de ferramenta. <mark>Deflexão é hipótese a medir, nunca premissa de preço.</mark></p>
     </div>
   </section>
@@ -351,6 +352,13 @@
       <p>Mas as rotinas automatizadas e os plugins construídos no grupo <strong>não são um sistema de gestão</strong>. São a camada que faz o sistema que a clínica <em>já tem</em> produzir dinheiro: estoque, conversão de orçamento, falta, conciliação. <mark>Isso não concorre com ninguém diretamente</mark>, não exige troca de sistema, elimina a objeção "eu já tenho sistema" — e é precificado contra dinheiro medido, não contra funcionalidade.</p>
     </div>
 
+    <div class="box">
+      <h3>O cliente nunca precisa comprar licença de nada</h3>
+      <p>Há dois usos de inteligência artificial aqui, e confundi-los quebra o modelo de venda. <strong>IA como ferramenta de construção</strong> escreve o código; o que se entrega é software que roda sozinho, e o cliente não precisa de licença — a mesma razão pela qual ninguém pergunta que editor de texto foi usado. <strong>IA como parte do produto em execução</strong> é quando o modelo é chamado toda vez que a rotina roda.</p>
+      <p><mark>A maior parte das rotinas não precisa de modelo em execução.</mark> Alerta de estoque abaixo do mínimo, régua de retorno de orçamento e conferência de divergência de caixa são lógica determinística: foram construídas com IA, não precisam de IA para rodar. Só texto livre, classificação e o atendimento do MODELO 3 exigem o modelo em execução — e esses rodam <strong>no ambiente da Wissen Tech, com chave própria, cobrados por consumo e não por assento</strong>. O custo entra na mensalidade; a licença não existe do lado do cliente.</p>
+      <p><strong>Consequência de arquitetura:</strong> toda rotina que puder ser determinística é convertida para código convencional antes de ir a cliente. É o que torna o produto barato de operar, previsível de suportar e independente de fornecedor terceiro.</p>
+    </div>
+
     <div class="box warn">
       <h3>Sem leitura dos dados, não existe produto</h3>
       <p>A camada de resultado depende inteiramente de conseguir ler o que já está no sistema da clínica. <strong>Isso não é detalhe técnico: é critério de qualificação, e é binário.</strong> Não é o mesmo cliente uma clínica cujo sistema tem API documentada e uma que só oferece a tela.</p>
@@ -464,6 +472,11 @@
     <div class="box no">
       <h3>Cobrar do cliente a construção do produto</h3>
       <p>Setup cobre o que é dele. O núcleo reutilizável é investimento da empresa.</p>
+    </div>
+    <div class="box no">
+      <h3>Produto que exija o cliente comprar licença de terceiro</h3>
+      <p>Nada é vendido dependendo de o cliente assinar uma ferramenta de terceiro para funcionar. Três razões, e a primeira sozinha basta: <strong>o produto entregue como arquivo de configuração é o produto inteiro entregue na primeira mensalidade</strong> — não há o que renovar. Além disso, adiciona barreira de compra a quem menos pode comprar, e transfere para o fornecedor de terceiro o controle de versão, preço e continuidade de um produto que leva o nosso nome.</p>
+      <p><b>Única exceção:</b> cliente de MODELO 1 com equipe de TI própria, aprendendo a operar as próprias ferramentas. Isso é consultoria e entra no plano de trabalho, nunca na fatura de produto.</p>
     </div>
     <div class="box no">
       <h3>Integração por raspagem de tela</h3>

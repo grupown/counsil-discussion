@@ -346,7 +346,73 @@ mostra a sua política antes de vender a dele.
 
 ---
 
-## 10. A única coisa a fazer primeiro
+## 10. Como o produto é entregue sem o cliente comprar licença de nada
+
+Pergunta legítima e que eu tinha passado por cima: se os plugins e skills foram
+construídos com Claude ou Codex, como entregar a uma clínica que não tem licença?
+
+**A pergunta tem uma confusão embutida, e desfazê-la resolve quase tudo.** Há dois
+usos de IA aqui:
+
+| Uso | O que é entregue | Licença do cliente |
+|---|---|---|
+| **IA como ferramenta de construção** — o modelo escreve o código | software que roda sozinho | **nenhuma** |
+| **IA como parte do produto em execução** — o modelo é chamado toda vez que roda | serviço | depende de onde roda |
+
+**A maior parte das 29 rotinas não precisa de modelo em execução.** Alerta de
+estoque abaixo do mínimo, régua de retorno de orçamento, conferência de divergência
+de caixa — isso é lógica determinística. Foi construído com IA; não precisa de IA
+para rodar. **Regra de arquitetura: toda rotina que puder ser determinística é
+convertida para código convencional antes de ir a cliente.**
+
+O que genuinamente exige modelo em execução é pouco: texto livre (anotação clínica,
+mensagem de paciente), classificação, e o atendimento do MODELO 3.
+
+### Para esses, três caminhos e só um presta
+
+| Caminho | Quem paga a IA | Licença do cliente | Veredito |
+|---|---|---|---|
+| Cliente assina e roda os skills no ambiente dele | cliente | sim | **recusar** |
+| **Roda no ambiente da Wissen Tech, com chave de API própria** | **nós, por consumo** | **nenhuma** | **este** |
+| Cliente com TI interno usa a própria assinatura | cliente | sim | só no MODELO 1 |
+
+**A API é cobrada por token, não por assento.** Não existe licença a comprar do lado
+de quem executa — existe consumo, e o consumo é nosso, embutido na mensalidade. O
+cliente compra resultado, não ferramenta.
+
+### Por que "o cliente compra a licença" é ruim, e o motivo principal não é custo
+
+**Skill é markdown.** Entregar os arquivos no ambiente do cliente é entregar o
+produto inteiro na primeira mensalidade. Ele copia e cancela; não há o que renovar.
+**Isso sozinho já derruba a opção.**
+
+Somam-se: barreira de compra imposta a quem menos pode comprar; perda de controle de
+versão, modelo e plano, o que torna o suporte impossível de diagnosticar; e
+dependência de um terceiro que muda preço e estrutura de plano sem avisar — quebrando
+um produto que leva o nosso nome.
+
+**Exceção única:** cliente de MODELO 1 com equipe de TI própria, aprendendo a operar
+as próprias ferramentas. Isso é consultoria, entra no plano de trabalho, nunca na
+fatura de produto.
+
+### O custo de token, e é uma boa notícia
+
+Ordem de grandeza com premissas explícitas — **não é medição, é teste de sanidade;
+o piloto tem que medir de verdade.** Um relatório mensal de resultado de uma clínica,
+algo como 200 mil tokens de entrada e 20 mil de saída:
+
+| Modelo | Custo por conta/mês |
+|---|---|
+| Haiku 4.5 (US$ 1 / US$ 5 por milhão) | ≈ US$ 0,30 |
+| Opus 5 (US$ 5 / US$ 25 por milhão) | ≈ US$ 1,50 |
+
+Contra uma mensalidade de R$ 490. **O token não é a restrição — a hora de suporte
+é.** Automação é barata, gente é cara: é a justificativa econômica do MODELO 3, e
+agora com número em vez de intuição.
+
+---
+
+## 11. A única coisa a fazer primeiro
 
 **Escolher, antes de qualquer proposta comercial, o que o MODELO 2 vende:** o
 sistema de clínica, ou a camada de resultado sobre o sistema que a clínica já tem.

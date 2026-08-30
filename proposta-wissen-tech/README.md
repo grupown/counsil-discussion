@@ -131,5 +131,17 @@ API e nunca de plano de consumidor (cujo padrão permite treinamento com retenç
 anos), e proibição de base de produção em prompt. Vender conformidade de IA na L1
 sem ter a própria política é o risco de reputação mais barato de evitar.
 
+**rev. 17** — resolvida a pergunta de como entregar os plugins a clínicas sem
+licença de ferramenta de IA. Separados os dois usos que estavam fundidos: IA como
+ferramenta de construção não exige nada do cliente, e a maior parte das 29 rotinas é
+determinística — foi construída com IA mas não precisa dela para rodar, e passa a ser
+convertida para código convencional antes de ir a cliente. O que exige modelo em
+execução roda no ambiente da Wissen Tech com chave própria, cobrado por consumo e não
+por assento. Recusa nova: produto que exija o cliente comprar licença de terceiro —
+o argumento decisivo não é custo, é que skill entregue como arquivo é o produto
+inteiro entregue na primeira mensalidade. Estimativa de ordem de grandeza do custo de
+token (US$ 0,30 a 1,50 por conta/mês) confirma que a restrição do MODELO 2 é a hora
+de suporte, não o consumo de IA.
+
 Base analítica: os 5 documentos de planejamento (plano de cobertura, playbook por
 área, cronograma, painel de exceções, catálogo de 56 indicadores).

@@ -622,3 +622,83 @@ o freelance, mais o salário integral que ele largou, mais o restaurante.
 Se R$ 25.000 ficam abaixo disso, o pedido deixa de ser posição de negociação e passa a
 ser necessidade — e aí ele deve dizer exatamente isso, com o número, sem rodeio. É o
 argumento mais forte que existe numa mesa, e o único que não se discute.
+
+---
+
+## 12. A renda anterior, e a correção que ela obriga
+
+### 12.1 · Correção de uma afirmação minha
+
+Na seção 9.1 eu escrevi que ele "não tem mais BATNA" e que a postura colaborativa era
+imposta pela fraqueza da posição. **Isso estava errado, por falta de informação.** Quem
+comandava R$ 40 mil CLT com bônus de USD 30 mil anuais tem mercado. O BATNA é forte — a
+postura colaborativa continua certa, mas por ser eficaz com uma contraparte que corrige,
+não por falta de alternativa.
+
+### 12.2 · A conta
+
+Dólar em ~R$ 5,15 (set/2026: R$ 5,13 à vista; Focus projeta R$ 5,20 para o fim do ano).
+PJ de R$ 20 mil assumido como mensal. Líquidos, com Simples a ~10 %.
+
+| Componente anterior | Líquido/ano |
+|---|---|
+| CLT R$ 40.000 (12 + 13º + 1/3 de férias) | R$ 391.919 |
+| FGTS (8 % sobre 13 salários) | R$ 41.600 |
+| Bônus USD 30.000 | R$ 112.012 |
+| PJ R$ 20.000/mês | R$ 216.000 |
+| **Total** | **R$ 761.531/ano · R$ 63.461/mês** |
+
+| Oferta Wissen Tech | Líquido/mês | Corte | Subsídio/ano |
+|---|---|---|---|
+| R$ 25.000 PJ (minuta) | R$ 22.500 | **−65 %** | **R$ 491.531** |
+| R$ 32.000 PJ | R$ 28.800 | −55 % | R$ 415.931 |
+| R$ 40.000 PJ (teto da 6.2) | R$ 36.000 | −43 % | R$ 329.531 |
+| R$ 50.000 PJ | R$ 45.000 | −29 % | R$ 221.531 |
+
+**Para empatar com o que ele tinha, precisaria de R$ 70.512/mês PJ.**
+
+### 12.3 · O que isso faz com a participação
+
+Isso deixa de ser negociação salarial. **É um aporte.** Ele está financiando a empresa
+com renda pessoal, e a pergunta passa a ser se os 25 % pagam o aporte.
+
+| Cenário | Aporte em 4 anos | Valor da empresa para os 25 % cobrirem |
+|---|---|---|
+| R$ 25.000/mês | R$ 1.966.000 | **R$ 7,9 milhões** |
+| R$ 40.000/mês | R$ 1.318.000 | **R$ 5,3 milhões** |
+
+A receita externa comprovada até hoje é o CRM (R$ 4.900 + R$ 890/mês) e a consultoria
+Batista (R$ 19.600). Pelo múltiplo de EBITDA da 9.2, R$ 5 a 8 milhões exigem algo como
+R$ 1 a 1,6 milhão de EBITDA anual. **A distância não é pequena, e o número que decide
+isso — o Valor Justo da 9.1 — está em branco.**
+
+### 12.4 · O pedido revisto
+
+A recomendação anterior de R$ 28.000 (seção 11.4) foi calibrada sem esses dados e não se
+sustenta: seria um corte de 62 %. **O pedido correto é R$ 40.000 desde a assinatura.**
+
+Três razões para esse número, e não outro:
+
+1. **Não é um número novo.** É o teto que a própria 6.2 já contempla. O pedido não é de
+   valor, é de **data e de certeza** — sai de "poderá, até, no mês 6" para "é, desde já".
+2. **Ainda é um corte de 43 %.** Ele continua aportando R$ 330 mil/ano. A troca por
+   participação continua existindo, só deixa de ser desproporcional.
+3. **R$ 40.000 PJ equivalem a R$ 24–28 mil CLT** — abaixo do que ele ganhava só de
+   salário, sem bônus, sem FGTS e sem o PJ.
+
+**E a saída para o caso de o caixa não comportar:** a diferença entre o que pagarem e os
+R$ 40.000 vira crédito conversível em quota, apurado pelo Valor Justo da 9.1. Dá a eles
+um jeito de dizer sim sem caixa, e torna o preenchimento da 9.1 obrigatório — não se
+converte subsídio em quota sem preço.
+
+### 12.5 · O parágrafo que ele leva para a mesa
+
+> Eu saí de R$ 63 mil líquidos por mês para uma proposta de R$ 22,5 mil. São R$ 490 mil
+> por ano que eu estou colocando na empresa — isso não é salário abaixo do mercado, é
+> aporte. E eu topo aportar: é exatamente a troca que a minuta propõe, e eu concordo com
+> ela. O que precisa fechar é o tamanho. A R$ 25 mil, os 25 % só se pagam se a empresa
+> valer R$ 8 milhões; a R$ 40 mil, R$ 5 milhões. Por isso eu peço os R$ 40 mil desde a
+> assinatura — que é o número que vocês mesmos já escreveram na 6.2 — e, se o caixa não
+> comportar agora, que a diferença vire quota pelo Valor Justo. E é por isso também que
+> eu não consigo assinar com a 9.1 em branco: sem esse número, eu não sei o que estou
+> comprando com os R$ 490 mil.

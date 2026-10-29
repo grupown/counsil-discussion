@@ -548,3 +548,77 @@ gastar capital no piso e perder o mecanismo, perde a negociação ganhando a dis
 A minuta está escrita como se ele chegasse agora. Não chega — opera há seis meses, com
 resultado conhecido pelos dois lados. É disso que decorrem os pedidos 1 e 3, e é o único
 argumento da mesa que não depende de projeção nenhuma.
+
+---
+
+## 11. Quanto pedir de salário
+
+### 11.1 · O problema de responder isso agora
+
+A 6.5 diz que o Contrato de Serviços Intragrupo é a fonte da remuneração dele, e **a
+tabela de preços desse contrato está em branco**. Ele está sendo convidado a nomear um
+salário antes de ver o orçamento que o paga.
+
+Nenhum número respondido aqui é confiável enquanto essa tabela não aparecer. Se o
+intragrupo for de R$ 20 mil por clínica, R$ 60 mil/mês entram e R$ 40 mil cabem. Se for
+R$ 10 mil, R$ 30 mil entram e nem os R$ 25 mil cabem com o salário do Felipe junto.
+**Pedir a tabela é o primeiro movimento, e vem antes de qualquer número.**
+
+### 11.2 · As referências
+
+| Referência | Valor |
+|---|---|
+| R$ 25.000 PJ, convertido para CLT (multiplicador 1,4–1,65) | R$ 15.150 a R$ 17.860 |
+| R$ 32.000 PJ em CLT | R$ 19.400 a R$ 22.850 |
+| R$ 40.000 PJ em CLT | R$ 24.240 a R$ 28.570 |
+| Glassdoor CTO Brasil | R$ 11–30 mil, mediana ~R$ 20 mil |
+| CTO de startup early-stage, com equity | R$ 15–25 mil |
+| Robert Half, CTO de empresa média/grande | mediana ~R$ 38 mil |
+
+Os R$ 25.000 não são insultuosos. Equivalem a ~R$ 16 mil CLT, dentro da faixa de CTO
+early-stage com participação. **Não são generosos tampouco** — e, com 25 % de quotas em
+jogo, estar no meio da faixa é defensável.
+
+### 11.3 · A estrutura que eu pediria, em vez de um número solto
+
+O piso e o mecanismo da 6.2 não são independentes. **Se a 6.2 virar automática, o piso
+só importa por seis meses** — R$ 3 mil de diferença por seis meses é R$ 18 mil, não vale
+gastar capital. Se a 6.2 continuar discricionária, o piso é tudo, porque R$ 25 mil podem
+ser para sempre.
+
+Daí a jogada: **oferecer a escolha entre duas, e deixar que a que ele quer seja também a
+melhor para eles.**
+
+**Opção A** — piso de R$ 25.000 como está, e a 6.2 passa a ser automática pelo Índice de
+Atingimento: índice dos dois primeiros trimestres ≥ 90 % leva a R$ 40.000 no mês 7;
+70–89 %, proporcional entre R$ 32.000 e R$ 40.000; abaixo de 70 %, mantém R$ 25.000 com
+nova revisão em seis meses.
+
+**Opção B** — piso de R$ 32.000 desde a assinatura, e a 6.2 pode continuar discricionária.
+
+Custo do Ano 1 para a empresa:
+
+| | Conta | Total |
+|---|---|---|
+| Opção A, com índice ≥ 90 % | 6 × 25.000 + 6 × 40.000 | **R$ 390.000** |
+| Opção B | 12 × 32.000 | **R$ 384.000** |
+
+Praticamente o mesmo dinheiro. **A diferença é que a A é condicionada ao desempenho e a
+B não é** — e um documento inteiro construído sobre índice de atingimento não tem como
+preferir a incondicional. A opção que ele quer é a que eles devem escolher.
+
+### 11.4 · Onde isso aterrissa
+
+O ponto natural de acordo é **R$ 28.000 de piso com a 6.2 automática** — melhor que A e
+que B para ele. Mas ele não deve abrir em 28: abrindo a escolha ancorada em 32, a divisão
+natural cai em 28. Abrindo em 28, cai em 26.
+
+### 11.5 · A conta que só ele pode fazer
+
+Ele deixou o vínculo anterior (considerando ii). A comparação relevante não é com a
+mediana do Glassdoor, é com a **renda total dele em julho**: R$ 13 mil da Wissence, mais
+o freelance, mais o salário integral que ele largou, mais o restaurante.
+
+Se R$ 25.000 ficam abaixo disso, o pedido deixa de ser posição de negociação e passa a
+ser necessidade — e aí ele deve dizer exatamente isso, com o número, sem rodeio. É o
+argumento mais forte que existe numa mesa, e o único que não se discute.

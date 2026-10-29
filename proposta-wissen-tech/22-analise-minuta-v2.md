@@ -189,3 +189,125 @@ documento já lista mas que são dele, não do controlador: o risco de vínculo 
 no modelo PJ com metas e dedicação integral (Tema 1.389); a validade da recompra pelo
 preço pago; e a validade da não concorrência de 24 meses sem compensação no cenário
 de bad leaver.
+
+
+---
+
+## 8. O valor do salário faz sentido?
+
+**R$ 25.000 está baixo. R$ 40.000 está certo. E a cláusula que leva de um ao outro é
+a única do contrato que não tem gatilho.**
+
+### 8.1 · PJ não é CLT, e a diferença é grande
+
+A cláusula 6.1 paga por pessoa jurídica. Sem 13º, sem férias com um terço, sem FGTS,
+sem multa rescisória, sem seguro-desemprego — e com o imposto por conta dele. O
+multiplicador de mercado para manter o mesmo padrão fica entre **1,4 e 1,65**:
+
+| | Equivalente CLT |
+|---|---|
+| **R$ 25.000 PJ** | **R$ 15.000 a 18.000** |
+| **R$ 40.000 PJ** | **R$ 24.000 a 29.000** |
+
+### 8.2 · Contra o mercado de 2026
+
+| Fonte | Faixa |
+|---|---|
+| Glassdoor · CTO | R$ 11 a 30 mil · mediana ~R$ 20 mil |
+| Glassdoor · Head de Tecnologia | R$ 15 a 25 mil · mediana ~R$ 20 mil |
+| CTO de startup em estágio inicial | R$ 15 a 25 mil, com participação |
+| Robert Half · CTO (empresa média e grande) | mediana ~R$ 38 mil, topo R$ 49,5 mil |
+
+**R$ 25.000 PJ equivale a um CLT abaixo da faixa de CTO em todas as fontes** — abaixo,
+inclusive, da mediana de Head de Tecnologia. **R$ 40.000 PJ cai dentro da faixa**: topo
+da banda de startup, média do Glassdoor, bem abaixo da Robert Half.
+
+*Os números do Glassdoor vêm de amostras pequenas e autodeclaradas; a Robert Half mira
+empresa média e grande. Trate como ordem de grandeza.*
+
+A banda de R$ 15 a 25 mil para CTO de estágio inicial pressupõe **participação
+relevante em troca** — e ele tem 5 % na assinatura. Então R$ 25.000 como ponto de
+partida não é absurdo. **O problema não é o valor inicial: é não haver nada que
+garanta a saída dele.**
+
+### 8.3 · O achado — a cláusula 6.2 é a única discricionária do contrato
+
+> **6.2.** A remuneração mensal é de R$ 25.000. Após 6 meses da Data de Assinatura,
+> haverá uma revisão única, vinculada à avaliação dos dois primeiros trimestres, que
+> **poderá** elevar a remuneração para **até** R$ 40.000.
+
+*Poderá. Até.* Sem gatilho, sem fórmula, sem árbitro.
+
+Compare com o resto do documento, que é obsessivamente objetivo:
+
+| Cláusula | Mecanismo |
+|---|---|
+| 4.4 | escala numérica pelo Índice de Atingimento |
+| 4.6 | avaliador técnico independente em divergência |
+| 7.1 | fórmula fechada — o menor entre dois valores |
+| 9.1 e 9.2 | revisão anual com piso, e múltiplo de EBITDA |
+| 9.4 | avaliador independente, com custo para quem errar mais |
+| 10.1 | aceleração proporcional, calculada |
+| 8.1 | lista fechada de hipóteses |
+| **6.2** | **"poderá… até"** |
+
+**E há uma ironia que é o melhor argumento dele.** A nota da cláusula 4.2 diz:
+
+> *"as metas não podem depender só da vontade de uma das partes. Uma condição desse
+> tipo é nula pelo art. 122 do Código Civil."*
+
+**O documento conhece o princípio, aplica-o à participação, e não o aplica ao caixa
+dele.** Não é preciso inventar argumento: basta pedir coerência com a própria nota.
+
+### 8.4 · A correção usa a máquina que já existe
+
+A cláusula 4.3 já prevê avaliação trimestral registrada em ata. A 4.4 já tem a escala.
+Basta amarrar uma na outra:
+
+| Índice dos dois primeiros trimestres | Remuneração a partir do mês 7 |
+|---|---|
+| 90 % ou mais | **R$ 40.000** |
+| 70 % a 89 % | proporcional entre R$ 30.000 e R$ 40.000 |
+| abaixo de 70 % | mantém R$ 25.000, com nova revisão em 6 meses |
+
+Zero mecanismo novo. Mesma lógica da 4.4. **E transforma "poderá" em "será".**
+
+### 8.5 · Por que eles escreveram assim — e a conexão que isso revela
+
+O salto custa caro, e é honesto reconhecer:
+
+| | Custo mensal | Equilíbrio em receita externa |
+|---|---:|---:|
+| Ele a R$ 25 mil | R$ 49 mil | R$ 37 mil/mês |
+| Ele a R$ 40 mil | R$ 64 mil | **R$ 52 mil/mês** |
+
+**O salto eleva em 41 % a receita externa necessária para a empresa se pagar.** Quase
+certamente é por isso que a cláusula ficou discricionária.
+
+**Mas isso revela algo maior.** A cláusula 6.5 diz que é o Contrato de Serviços
+Intragrupo que dá receita para pagar a remuneração. E a 9.3 diz que o EBITDA — que
+define o Valor Justo das quotas — é calculado com a receita desse mesmo contrato.
+
+Logo: **se a tabela intragrupo não sustenta R$ 40 mil, ela também não sustenta um
+EBITDA que faça as quotas dele valerem alguma coisa.** Salário, valor da participação
+e preço do intragrupo são o mesmo problema, e a 9.3 só protege um número que precisa
+ser alto o bastante para valer a pena proteger.
+
+**A pergunta certa não é "por que não R$ 40 mil".** É *"qual é a tabela do intragrupo,
+e ela sustenta a empresa?"* — que, não por acaso, é a condição de assinatura da
+cláusula 6.5 e ainda não foi apresentada.
+
+### 8.6 · A conta que só ele pode fazer
+
+Tudo acima é mercado. **O número que decide é outro: o que ele deixou para trás.**
+
+Antes havia R$ 13 mil da Wissence, cerca de R$ 10 mil de freelance, o emprego integral
+e o restaurante. O considerando (ii) diz que o emprego acabou.
+
+**R$ 25.000 pode ser uma queda de renda total**, e isso não aparece em nenhum guia
+salarial. A comparação que importa não é com a mediana do Glassdoor — é com o que ele
+ganhava somando tudo em julho.
+
+Se R$ 25.000 for abaixo disso, **o degrau não é uma melhoria de carreira: é um
+empréstimo que ele está fazendo à empresa**, e que só se paga pela participação. O que
+devolve a conversa, de novo, para o campo em branco da cláusula 9.1.

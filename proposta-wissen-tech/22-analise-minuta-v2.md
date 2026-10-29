@@ -471,3 +471,80 @@ custo de aquisição do catálogo, e a 6.4 coloca prospecção no escopo dele.
 R$ 1 por quota —, os 25 % valem R$ 25 mil em qualquer saída que não seja venda a
 terceiro, e a conversa toda sobre participação era decorativa. **Esse número é o que
 decide se vale a pena, e tudo o mais é secundário a ele.**
+
+---
+
+## 10. Os seis meses já trabalhados, e o escopo que cresceu
+
+Dois fatos novos entram na negociação: ele opera desde maio, e hoje apoia também
+financeiro, marketing e comercial. Mudam o pedido — mas não na direção que parece.
+
+### 10.1 · O ponto cego: o escopo extra está custando quotas a ele
+
+A 4.4 define as parcelas anuais de 5 % pelo Índice de Atingimento. O índice é apurado
+contra o **Anexo I**, e o Anexo I só tem métrica de tecnologia — implantação em 30 dias,
+disponibilidade, entregas.
+
+**Financeiro, marketing e comercial não estão no Anexo I.** Então cada hora gasta neles
+não gera índice, e o que não gera índice não gera quota. Ele está fazendo trabalho extra
+que **reduz** a participação que vai receber, porque consome a capacidade que produziria
+as entregas medidas.
+
+Três saídas, e ele precisa escolher uma antes de assinar:
+
+1. O escopo extra entra no Anexo I com peso próprio;
+2. Fica fora, e o índice é ajustado proporcionalmente à capacidade que ele consome;
+3. É explicitamente temporário, com data para passar adiante.
+
+**O que não pode é continuar como está**, que é a única configuração em que ele paga
+pelo próprio esforço.
+
+### 10.2 · O segundo ponto cego: "faço mais" é um argumento contra ele
+
+Dizer "estou apoiando no financeiro, marketing e comercial" sem enquadrar machuca de
+duas formas:
+
+- **Lê-se como capacidade sobrando.** Todo o diagnóstico deste projeto é que a
+  capacidade é a restrição — 38 h/mês livres, 22 h/mês perdidas em limpeza manual, um
+  único desenvolvedor. Se sobra tempo para marketing, o argumento da capacidade cai.
+- **Já está sendo entregue de graça.** Demonstrar que faz sem cobrar estabelece o preço
+  em zero. Pedir depois é pedir para reprecificar o que já é gratuito.
+
+O enquadramento que funciona não é "faço mais, pague mais". É **"o risco que a carência
+existe para cobrir já foi corrido"**.
+
+### 10.3 · O que os seis meses realmente compram
+
+A 3.1 dá 5 % na assinatura sem carência. Essa parcela existe para remunerar a entrada e
+o risco de encaixe — risco que **já foi corrido, de maio a outubro, e deu certo**.
+
+Mas o relógio do vesting começa na assinatura. Os seis meses não contam para nada.
+
+**O pedido mais barato do documento inteiro:** antecipar a primeira parcela anual de 5 %
+para o mês 6, em reconhecimento ao período já cumprido. Custa zero em caixa, continua
+condicionada ao índice (se ele não entregar, não recebe), usa a máquina que já existe, e
+é justificada por um fato que os dois lados conhecem.
+
+### 10.4 · Os valores
+
+| # | Pedido | Vale | Argumento |
+|---|---|---|---|
+| 1 | Primeira parcela de 5 % antecipada para o mês 6 | 5 % seis meses antes, e o teto de 25 % no mês 42 em vez do 48 | Maio a outubro já cumpriu a carência |
+| 2 | 6.2 automática pelo índice | até R$ 180 mil/ano | A nota da 4.2 deles diz que condição potestativa é nula |
+| 3 | Piso de R$ 28.000 em vez de R$ 25.000 | R$ 36 mil/ano | Escopo real já inclui comercial e financeiro |
+| 4 | Escopo extra no Anexo I, ou índice ajustado | as parcelas anuais inteiras | Hoje o trabalho extra reduz a participação |
+| 5 | 8.1(a) sem "culpa grave" | os 25 % | Operação sem automação de publicação |
+| 6 | 11.4 afastada na recompra ao preço da outorga | liberdade de trabalhar | Sem compensação não há validade |
+
+Mais os três brancos: Valor Justo (9.1), múltiplo (9.2), tabela do intragrupo (6.5).
+
+**A hierarquia importa mais que os números.** O item 2 vale cinco vezes o item 3. Se ele
+gastar capital no piso e perder o mecanismo, perde a negociação ganhando a discussão.
+
+### 10.5 · A frase que abre
+
+> **Não estou entrando. Estou formalizando o que já existe desde maio.**
+
+A minuta está escrita como se ele chegasse agora. Não chega — opera há seis meses, com
+resultado conhecido pelos dois lados. É disso que decorrem os pedidos 1 e 3, e é o único
+argumento da mesa que não depende de projeção nenhuma.

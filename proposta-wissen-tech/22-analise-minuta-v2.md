@@ -702,3 +702,91 @@ converte subsídio em quota sem preço.
 > comportar agora, que a diferença vire quota pelo Valor Justo. E é por isso também que
 > eu não consigo assinar com a 9.1 em branco: sem esse número, eu não sei o que estou
 > comprando com os R$ 490 mil.
+
+---
+
+## 13. Qual seria um Valor Justo
+
+### 13.1 · A qualidade do dado
+
+Procurei múltiplos de mercado e o resultado foi fraco: as fontes brasileiras são blogs
+comerciais, sem metodologia nem amostra, e se contradizem — 3,3–5,4× ARR numa, 8–12× ARR
+noutra, 8–15× EBITDA numa terceira. A única tabela com recorte de porte é americana
+(Adastra Equity): **abaixo de US$ 1 M de ARR o referencial deixa de ser múltiplo de ARR**
+e vira múltiplo de SDE, 2 a 4×. Wissen Tech está bem abaixo disso.
+
+**Qualquer faixa aqui é chute informado.** O que não é chute é a estrutura do problema,
+e é nela que está o dinheiro.
+
+### 13.2 · O achado principal: a fórmula escolhida trabalha contra ele
+
+A 9.2 usa **múltiplo de EBITDA**. Rodando os cenários com o teto de capacidade do próprio
+catálogo (externo de R$ 52.060/mês, R$ 624.720/ano) e o intragrupo a R$ 15 mil por clínica:
+
+| Salário dele | EBITDA | 5× EBITDA | **Os 25 % dele** |
+|---|---|---|---|
+| R$ 25.000 | R$ 233.124 | R$ 1.165.620 | **R$ 291.405** |
+| R$ 40.000 | R$ 53.124 | R$ 265.620 | **R$ 66.405** |
+
+**O salário dele é custo, e custo derruba EBITDA.** Pedir R$ 40 mil custa R$ 225 mil do
+valor da própria participação. Ele ganha R$ 720 mil de caixa em 4 anos e perde R$ 225 mil
+de quota — ainda vale a pena, mas os dois pedidos brigam entre si, e ele precisa saber
+disso antes de sentar.
+
+**O espelho disso é um argumento a favor dele:** quem recompra pelo Valor Justo na saída
+é a Cedente (8.6a). Salário maior significa EBITDA menor, Valor Justo menor e recompra
+mais barata. **Pagar mais caixa sai mais barato para o controlador do que parece.**
+
+### 13.3 · O intragrupo é o valuation
+
+| Intragrupo | Receita/ano | 3× receita | 5× EBITDA | 25 % dele (pelo EBITDA) |
+|---|---|---|---|---|
+| A custo | R$ 281 mil | R$ 843 mil | **R$ 0** | **R$ 0** |
+| R$ 15 mil/clínica | R$ 821 mil | R$ 2,46 mi | R$ 1,17 mi | R$ 291 mil |
+| R$ 25 mil/clínica | R$ 1,18 mi | R$ 3,54 mi | R$ 2,97 mi | R$ 741 mil |
+
+*(externo a 45 % do teto, salário a R$ 25 mil)*
+
+**Um único campo em branco move a participação dele de R$ 0 a R$ 741 mil.** Tudo o mais
+que está em negociação é ruído perto disso. A tabela do intragrupo não é um anexo — é o
+contrato.
+
+### 13.4 · O número honesto
+
+Com o time atual, no teto do que o catálogo comporta e com o intragrupo a preço de
+mercado, a receita consolidada chega a R$ 0,8 a 1,5 milhão/ano. Receita de serviço não
+merece múltiplo de SaaS; receita recorrente do MODELO 2 mereceria, mas hoje é mínima.
+
+**Valor honesto hoje: R$ 2,0 a 2,5 milhões. Em 2–3 anos, no teto de capacidade: R$ 3,0 a
+3,5 milhões.** Os 25 % valem, respectivamente, R$ 500–625 mil e R$ 750–875 mil.
+
+**Contra um aporte de R$ 1,32 milhão em 4 anos (a R$ 40 mil) ou R$ 1,97 milhão (a R$ 25
+mil), a participação não se paga.** Esse é o fato central, e nenhuma cláusula o conserta.
+
+### 13.5 · O que pedir na 9.1
+
+Não um número — uma fórmula, porque número fixo vira briga todo ano e múltiplo de EBITDA
+é manipulável pelo custo:
+
+> **Valor Justo = o maior entre (i) R$ 3.000.000; (ii) 3× a receita bruta consolidada dos
+> últimos 12 meses, com o intragrupo a preço de mercado; (iii) a fórmula da Cláusula 9.2.**
+
+Três razões: o piso protege nos anos em que o EBITDA é zero por construção; o múltiplo de
+receita **elimina o conflito entre o salário dele e o valor da quota dele**; e manter a
+9.2 como terceira alternativa não tira nada de ninguém.
+
+A R$ 3 milhões de piso, os 25 % valem R$ 750 mil e os 5 % da assinatura, R$ 150 mil.
+
+### 13.6 · A conclusão que reorganiza a negociação
+
+**Caixa e participação são substitutos aqui, e qual deles querer depende de uma coisa só:
+se eles vão financiar o crescimento.**
+
+- Se houver verba para contratar e para o MODELO 3, o teto do catálogo sobe, a receita
+  sai de R$ 1,2 milhão, e a participação passa a valer mais que o caixa abdicado. Aí vale
+  aceitar menos salário.
+- Se não houver, a receita fica presa no teto de duas pessoas, os 25 % valem R$ 750 mil
+  no melhor caso, e **a participação é decorativa — nesse cenário ele deve querer caixa.**
+
+A pergunta que decide o contrato inteiro não é quanto ele ganha. É **quanto eles vão
+investir em 2027**, e isso não está em lugar nenhum da minuta.

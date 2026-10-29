@@ -24,6 +24,7 @@ Wissen Tech (braço de TI/IA do grupo Wissence).
 - `19-refino-catalogo.md` — veredito do conselho sobre o próprio catálogo: o que ele deixou de ser e no que virou
 - `20-validacao-propostas.md` — o catálogo conferido contra duas propostas reais: o que bateu, o que estava inventado, e o que faltava
 - `21-analise-term-sheet.md` — o Term Sheet v3 analisado contra a nossa proposta: o que ele faz melhor, os três defeitos, e a conta de quanto a participação vale
+- `22-analise-minuta-v2.md` — a minuta contratual de outubro: o que eles concederam, e os três pontos que não podem ser assinados como estão
 - `diretoria/` — **o memorando de decisão que vai à diretoria** e o anexo técnico-contratual que vai ao jurídico
 - `catalogo/` — **o catálogo de serviços** e a proposta de exemplo que o originou
 - `apresentacao/` — **a peça que vai para o Leonardo** (documento externo, tom e conteúdo diferentes do memorando interno)
@@ -267,6 +268,23 @@ desligado sem justa causa antes do mês 12, e se a partida em R$ 25 mil reprecif
 participação. Duas perguntas de urgência tratam do evento de 5 de setembro: quantas
 licenças serão vendidas contra uma fila que entrega duas a cada 45 dias, e qual a
 prioridade entre CRM, Aurora e ValorMed.
+
+**rev. 29 · 29/10/2026** — dois meses depois, chegou a minuta contratual de outorga
+com vesting. O outro lado se moveu em quase tudo: 5 % liberados já na assinatura
+contra os 0 % de agosto, sem carência; remuneração de R$ 25 mil com revisão para até
+R$ 40 mil no mês 6; aceleração proporcional em evento de liquidez, que não existia;
+critério de aceite por plano bilateral com avaliador independente em divergência no
+lugar do "critério único do grupo"; métricas trocadas por entregas sob controle dele;
+e a cessão retroativa de PI desapareceu. A cláusula 9.3, que impede a redução da
+tabela intragrupo sem anuência dele, fecha o buraco de parte relacionada apontado
+desde o início. Fato novo de peso: o considerando (ii) registra que ele deixou o
+vínculo anterior e está em dedicação integral — o risco das 70 horas semanais some e
+nasce o de não haver renda alternativa. Três pontos impedem assinatura como está: o
+Valor Justo da cláusula 9.1 está em branco e é o que define o preço de tudo; incidente
+de dados por culpa grave é bad leaver, o que converte uma falha operacional previsível
+numa operação sem CI/CD em perda total; e a combinação de recompra pelo preço pago,
+não concorrência de 24 meses e ausência de emprego alternativo produz ruína no pior
+cenário, justamente onde a compensação que validaria a não concorrência não existe.
 
 Base analítica: os 5 documentos de planejamento (plano de cobertura, playbook por
 área, cronograma, painel de exceções, catálogo de 56 indicadores).

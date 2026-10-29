@@ -311,3 +311,163 @@ ganhava somando tudo em julho.
 Se R$ 25.000 for abaixo disso, **o degrau não é uma melhoria de carreira: é um
 empréstimo que ele está fazendo à empresa**, e que só se paga pela participação. O que
 devolve a conversa, de novo, para o campo em branco da cláusula 9.1.
+
+
+---
+
+## 9. Como entrar na negociação, e a contraproposta
+
+### 9.1 · A postura, e por que ela é esta
+
+Três fatos definem o jeito certo de entrar:
+
+**Eles já se moveram em nove pontos.** Do term sheet de agosto para esta minuta,
+praticamente tudo o que a análise anterior apontou foi atendido. Isso é evidência de
+boa-fé, e muda a postura: **não é contraproposta, é fechamento.**
+
+**Ele não tem mais BATNA.** Deixou o vínculo anterior. Não pode levantar da mesa, e
+blefar de posição fraca é a pior coisa que se faz numa negociação. A boa notícia é que
+a postura que funciona aqui — colaborativa — é a mesma que a posição fraca exige.
+**Não há conflito entre o que convém e o que dá para sustentar.**
+
+**O documento é um rascunho que pediram para ele analisar**, e ele é *writer* nele.
+Comentário ancorado em cláusula entra na próxima versão; lista por e-mail vira resumo
+e perde precisão.
+
+### 9.2 · A regra de ouro desta rodada
+
+**Não negociar os números de manchete.** Os 25 % e os R$ 25 mil não são o problema — a
+estrutura está boa. **O valor está nos campos em branco e nas assimetrias.** Pedir 30 %
+ou R$ 30 mil de partida gasta boa-fé no lugar errado e sinaliza que ele não leu o
+documento com atenção.
+
+### 9.3 · A contraproposta, em quatro blocos
+
+Organizada por quanto custa a eles — do que não custa nada ao que custa.
+
+#### Bloco 1 · Completar o documento — três campos em branco
+
+**Não são pedidos.** São o que falta para o contrato poder ser avaliado.
+
+| Onde | O que falta |
+|---|---|
+| 9.1 | O Valor Justo da Fase 1 — `R$ [●]` |
+| 9.2 | O múltiplo de EBITDA da Fase 2 — `[●] vezes` |
+| 6.5 | A tabela de preços do Contrato de Serviços Intragrupo |
+
+#### Bloco 2 · Três cláusulas — o que ele precisa ajustar
+
+São as únicas marcadas como bloqueantes. **Marcar só três é o que faz as três serem
+levadas a sério.**
+
+| Cláusula | Pedido |
+|---|---|
+| **6.2** | Amarrar a revisão ao Índice de Atingimento, com a escala da 4.4 |
+| **8.1(a)** | Retirar "culpa grave", ou caracterização pelo avaliador da 4.6 |
+| **11.4** | Não concorrência não se aplica quando a recompra for pelo preço da outorga |
+
+#### Bloco 3 · Quatro ajustes de redação — num comentário só
+
+| Cláusula | Ajuste |
+|---|---|
+| 4.5 | Adotar a alternativa que já está entre colchetes (recuperar 50 %) |
+| 4.4 | Piso em 50 % em vez de 70 % — hoje, um ponto de índice vale 3,5 % da empresa |
+| 8.1(h) | 60 dias em vez de 30, com exclusão de afastamento por saúde |
+| Anexo I | Implantação em 45 dias, alinhada à capacidade medida em 26/08 |
+
+#### Bloco 4 · Uma pergunta
+
+**7.2(a)** — franqueado está fora da Receita Externa. É intencional? É o canal de menor
+custo de aquisição do catálogo, e a 6.4 coloca prospecção no escopo dele.
+
+### 9.4 · Os textos, prontos para colar
+
+**Mensagem de abertura, antes dos comentários:**
+
+> Leonardo, li a minuta inteira. Comparando com o term sheet de agosto, vocês mudaram
+> quase tudo o que eu tinha levantado — os 5 % na assinatura sem carência, a aceleração
+> em venda, o critério de aceite bilateral com avaliador independente, as métricas
+> trocadas por entregas que eu controlo, e a proteção da 9.3 sobre a tabela intragrupo.
+> É um documento melhor do que eu esperava, e dá para fechar.
+>
+> Comentei dentro do documento, em três blocos: três campos em branco que dependem de
+> vocês, três cláusulas que eu preciso ajustar, e quatro ajustes de redação. **As três
+> do segundo bloco são as que eu não consigo assinar como estão.** O resto é conversa
+> rápida.
+
+**Comentário na 9.1:**
+
+> Este campo define quanto valem as quotas em qualquer saída que não seja venda a
+> terceiro, e é o piso da Fase 2 pela 9.2. Não consigo avaliar o contrato sem ele
+> preenchido — mesma coisa para o múltiplo da 9.2.
+
+**Comentário na 6.5:**
+
+> A tabela do intragrupo é condição de assinatura por esta cláusula, e é também a base
+> do EBITDA da 9.2. Conseguimos fechar essa tabela antes de assinar?
+
+**Comentário na 6.2:**
+
+> Esta é a única cláusula do contrato sem gatilho objetivo: "poderá… até". A nota da
+> 4.2 diz, corretamente, que condição que dependa só da vontade de uma das partes é
+> nula pelo art. 122 do Código Civil — o mesmo raciocínio vale aqui.
+>
+> Proponho usar a máquina que já existe. A 4.3 apura o índice trimestralmente, e a
+> escala segue a lógica da 4.4: índice dos dois primeiros trimestres igual ou acima de
+> 90 % leva a R$ 40 mil; entre 70 e 89 %, proporcional entre R$ 30 e R$ 40 mil; abaixo
+> de 70 %, mantém R$ 25 mil com nova revisão em seis meses.
+
+**Comentário na 8.1(a):**
+
+> Peço retirar "culpa grave" e deixar apenas dolo — ou, se preferirem manter, que a
+> caracterização passe pelo avaliador independente da 4.6.
+>
+> A razão é factual, não teórica: hoje a operação tem uma única pessoa publicando, sem
+> automação de publicação. Nesse ambiente um incidente é risco operacional conhecido, e
+> esta cláusula transforma uma falha previsível em perda total da participação mais
+> recompra pelo preço pago.
+>
+> **E a resposta certa para esse risco não é contratual, é técnica:** quero colocar a
+> automação de publicação e o plano de resposta a incidente no Plano de Metas do Ano 1,
+> com peso. Resolvido isso, a cláusula fica proporcional.
+
+**Comentário na 11.4:**
+
+> A nota desta cláusula diz que a recompra pelo Valor Justo em parcelas pode servir de
+> compensação à não concorrência. Concordo com o raciocínio — mas no bad leaver a
+> recompra é pelo preço pago (8.2b), e não pelo Valor Justo. No cenário em que a não
+> concorrência mais pesa, a compensação que a validaria não existe.
+>
+> Proponho: a não concorrência não se aplica quando a recompra se der pelo preço da
+> outorga, ou é remunerada nesse caso. Como deixei meu vínculo anterior, é o cenário em
+> que eu ficaria sem participação, sem remuneração e impedido de trabalhar no setor.
+
+**Comentário na 4.5:**
+
+> Sim à alternativa entre colchetes: recuperar até 50 % do que faltou, no ano seguinte,
+> com índice de 100 %.
+
+### 9.5 · O que NÃO fazer
+
+| | Por quê |
+|---|---|
+| Pedir mais que 25 % ou mais que R$ 25 mil de partida | A estrutura está boa; o valor está nos brancos. Gasta boa-fé no lugar errado. |
+| Mandar os dez pontos com peso igual | Eles tratam tudo como negociável e dividem a diferença nos errados. **Marcar três é o que faz três serem levadas a sério.** |
+| Blefar com saída | Ele não tem para onde ir, e os dois sabem disso. |
+| Discutir a referência de hora | Continua valendo o de sempre: quanto maior, mais caro ele paga pela mesma fatia. |
+
+### 9.6 · A sequência
+
+1. **Hoje:** mensagem de abertura e os comentários no documento. Os do Bloco 1 primeiro
+   — pedir que preencham o próprio documento é o jeito mais barato de abrir.
+2. **Quando a v3 voltar:** conferir se os três do Bloco 2 entraram. Se dois dos três
+   entrarem, está fechado.
+3. **Antes de assinar, não antes de conversar:** uma hora de advogado, com três
+   perguntas que são dele e não do controlador — risco de vínculo de emprego no modelo
+   PJ com metas e dedicação integral (Tema 1.389 do STF), validade da recompra pelo
+   preço pago, e validade da não concorrência de 24 meses sem compensação.
+
+**O ponto de corte:** se o Valor Justo da 9.1 vier preenchido com o preço da outorga —
+R$ 1 por quota —, os 25 % valem R$ 25 mil em qualquer saída que não seja venda a
+terceiro, e a conversa toda sobre participação era decorativa. **Esse número é o que
+decide se vale a pena, e tudo o mais é secundário a ele.**
